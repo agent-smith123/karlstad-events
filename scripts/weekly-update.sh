@@ -24,22 +24,22 @@ log "📡 Running event research..."
 log "🏗️ Building Hugo site..."
 hugo --buildDrafts >> "$LOG_FILE" 2>&1
 
-# Step 3: Check for changes
+# Step 3: Check for changes and deploy
 if [ -n "$(git status --porcelain)" ]; then
     log "📝 Changes detected, committing..."
     git add content/events/ public/ hugo.toml netlify.toml layouts/
     git commit -m "Weekly event update - $(date '+%Y-%m-%d')"
     git push origin main
     
-    # Trigger Netlify build
-    log "🚀 Triggering Netlify build..."
-    curl -s -X POST "https://api.netlify.com/build_hooks/69a4aba1e906bcb08f79cbb2" >> "$LOG_FILE" 2>&1
-    log "   Build triggered"
+    # Deploy to surge
+    log "🚀 Deploying to surge.sh..."
+    surge . karlstad-events.surge.sh >> "$LOG_FILE" 2>&1
+    log "   Deployed!"
     
     # Step 4: Build and send email with event list
     log "📧 Building notification email..."
     
-    SITE_URL="https://karlstad-events.netlify.app"
+    SITE_URL="https://karlstad-events.surge.sh"
     WEEK=$(date '+%W')
     YEAR=$(date '+%Y')
     
@@ -47,7 +47,6 @@ if [ -n "$(git status --porcelain)" ]; then
     EVENT_LIST=""
     for f in "$CONTENT_DIR"/*.markdown; do
         if [ -f "$f" ]; then
-            # Extract frontmatter values - handle quoted and unquoted values
             title=$(grep "^title:" "$f" | head -1 | sed 's/title: *"\([^"]*\)"/\1/; s/title: *\([^ ]*\)/\1/' | tr -d '"')
             date=$(grep "^date:" "$f" | head -1 | sed 's/date: *"\([^"]*\)"/\1/; s/date: *\([^ ]*\)/\1/' | tr -d '"')
             venue=$(grep "^venue:" "$f" | head -1 | sed 's/venue: *"\([^"]*\)"/\1/; s/venue: *\([^ ]*\)/\1/' | tr -d '"')
@@ -57,13 +56,11 @@ if [ -n "$(git status --porcelain)" ]; then
             link=$(grep "^link:" "$f" | head -1 | sed 's/link: *"\([^"]*\)"/\1/; s/link: *\([^ ]*\)/\1/' | tr -d '"')
             soldOut=$(grep "^soldOut:" "$f" | head -1 | sed 's/soldOut: *//; s/ //g' | tr -d '"')
             
-            # Format the event entry
             if [ -n "$title" ]; then
                 EVENT_LIST="${EVENT_LIST}\n📅 ${date} - ${title}"
                 EVENT_LIST="${EVENT_LIST}\n   📍 ${venue} (${location})"
                 [ -n "$time" ] && EVENT_LIST="${EVENT_LIST}\n   🕐 ${time}"
                 
-                # Add link info
                 if [ "$soldOut" = "true" ]; then
                     EVENT_LIST="${EVENT_LIST}\n   🎫 SLUTSÅLT"
                 elif [ -n "$ticketLink" ]; then
