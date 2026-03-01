@@ -6,6 +6,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 CONTENT_DIR="$PROJECT_DIR/content/events"
+PUBLIC_DIR="$PROJECT_DIR/public"
 LOG_FILE="$SCRIPT_DIR/weekly-update.log"
 
 log() {
@@ -31,9 +32,11 @@ if [ -n "$(git status --porcelain)" ]; then
     git commit -m "Weekly event update - $(date '+%Y-%m-%d')"
     git push origin main
     
-    # Deploy to surge
+    # Deploy to surge (from public folder)
     log "🚀 Deploying to surge.sh..."
+    cd "$PUBLIC_DIR"
     surge . karlstad-events.surge.sh >> "$LOG_FILE" 2>&1
+    cd "$PROJECT_DIR"
     log "   Deployed!"
     
     # Step 4: Build and send email with event list
