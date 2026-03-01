@@ -15,6 +15,9 @@
   <div class="events-grid">
     {{ range sort $upcoming "Params.date" "asc" }}
     <article class="event-card">
+      {{ if .Params.soldOut }}
+      <div class="sold-out-badge">SLUTSÅLT</div>
+      {{ end }}
       <div class="event-date">
         <span class="day">{{ .Params.date.Format "02" }}</span>
         <span class="month">{{ .Params.date.Format "Jan" }}</span>
@@ -25,7 +28,17 @@
         <p class="event-location">🗺️ {{ .Params.location }}</p>
         {{ if .Params.time }}<p class="event-time">🕐 {{ .Params.time }}</p>{{ end }}
         <p class="event-description">{{ .Summary }}</p>
-        {{ if .Params.link }}<a href="{{ .Params.link }}" target="_blank" rel="noopener" class="event-link">Läs mer →</a>{{ end }}
+        <div class="event-links">
+          {{ if .Params.ticketLink }}
+            {{ if .Params.soldOut }}
+              <span class="event-link sold-out">🎫 Slutsålt</span>
+            {{ else }}
+              <a href="{{ .Params.ticketLink }}" target="_blank" rel="noopener" class="event-link">🎫 Köp biljetter →</a>
+            {{ end }}
+          {{ else if .Params.link }}
+            <a href="{{ .Params.link }}" target="_blank" rel="noopener" class="event-link">Läs mer →</a>
+          {{ end }}
+        </div>
       </div>
     </article>
     {{ end }}
