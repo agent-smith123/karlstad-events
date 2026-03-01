@@ -47,19 +47,19 @@ if [ -n "$(git status --porcelain)" ]; then
     EVENT_LIST=""
     for f in "$CONTENT_DIR"/*.markdown; do
         if [ -f "$f" ]; then
-            # Extract frontmatter values
-            title=$(grep "^title:" "$f" | head -1 | sed 's/title: "\(.*\)"/\1/' | tr -d '"')
-            date=$(grep "^date:" "$f" | head -1 | sed 's/date: //')
-            venue=$(grep "^venue:" "$f" | head -1 | sed 's/venue: "\(.*\)"/\1/' | tr -d '"')
-            location=$(grep "^location:" "$f" | head -1 | sed 's/location: "\(.*\)"/\1/' | tr -d '"')
-            time=$(grep "^time:" "$f" | head -1 | sed 's/time: "\(.*\)"/\1/' | tr -d '"')
-            ticketLink=$(grep "^ticketLink:" "$f" | head -1 | sed 's/ticketLink: "\(.*\)"/\1/' | tr -d '"')
-            link=$(grep "^link:" "$f" | head -1 | sed 's/link: "\(.*\)"/\1/' | tr -d '"')
-            soldOut=$(grep "^soldOut:" "$f" | head -1 | sed 's/soldOut: //' | tr -d ' ')
+            # Extract frontmatter values - handle quoted and unquoted values
+            title=$(grep "^title:" "$f" | head -1 | sed 's/title: *"\([^"]*\)"/\1/; s/title: *\([^ ]*\)/\1/' | tr -d '"')
+            date=$(grep "^date:" "$f" | head -1 | sed 's/date: *"\([^"]*\)"/\1/; s/date: *\([^ ]*\)/\1/' | tr -d '"')
+            venue=$(grep "^venue:" "$f" | head -1 | sed 's/venue: *"\([^"]*\)"/\1/; s/venue: *\([^ ]*\)/\1/' | tr -d '"')
+            location=$(grep "^location:" "$f" | head -1 | sed 's/location: *"\([^"]*\)"/\1/; s/location: *\([^ ]*\)/\1/' | tr -d '"')
+            time=$(grep "^time:" "$f" | head -1 | sed 's/time: *"\([^"]*\)"/\1/; s/time: *\([^ ]*\)/\1/' | tr -d '"')
+            ticketLink=$(grep "^ticketLink:" "$f" | head -1 | sed 's/ticketLink: *"\([^"]*\)"/\1/; s/ticketLink: *\([^ ]*\)/\1/' | tr -d '"')
+            link=$(grep "^link:" "$f" | head -1 | sed 's/link: *"\([^"]*\)"/\1/; s/link: *\([^ ]*\)/\1/' | tr -d '"')
+            soldOut=$(grep "^soldOut:" "$f" | head -1 | sed 's/soldOut: *//; s/ //g' | tr -d '"')
             
             # Format the event entry
             if [ -n "$title" ]; then
-                EVENT_LIST="${EVENT_LIST}\n📅 ${date#* } - ${title}"
+                EVENT_LIST="${EVENT_LIST}\n📅 ${date} - ${title}"
                 EVENT_LIST="${EVENT_LIST}\n   📍 ${venue} (${location})"
                 [ -n "$time" ] && EVENT_LIST="${EVENT_LIST}\n   🕐 ${time}"
                 
