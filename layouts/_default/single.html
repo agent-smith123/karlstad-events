@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="event-detail">
+  <a href="/">&larr; Tillbaka till alla evenemang</a>
+  <h1>{{ .Title }}</h1>
+  <p><strong>📍 Plats:</strong> {{ .Params.venue }}</p>
+  <p><strong>🗺️ Område:</strong> {{ .Params.location }}</p>
+  <p><strong>📅 Datum:</strong> {{ .Params.date.Format "2006-01-02" }}</p>
+  {{ with .Params.time }}<p><strong>🕐 Tid:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.link }}<p><a href="{{ . }}" target="_blank">Läs mer på arrangörens sida &rarr;</a></p>{{ end }}
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}

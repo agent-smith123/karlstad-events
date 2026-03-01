@@ -1,0 +1,59 @@
+{{ define "main" }}
+<section class="hero-section">
+  <h1>📅 Evenemang i Karlstad</h1>
+  <p class="subtitle">Vad händer i Karlstad, Forshaga, Kil, Molkom, Skattkärr, Väse, Vålberg & Deje?</p>
+  <p class="updated">Uppdaterad: {{ now.Format "2006-01-02 15:04" }}</p>
+</section>
+
+{{ $events := where .Site.RegularPages "Type" "events" }}
+{{ $upcoming := where $events "Params.date" ">" (now.AddDate 0 0 -7) }}
+
+<section class="events-section">
+  <h2> Kommande evenemang</h2>
+  
+  {{ if $upcoming }}
+  <div class="events-grid">
+    {{ range sort $upcoming "Params.date" "asc" }}
+    <article class="event-card">
+      <div class="event-date">
+        <span class="day">{{ .Params.date.Format "02" }}</span>
+        <span class="month">{{ .Params.date.Format "Jan" }}</span>
+      </div>
+      <div class="event-content">
+        <h3>{{ .Title }}</h3>
+        <p class="event-venue">📍 {{ .Params.venue }}</p>
+        <p class="event-location">🗺️ {{ .Params.location }}</p>
+        {{ if .Params.time }}<p class="event-time">🕐 {{ .Params.time }}</p>{{ end }}
+        <p class="event-description">{{ .Summary }}</p>
+        {{ if .Params.link }}<a href="{{ .Params.link }}" target="_blank" rel="noopener" class="event-link">Läs mer →</a>{{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p class="no-events">Inga evenemang hittades för tillfället. Kolla tillbaka snart!</p>
+  {{ end }}
+</section>
+
+<section class="areas-section">
+  <h2>📍 Täckta områden</h2>
+  <div class="areas-list">
+    <span class="area-tag">Karlstad</span>
+    <span class="area-tag">Forshaga</span>
+    <span class="area-tag">Kil</span>
+    <span class="area-tag">Molkom</span>
+    <span class="area-tag">Skattkärr</span>
+    <span class="area-tag">Väse</span>
+    <span class="area-tag">Vålberg</span>
+    <span class="area-tag">Deje</span>
+  </div>
+</section>
+{{ end }}
+
+{{ define "header" }}
+<header>
+  <nav>
+    <a href="/" class="logo">🏠 Karlstad Events</a>
+  </nav>
+</header>
+{{ end }}

@@ -1,0 +1,10 @@
+baseURL = "https://karlstad-events.netlify.app/"
+languageCode = "sv-se"
+title = "Evenemang Karlstad"
+theme = "ananke"
+
+[params]
+  description = "Evenemang och happenings i Karlstad med omnejd"
+  author = "OpenClaw"
+  featured_image = "/images/karlstad.jpg"
+  og_image = "/images/karlstad.jpg"
