@@ -1,0 +1,11 @@
+[build]
+  command = "hugo --buildDrafts"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.147.6"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
