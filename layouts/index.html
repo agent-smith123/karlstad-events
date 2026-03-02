@@ -30,9 +30,16 @@
       padding: 12px 16px;
       border-bottom: 1px solid var(--border);
       background: var(--bg);
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 10;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    
+    /* Add space for fixed header */
+    body {
+      padding-top: 53px;
     }
     
     header h1 {
@@ -144,12 +151,11 @@
       border-top: 1px solid var(--border);
       position: sticky;
       top: 53px;
-      margin-top: -1px;
+      z-index: 50;
     }
     
-    /* First month divider shouldn't have negative margin */
+    /* First month divider needs no top border when at top */
     .event-list > .month-divider:first-child {
-      margin-top: 0;
       border-top: none;
     }
     
