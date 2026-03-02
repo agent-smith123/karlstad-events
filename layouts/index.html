@@ -79,18 +79,10 @@
     
     .date-day {
       display: block;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 600;
       line-height: 1;
       letter-spacing: -0.5px;
-    }
-    
-    .date-month {
-      display: block;
-      font-size: 11px;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-top: 1px;
     }
     
     .date-weekday {
@@ -141,7 +133,7 @@
     
     /* Month divider */
     .month-divider {
-      padding: 6px 16px;
+      padding: 8px 16px;
       background: #f5f5f5;
       font-size: 11px;
       font-weight: 600;
@@ -149,8 +141,16 @@
       color: var(--text-secondary);
       letter-spacing: 0.5px;
       border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
       position: sticky;
-      top: 57px;
+      top: 53px;
+      margin-top: -1px;
+    }
+    
+    /* First month divider shouldn't have negative margin */
+    .event-list > .month-divider:first-child {
+      margin-top: 0;
+      border-top: none;
     }
     
     /* Empty state */
@@ -219,7 +219,6 @@
       <li class="event-item">
         <div class="date">
           <span class="date-day">{{ .Date.Format "2" }}</span>
-          <span class="date-month">{{ substr $monthSv 0 3 }}</span>
           {{ $wdEn := .Date.Format "Mon" }}
           <span class="date-weekday">{{ index $weekdays $wdEn }}</span>
         </div>
