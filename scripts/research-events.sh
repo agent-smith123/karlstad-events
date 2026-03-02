@@ -79,6 +79,14 @@ echo ""
 echo "🔍 Validating events..."
 python3 "$SCRIPT_DIR/validate_events.py" || echo "⚠️  Validation found issues (continuing anyway)"
 
+# Quality gate
+echo ""
+echo "🔒 Running quality gate..."
+python3 "$SCRIPT_DIR/quality_gate.py" || {
+    echo "⚠️  Quality gate found issues - review data/quality_gate_log.json"
+    echo "   Continuing with deployment (manual review recommended)"
+}
+
 # Generate Hugo site
 echo ""
 echo "🏗️  Building Hugo site..."
