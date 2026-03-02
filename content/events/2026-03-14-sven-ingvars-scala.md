@@ -1,0 +1,10 @@
+---
+title: "Sven Ingvars - Igår. Idag. Imorgon. 70 år"
+date: 2026-03-14
+venue: "Scalateatern"
+location: "Karlstad"
+time: "16:00"
+link: "https://www.ticketmaster.se/artist/sven-ingvars-biljetter/107163"
+categories: ["Konsert", "Dansband"]
+---
+Sven Ingvars firar 70 år med turné 2026!

@@ -11,6 +11,39 @@ metadata:
   - Vålberg
   - Deje
 tier1_major:
+  farjestad_bk:
+    name: Färjestad BK
+    location: Karlstad
+    address: Löfbergs Arena, Fjällruvsvägen 1, 652 21 Karlstad
+    type:
+    - Ishockey
+    - SHL
+    - Sport
+    urls:
+      schedule: https://www.farjestadbk.se/game-schedule
+      tickets: https://www.ticketmaster.se/venue/lofbergs-arena-karlstad-biljetter/lof/416
+      home: https://www.farjestadbk.se/
+    scraper:
+      type: external
+      source: ticketmaster
+    active: true
+  if_boltic:
+    name: IF Boltic (Bandy)
+    location: Karlstad
+    address: Tingvalla isstadion, Björkvägen, 656 37 Karlstad
+    type:
+    - Bandy
+    - Elitserien
+    - Sport
+    urls:
+      schedule: https://www.ifboltic.com/nyheter/
+      tickets: https://www.ticketmaster.se/artist/if-bolic-biljetter/123456
+      home: https://www.ifboltic.com/
+    scraper:
+      type: static
+      method: beautifulsoup
+      note: Swedish bandy season runs October-March
+    active: true
   wermland_opera:
     name: Wermland Opera
     location: Karlstad
@@ -1114,4 +1147,65 @@ special:
     - Elektronisk musik
     urls:
       home: https://synthimolkom.se/
+    active: true
+
+# Markets (Marknader) in Värmland area
+tier_markets:
+  putte_i_parken:
+    name: Putte i Parken
+    location: Karlstad
+    type:
+    - Marknad
+    - Musikfestival
+    dates: Usually August (check annual schedule)
+    urls:
+      home: https://putteiparken.se/
+    active: true
+  alsters_herrgard_hostmarknad:
+    name: Höstmarknad på Alsters Herrgård
+    location: Karlstad (Alster)
+    type:
+    - Marknad
+    - Hantverk
+    - Lokal mat
+    dates: Usually September
+    urls:
+      info: https://visitvarmland.com/karlstad/evenemang/marknad/hostmarknad-pa-alsters-herrgard
+    active: true
+  varmland_market:
+    name: Smaka på Värmland
+    location: Kristinehamn
+    type:
+    - Matmarknad
+    - Lokal mat
+    dates: Usually annually
+    urls:
+      home: https://www.visitvarmland.com/kristinehamn/evenemang
+    active: true
+  forshaga_market:
+    name: Forshaga Marknad
+    location: Forshaga
+    type:
+    - Marknad
+    dates: Usually spring/autumn
+    urls:
+      home: https://marknadsdager.se/forshaga-forshaga-marknad
+    active: true
+  hagfors_market:
+    name: Hagfors Vårmarknad
+    location: Hagfors
+    type:
+    - Marknad
+    dates: Usually May
+    urls:
+      home: https://marknadsdager.se/hagfors-hagfors-varmarknad
+    active: true
+  grums_market:
+    name: Grums Vårmarknad
+    location: Grums
+    type:
+    - Marknad
+    dates: Usually spring
+    urls:
+      home: https://marknadsdager.se/grums-grums-varmarknad
     active: true
