@@ -452,7 +452,8 @@ class EnhancedResearcher:
         written = self.store.write_markdown_files()
         print(f"📝 Wrote {written} new markdown files")
         
-        return written
+        # Return list of new events from store
+        return [evt for evt in self.store.events.values()]
 
 
 def run_venue_discovery():

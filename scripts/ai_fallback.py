@@ -9,8 +9,8 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-SCRIPT_DIR = Path(__file__).parent
-PROJECT_DIR = SCRIPT_DIR.parent
+SCRIPT_DIR = Path(__file__).parent.resolve()
+PROJECT_DIR = SCRIPT_DIR.parent.resolve()
 DATA_DIR = PROJECT_DIR / "data"
 AI_REQUEST_FILE = DATA_DIR / ".ai-fetch-requested"
 AI_RESULTS_FILE = DATA_DIR / "ai-fetched-events.json"

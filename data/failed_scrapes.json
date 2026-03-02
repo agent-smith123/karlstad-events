@@ -29,6 +29,24 @@
       "venue": "research_cycle",
       "url": "multiple",
       "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T17:03:24.420698",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T17:03:42.865861",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T17:03:57.543310",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
     }
   ]
 }
