@@ -325,7 +325,8 @@
   
   <main>
     {{ $allEvents := where .Site.RegularPages "Section" "events" }}
-    {{ $sortedEvents := $allEvents.ByDate }}
+    {{ $futureEvents := where $allEvents "Date" ">=" now }}
+    {{ $sortedEvents := $futureEvents.ByDate }}
     
     <h2 class="section-title">📋 Kommande evenemang</h2>
     
