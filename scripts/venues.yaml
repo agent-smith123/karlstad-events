@@ -1,5 +1,5 @@
 metadata:
-  version: '1.0'
+  version: '1.1'
   last_updated: '2026-03-02'
   areas:
   - Karlstad
@@ -10,6 +10,16 @@ metadata:
   - Väse
   - Vålberg
   - Deje
+  - Hammarö
+  - Kristinehamn
+  - Arvika
+  - Säffle
+  - Grums
+  - Hagfors
+  - Sunne
+  - Torsby
+  - Årjäng
+  - Filipstad
 tier1_major:
   farjestad_bk:
     name: Färjestad BK
@@ -30,19 +40,71 @@ tier1_major:
   if_boltic:
     name: IF Boltic (Bandy)
     location: Karlstad
-    address: Tingvalla isstadion, Björkvägen, 656 37 Karlstad
+    address: Tingvalla isstadion, Stadionvägen 2-4, 653 39 Karlstad
     type:
     - Bandy
     - Elitserien
     - Sport
     urls:
       schedule: https://www.ifboltic.com/nyheter/
-      tickets: https://www.ticketmaster.se/artist/if-bolic-biljetter/123456
       home: https://www.ifboltic.com/
     scraper:
       type: static
       method: beautifulsoup
       note: Swedish bandy season runs October-March
+    active: true
+  kristinehamn_arena:
+    name: Kristinehamn Arena
+    location: Kristinehamn
+    address: Kristinehamn
+    type:
+    - Multi-sport
+    - Konserter
+    - Mässor
+    - Evenemang
+    urls:
+      home: https://www.kristinehamnarena.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  torsby_skidtunnel:
+    name: Torsby Skidtunnel & Sportcenter
+    location: Torsby
+    type:
+    - Skidåkning
+    - Biathlon
+    - Evenemang
+    urls:
+      home: https://www.visitvarmland.com/
+    note: Världens första skidtunnel - 1.3 km lång
+    scraper:
+      type: manual
+    active: true
+  safle_simhall:
+    name: Säffle Simhall
+    location: Säffle
+    type:
+    - Simhall
+    - Sport
+    - Evenemang
+    urls:
+      home: https://www.saffle.se/
+    note: Värmlands första 50-meters bassäng
+    scraper:
+      type: manual
+    active: true
+  arvika_simhall:
+    name: Arvika Simhall
+    location: Arvika
+    address: Skolgatan 34, Arvika
+    type:
+    - Simhall
+    - Sport
+    urls:
+      home: https://www.arvika.se/
+    scraper:
+      type: manual
     active: true
   wermland_opera:
     name: Wermland Opera
@@ -1208,4 +1270,285 @@ tier_markets:
     dates: Usually spring
     urls:
       home: https://marknadsdager.se/grums-grums-varmarknad
+    active: true
+
+# Nightlife & Entertainment venues
+tier_nightlife:
+  # Karlstad
+  nöjesfabriken:
+    name: Nöjesfabriken
+    location: Karlstad
+    address: Karlagatan 42, 652 23 Karlstad
+    type:
+    - Nattklubb
+    - Bowling
+    - Live music
+    urls:
+      home: https://www.nojesfabriken.se/
+    active: true
+  verket_karlstad:
+    name: Verket (Nöjesfabriken)
+    location: Karlstad
+    type:
+    - Nattklubb
+    - Musik
+    urls:
+      home: https://www.nojesfabriken.se/
+    active: true
+  the_bull_bar:
+    name: The Bull Bar
+    location: Karlstad
+    address: Östra Torggatan 8, 652 24 Karlstad
+    type:
+    - Pub
+    - Live music
+    urls:
+      home: https://thebullbar.se/
+    active: true
+  the_leprechaun_pub:
+    name: The Leprechaun Pub
+    location: Karlstad
+    address: Östra Torggatan 4, 652 24 Karlstad
+    type:
+    - Pub
+    - Irsk pub
+    urls:
+      home: http://www.theleprechaun.se/
+    active: true
+  glada_ankan:
+    name: Glada Ankan
+    location: Karlstad
+    type:
+    - Rock club
+    - Nattklubb
+    urls:
+      home: https://karlstad.com/
+    active: true
+  pitchers_karlstad:
+    name: Pitchers Karlstad
+    location: Karlstad
+    type:
+    - Sportbar
+    - Nattklubb
+    urls:
+      home: https://www.pitchers.se/
+    active: true
+  o_learys_karlstad:
+    name: O'Learys Karlstad
+    location: Karlstad
+    type:
+    - Sportbar
+    - Underhållning
+    urls:
+      home: https://www.olearys.com/
+    active: true
+  bishops_arms_karlstad:
+    name: The Bishops Arms
+    location: Karlstad
+    type:
+    - Pub
+    - Restaurang
+    urls:
+      home: https://www.bishopsarms.com/
+    active: true
+  carlstad_olhall:
+    name: Carlstad Ölhall
+    location: Karlstad
+    type:
+    - Ölhall
+    urls:
+      home: https://visitvarmland.com/
+    active: true
+  good_guys_beer_pizza:
+    name: Good Guys Beer & Pizza
+    location: Karlstad
+    type:
+    - Pub
+    - Restaurang
+    urls:
+      home: https://visitvarmland.com/
+    active: true
+
+  # Kristinehamn
+  king_street_bar:
+    name: King Street Bar
+    location: Kristinehamn
+    address: Kungsgatan 34, 681 30 Kristinehamn
+    type:
+    - Pub
+    - Darts
+    urls:
+      home: https://facebook.com/KingStreetBarKristinehamn
+    active: true
+
+  # Arvika
+  ritz_club:
+    name: Ritz Club
+    location: Arvika
+    type:
+    - Nattklubb
+    - Evenemangslokal
+    urls:
+      home: https://www.arvika.se/
+    active: true
+  olssons_brygga:
+    name: Olssons Brygga
+    location: Arvika
+    type:
+    - Restaurang
+    - Live music
+    urls:
+      home: https://visitvarmland.com/
+    active: true
+
+  # Sunne
+  kolsnasparken:
+    name: Kolsnäsparken
+    location: Sunne
+    address: Sunne Camping
+    type:
+    - Festivalarena
+    - Dansband
+    urls:
+      home: https://sagolikasunne.se/
+    active: true
+  tumult_festival:
+    name: Tumult Festival
+    location: Sunne
+    type:
+    - Festival
+    - Kultur
+    dates: Late June
+    urls:
+      home: https://tumul tkultur.se/
+    active: true
+
+# Sports venues
+tier_sports:
+  lofbergs_arena:
+    name: Löfbergs Arena
+    location: Karlstad
+    address: Norra Infarten 78-79, 654 65 Karlstad
+    type:
+    - Ishockey
+    - Arena
+    - Konserter
+    urls:
+      home: https://www.lofbergsarena.se/
+    active: true
+  tingvalla_isstadion:
+    name: Tingvalla Isstadion
+    location: Karlstad
+    address: Stadionvägen 2-4, 653 39-40 Karlstad
+    type:
+    - Bandy
+    - Ishockey
+    urls:
+      home: https://karlstad.se/
+    active: true
+  tingvalla_ip:
+    name: Tingvalla IP
+    location: Karlstad
+    address: Regementsgatan 8, Karlstad
+    type:
+    - Fotboll
+    - Amerikansk fotboll
+    urls:
+      home: https://karlstad.se/
+    active: true
+  kristinehamn_arena:
+    name: Kristinehamn Arena
+    location: Kristinehamn
+    type:
+    - Arena
+    - Simhall
+    - Evenemang
+    urls:
+      home: https://kristinehamnarena.se/
+    active: true
+  karlstad_racketcenter:
+    name: Karlstad Racketcenter
+    location: Karlstad
+    type:
+    - Badminton
+    - Tennis
+    - Squash
+    urls:
+      home: https://karlstad.se/
+    active: true
+  torsby_skidtunnel:
+    name: Torsby Skidtunnel & Sportcenter
+    location: Torsby
+    type:
+    - Skidtunnel
+    - evenemang
+    urls:
+      home: https://visitvarmland.com/
+    active: true
+  saffle_simhall:
+    name: Säffle Simhall
+    location: Säffle
+    type:
+    - Simhall
+    - 50-meters pool
+    urls:
+      home: https://saffle.se/
+    active: true
+
+# Outdoor & Festival venues
+tier_outdoor:
+  stora_torget_karlstad:
+    name: Stora Torget
+    location: Karlstad
+    type:
+    - Torg
+    - Evenemang
+    urls:
+      home: https://karlstad.se/
+    active: true
+  kvarteret_almen:
+    name: Kvarteret Almen
+    location: Karlstad
+    type:
+    - Utomhusarena
+    - Konserter
+    urls:
+      home: https://visitvarmland.com/
+    active: true
+  stadstradgarden:
+    name: Stadsträdgården
+    location: Karlstad
+    type:
+    - Park
+    - Utomhuskonserter
+    urls:
+      home: https://karlstad.se/
+    active: true
+  kajen_festival:
+    name: KAJEN Festival
+    location: Karlstad
+    type:
+    - Festival
+    - Mat & Vin
+    dates: July
+    urls:
+      home: https://kajenksd.se/
+    active: true
+  angsbacka:
+    name: Ängsbacka
+    location: Molkom
+    type:
+    - Kursgård
+    - Festival
+    urls:
+      home: https://www.angsbacka.com/
+    active: true
+  vastana_musik_teater:
+    name: Västanå Musik & Teater
+    location: Sunne
+    type:
+    - Teater
+    - Musik
+    urls:
+      home: https://vastanateater.se/
     active: true
