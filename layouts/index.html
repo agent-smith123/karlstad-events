@@ -2,310 +2,241 @@
 <html lang="sv">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Evenemang Karlstad med omnejd</title>
-  <meta name="description" content="Kommande evenemang, konserter och föreställningar i Karlstad och Värmland.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Evenemang Karlstad</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #333;
-      background: #f5f5f5;
+    :root {
+      --text: #1a1a1a;
+      --text-secondary: #666;
+      --border: #e0e0e0;
+      --link: #0066cc;
+      --bg: #fff;
+      --row-hover: #f8f9fa;
     }
     
-    /* Header */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.4;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Header - minimal */
     header {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 1rem 2rem;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     
     header h1 {
-      font-size: 1.25rem;
+      font-size: 17px;
       font-weight: 600;
-      color: #222;
+      letter-spacing: -0.3px;
     }
     
     header p {
-      font-size: 0.875rem;
-      color: #666;
-      margin-top: 0.25rem;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 2px;
     }
     
-    /* Main content */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.5rem 2rem;
+    /* Event list - ultra compact */
+    .event-list {
+      list-style: none;
     }
     
-    /* Info bar */
-    .info-bar {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.8125rem;
-      color: #666;
+    .event-item {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
     }
     
-    .info-bar strong {
-      color: #333;
+    .event-item:active {
+      background: var(--row-hover);
     }
     
-    /* Table container */
-    .table-container {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      overflow: hidden;
+    @media (hover: hover) {
+      .event-item:hover {
+        background: var(--row-hover);
+      }
     }
     
-    /* Event table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.875rem;
-    }
-    
-    thead {
-      background: #fafafa;
-      border-bottom: 2px solid #ddd;
-    }
-    
-    th {
-      text-align: left;
-      padding: 0.75rem 1rem;
-      font-weight: 600;
-      color: #555;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.025em;
-    }
-    
-    tbody tr {
-      border-bottom: 1px solid #eee;
-    }
-    
-    tbody tr:hover {
-      background: #f9f9f9;
-    }
-    
-    tbody tr:last-child {
-      border-bottom: none;
-    }
-    
-    td {
-      padding: 0.875rem 1rem;
-      vertical-align: top;
-    }
-    
-    /* Date column */
+    /* Date block - fixed width */
     .date {
-      white-space: nowrap;
-      font-weight: 500;
-      color: #222;
+      flex-shrink: 0;
+      width: 44px;
+      text-align: center;
     }
     
-    .date .day {
-      font-size: 1rem;
+    .date-day {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.5px;
     }
     
-    .date .weekday {
-      font-size: 0.75rem;
-      color: #888;
+    .date-month {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-top: 1px;
+    }
+    
+    .date-weekday {
+      display: block;
+      font-size: 10px;
+      color: var(--text-secondary);
       text-transform: lowercase;
+      margin-top: 1px;
     }
     
-    /* Title column */
-    .title {
-      font-weight: 500;
-      color: #222;
-      max-width: 400px;
+    /* Event title - takes remaining space */
+    .event-title {
+      flex: 1;
+      min-width: 0;
     }
     
-    .title a {
-      color: #2563eb;
+    .event-title a {
+      color: var(--text);
       text-decoration: none;
-    }
-    
-    .title a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Venue column */
-    .venue {
-      color: #555;
+      display: block;
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
     }
     
-    .location {
-      font-size: 0.75rem;
-      color: #888;
+    .event-title a[href]:hover {
+      color: var(--link);
     }
     
-    /* Category column */
-    .category {
-      font-size: 0.75rem;
+    .event-title a[href]:active {
+      opacity: 0.7;
     }
     
-    .tag {
-      display: inline-block;
-      padding: 0.125rem 0.5rem;
-      background: #e5e7eb;
-      border-radius: 3px;
-      color: #374151;
+    /* Venue - secondary info */
+    .venue {
+      flex-shrink: 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: right;
     }
     
-    /* Time column */
-    .time {
-      color: #666;
-      font-size: 0.8125rem;
+    /* Month divider */
+    .month-divider {
+      padding: 6px 16px;
+      background: #f5f5f5;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 57px;
     }
     
     /* Empty state */
     .empty {
+      padding: 40px 16px;
       text-align: center;
-      padding: 3rem;
-      color: #666;
+      color: var(--text-secondary);
+      font-size: 14px;
     }
     
     /* Footer */
     footer {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-      font-size: 0.75rem;
-      color: #888;
+      padding: 16px;
       text-align: center;
+      font-size: 11px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
     }
     
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-      main {
-        padding: 1rem;
+    /* Desktop - slightly more breathing room */
+    @media (min-width: 768px) {
+      body {
+        max-width: 680px;
+        margin: 0 auto;
+        border-left: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+        min-height: 100vh;
       }
       
-      .info-bar {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+      .event-item {
+        padding: 12px 20px;
       }
       
-      /* Stack table on mobile */
-      table, thead, tbody, th, td, tr {
-        display: block;
+      .date {
+        width: 50px;
       }
       
-      thead {
-        display: none;
-      }
-      
-      tbody tr {
-        padding: 1rem;
-        border-bottom: 2px solid #ddd;
-      }
-      
-      td {
-        padding: 0.25rem 0;
-        border: none;
-      }
-      
-      td:before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: #666;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        display: block;
-        margin-bottom: 0.25rem;
-      }
-      
-      .date, .venue, .location, .time {
-        white-space: normal;
+      .venue {
+        max-width: 140px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Evenemang Karlstad med omnejd</h1>
-    <p>Kommande konserter, teaterföreställningar och kulturarrangemang</p>
+    <h1>Evenemang Karlstad</h1>
+    <p>Konserter, teater & kultur</p>
   </header>
   
-  <main>
-    {{ $allEvents := where .Site.RegularPages "Section" "events" }}
-    {{ $futureEvents := where $allEvents "Date" ">=" now }}
-    {{ $sortedEvents := $futureEvents.ByDate }}
-    
-    <div class="info-bar">
-      <span><strong>{{ len $sortedEvents }}</strong> evenemang från {{ now.Format "2 jan" }} och framåt</span>
-      <span>Uppdaterad {{ now.Format "2 jan 2006" }}</span>
-    </div>
-    
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 90px;">Datum</th>
-            <th>Tid</th>
-            <th>Evenemang</th>
-            <th>Plats</th>
-            <th style="width: 100px;">Typ</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ range $sortedEvents }}
-          <tr>
-            <td class="date" data-label="Datum">
-              <span class="day">{{ .Date.Format "2 jan" }}</span>
-              <span class="weekday">{{ .Date.Format "Mon" }}</span>
-            </td>
-            <td class="time" data-label="Tid">
-              {{ if .Params.time }}{{ .Params.time }}{{ else }}-{{ end }}
-            </td>
-            <td class="title" data-label="Evenemang">
-              {{ if .Params.link }}
-                <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
-              {{ else }}
-                {{ .Title }}
-              {{ end }}
-            </td>
-            <td class="venue" data-label="Plats">
-              {{ .Params.venue }}
-              {{ if .Params.location }}
-                <span class="location">{{ .Params.location }}</span>
-              {{ end }}
-            </td>
-            <td class="category" data-label="Typ">
-              {{ if .Params.categories }}
-                <span class="tag">{{ index .Params.categories 0 }}</span>
-              {{ else }}
-                <span class="tag">Evenemang</span>
-              {{ end }}
-            </td>
-          </tr>
+  {{ $allEvents := where .Site.RegularPages "Section" "events" }}
+  {{ $futureEvents := where $allEvents "Date" ">=" now }}
+  {{ $sortedEvents := $futureEvents.ByDate }}
+  
+  <ul class="event-list">
+    {{ $currentMonth := "" }}
+    {{ range $sortedEvents }}
+      {{ $month := .Date.Format "January" }}
+      {{ if ne $month $currentMonth }}
+        {{ $currentMonth = $month }}
+        <li class="month-divider">{{ .Date.Format "Januari 2006" }}</li>
+      {{ end }}
+      
+      <li class="event-item">
+        <div class="date">
+          <span class="date-day">{{ .Date.Format "2" }}</span>
+          <span class="date-month">{{ .Date.Format "jan" }}</span>
+          <span class="date-weekday">{{ .Date.Format "Mon" }}</span>
+        </div>
+        
+        <div class="event-title">
+          {{ if .Params.link }}
+            <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
           {{ else }}
-          <tr>
-            <td colspan="5" class="empty">
-              Inga kommande evenemang just nu.
-            </td>
-          </tr>
+            <span>{{ .Title }}</span>
           {{ end }}
-        </tbody>
-      </table>
-    </div>
-  </main>
+        </div>
+        
+        <div class="venue" title="{{ .Params.venue }}{{ if .Params.location }}, {{ .Params.location }}{{ end }}">
+          {{ .Params.venue }}
+        </div>
+      </li>
+    {{ else }}
+      <li class="empty">Inga kommande evenemang</li>
+    {{ end }}
+  </ul>
   
   <footer>
-    <p>Karlstad Events • Samlar evenemang från Karlstad, Forshaga, Kil, Molkom, Kristinehamn och övriga Värmland</p>
+    {{ len $sortedEvents }} evenemang • Uppdaterad {{ now.Format "2/1" }}
   </footer>
 </body>
 </html>
