@@ -74,6 +74,11 @@ else
     try_research "ai-agent"
 fi
 
+# Validate events
+echo ""
+echo "🔍 Validating events..."
+python3 "$SCRIPT_DIR/validate_events.py" || echo "⚠️  Validation found issues (continuing anyway)"
+
 # Generate Hugo site
 echo ""
 echo "🏗️  Building Hugo site..."
