@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="hero-section">
+  <h1>📅 Evenemang i Karlstad</h1>
+  <p class="subtitle">Debug - All Pages:</p>
+  <ul>
+  {{ range .Site.RegularPages }}
+    <li>{{ .Title }} - {{ .Type }} - {{ .Section }}</li>
+  {{ end }}
+  </ul>
+</section>
+{{ end }}

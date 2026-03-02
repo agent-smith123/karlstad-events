@@ -8,3 +8,6 @@ theme = "ananke"
   author = "OpenClaw"
   featured_image = "/images/karlstad.jpg"
   og_image = "/images/karlstad.jpg"
+
+[build]
+future = true

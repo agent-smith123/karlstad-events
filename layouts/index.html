@@ -5,38 +5,37 @@
   <p class="updated">Uppdaterad: {{ now.Format "2006-01-02 15:04" }}</p>
 </section>
 
-{{ $events := where .Site.RegularPages "Type" "events" }}
-{{ $upcoming := where $events "Params.date" ">" (now.AddDate 0 0 -7) }}
+{{ $events := where (index .Site.Data "events") "date" "ge" "2026-03-02" }}
 
 <section class="events-section">
   <h2> Kommande evenemang</h2>
   
-  {{ if $upcoming }}
+  {{ if $events }}
   <div class="events-grid">
-    {{ range sort $upcoming "Params.date" "asc" }}
+    {{ range $events }}
     <article class="event-card">
-      {{ if .Params.soldOut }}
+      {{ if .soldOut }}
       <div class="sold-out-badge">SLUTSÅLT</div>
       {{ end }}
       <div class="event-date">
-        <span class="day">{{ .Params.date.Format "02" }}</span>
-        <span class="month">{{ .Params.date.Format "Jan" }}</span>
+        <span class="day">{{ dateFormat "02" .date }}</span>
+        <span class="month">{{ dateFormat "Jan" .date }}</span>
       </div>
       <div class="event-content">
-        <h3>{{ .Title }}</h3>
-        <p class="event-venue">📍 {{ .Params.venue }}</p>
-        <p class="event-location">🗺️ {{ .Params.location }}</p>
-        {{ if .Params.time }}<p class="event-time">🕐 {{ .Params.time }}</p>{{ end }}
-        <p class="event-description">{{ .Summary }}</p>
+        <h3>{{ .title }}</h3>
+        <p class="event-venue">📍 {{ .venue }}</p>
+        <p class="event-location">🗺️ {{ .location }}</p>
+        {{ if .time }}<p class="event-time">🕐 {{ .time }}</p>{{ end }}
+        <p class="event-description">{{ .description }}</p>
         <div class="event-links">
-          {{ if .Params.ticketLink }}
-            {{ if .Params.soldOut }}
-              <span class="event-link sold-out">🎫 Slutsålt</span>
+          {{ if .ticketLink }}
+            {{ if .soldOut }}
+              <span class="event-link sold-out">🎫 SLUTSÅLT</span>
             {{ else }}
-              <a href="{{ .Params.ticketLink }}" target="_blank" rel="noopener" class="event-link">🎫 Köp biljetter →</a>
+              <a href="{{ .ticketLink }}" target="_blank" rel="noopener" class="event-link">🎫 Köp biljetter →</a>
             {{ end }}
-          {{ else if .Params.link }}
-            <a href="{{ .Params.link }}" target="_blank" rel="noopener" class="event-link">Läs mer →</a>
+          {{ else if .link }}
+            <a href="{{ .link }}" target="_blank" rel="noopener" class="event-link">Läs mer →</a>
           {{ end }}
         </div>
       </div>

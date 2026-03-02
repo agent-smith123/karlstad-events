@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Thank You For The Music - Part Two",
+    "date": "2026-03-06",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "time": "19:30",
+    "ticketLink": "https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416",
+    "description": "En hyllningsshow till ABBA med klassiska hits."
+  },
+  {
+    "title": "Leva Livet - Wermland Opera",
+    "date": "2026-03-05",
+    "venue": "Åsbacka",
+    "location": "Molkom",
+    "time": "14:00",
+    "link": "https://www.wermlandopera.com/evenemang/leva-livet/",
+    "description": "Symfonisk konsert med kör och solister. Fri entre."
+  },
+  {
+    "title": "En Jäkla Massa Schlagers",
+    "date": "2026-03-13",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "time": "19:30",
+    "ticketLink": "https://www.ticketmaster.se/discover/karlstad",
+    "description": "Schlagerexplosion med Sveriges mest kända schlagerstjärnor."
+  },
+  {
+    "title": "Tomas Andersson Wij - Konsert",
+    "date": "2026-03-14",
+    "venue": "Tingvallakyrkan",
+    "location": "Karlstad",
+    "time": "19:00",
+    "ticketLink": "https://www.greateventofkarlstad.se/kommande-evenemang/",
+    "description": "Konsert i Tingvallakyrkan."
+  },
+  {
+    "title": "Leva Livet - Wermland Opera",
+    "date": "2026-03-20",
+    "venue": "Granberga",
+    "location": "Väse",
+    "time": "15:00",
+    "link": "https://www.wermlandopera.com/evenemang/leva-livet/",
+    "description": "Symfonisk konsert i Väse. Fri entre."
+  },
+  {
+    "title": "Eric Idle - The One Man Show",
+    "date": "2026-04-24",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "time": "19:30",
+    "ticketLink": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "description": "Eric Idle från Monty Python presenterar sin nya one-man-show."
+  }
+]

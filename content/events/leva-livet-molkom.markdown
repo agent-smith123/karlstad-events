@@ -1,11 +1,13 @@
 ---
+draft: false
 title: "Leva Livet - Wermland Opera"
-date: "2026-03-05"
+date: 2026-03-05
 venue: "Åsbacka"
 location: "Molkom"
 time: "14:00"
 link: "https://www.wermlandopera.com/evenemang/leva-livet/"
 categories: ["Kultur", "Opera"]
 ---
+draft: false
 
-Wermland Opera presenterar "Leva Livet" - en symfonisk konsert med kör och solister. Fri entre, ingen biljett krävs.
+Wermland Opera presenterar "Leva Livet" - en symfonisk konsert med kör och solister. Fri entre.
