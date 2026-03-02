@@ -1,10 +1,25 @@
 {
-  "timestamp": "2026-03-02T17:35:29.550997",
+  "timestamp": "2026-03-02T22:46:08.890214",
   "verified": [
     {
-      "file": "c91df1760bdd.md",
-      "title": "OCH SEN VAR INGEN KVAR",
+      "file": "2026-06-23-sm-veckan.md",
+      "title": "SM-veckan Sommar 2026",
+      "warnings": 0
+    },
+    {
+      "file": "8c16c3fe80ea.md",
+      "title": "EN J\u00c4KLA MASSA SCHLAGER",
       "warnings": 1
+    },
+    {
+      "file": "c91df1760bdd.md",
+      "title": "Och sen var Ingen Kvar",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-29-theo.md",
+      "title": "THEO",
+      "warnings": 0
     },
     {
       "file": "d775743b6b6f.md",
@@ -27,6 +42,16 @@
       "warnings": 0
     },
     {
+      "file": "2026-03-13-en-jakla-massa-schlager.md",
+      "title": "En J\u00e4kla Massa Schlager",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-10-fbk-hv71.md",
+      "title": "F\u00e4rjestad BK - HV71",
+      "warnings": 0
+    },
+    {
       "file": "fab1e42fe509.md",
       "title": "Majas alfabetss\u00e5nger",
       "warnings": 0
@@ -42,19 +67,44 @@
       "warnings": 0
     },
     {
+      "file": "2026-03-21-albin-lee-meldau.md",
+      "title": "Albin Lee Meldau & Arvid Nero - Min v\u00e4n och jag",
+      "warnings": 0
+    },
+    {
       "file": "b2378ee54abe.md",
       "title": "Kv\u00e4llsvisning: V\u00e4rmlandsliv",
       "warnings": 0
     },
     {
+      "file": "2026-10-10-boltic-villa.md",
+      "title": "IF Boltic - Villa Lidk\u00f6ping",
+      "warnings": 0
+    },
+    {
       "file": "447145b2dd24.md",
-      "title": "TRAD ON THE PROM - THE CONCERT",
-      "warnings": 1
+      "title": "Trad On The Prom - The Concert",
+      "warnings": 0
+    },
+    {
+      "file": "2026-04-23-bruckner.md",
+      "title": "Bruckners romantiska symfoni",
+      "warnings": 0
     },
     {
       "file": "8db233abd8eb.md",
-      "title": "ERIC CLAPTON TRIBUTE",
-      "warnings": 1
+      "title": "Eric Clapton Tribute",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-21-fbk-skelleftea.md",
+      "title": "F\u00e4rjestad BK - Skellefte\u00e5 AIK",
+      "warnings": 0
+    },
+    {
+      "file": "2026-05-10-pjasen-helvete.md",
+      "title": "Pj\u00e4sen som g\u00e5r \u00e5t helvete",
+      "warnings": 0
     },
     {
       "file": "3c6cd84a8f2e.md",
@@ -62,9 +112,19 @@
       "warnings": 0
     },
     {
+      "file": "2026-05-03-eric-idle.md",
+      "title": "Eric Idle - Always look on the bright side of life",
+      "warnings": 0
+    },
+    {
       "file": "9ab15b46b0a8.md",
-      "title": "DEN SVENSKA S\u00c5NGBOKEN",
-      "warnings": 1
+      "title": "Den Svenska S\u00e5ngboken",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-22-bara-hits.md",
+      "title": "BARA HITS - Showen om Mariann Grammofon",
+      "warnings": 0
     },
     {
       "file": "36ae7df3941a.md",
@@ -73,12 +133,17 @@
     },
     {
       "file": "769af9d838ca.md",
-      "title": "SVANSJ\u00d6N - EN KV\u00c4LL MED BALETT I V\u00c4RLDSKLASS",
-      "warnings": 1
+      "title": "Svansj\u00f6n - en Kv\u00e4ll med Balett i V\u00e4rldsklass",
+      "warnings": 0
     },
     {
       "file": "dbe85ff4c7a0.md",
       "title": "Sven Ingvars - Ig\u00e5r. Idag. Imorgon. 70 \u00e5r.",
+      "warnings": 0
+    },
+    {
+      "file": "2026-05-02-joback.md",
+      "title": "En kv\u00e4ll med J\u00f6back & Nils-Petter Ankarblom",
       "warnings": 0
     },
     {
@@ -88,12 +153,17 @@
     },
     {
       "file": "84e61bdeda03.md",
-      "title": "OCH SEN VAR INGEN KVAR",
-      "warnings": 1
+      "title": "Och sen var Ingen Kvar",
+      "warnings": 0
     },
     {
       "file": "982c197682aa.md",
       "title": "Weeping Willows v\u00e5rturn\u00e9 2026",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-27-wermland-opera.md",
+      "title": "Wermlands Opera - Kv\u00e4llskonsert",
       "warnings": 0
     },
     {
@@ -107,14 +177,19 @@
       "warnings": 0
     },
     {
+      "file": "2026-03-15-niklas-stromstedt.md",
+      "title": "Niklas Str\u00f6mstedt - Tyck om mig",
+      "warnings": 0
+    },
+    {
       "file": "8c39df4c42ce.md",
       "title": "Stora konsertserien 2025-2026",
       "warnings": 0
     },
     {
       "file": "9bdfe0e95ab6.md",
-      "title": "STORA DIALEKTSHOWEN - AV OCH MED FREDRIK LINDSTR\u00d6M",
-      "warnings": 1
+      "title": "Stora Dialektshowen - av och med Fredrik Lindstr\u00f6m",
+      "warnings": 0
     },
     {
       "file": "fe87ddb52cc8.md",
@@ -123,33 +198,102 @@
     },
     {
       "file": "d3eb36cc668f.md",
-      "title": "ALLT JAG INTE SA - ENCIMA DANSSTUDIO",
+      "title": "Allt Jag Inte Sa - Encima Dansstudio",
+      "warnings": 0
+    },
+    {
+      "file": "2026-05-15-tommy-korberg.md",
+      "title": "Tommy K\u00f6rberg - Dinnershow",
+      "warnings": 0
+    },
+    {
+      "file": "5e1a66df8998.md",
+      "title": "THANK YOU FOR THE MUSIC - PART TWO",
       "warnings": 1
+    },
+    {
+      "file": "2026-03-06-thank-you-music.md",
+      "title": "Thank you for the music! Part two",
+      "warnings": 0
+    },
+    {
+      "file": "2026-09-19-hostmarknad-alster.md",
+      "title": "H\u00f6stmarknad p\u00e5 Alsters Herrg\u00e5rd",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-26-leva-livet.md",
+      "title": "Leva Livet - Turn\u00e9 2026",
+      "warnings": 0
     },
     {
       "file": "af8d474a45c4.md",
-      "title": "OCH SEN VAR INGEN KVAR",
-      "warnings": 1
+      "title": "Och sen var Ingen Kvar",
+      "warnings": 0
     },
     {
       "file": "7f8ec5cd2696.md",
-      "title": "OCH SEN VAR INGEN KVAR",
-      "warnings": 1
+      "title": "Och sen var Ingen Kvar",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-14-sven-ingvars-scala.md",
+      "title": "Sven Ingvars - Ig\u00e5r. Idag. Imorgon. 70 \u00e5r",
+      "warnings": 0
     },
     {
       "file": "f95833d889c1.md",
-      "title": "CARL-EINAR H\u00c4CKNER - SILUETTER",
-      "warnings": 1
+      "title": "Carleinar H\u00e4ckner - Siluetter",
+      "warnings": 0
+    },
+    {
+      "file": "2026-08-14-putte-i-parken.md",
+      "title": "Putte i Parken",
+      "warnings": 0
+    },
+    {
+      "file": "2026-03-05-mendelssohn.md",
+      "title": "Mendelssohn och Tjajkovskij",
+      "warnings": 0
     },
     {
       "file": "e4c7976f721e.md",
       "title": "Selma",
       "warnings": 0
+    },
+    {
+      "file": "2026-09-27-fbk-season-opener.md",
+      "title": "F\u00e4rjestad BK - S\u00e4songspremi\u00e4r 2026/27",
+      "warnings": 0
     }
   ],
-  "rejected": [],
+  "rejected": [
+    {
+      "file": "2026-03-14-fb-scala.md",
+      "title": "Sven Ingvars - Ig\u00e5r. Idag. Imorgon. 70 \u00e5r",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "high",
+          "message": "Duplicate of 2026-03-14-sven-ingvars-scala.md (100% match)",
+          "existing_file": "2026-03-14-sven-ingvars-scala.md"
+        }
+      ]
+    },
+    {
+      "file": "2026-07-03-ark-karlstad.md",
+      "title": "The Ark - Karlstad",
+      "issues": [
+        {
+          "type": "invalid_link",
+          "severity": "high",
+          "message": "Link verification failed: Access denied (403)"
+        }
+      ]
+    }
+  ],
   "summary": {
-    "total_verified": 29,
-    "total_rejected": 0
+    "total_verified": 53,
+    "total_rejected": 2
   }
 }
