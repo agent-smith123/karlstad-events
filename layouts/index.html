@@ -101,20 +101,25 @@
       margin-top: 1px;
     }
     
-    /* Event title - takes remaining space */
-    .event-title {
+    /* Event content - stacked layout */
+    .event-content {
       flex: 1;
       min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    
+    .event-title {
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     
     .event-title a {
       color: var(--text);
       text-decoration: none;
-      display: block;
-      font-weight: 400;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
     
     .event-title a[href]:hover {
@@ -125,16 +130,13 @@
       opacity: 0.7;
     }
     
-    /* Venue - secondary info */
+    /* Venue - below title */
     .venue {
-      flex-shrink: 0;
       font-size: 12px;
       color: var(--text-secondary);
-      max-width: 100px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      text-align: right;
     }
     
     /* Month divider */
@@ -218,16 +220,18 @@
           <span class="date-weekday">{{ .Date.Format "Mon" }}</span>
         </div>
         
-        <div class="event-title">
-          {{ if .Params.link }}
-            <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
-          {{ else }}
-            <span>{{ .Title }}</span>
-          {{ end }}
-        </div>
-        
-        <div class="venue" title="{{ .Params.venue }}{{ if .Params.location }}, {{ .Params.location }}{{ end }}">
-          {{ .Params.venue }}
+        <div class="event-content">
+          <div class="event-title">
+            {{ if .Params.link }}
+              <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+            {{ else }}
+              <span>{{ .Title }}</span>
+            {{ end }}
+          </div>
+          
+          <div class="venue" title="{{ .Params.venue }}{{ if .Params.location }}, {{ .Params.location }}{{ end }}">
+            {{ .Params.venue }}{{ if .Params.location }}, {{ .Params.location }}{{ end }}
+          </div>
         </div>
       </li>
     {{ else }}
