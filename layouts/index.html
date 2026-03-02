@@ -206,18 +206,22 @@
   
   <ul class="event-list">
     {{ $currentMonth := "" }}
+    {{ $months := dict "January" "Januari" "February" "Februari" "March" "Mars" "April" "April" "May" "Maj" "June" "Juni" "July" "Juli" "August" "Augusti" "September" "September" "October" "Oktober" "November" "November" "December" "December" }}
+    {{ $weekdays := dict "Mon" "mån" "Tue" "tis" "Wed" "ons" "Thu" "tor" "Fri" "fre" "Sat" "lör" "Sun" "sön" }}
     {{ range $sortedEvents }}
-      {{ $month := .Date.Format "January" }}
-      {{ if ne $month $currentMonth }}
-        {{ $currentMonth = $month }}
-        <li class="month-divider">{{ .Date.Format "Januari 2006" }}</li>
+      {{ $monthEn := .Date.Format "January" }}
+      {{ $monthSv := index $months $monthEn }}
+      {{ if ne $monthSv $currentMonth }}
+        {{ $currentMonth = $monthSv }}
+        <li class="month-divider">{{ $monthSv }} {{ .Date.Format "2006" }}</li>
       {{ end }}
       
       <li class="event-item">
         <div class="date">
           <span class="date-day">{{ .Date.Format "2" }}</span>
-          <span class="date-month">{{ .Date.Format "jan" }}</span>
-          <span class="date-weekday">{{ .Date.Format "Mon" }}</span>
+          <span class="date-month">{{ substr $monthSv 0 3 }}</span>
+          {{ $wdEn := .Date.Format "Mon" }}
+          <span class="date-weekday">{{ index $weekdays $wdEn }}</span>
         </div>
         
         <div class="event-content">
