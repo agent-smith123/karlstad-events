@@ -45,6 +45,7 @@
       "event-content",
       "event-detail",
       "event-item",
+      "event-link",
       "event-list",
       "event-title",
       "events-section",
