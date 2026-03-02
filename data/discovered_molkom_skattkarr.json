@@ -1,0 +1,79 @@
+{
+  "description": "Event venues discovered in Molkom and Skattkärr, Karlstad Municipality",
+  "searchDate": "2026-03-02",
+  "venues": [
+    {
+      "name": "Upperudslogen i Molkom",
+      "address": "Upperudsvägen 1, 65560 Molkom",
+      "website": "https://www.kulturaktiebolaget.se/venues/upperudslogen-i-molkom",
+      "type": "Konserthall/Eventlokal",
+      "location": "Molkom",
+      "notes": "Event venue managed by Kulturaktiebolaget. Hosts concerts and cultural events."
+    },
+    {
+      "name": "Ängsbacka Course & Festival Center",
+      "address": "Molkom, Värmland",
+      "website": "https://www.angsbacka.com/",
+      "type": "Kursgård/Festival",
+      "location": "Molkom",
+      "notes": "Course and festival center focused on personal development, yoga, tantra, dance, meditation. Hosts approximately 6000 visitors annually. Started in 1996."
+    },
+    {
+      "name": "Molkoms folkhögskola",
+      "address": "Mejerivägen 3, 660 60 Molkom",
+      "website": "https://regionvarmland.se/folkhogskolor/molkoms-folkhogskola/",
+      "type": "Folkhögskola/Eventlokal",
+      "location": "Molkom",
+      "notes": "Folk high school with courses in film, acting, animation, and health. Also hosts events and the annual Synth i Molkom festival. Founded in 1874, celebrated 150th anniversary in 2024."
+    },
+    {
+      "name": "Molkoms bibliotek",
+      "address": "Molkom",
+      "website": "https://www.biblioteken.se/molkoms-bibliotek/",
+      "type": "Bibliotek",
+      "location": "Molkom",
+      "notes": "Public library that also hosts cultural events including book clubs, author visits, and workshops."
+    },
+    {
+      "name": "Restaurang & Pizzeria Lilla Huset",
+      "address": "Graningevägen 4, 660 60 Molkom",
+      "website": null,
+      "type": "Restaurang",
+      "location": "Molkom",
+      "notes": "Restaurant and pizzeria in Molkom."
+    },
+    {
+      "name": "Stiftelsen Vårt Hus i Skattkärr",
+      "address": "Skogsvallsvägen 45, 656 72 Skattkärr",
+      "website": "https://hittafestlokal.se/festlokalen-stiftelsen-vart-hus-i-skattkarr-skattkarr/",
+      "type": "Festlokal",
+      "location": "Skattkärr",
+      "notes": "Rental event venue for parties and celebrations. Contact: +46 54 86 41 90"
+    },
+    {
+      "name": "Skattkärrs bibliotek",
+      "address": "Skattkärrsvägen 39, Skattkärr",
+      "website": "https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek",
+      "type": "Bibliotek",
+      "location": "Skattkärr",
+      "notes": "Public library in Skattkärr. Part of Bibliotek Värmland."
+    },
+    {
+      "name": "Skattkärrs Pizzeria och Pub",
+      "address": "Tallstigen 4, 656 71 Skattkärr",
+      "website": "https://www.skattkarrspizza.se/",
+      "type": "Pub/Restaurang",
+      "location": "Skattkärr",
+      "notes": "Pizzeria and pub in Skattkärr. Offers kebab, pizza, hamburgers, and other dishes."
+    }
+  ],
+  "searchesPerformed": [
+    "konserthall+Molkom",
+    "kulturhus+Molkom",
+    "pub+Molkom",
+    "konserthall+Skattkärr",
+    "kulturhus+Skattkärr",
+    "pub+Skattkärr"
+  ],
+  "notes": "Browser automation was unavailable, so web search was used to discover venues. Some venues may not have been captured. Karlstad CCC and Solasalen (main concert hall in Karlstad) are in Karlstad city, not in Molkom or Skattkärr areas."
+}

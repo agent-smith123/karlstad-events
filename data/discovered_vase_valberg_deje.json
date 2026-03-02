@@ -1,0 +1,110 @@
+{
+  "description": "Event venues discovered in Väse, Vålberg, and Deje areas (Värmland, Sweden)",
+  "searchDate": "2026-03-02",
+  "totalVenues": 11,
+  "venues": [
+    {
+      "name": "Kulturhuset i Deje",
+      "address": "Brogatan 11, 669 30 Deje",
+      "website": "https://www.forshaga.se/upplevaochgora/kultur/kulturhusetideje.4.725330be11efa4b0a3f80003549.html",
+      "type": "Kulturhus/Cultural Center",
+      "location": "Deje",
+      "description": "Combined cultural center with library, Deje Folkets husförening, music hall, youth center Hubben, and Deje församlingshem. Hosts events including cinema nights, parties, conferences, and other events."
+    },
+    {
+      "name": "Deje Folkets husförening",
+      "address": "Brogatan 11, 669 30 Deje (c/o Kulturhuset)",
+      "website": "https://www.evenemang.se/se/v%C3%A4rmland/forshaga/deje-folkets-hus-kulturhuset",
+      "type": "Folkets Hus/Community Hall",
+      "location": "Deje",
+      "description": "Organizes cinema nights, parties, conferences and other events at Kulturhuset in Deje. Responsible for bookings.",
+      "contact": {
+        "phone": "073-055 27 44",
+        "email": "hakan@engmalm.dinstudio.se"
+      }
+    },
+    {
+      "name": "Dejefors Musikkår",
+      "address": "Brogatan 11, 669 30 Deje (at Kulturhuset)",
+      "website": "https://dejeforsmusikkar.com/",
+      "type": "Music Association",
+      "location": "Deje",
+      "description": "Music band formed in 1924, practices regularly at Kulturhuset in Deje. About 30 musicians from Klarälvsdalen."
+    },
+    {
+      "name": "Hubben Deje",
+      "address": "Brogatan 11, 669 30 Deje (basement of Kulturhuset)",
+      "website": null,
+      "type": "Youth Center",
+      "location": "Deje",
+      "description": "Youth meeting place in the basement of Kulturhuset. Offers theme evenings and other activities for youth."
+    },
+    {
+      "name": "Älvenäs Bygdegårdsförening",
+      "address": "Vålberg",
+      "website": "https://www.facebook.com/p/%C3%84lven%C3%A4s-Bygdeg%C3%A5rdsf%C3%B6rening-100063540765101/",
+      "type": "Bygdegård/Village Hall",
+      "location": "Vålberg",
+      "description": "Village hall in Vålberg available for rent for events and gatherings.",
+      "contact": {
+        "phone": "070-616 64 99",
+        "contactPerson": "Hasse Abrahamson"
+      }
+    },
+    {
+      "name": "Sosen Restaurang, Bar o. Pizzeria",
+      "address": "Norsbrovägen 3, Vålberg",
+      "website": null,
+      "type": "Restaurant/Bar/Pizzeria",
+      "location": "Vålberg",
+      "description": "Restaurant, bar and pizzeria in Vålberg."
+    },
+    {
+      "name": "Väse-Bäckelids Bygdegård",
+      "address": "Väse",
+      "website": null,
+      "type": "Bygdegård/Village Hall",
+      "location": "Väse",
+      "description": "Village hall in Väse. Website vasebygd.se is currently not accessible."
+    },
+    {
+      "name": "Rävens Bistro",
+      "address": "Väse",
+      "website": "https://www.facebook.com/p/R%C3%A4vens-Bistro-100063593528512/",
+      "type": "Restaurant/Bar",
+      "location": "Väse",
+      "description": "Restaurant offering pizza and à la carte, as well as alcohol service. Some evenings open until 01:00."
+    },
+    {
+      "name": "Rasta Värmland",
+      "address": "E18, Väse (between Stockholm and Oslo, 22 km east of Karlstad)",
+      "website": "https://www.rasta.se/varmland/",
+      "type": "Restaurant/Roadhouse",
+      "location": "Väse",
+      "description": "Restaurant with outdoor seating and OKQ8 service station. Located at E18 highway."
+    },
+    {
+      "name": "Equmeniakyrkan Väse",
+      "address": "Väse",
+      "website": "https://equmeniakyrkanvase.se/",
+      "type": "Church",
+      "location": "Väse",
+      "description": "Church in Väse with regular services and events. Also hosts activities like confirmations and gatherings."
+    },
+    {
+      "name": "Dejes Pizzahouse",
+      "address": "Deje",
+      "website": "https://dejespizzahouse.se/",
+      "type": "Restaurant/Pizzeria",
+      "location": "Deje",
+      "description": "Pizza restaurant in Deje."
+    }
+  ],
+  "notes": [
+    "These are small localities in Värmland, Sweden, near Karlstad",
+    "Deje is part of Forshaga municipality",
+    "Väse and Vålberg are part of Karlstad municipality",
+    "Most venues are community halls, village halls (bygdegårdar), folkets hus, or small restaurants/pubs",
+    "The old Folkets hus in Vålberg has been reported as abandoned/closed in recent news"
+  ]
+}

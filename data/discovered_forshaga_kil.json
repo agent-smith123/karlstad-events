@@ -1,0 +1,134 @@
+{
+  "description": "Event venues discovered in Forshaga and Kil, Värmland County, Sweden",
+  "searchDate": "2026-03-02",
+  "sources": ["Google Maps searches", "Visit Värmland", "Forshaga municipality"],
+  "venues": [
+    {
+      "name": "Forshaga Folkets Hus",
+      "address": "Vinkelgatan 18, 667 31 Forshaga",
+      "website": "http://www.forshagafh.se/",
+      "type": "konserthall",
+      "location": "Forshaga",
+      "notes": "Community center with concerts, theater, cinema, and conferences. Houses cinema (bio)."
+    },
+    {
+      "name": "Kulturhuset Forshaga",
+      "address": "Storgatan 52, 667 32 Forshaga",
+      "website": "https://www.forshaga.se/upplevaochgora/kultur/kulturhuset.4.725330be11efa4b0a3f80003549.html",
+      "type": "kulturhus",
+      "location": "Forshaga",
+      "notes": "Municipal cultural center. Houses youth activities (Hubben), fritidsgård."
+    },
+    {
+      "name": "Kulturhuset i Deje",
+      "address": "Brogatan 11, 669 30 Deje",
+      "website": "https://www.forshaga.se/upplevaochgora/kultur/kulturhusetideje.4.725330be11efa4b0a3f80003549.html",
+      "type": "kulturhus",
+      "location": "Forshaga",
+      "notes": "Cultural center in Deje. Also houses Deje library."
+    },
+    {
+      "name": "Forshaga Deje Teaterförening",
+      "address": "Forshaga kommun",
+      "website": "https://www.riksteatern.se/forening/forshaga-deje-teaterforening---en-del-av-riksteatern/",
+      "type": "teater",
+      "location": "Forshaga",
+      "notes": "Theatre association, part of Riksteatern. Organizes theater performances."
+    },
+    {
+      "name": "Gamla Kraftstationen i Deje",
+      "address": "Deje",
+      "website": "https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/sevardheter.4.211785d1545641708e1d6.html",
+      "type": "teater",
+      "location": "Forshaga",
+      "notes": "Former power station now functioning as art gallery and cultural meeting place for theater, art, and music."
+    },
+    {
+      "name": "Dallas Pizzeria & Pub",
+      "address": "Forshaga",
+      "website": null,
+      "type": "pub",
+      "location": "Forshaga",
+      "notes": "Pizzeria and pub in Forshaga."
+    },
+    {
+      "name": "Forshaga Kök & Bar",
+      "address": "Bruksgatan 10, 667 32 Forshaga",
+      "website": "https://forshaga-kok-bar.webnode.se/",
+      "type": "pub",
+      "location": "Forshaga",
+      "notes": "Restaurant and bar in Forshaga."
+    },
+    {
+      "name": "Pub Luna",
+      "address": "Esplanaden 2, 667 30 Forshaga",
+      "website": "https://lunalucet.se/pub-luna/",
+      "type": "pub",
+      "location": "Forshaga",
+      "notes": "Pub at Restaurant Luna Lucet. Has large screen TV."
+    },
+    {
+      "name": "Restaurant Luna Lucet",
+      "address": "Esplanaden 2, 667 30 Forshaga",
+      "website": "https://lunalucet.se/",
+      "type": "restaurant",
+      "location": "Forshaga",
+      "notes": "Restaurant in Forshaga."
+    },
+    {
+      "name": "Kulturhuset KilArena",
+      "address": "Industrigatan 1, 665 33 Kil",
+      "website": "https://kulturhusetkilarena.se/",
+      "type": "konserthall",
+      "location": "Kil",
+      "notes": "Cultural center in Kil. Hosts concerts, theater, dance performances, lectures, and conferences."
+    },
+    {
+      "name": "Glada Killingen Pub & Restaurang",
+      "address": "Storgatan 51, 665 30 Kil",
+      "website": "https://gladakillingen.se/",
+      "type": "pub",
+      "location": "Kil",
+      "notes": "Pub and restaurant with music events."
+    },
+    {
+      "name": "Guldapan",
+      "address": "Kil",
+      "website": null,
+      "type": "pub",
+      "location": "Kil",
+      "notes": "Bar focusing on beer, wine, and delicacies."
+    },
+    {
+      "name": "Kils bibliotek",
+      "address": "Kil",
+      "website": null,
+      "type": "kulturhus",
+      "location": "Kil",
+      "notes": "Library in Kil, also serves as cultural venue."
+    },
+    {
+      "name": "Kunskapsteatern",
+      "address": "Kil",
+      "website": "https://kunskapsteatern.se/",
+      "type": "teater",
+      "location": "Kil",
+      "notes": "Educational theater. Has collaborated with Kils Kulturskola."
+    }
+  ],
+  "summary": {
+    "forshaga": {
+      "konserthall": 1,
+      "teater": 2,
+      "kulturhus": 2,
+      "pub": 3,
+      "restaurant": 1
+    },
+    "kil": {
+      "konserthall": 1,
+      "teater": 1,
+      "kulturhus": 2,
+      "pub": 2
+    }
+  }
+}

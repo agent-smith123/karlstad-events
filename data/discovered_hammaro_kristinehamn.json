@@ -1,0 +1,114 @@
+{
+  "description": "Event venues discovered in Hammarö and Kristinehamn areas via web search",
+  "source": "Google Maps style searches (via web search)",
+  "last_updated": "2026-03-02",
+  "hammarö": {
+    "venues": [
+      {
+        "name": "Hammarö kulturhus - GT-salen (Gunnar Turesson salen)",
+        "address": "Nära Hammarlundens skola, Hammarö",
+        "website": "https://hammaro.se/uppleva-och-gora/kultur/kultur--och-aktivitetshus",
+        "type": "Kulturhus / Konsertsal",
+        "location": "Hammarö",
+        "notes": "174 sittplatser, max 200 personer. Utrustad med hörslinga och rullstolsanpassad plats. Används för kulturskolans elever, konserter, teater, dans och musikframträdanden."
+      },
+      {
+        "name": "Skoghalls Folkets Hus",
+        "address": "Skogåsvägen 3, 663 21 Skoghall",
+        "website": "https://skoghallsfolketshus.se/",
+        "type": "Folkets hus / Biograf / Evenemangslokal",
+        "location": "Skoghall (Hammarö)",
+        "notes": "293 sittplatser i storsalong med 4K-projektor och Dolby 7.1 ljud. Evenemangslokal för konserter, teater, konferenser. Drivs av Folkets Hus-förening. Hammarö bibliotek och lunchrestaurang finns i huset."
+      },
+      {
+        "name": "Udden - Morudden Restaurang & Bar",
+        "address": "First Camp Mörudden, Skoghall",
+        "website": "https://firstcamp.se/destinationer/morudden-hammaro/restaurang",
+        "type": "Restaurang / Bar",
+        "location": "Skoghall (Hammarö)",
+        "notes": "Restaurang med utsikt över Vänern. Serverar a la carte på sommaren och helger. Lunch måndag-fredag 11:30-14:00."
+      },
+      {
+        "name": "Sätterstrands Restaurang",
+        "address": "Hammarö",
+        "website": "https://www.facebook.com/Satterstrandsrestaurang/",
+        "type": "Restaurang",
+        "location": "Hammarö",
+        "notes": "Lunchbuffé med minst 3 rätter, varav en fiskrätt. Vegetariska alternativ finns."
+      },
+      {
+        "name": "Bistro på First Camp Mörudden",
+        "address": "First Camp Mörudden, Skoghall",
+        "website": "https://firstcamp.se/destinationer/morudden-hammaro/restaurang",
+        "type": "Bistro / Restaurang",
+        "location": "Skoghall (Hammarö)",
+        "notes": "Serverar lunch och middag, både inomhus och utomhus på sommaren."
+      }
+    ]
+  },
+  "kristinehamn": {
+    "venues": [
+      {
+        "name": "Christinateatern",
+        "address": "Kristinehamn",
+        "website": "https://www.scenrum.nu (sök Christinateatern)",
+        "type": "Teater",
+        "location": "Kristinehamn",
+        "notes": "Kristinehamns teater. Nyinvigd 2016 efter stor renovering. 277 platser i salongen. Utrustad med hörselslinga. Boka via vaktmästare: 0550-145 75 eller info@christinateatern.se"
+      },
+      {
+        "name": "Hörsalen (Nämndhuset)",
+        "address": "Nämndhuset, Kristinehamn",
+        "website": "https://www.kristinehamn.se/kultur-och-fritid/hallar-planer-och-lokaler/moteslokaler-kulturlokaler/",
+        "type": "Möteslokal / Hörsal",
+        "location": "Kristinehamn",
+        "notes": "80 stolar, max 100 personer. Utrustad med ljudanläggning och hörselslinga. Tillgänglighet: hiss, dörröppnare, ledstråk. Boka via biblioteket: 0550-880 80."
+      },
+      {
+        "name": "Galleri Vågen",
+        "address": "Konstnärskvarteret Vågen, Kristinehamn",
+        "website": "https://www.visitkristinehamn.se",
+        "type": "Galleri / Konstutställning",
+        "location": "Kristinehamn",
+        "notes": "Kommunal galleri med utställningar av lokala och regionala konstnärer. Max 31 dagars utställningsperiod. Utrustad med kokvrå och tillgänglighet med ramp."
+      },
+      {
+        "name": "Kultur & Media Centrum (KMC)",
+        "address": "Södra Staketgatan 10 C, Kristinehamn",
+        "website": "https://www.kristinehamn.se/kultur-och-fritid/kultur--media-centrum/",
+        "type": "Kulturcenter",
+        "location": "Kristinehamn",
+        "notes": "Del av Daglig verksamhet med fokus på kreativt arbete inom teater, foto, film och musik. Arrangerar teater- och musikuppträdanden samt fotoutställningar."
+      },
+      {
+        "name": "King Street Bar",
+        "address": "Kungsgatan 34, 681 30 Kristinehamn",
+        "website": "https://www.facebook.com/KingStreetBarKristinehamn",
+        "type": "Pub / Bar",
+        "location": "Kristinehamn",
+        "notes": "Brittisk pubkänsla kombinerad med avslappnad rockbar-atmosfär. Serverar middag, drycker och underhållning flera kvällar i veckan. Telefon: 0732289667"
+      },
+      {
+        "name": "NKP - Restaurang Steakhouse 1895",
+        "address": "Kristinehamn",
+        "website": "https://www.nkp.se/",
+        "type": "Restaurang / Nattklubb",
+        "location": "Kristinehamn",
+        "notes": "Restaurang som även satsar på nattklubb med lokala DJ:s. Arrangerar kvällar med dans och musik."
+      }
+    ]
+  },
+  "summary": {
+    "hammarö_total": 5,
+    "kristinehamn_total": 6,
+    "total_venues": 11,
+    "categories": {
+      "kulturhus_konserthall": 2,
+      "teater": 1,
+      "folkets_hus_bio": 1,
+      "galleri": 1,
+      "pub_bar": 2,
+      "restaurang": 3
+    }
+  }
+}

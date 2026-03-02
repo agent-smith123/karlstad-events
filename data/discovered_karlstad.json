@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "description": "Event venues in Karlstad area discovered via web search",
+    "searchDate": "2026-03-02",
+    "source": "Web search (Brave API)",
+    "searchTerms": ["konserthall", "teater", "kulturhus", "pub", "evenemangslokal"]
+  },
+  "venues": [
+    {
+      "name": "Karlstad CCC (Congress Culture Centre)",
+      "type": "konserthall",
+      "address": "Tage Erlandergatan 8A-F, 652 20 Karlstad",
+      "phone": "+46 54 22 21 00",
+      "website": "https://www.karlstadccc.se/",
+      "notes": "One of the Nordic region's largest congress and conference facilities. Features Solasalen concert hall."
+    },
+    {
+      "name": "Scalateatern",
+      "type": "teater",
+      "address": "Västra Torggatan 1, 652 25 Karlstad",
+      "phone": "054-19 00 80",
+      "website": "https://www.scalateatern.com/",
+      "notes": "Central theater in Karlstad hosting music, theater, standup, and musicals. Ticket office: biljett@scalateatern.com"
+    },
+    {
+      "name": "Karlstads Teater",
+      "type": "teater",
+      "address": "Malmtorgsgatan 2, 652 30 Karlstad",
+      "phone": null,
+      "website": "https://www.wermlandopera.com/",
+      "notes": "Historic theater from 1893, designed by Axel Johan Anderberg. Main venue for Wermland Opera productions."
+    },
+    {
+      "name": "Värmlandsteatern",
+      "type": "teater",
+      "address": "Pihlgrensgatan 3, 652 25 Karlstad",
+      "phone": "054-15 28 89",
+      "website": "https://varmlandsteatern.se/",
+      "notes": "Theater association with productions at multiple venues including Tempelriddaren and Spinneriet."
+    },
+    {
+      "name": "Arenan (Bibliotekshuset)",
+      "type": "teater",
+      "address": "Västra Torggatan 26, 651 84 Karlstad",
+      "phone": null,
+      "website": "https://karlstad.se/uppleva-och-gora/kultur/arenan---bio-musik-teater",
+      "notes": "Cinema, music, and theater venue. Offers film, theater, dance, stand-up, lectures, and concerts."
+    },
+    {
+      "name": "Spinneriet (Wermland Opera)",
+      "type": "teater",
+      "address": "Älvgatan 49, 652 30 Karlstad",
+      "phone": null,
+      "website": "https://www.wermlandopera.com/",
+      "notes": "Smaller stage for Wermland Opera performances. Lilla scen for intimate productions."
+    },
+    {
+      "name": "Gjuteriet",
+      "type": "kulturhus",
+      "address": "Verkstadsgatan 1, 652 19 Karlstad",
+      "phone": "+46 54 10 00 00",
+      "website": "https://gjuteriet.nu/",
+      "notes": "Cultural center run by various volunteer organizations. Features theater, music, photo exhibitions, and café."
+    },
+    {
+      "name": "The Bull Bar",
+      "type": "pub",
+      "address": "Östra Torggatan 8, 652 24 Karlstad",
+      "phone": "054-10 06 00",
+      "website": "https://www.facebook.com/thebullbarkarlstad/",
+      "notes": "Cozy pub in central Karlstad with quiz, darts, and live bands. American-inspired atmosphere."
+    },
+    {
+      "name": "The Leprechaun Pub",
+      "type": "pub",
+      "address": "Östra Torggatan 4, 652 24 Karlstad",
+      "phone": "054-18 25 50",
+      "website": "http://www.theleprechaun.se/",
+      "notes": "Irish pub in central Karlstad with music entertainment on certain evenings. Known for Guinness stew and whisky tastings."
+    },
+    {
+      "name": "Nöjesfabriken",
+      "type": "evenemangslokal",
+      "address": "Karlstad",
+      "phone": null,
+      "website": "https://www.nojesfabriken.se/",
+      "notes": "Entertainment complex with conference, restaurant, bowling, live stage, nightclub, and bar. Features Verket nightclub."
+    },
+    {
+      "name": "Tempelriddaren",
+      "type": "teater",
+      "address": "Karlstad",
+      "phone": null,
+      "website": "https://varmlandsteatern.se/scener-lokaler/tempelriddaren/",
+      "notes": "Värmlandsteaterns own stage venue. Also hosts nightclub events on Fridays."
+    },
+    {
+      "name": "Ulvsbygården",
+      "type": "evenemangslokal",
+      "address": "Ulvsbygården (outside Karlstad)",
+      "phone": null,
+      "website": "https://www.ulvsbygarden.se/",
+      "notes": "Rented venue for weddings, parties, and conferences. Old school building converted to activity house."
+    },
+    {
+      "name": "Sundstaaulan",
+      "type": "evenemangslokal",
+      "address": "Sundsta-Älvkule gymnasiet, Karlstad",
+      "phone": null,
+      "website": "https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal/boka-lokal-for-kulturarrangemang",
+      "notes": "Municipal venue available for cultural events. Part of Karlstad municipal rental system."
+    },
+    {
+      "name": "Alsters Herrgård",
+      "type": "evenemangslokal",
+      "address": "Alster, Karlstad",
+      "phone": null,
+      "website": "https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal",
+      "notes": "Municipal manor house available for events and cultural activities."
+    },
+    {
+      "name": "Friluftsteatern Mariebergsskogen",
+      "type": "teater",
+      "address": "Mariebergsskogen, Karlstad",
+      "phone": null,
+      "website": "https://karlstad.se/uppleva-och-gora/kultur/teater-och-dans",
+      "notes": "Sweden's oldest outdoor theater, located in Mariebergsskogen."
+    },
+    {
+      "name": "Jaguar Bar & Nattklubb",
+      "type": "pub",
+      "address": "Karlstad (central)",
+      "phone": null,
+      "website": null,
+      "notes": "Nightclub with two dance floors, live stage, Värmland's longest bar, and party bar."
+    },
+    {
+      "name": "K12 (Pitcher's)",
+      "type": "pub",
+      "address": "Karlstad",
+      "phone": null,
+      "website": "https://www.pitchers.se/aktiviteter/karlstad-nattklubb",
+      "notes": "Nightclub on upper floor with modern music profile and renovated club atmosphere."
+    }
+  ]
+}

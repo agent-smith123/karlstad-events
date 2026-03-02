@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-03-02T14:39:03.337971",
+  "request_type": "event_fetch",
+  "priority_venues": [
+    {
+      "name": "N\u00f6jesfabriken",
+      "location": "Karlstad",
+      "urls": {
+        "events": "https://www.nojesfabriken.se/nojeskalendern/"
+      },
+      "type": [
+        "Klubb",
+        "Konserter",
+        "Quiz",
+        "Live music"
+      ]
+    },
+    {
+      "name": "Sandgrund Lars Lerin",
+      "location": "Karlstad",
+      "urls": {
+        "home": "https://sandgrund.org/"
+      },
+      "type": [
+        "Konsthall",
+        "Permanent utst\u00e4llning"
+      ]
+    }
+  ],
+  "instructions": {
+    "task": "Fetch current events from these venues",
+    "output_format": "JSON array of events",
+    "fields_required": [
+      "title",
+      "date",
+      "venue",
+      "location",
+      "link"
+    ],
+    "notes": "Use web search and browser tools to find events. Focus on upcoming events (next 30-90 days)."
+  }
+}

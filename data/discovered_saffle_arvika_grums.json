@@ -1,0 +1,142 @@
+{
+  "description": "Event venues discovered in Säffle, Arvika, and Grums",
+  "searchDate": "2026-03-02",
+  "venues": [
+    {
+      "name": "Medis - Säffle Medborgarhus",
+      "address": "Magasinsgatan 2, 661 30 Säffle",
+      "website": "https://www.saffle.se/medis",
+      "type": "kulturhus",
+      "location": "Säffle",
+      "notes": "Säffles kulturpärla, vackert beläget vid Byälvens strand. Bjuder på teater, konserter, konferenser och mycket mer."
+    },
+    {
+      "name": "SäffleOperan",
+      "address": "Magasinsgatan 2, 661 30 Säffle",
+      "website": "https://www.saffleoperan.se/",
+      "type": "teater",
+      "location": "Säffle",
+      "notes": "Teater som spelat musikaler och operetter sedan 1974. Håller till i Trätäljateatern (Medis)."
+    },
+    {
+      "name": "Sir William Wallace Pub",
+      "address": "Östra Storgatan 11, Säffle",
+      "website": "",
+      "type": "pub",
+      "location": "Säffle",
+      "notes": "Pub i centrala Säffle."
+    },
+    {
+      "name": "Harrys Säffle",
+      "address": "Östra Storgatan 3, Säffle",
+      "website": "",
+      "type": "pub",
+      "location": "Säffle",
+      "notes": "Pub och restaurang i centrala Säffle."
+    },
+    {
+      "name": "Dany's Sport Bar",
+      "address": "Kyrkogatan 24, Säffle",
+      "website": "",
+      "type": "pub",
+      "location": "Säffle",
+      "notes": "Sportbar med TV-spel, dart och bar."
+    },
+    {
+      "name": "Näbben Kök & Bar",
+      "address": "",
+      "website": "",
+      "type": "bar",
+      "location": "Säffle",
+      "notes": "Kök och bar i Säffle."
+    },
+    {
+      "name": "Ritz",
+      "address": "Kyrkogatan, 671 31 Arvika",
+      "website": "https://www.arvika.se/upplevaochgora/ritzkulturochaktivitetshus.2722.html",
+      "type": "kulturhus",
+      "location": "Arvika",
+      "notes": "Kultur- och aktivitetshus med scen för konserter, teater, dans och föreläsningar. 208 sittande platser."
+    },
+    {
+      "name": "Wilmas Musik Pub",
+      "address": "Magasinsgatan 8, 671 31 Arvika",
+      "website": "https://www.facebook.com/wilmas.arvika.musik.krog/",
+      "type": "pub",
+      "location": "Arvika",
+      "notes": "Restaurang i centrala Arvika med livemusik flera gånger."
+    },
+    {
+      "name": "Kolonin Arvika",
+      "address": "Kyrkogatan 42, Arvika",
+      "website": "https://koloninarvika.se/",
+      "type": "kulturhus",
+      "location": "Arvika",
+      "notes": "Mötesplats för samtidskonst, musik, litteratur, teater och performance."
+    },
+    {
+      "name": "Totalteatern",
+      "address": "",
+      "website": "https://www.regionvarmland.se/kulturpoolen/kulturaktorer/totalteatern",
+      "type": "teater",
+      "location": "Arvika",
+      "notes": "Turnerande fri teatergrupp baserad i Arvika med expressiv, poetisk teater."
+    },
+    {
+      "name": "Grums Bio - Folkets Hus",
+      "address": "",
+      "website": "https://www.folketshusochparker.se/arrangor/grums-folkets-hus/",
+      "type": "biograf",
+      "location": "Grums",
+      "notes": "Biograf och samlingslokal i Folkets Hus."
+    },
+    {
+      "name": "Grums Bibliotek",
+      "address": "",
+      "website": "https://www.biblioteken.se/grums-bibliotek/",
+      "type": "bibliotek",
+      "location": "Grums",
+      "notes": "Bibliotek som arrangerar författarbesök, barnaktiviteter, bokklubbar och sagostunder."
+    },
+    {
+      "name": "Grums Bar & Kök",
+      "address": "Hotellgatan 2, Grums",
+      "website": "",
+      "type": "pub",
+      "location": "Grums",
+      "notes": "Bar och restaurang i Grums."
+    },
+    {
+      "name": "Cheers Restaurang och Pub",
+      "address": "",
+      "website": "",
+      "type": "pub",
+      "location": "Grums",
+      "notes": "Restaurang och pub i Grums."
+    },
+    {
+      "name": "Segmons Folkets Hus",
+      "address": "",
+      "website": "",
+      "type": "samlingslokal",
+      "location": "Grums",
+      "notes": "Samlingslokal i Segmon, Grums kommun."
+    },
+    {
+      "name": "Rasta Grums",
+      "address": "Nyängsgatan 1, 664 34 Grums",
+      "website": "https://www.rasta.se/grums/",
+      "type": "restaurang",
+      "location": "Grums",
+      "notes": "Restaurang och vägkrog vid E18."
+    },
+    {
+      "name": "Anderssons Restaurang",
+      "address": "Sveagatan 142, 664 34 Grums",
+      "website": "",
+      "type": "restaurang",
+      "location": "Grums",
+      "notes": "Restaurang i Grums."
+    }
+  ]
+}

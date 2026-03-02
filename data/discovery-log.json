@@ -287,6 +287,294 @@
       "query": "teater Grums",
       "area": "Grums",
       "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541432",
+      "query": "evenemang Karlstad",
+      "area": "Karlstad",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541448",
+      "query": "konserter Karlstad",
+      "area": "Karlstad",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541452",
+      "query": "teater Karlstad",
+      "area": "Karlstad",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541657",
+      "query": "evenemang Forshaga",
+      "area": "Forshaga",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541660",
+      "query": "konserter Forshaga",
+      "area": "Forshaga",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541663",
+      "query": "teater Forshaga",
+      "area": "Forshaga",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541808",
+      "query": "evenemang Kil",
+      "area": "Kil",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541810",
+      "query": "konserter Kil",
+      "area": "Kil",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541813",
+      "query": "teater Kil",
+      "area": "Kil",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541954",
+      "query": "evenemang Molkom",
+      "area": "Molkom",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541957",
+      "query": "konserter Molkom",
+      "area": "Molkom",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541959",
+      "query": "teater Molkom",
+      "area": "Molkom",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542101",
+      "query": "evenemang Skattk\u00e4rr",
+      "area": "Skattk\u00e4rr",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542104",
+      "query": "konserter Skattk\u00e4rr",
+      "area": "Skattk\u00e4rr",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542106",
+      "query": "teater Skattk\u00e4rr",
+      "area": "Skattk\u00e4rr",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542256",
+      "query": "evenemang V\u00e4se",
+      "area": "V\u00e4se",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542259",
+      "query": "konserter V\u00e4se",
+      "area": "V\u00e4se",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542261",
+      "query": "teater V\u00e4se",
+      "area": "V\u00e4se",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542406",
+      "query": "evenemang V\u00e5lberg",
+      "area": "V\u00e5lberg",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542409",
+      "query": "konserter V\u00e5lberg",
+      "area": "V\u00e5lberg",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542411",
+      "query": "teater V\u00e5lberg",
+      "area": "V\u00e5lberg",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542555",
+      "query": "evenemang Deje",
+      "area": "Deje",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542557",
+      "query": "konserter Deje",
+      "area": "Deje",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542559",
+      "query": "teater Deje",
+      "area": "Deje",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542700",
+      "query": "evenemang Hammar\u00f6",
+      "area": "Hammar\u00f6",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542702",
+      "query": "konserter Hammar\u00f6",
+      "area": "Hammar\u00f6",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542705",
+      "query": "teater Hammar\u00f6",
+      "area": "Hammar\u00f6",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542847",
+      "query": "evenemang Kristinehamn",
+      "area": "Kristinehamn",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542850",
+      "query": "konserter Kristinehamn",
+      "area": "Kristinehamn",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542853",
+      "query": "teater Kristinehamn",
+      "area": "Kristinehamn",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542999",
+      "query": "evenemang Sunne",
+      "area": "Sunne",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543001",
+      "query": "konserter Sunne",
+      "area": "Sunne",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543004",
+      "query": "teater Sunne",
+      "area": "Sunne",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543145",
+      "query": "evenemang Torsby",
+      "area": "Torsby",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543148",
+      "query": "konserter Torsby",
+      "area": "Torsby",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543150",
+      "query": "teater Torsby",
+      "area": "Torsby",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543289",
+      "query": "evenemang \u00c5rj\u00e4ng",
+      "area": "\u00c5rj\u00e4ng",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543292",
+      "query": "konserter \u00c5rj\u00e4ng",
+      "area": "\u00c5rj\u00e4ng",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543294",
+      "query": "teater \u00c5rj\u00e4ng",
+      "area": "\u00c5rj\u00e4ng",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543439",
+      "query": "evenemang S\u00e4ffle",
+      "area": "S\u00e4ffle",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543441",
+      "query": "konserter S\u00e4ffle",
+      "area": "S\u00e4ffle",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543444",
+      "query": "teater S\u00e4ffle",
+      "area": "S\u00e4ffle",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543588",
+      "query": "evenemang Arvika",
+      "area": "Arvika",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543590",
+      "query": "konserter Arvika",
+      "area": "Arvika",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543593",
+      "query": "teater Arvika",
+      "area": "Arvika",
+      "keyword": "teater"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543734",
+      "query": "evenemang Grums",
+      "area": "Grums",
+      "keyword": "evenemang"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543737",
+      "query": "konserter Grums",
+      "area": "Grums",
+      "keyword": "konserter"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543739",
+      "query": "teater Grums",
+      "area": "Grums",
+      "keyword": "teater"
     }
   ],
   "discoveries": [
@@ -1054,6 +1342,774 @@
     },
     {
       "date": "2026-03-02T14:23:23.091168",
+      "name": "Google Maps: evenemangslokal i Grums",
+      "location": "Grums",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541509",
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541530",
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541580",
+      "name": "Google Maps: konserthall i Karlstad",
+      "location": "Karlstad",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541596",
+      "name": "Google Maps: teater i Karlstad",
+      "location": "Karlstad",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541610",
+      "name": "Google Maps: kulturhus i Karlstad",
+      "location": "Karlstad",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541624",
+      "name": "Google Maps: pub i Karlstad",
+      "location": "Karlstad",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541638",
+      "name": "Google Maps: restaurang live music i Karlstad",
+      "location": "Karlstad",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541651",
+      "name": "Google Maps: evenemangslokal i Karlstad",
+      "location": "Karlstad",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541684",
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541697",
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541736",
+      "name": "Google Maps: konserthall i Forshaga",
+      "location": "Forshaga",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541750",
+      "name": "Google Maps: teater i Forshaga",
+      "location": "Forshaga",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541763",
+      "name": "Google Maps: kulturhus i Forshaga",
+      "location": "Forshaga",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541775",
+      "name": "Google Maps: pub i Forshaga",
+      "location": "Forshaga",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541789",
+      "name": "Google Maps: restaurang live music i Forshaga",
+      "location": "Forshaga",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541803",
+      "name": "Google Maps: evenemangslokal i Forshaga",
+      "location": "Forshaga",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541833",
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541846",
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541883",
+      "name": "Google Maps: konserthall i Kil",
+      "location": "Kil",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541896",
+      "name": "Google Maps: teater i Kil",
+      "location": "Kil",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541910",
+      "name": "Google Maps: kulturhus i Kil",
+      "location": "Kil",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541923",
+      "name": "Google Maps: pub i Kil",
+      "location": "Kil",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541936",
+      "name": "Google Maps: restaurang live music i Kil",
+      "location": "Kil",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541950",
+      "name": "Google Maps: evenemangslokal i Kil",
+      "location": "Kil",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541979",
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.541992",
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542030",
+      "name": "Google Maps: konserthall i Molkom",
+      "location": "Molkom",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542043",
+      "name": "Google Maps: teater i Molkom",
+      "location": "Molkom",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542057",
+      "name": "Google Maps: kulturhus i Molkom",
+      "location": "Molkom",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542069",
+      "name": "Google Maps: pub i Molkom",
+      "location": "Molkom",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542082",
+      "name": "Google Maps: restaurang live music i Molkom",
+      "location": "Molkom",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542096",
+      "name": "Google Maps: evenemangslokal i Molkom",
+      "location": "Molkom",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542128",
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542142",
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542180",
+      "name": "Google Maps: konserthall i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542195",
+      "name": "Google Maps: teater i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542209",
+      "name": "Google Maps: kulturhus i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542222",
+      "name": "Google Maps: pub i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542237",
+      "name": "Google Maps: restaurang live music i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542251",
+      "name": "Google Maps: evenemangslokal i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542282",
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542295",
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542332",
+      "name": "Google Maps: konserthall i V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542346",
+      "name": "Google Maps: teater i V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542359",
+      "name": "Google Maps: kulturhus i V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542373",
+      "name": "Google Maps: pub i V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542387",
+      "name": "Google Maps: restaurang live music i V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542402",
+      "name": "Google Maps: evenemangslokal i V\u00e4se",
+      "location": "V\u00e4se",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542431",
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542445",
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542482",
+      "name": "Google Maps: konserthall i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542495",
+      "name": "Google Maps: teater i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542508",
+      "name": "Google Maps: kulturhus i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542522",
+      "name": "Google Maps: pub i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542536",
+      "name": "Google Maps: restaurang live music i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542550",
+      "name": "Google Maps: evenemangslokal i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542580",
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542593",
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542629",
+      "name": "Google Maps: konserthall i Deje",
+      "location": "Deje",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542642",
+      "name": "Google Maps: teater i Deje",
+      "location": "Deje",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542655",
+      "name": "Google Maps: kulturhus i Deje",
+      "location": "Deje",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542668",
+      "name": "Google Maps: pub i Deje",
+      "location": "Deje",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542681",
+      "name": "Google Maps: restaurang live music i Deje",
+      "location": "Deje",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542695",
+      "name": "Google Maps: evenemangslokal i Deje",
+      "location": "Deje",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542725",
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542738",
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542775",
+      "name": "Google Maps: konserthall i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542789",
+      "name": "Google Maps: teater i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542802",
+      "name": "Google Maps: kulturhus i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542815",
+      "name": "Google Maps: pub i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542829",
+      "name": "Google Maps: restaurang live music i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542843",
+      "name": "Google Maps: evenemangslokal i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542873",
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542886",
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542923",
+      "name": "Google Maps: konserthall i Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542937",
+      "name": "Google Maps: teater i Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542950",
+      "name": "Google Maps: kulturhus i Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542967",
+      "name": "Google Maps: pub i Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542980",
+      "name": "Google Maps: restaurang live music i Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.542994",
+      "name": "Google Maps: evenemangslokal i Kristinehamn",
+      "location": "Kristinehamn",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543025",
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543038",
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543074",
+      "name": "Google Maps: konserthall i Sunne",
+      "location": "Sunne",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543087",
+      "name": "Google Maps: teater i Sunne",
+      "location": "Sunne",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543100",
+      "name": "Google Maps: kulturhus i Sunne",
+      "location": "Sunne",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543113",
+      "name": "Google Maps: pub i Sunne",
+      "location": "Sunne",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543126",
+      "name": "Google Maps: restaurang live music i Sunne",
+      "location": "Sunne",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543140",
+      "name": "Google Maps: evenemangslokal i Sunne",
+      "location": "Sunne",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543170",
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543183",
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543219",
+      "name": "Google Maps: konserthall i Torsby",
+      "location": "Torsby",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543232",
+      "name": "Google Maps: teater i Torsby",
+      "location": "Torsby",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543245",
+      "name": "Google Maps: kulturhus i Torsby",
+      "location": "Torsby",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543258",
+      "name": "Google Maps: pub i Torsby",
+      "location": "Torsby",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543271",
+      "name": "Google Maps: restaurang live music i Torsby",
+      "location": "Torsby",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543285",
+      "name": "Google Maps: evenemangslokal i Torsby",
+      "location": "Torsby",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543315",
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543328",
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543365",
+      "name": "Google Maps: konserthall i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543379",
+      "name": "Google Maps: teater i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543392",
+      "name": "Google Maps: kulturhus i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543406",
+      "name": "Google Maps: pub i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543420",
+      "name": "Google Maps: restaurang live music i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543434",
+      "name": "Google Maps: evenemangslokal i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543465",
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543478",
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543515",
+      "name": "Google Maps: konserthall i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543528",
+      "name": "Google Maps: teater i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543542",
+      "name": "Google Maps: kulturhus i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543556",
+      "name": "Google Maps: pub i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543570",
+      "name": "Google Maps: restaurang live music i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543583",
+      "name": "Google Maps: evenemangslokal i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543613",
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543626",
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543662",
+      "name": "Google Maps: konserthall i Arvika",
+      "location": "Arvika",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543675",
+      "name": "Google Maps: teater i Arvika",
+      "location": "Arvika",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543689",
+      "name": "Google Maps: kulturhus i Arvika",
+      "location": "Arvika",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543703",
+      "name": "Google Maps: pub i Arvika",
+      "location": "Arvika",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543717",
+      "name": "Google Maps: restaurang live music i Arvika",
+      "location": "Arvika",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543730",
+      "name": "Google Maps: evenemangslokal i Arvika",
+      "location": "Arvika",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543760",
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543773",
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "source": "facebook_search"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543809",
+      "name": "Google Maps: konserthall i Grums",
+      "location": "Grums",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543836",
+      "name": "Google Maps: teater i Grums",
+      "location": "Grums",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543850",
+      "name": "Google Maps: kulturhus i Grums",
+      "location": "Grums",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543863",
+      "name": "Google Maps: pub i Grums",
+      "location": "Grums",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543876",
+      "name": "Google Maps: restaurang live music i Grums",
+      "location": "Grums",
+      "source": "google_maps"
+    },
+    {
+      "date": "2026-03-02T14:39:03.543889",
       "name": "Google Maps: evenemangslokal i Grums",
       "location": "Grums",
       "source": "google_maps"
