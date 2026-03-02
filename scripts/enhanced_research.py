@@ -36,10 +36,37 @@ CONTENT_DIR = PROJECT_DIR / "content" / "events"
 DATA_DIR = PROJECT_DIR / "data"
 VENUES_FILE = SCRIPT_DIR / "venues.yaml"
 STATE_FILE = DATA_DIR / "research_state.json"
+FAILED_SCRAPES_FILE = DATA_DIR / "failed_scrapes.json"
+AI_REQUEST_FILE = DATA_DIR / ".ai-fetch-requested"
 
 # Ensure directories exist
 DATA_DIR.mkdir(exist_ok=True)
 CONTENT_DIR.mkdir(exist_ok=True)
+
+
+def log_failed_scrape(venue_name: str, url: str, error: str):
+    """Log failed scrapes for AI fallback"""
+    failed = {"timestamp": datetime.now().isoformat(), "venue": venue_name, "url": url, "error": str(error)}
+    
+    data = {"failed": []}
+    if FAILED_SCRAPES_FILE.exists():
+        with open(FAILED_SCRAPES_FILE) as f:
+            data = json.load(f)
+    
+    data["failed"].append(failed)
+    
+    with open(FAILED_SCRAPES_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+def request_ai_fallback():
+    """Trigger AI agent fallback"""
+    print("\n🤖 Triggering AI agent fallback...")
+    import subprocess
+    try:
+        subprocess.run(["python3", str(SCRIPT_DIR / "ai_fallback.py")], check=True)
+    except Exception as e:
+        print(f"  ⚠️ Could not trigger AI fallback: {e}")
 
 
 @dataclass
@@ -428,13 +455,54 @@ class EnhancedResearcher:
         return written
 
 
+def run_venue_discovery():
+    """Run venue discovery cycle"""
+    print("\n🔍 Running venue discovery...")
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["python3", str(SCRIPT_DIR / "venue_discovery.py")],
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        print(result.stdout)
+        if result.returncode != 0:
+            print(f"  ⚠️ Discovery warning: {result.stderr}")
+    except Exception as e:
+        print(f"  ⚠️ Could not run discovery: {e}")
+
+
 def main():
-    """Entry point"""
-    researcher = EnhancedResearcher()
-    count = researcher.run_research()
-    print(f"\n✅ Research complete! Found {count} new events.")
-    return count
+    """Entry point with error handling and fallback"""
+    success = False
+    total_events = 0
+    
+    try:
+        researcher = EnhancedResearcher()
+        total_events = researcher.run_research()
+        success = True
+        print(f"\n✅ Research complete! Found {total_events} new events.")
+        
+    except Exception as e:
+        print(f"\n❌ Research failed: {e}")
+        import traceback
+        traceback.print_exc()
+        
+        # Log failure and trigger AI fallback
+        log_failed_scrape("research_cycle", "multiple", str(e))
+        request_ai_fallback()
+        success = False
+    
+    # Always try venue discovery (non-critical)
+    try:
+        run_venue_discovery()
+    except Exception as e:
+        print(f"  ⚠️ Venue discovery failed: {e}")
+    
+    # Return appropriate exit code
+    return 0 if success else 1
 
 
 if __name__ == "__main__":
-    main()
+    exit(main())
