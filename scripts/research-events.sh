@@ -79,9 +79,9 @@ echo ""
 echo "🏗️  Building Hugo site..."
 cd "$PROJECT_DIR"
 if [ -f "$PROJECT_DIR/hugo" ]; then
-    "$PROJECT_DIR/hugo" --minify || hugo --minify
+    "$PROJECT_DIR/hugo" --buildFuture --minify || hugo --buildFuture --minify
 else
-    hugo --minify
+    hugo --buildFuture --minify
 fi
 
 # Commit any new content

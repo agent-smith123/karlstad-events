@@ -324,8 +324,8 @@
   </section>
   
   <main>
-    {{ $events := where (index .Site.Data "events") "date" "ge" "2026-03-02" }}
-    {{ $sortedEvents := sort $events "date" }}
+    {{ $allEvents := where .Site.RegularPages "Section" "events" }}
+    {{ $sortedEvents := $allEvents.ByDate }}
     
     <h2 class="section-title">📋 Kommande evenemang</h2>
     
@@ -333,29 +333,27 @@
       {{ range $sortedEvents }}
       <article class="event-card">
         <div class="date-badge">
-          <div class="month">{{ dateFormat "Jan" .date }}</div>
-          <div class="day">{{ dateFormat "02" .date }}</div>
-          <div class="weekday">{{ dateFormat "Mon" .date }}</div>
+          <div class="month">{{ .Date.Format "Jan" }}</div>
+          <div class="day">{{ .Date.Format "02" }}</div>
+          <div class="weekday">{{ .Date.Format "Mon" }}</div>
         </div>
         
         <div class="event-info">
-          <h3>{{ .title }}</h3>
+          <h3>{{ .Title }}</h3>
           <div class="event-meta">
-            <span>📍 {{ .venue }}</span>
-            <span>🗺️ {{ .location }}</span>
-            {{ if .time }}<span>🕐 {{ .time }}</span>{{ end }}
+            <span>📍 {{ .Params.venue }}</span>
+            <span>🗺️ {{ .Params.location }}</span>
+            {{ if .Params.time }}<span>🕐 {{ .Params.time }}</span>{{ end }}
           </div>
-          <p class="event-description">{{ .description }}</p>
-          <span class="category-tag">{{ .category }}</span>
+          <p class="event-description">{{ .Summary }}</p>
+          {{ if .Params.categories }}<span class="category-tag">{{ index .Params.categories 0 }}</span>{{ end }}
         </div>
         
         <div class="event-action">
-          {{ if .soldOut }}
+          {{ if .Params.soldOut }}
           <span class="btn btn-soldout">🎫 SLUTSÅLT</span>
-          {{ else if .ticketLink }}
-          <a href="{{ .ticketLink }}" target="_blank" rel="noopener" class="btn btn-primary">🎫 Köp biljetter</a>
-          {{ else if .link }}
-          <a href="{{ .link }}" target="_blank" rel="noopener" class="btn btn-primary">Läs mer</a>
+          {{ else if .Params.link }}
+          <a href="{{ .Params.link }}" target="_blank" rel="noopener" class="btn btn-primary">🎫 Köp biljetter</a>
           {{ end }}
         </div>
       </article>

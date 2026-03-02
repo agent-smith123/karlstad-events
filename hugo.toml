@@ -10,4 +10,14 @@ theme = "ananke"
   og_image = "/images/karlstad.jpg"
 
 [build]
-future = true
+  writeStats = true
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = [":git", "lastmod", "date", "publishDate"]
+  publishDate = ["publishDate", "date"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
