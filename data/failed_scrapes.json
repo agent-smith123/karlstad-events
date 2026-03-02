@@ -5,6 +5,30 @@
       "venue": "research_cycle",
       "url": "multiple",
       "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T15:54:16.161110",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T15:54:30.414895",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T15:54:45.271126",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
+    },
+    {
+      "timestamp": "2026-03-02T15:56:21.610341",
+      "venue": "research_cycle",
+      "url": "multiple",
+      "error": "can only concatenate list (not \"int\") to list"
     }
   ]
 }

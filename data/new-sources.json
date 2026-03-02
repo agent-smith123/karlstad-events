@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-02T14:39:03.543974",
+  "last_updated": "2026-03-02T15:56:21.903856",
   "venues": [
     {
       "name": "Facebook search: Karlstad",
@@ -2559,6 +2559,5126 @@
       "source": "google_maps",
       "confidence": "low",
       "discovered_date": "2026-03-02T14:39:03.543796",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459739",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459746",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/konserthall+Karlstad",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459865",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/teater+Karlstad",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459870",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/kulturhus+Karlstad",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459876",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/pub+Karlstad",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459880",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Karlstad",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459884",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Karlstad",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.459888",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460113",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460117",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/konserthall+Forshaga",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460187",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/teater+Forshaga",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460192",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/kulturhus+Forshaga",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460196",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/pub+Forshaga",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460200",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Forshaga",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460203",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Forshaga",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460207",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460423",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460427",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/konserthall+Kil",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460496",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/teater+Kil",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460500",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/kulturhus+Kil",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460504",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/pub+Kil",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460507",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kil",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460511",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kil",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460515",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460762",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460766",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/konserthall+Molkom",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460835",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/teater+Molkom",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460839",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/kulturhus+Molkom",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460843",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/pub+Molkom",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460846",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Molkom",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460850",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Molkom",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.460854",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461059",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461063",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/konserthall+Skattk\u00e4rr",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461133",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/teater+Skattk\u00e4rr",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461137",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/kulturhus+Skattk\u00e4rr",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461141",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/pub+Skattk\u00e4rr",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461145",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Skattk\u00e4rr",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461149",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Skattk\u00e4rr",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461153",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461366",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461369",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e4se",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461437",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/teater+V\u00e4se",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461441",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e4se",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461444",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/pub+V\u00e4se",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461448",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e4se",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461452",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e4se",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461456",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461662",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461665",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e5lberg",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461732",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/teater+V\u00e5lberg",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461736",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e5lberg",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461739",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/pub+V\u00e5lberg",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461743",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e5lberg",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461747",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e5lberg",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461751",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461960",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.461964",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/konserthall+Deje",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462029",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/teater+Deje",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462033",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/kulturhus+Deje",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462037",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/pub+Deje",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462041",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Deje",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462044",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Deje",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462048",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462250",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462253",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/konserthall+Hammar\u00f6",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462319",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/teater+Hammar\u00f6",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462323",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/kulturhus+Hammar\u00f6",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462327",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/pub+Hammar\u00f6",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462331",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Hammar\u00f6",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462334",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Hammar\u00f6",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462338",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462544",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462547",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/konserthall+Kristinehamn",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462614",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/teater+Kristinehamn",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462618",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/kulturhus+Kristinehamn",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462622",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/pub+Kristinehamn",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462625",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kristinehamn",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462629",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kristinehamn",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462633",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462841",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462844",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/konserthall+Sunne",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462910",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/teater+Sunne",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462914",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/kulturhus+Sunne",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462918",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/pub+Sunne",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462922",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Sunne",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462925",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Sunne",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.462929",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463133",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463136",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/konserthall+Torsby",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463201",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/teater+Torsby",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463205",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/kulturhus+Torsby",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463208",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/pub+Torsby",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463212",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Torsby",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463216",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Torsby",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463219",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463421",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463424",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/konserthall+\u00c5rj\u00e4ng",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463492",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/teater+\u00c5rj\u00e4ng",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463496",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/kulturhus+\u00c5rj\u00e4ng",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463500",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/pub+\u00c5rj\u00e4ng",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463503",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+\u00c5rj\u00e4ng",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463507",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/evenemangslokal+\u00c5rj\u00e4ng",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463511",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463718",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463722",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/konserthall+S\u00e4ffle",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463788",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/teater+S\u00e4ffle",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463792",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/kulturhus+S\u00e4ffle",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463796",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/pub+S\u00e4ffle",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463799",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+S\u00e4ffle",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463803",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/evenemangslokal+S\u00e4ffle",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.463807",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464012",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464015",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/konserthall+Arvika",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464081",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/teater+Arvika",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464085",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/kulturhus+Arvika",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464089",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/pub+Arvika",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464092",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Arvika",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464096",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Arvika",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464100",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464301",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464305",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/konserthall+Grums",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464370",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/teater+Grums",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464374",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/kulturhus+Grums",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464378",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/pub+Grums",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464381",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Grums",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464385",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Grums",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:16.464389",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.705885",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.705893",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/konserthall+Karlstad",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706014",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/teater+Karlstad",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706020",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/kulturhus+Karlstad",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706025",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/pub+Karlstad",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706029",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Karlstad",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706033",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Karlstad",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706037",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706260",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706264",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/konserthall+Forshaga",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706333",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/teater+Forshaga",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706338",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/kulturhus+Forshaga",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706342",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/pub+Forshaga",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706346",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Forshaga",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706350",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Forshaga",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706353",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706565",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706569",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/konserthall+Kil",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706638",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/teater+Kil",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706642",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/kulturhus+Kil",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706646",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/pub+Kil",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706649",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kil",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706653",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kil",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706657",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706863",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706866",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/konserthall+Molkom",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706934",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/teater+Molkom",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706938",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/kulturhus+Molkom",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706942",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/pub+Molkom",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706946",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Molkom",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706949",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Molkom",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.706953",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707160",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707164",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/konserthall+Skattk\u00e4rr",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707236",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/teater+Skattk\u00e4rr",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707240",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/kulturhus+Skattk\u00e4rr",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707243",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/pub+Skattk\u00e4rr",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707247",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Skattk\u00e4rr",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707251",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Skattk\u00e4rr",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707255",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707472",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707475",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e4se",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707543",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/teater+V\u00e4se",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707547",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e4se",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707551",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/pub+V\u00e4se",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707554",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e4se",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707558",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e4se",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707562",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707773",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707777",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e5lberg",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707845",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/teater+V\u00e5lberg",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707849",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e5lberg",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707853",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/pub+V\u00e5lberg",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707856",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e5lberg",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707860",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e5lberg",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.707864",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708075",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708079",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/konserthall+Deje",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708147",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/teater+Deje",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708151",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/kulturhus+Deje",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708154",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/pub+Deje",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708158",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Deje",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708162",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Deje",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708165",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708370",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708374",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/konserthall+Hammar\u00f6",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708441",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/teater+Hammar\u00f6",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708445",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/kulturhus+Hammar\u00f6",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708449",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/pub+Hammar\u00f6",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708452",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Hammar\u00f6",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708456",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Hammar\u00f6",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708460",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708680",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708683",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/konserthall+Kristinehamn",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708754",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/teater+Kristinehamn",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708758",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/kulturhus+Kristinehamn",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708762",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/pub+Kristinehamn",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708766",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kristinehamn",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708770",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kristinehamn",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708773",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708983",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.708987",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/konserthall+Sunne",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709054",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/teater+Sunne",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709058",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/kulturhus+Sunne",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709061",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/pub+Sunne",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709065",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Sunne",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709069",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Sunne",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709073",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709280",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709283",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/konserthall+Torsby",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709349",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/teater+Torsby",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709353",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/kulturhus+Torsby",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709357",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/pub+Torsby",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709360",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Torsby",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709364",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Torsby",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709368",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709573",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709576",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/konserthall+\u00c5rj\u00e4ng",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709644",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/teater+\u00c5rj\u00e4ng",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709648",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/kulturhus+\u00c5rj\u00e4ng",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709651",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/pub+\u00c5rj\u00e4ng",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709655",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+\u00c5rj\u00e4ng",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709659",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/evenemangslokal+\u00c5rj\u00e4ng",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709663",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709873",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709877",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/konserthall+S\u00e4ffle",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709944",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/teater+S\u00e4ffle",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709948",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/kulturhus+S\u00e4ffle",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709951",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/pub+S\u00e4ffle",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709955",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+S\u00e4ffle",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709959",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/evenemangslokal+S\u00e4ffle",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.709962",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710171",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710175",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/konserthall+Arvika",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710241",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/teater+Arvika",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710245",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/kulturhus+Arvika",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710249",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/pub+Arvika",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710252",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Arvika",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710256",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Arvika",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710260",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710465",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710468",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/konserthall+Grums",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710535",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/teater+Grums",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710538",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/kulturhus+Grums",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710542",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/pub+Grums",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710546",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Grums",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710550",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Grums",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:30.710553",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569466",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569474",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/konserthall+Karlstad",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569613",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/teater+Karlstad",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569619",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/kulturhus+Karlstad",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569623",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/pub+Karlstad",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569628",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Karlstad",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569633",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Karlstad",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569637",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569862",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569866",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/konserthall+Forshaga",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569937",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/teater+Forshaga",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569942",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/kulturhus+Forshaga",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569946",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/pub+Forshaga",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569949",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Forshaga",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569953",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Forshaga",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.569957",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570173",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570177",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/konserthall+Kil",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570246",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/teater+Kil",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570250",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/kulturhus+Kil",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570253",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/pub+Kil",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570257",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kil",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570261",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kil",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570265",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570471",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570475",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/konserthall+Molkom",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570542",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/teater+Molkom",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570547",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/kulturhus+Molkom",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570550",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/pub+Molkom",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570554",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Molkom",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570558",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Molkom",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570562",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570770",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570774",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/konserthall+Skattk\u00e4rr",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570846",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/teater+Skattk\u00e4rr",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570850",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/kulturhus+Skattk\u00e4rr",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570854",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/pub+Skattk\u00e4rr",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570858",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Skattk\u00e4rr",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570862",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Skattk\u00e4rr",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.570866",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571086",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571089",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e4se",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571158",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/teater+V\u00e4se",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571162",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e4se",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571166",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/pub+V\u00e4se",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571170",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e4se",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571174",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e4se",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571177",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571389",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571393",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e5lberg",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571461",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/teater+V\u00e5lberg",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571465",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e5lberg",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571469",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/pub+V\u00e5lberg",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571472",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e5lberg",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571476",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e5lberg",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571480",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571693",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571697",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/konserthall+Deje",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571766",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/teater+Deje",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571770",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/kulturhus+Deje",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571773",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/pub+Deje",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571777",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Deje",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571781",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Deje",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571784",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571991",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.571995",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/konserthall+Hammar\u00f6",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572063",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/teater+Hammar\u00f6",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572067",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/kulturhus+Hammar\u00f6",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572070",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/pub+Hammar\u00f6",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572074",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Hammar\u00f6",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572077",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Hammar\u00f6",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572081",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572292",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572295",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/konserthall+Kristinehamn",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572365",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/teater+Kristinehamn",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572368",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/kulturhus+Kristinehamn",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572372",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/pub+Kristinehamn",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572376",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kristinehamn",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572379",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kristinehamn",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572383",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572596",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572600",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/konserthall+Sunne",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572692",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/teater+Sunne",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572696",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/kulturhus+Sunne",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572699",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/pub+Sunne",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572703",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Sunne",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572707",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Sunne",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572711",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572923",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572926",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/konserthall+Torsby",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572993",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/teater+Torsby",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.572997",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/kulturhus+Torsby",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573000",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/pub+Torsby",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573004",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Torsby",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573008",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Torsby",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573012",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573219",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573222",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/konserthall+\u00c5rj\u00e4ng",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573292",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/teater+\u00c5rj\u00e4ng",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573296",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/kulturhus+\u00c5rj\u00e4ng",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573300",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/pub+\u00c5rj\u00e4ng",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573304",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+\u00c5rj\u00e4ng",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573308",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/evenemangslokal+\u00c5rj\u00e4ng",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573312",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573526",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573529",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/konserthall+S\u00e4ffle",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573598",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/teater+S\u00e4ffle",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573602",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/kulturhus+S\u00e4ffle",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573605",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/pub+S\u00e4ffle",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573609",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+S\u00e4ffle",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573613",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/evenemangslokal+S\u00e4ffle",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573617",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573828",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573831",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/konserthall+Arvika",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573898",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/teater+Arvika",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573902",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/kulturhus+Arvika",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573906",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/pub+Arvika",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573910",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Arvika",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573913",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Arvika",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.573917",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574126",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574129",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/konserthall+Grums",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574197",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/teater+Grums",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574201",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/kulturhus+Grums",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574204",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/pub+Grums",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574208",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Grums",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574212",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Grums",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:54:45.574215",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898803",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Karlstad",
+      "location": "Karlstad",
+      "url": "https://facebook.com/search/top?q=Karlstad+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898811",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/konserthall+Karlstad",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898939",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/teater+Karlstad",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898944",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/kulturhus+Karlstad",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898949",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/pub+Karlstad",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898953",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Karlstad",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898957",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Karlstad",
+      "location": "Karlstad",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Karlstad",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.898961",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899181",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Forshaga",
+      "location": "Forshaga",
+      "url": "https://facebook.com/search/top?q=Forshaga+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899184",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/konserthall+Forshaga",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899253",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/teater+Forshaga",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899258",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/kulturhus+Forshaga",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899261",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/pub+Forshaga",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899265",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Forshaga",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899269",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Forshaga",
+      "location": "Forshaga",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Forshaga",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899272",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899484",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kil",
+      "location": "Kil",
+      "url": "https://facebook.com/search/top?q=Kil+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899487",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/konserthall+Kil",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899556",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/teater+Kil",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899559",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/kulturhus+Kil",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899563",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/pub+Kil",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899567",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kil",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899571",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kil",
+      "location": "Kil",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kil",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899574",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899781",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Molkom",
+      "location": "Molkom",
+      "url": "https://facebook.com/search/top?q=Molkom+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899784",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/konserthall+Molkom",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899852",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/teater+Molkom",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899856",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/kulturhus+Molkom",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899859",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/pub+Molkom",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899863",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Molkom",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899867",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Molkom",
+      "location": "Molkom",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Molkom",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.899871",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900079",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://facebook.com/search/top?q=Skattk\u00e4rr+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900082",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/konserthall+Skattk\u00e4rr",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900158",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/teater+Skattk\u00e4rr",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900162",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/kulturhus+Skattk\u00e4rr",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900166",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/pub+Skattk\u00e4rr",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900170",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Skattk\u00e4rr",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900174",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Skattk\u00e4rr",
+      "location": "Skattk\u00e4rr",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Skattk\u00e4rr",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900178",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900396",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://facebook.com/search/top?q=V\u00e4se+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900400",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e4se",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900468",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/teater+V\u00e4se",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900472",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e4se",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900476",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/pub+V\u00e4se",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900479",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e4se",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900483",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e4se",
+      "location": "V\u00e4se",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e4se",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900487",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900713",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://facebook.com/search/top?q=V\u00e5lberg+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900717",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/konserthall+V\u00e5lberg",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900785",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/teater+V\u00e5lberg",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900789",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/kulturhus+V\u00e5lberg",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900793",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/pub+V\u00e5lberg",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900797",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+V\u00e5lberg",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900801",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i V\u00e5lberg",
+      "location": "V\u00e5lberg",
+      "url": "https://www.google.com/maps/search/evenemangslokal+V\u00e5lberg",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.900805",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901016",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Deje",
+      "location": "Deje",
+      "url": "https://facebook.com/search/top?q=Deje+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901021",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/konserthall+Deje",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901089",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/teater+Deje",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901094",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/kulturhus+Deje",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901097",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/pub+Deje",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901101",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Deje",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901105",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Deje",
+      "location": "Deje",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Deje",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901108",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901316",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://facebook.com/search/top?q=Hammar\u00f6+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901320",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/konserthall+Hammar\u00f6",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901388",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/teater+Hammar\u00f6",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901392",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/kulturhus+Hammar\u00f6",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901395",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/pub+Hammar\u00f6",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901399",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Hammar\u00f6",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901403",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Hammar\u00f6",
+      "location": "Hammar\u00f6",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Hammar\u00f6",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901406",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901616",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://facebook.com/search/top?q=Kristinehamn+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901620",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/konserthall+Kristinehamn",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901689",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/teater+Kristinehamn",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901693",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/kulturhus+Kristinehamn",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901697",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/pub+Kristinehamn",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901700",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Kristinehamn",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901704",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Kristinehamn",
+      "location": "Kristinehamn",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Kristinehamn",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901708",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901922",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Sunne",
+      "location": "Sunne",
+      "url": "https://facebook.com/search/top?q=Sunne+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901926",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/konserthall+Sunne",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901993",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/teater+Sunne",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.901997",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/kulturhus+Sunne",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902000",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/pub+Sunne",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902004",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Sunne",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902008",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Sunne",
+      "location": "Sunne",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Sunne",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902011",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902219",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Torsby",
+      "location": "Torsby",
+      "url": "https://facebook.com/search/top?q=Torsby+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902222",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/konserthall+Torsby",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902289",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/teater+Torsby",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902293",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/kulturhus+Torsby",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902296",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/pub+Torsby",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902300",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Torsby",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902304",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Torsby",
+      "location": "Torsby",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Torsby",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902307",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902515",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://facebook.com/search/top?q=\u00c5rj\u00e4ng+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902518",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/konserthall+\u00c5rj\u00e4ng",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902587",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/teater+\u00c5rj\u00e4ng",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902591",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/kulturhus+\u00c5rj\u00e4ng",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902594",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/pub+\u00c5rj\u00e4ng",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902598",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+\u00c5rj\u00e4ng",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902602",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i \u00c5rj\u00e4ng",
+      "location": "\u00c5rj\u00e4ng",
+      "url": "https://www.google.com/maps/search/evenemangslokal+\u00c5rj\u00e4ng",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902606",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902819",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://facebook.com/search/top?q=S\u00e4ffle+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902823",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/konserthall+S\u00e4ffle",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902890",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/teater+S\u00e4ffle",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902894",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/kulturhus+S\u00e4ffle",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902898",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/pub+S\u00e4ffle",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902902",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+S\u00e4ffle",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902906",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i S\u00e4ffle",
+      "location": "S\u00e4ffle",
+      "url": "https://www.google.com/maps/search/evenemangslokal+S\u00e4ffle",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.902909",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903120",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Arvika",
+      "location": "Arvika",
+      "url": "https://facebook.com/search/top?q=Arvika+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903123",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/konserthall+Arvika",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903190",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/teater+Arvika",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903194",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/kulturhus+Arvika",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903198",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/pub+Arvika",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903201",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Arvika",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903205",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Arvika",
+      "location": "Arvika",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Arvika",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903208",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+evenemang",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903416",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Facebook search: Grums",
+      "location": "Grums",
+      "url": "https://facebook.com/search/top?q=Grums+konsert",
+      "type": "social_media",
+      "source": "facebook_search",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903420",
+      "notes": "Manual review needed - check for venue pages"
+    },
+    {
+      "name": "Google Maps: konserthall i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/konserthall+Grums",
+      "type": "konserthall",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903489",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: teater i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/teater+Grums",
+      "type": "teater",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903493",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: kulturhus i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/kulturhus+Grums",
+      "type": "kulturhus",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903496",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: pub i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/pub+Grums",
+      "type": "pub",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903500",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: restaurang live music i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/restaurang+live+music+Grums",
+      "type": "restaurang_live_music",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903504",
+      "notes": "Browse for potential event venues"
+    },
+    {
+      "name": "Google Maps: evenemangslokal i Grums",
+      "location": "Grums",
+      "url": "https://www.google.com/maps/search/evenemangslokal+Grums",
+      "type": "evenemangslokal",
+      "source": "google_maps",
+      "confidence": "low",
+      "discovered_date": "2026-03-02T15:56:21.903508",
       "notes": "Browse for potential event venues"
     }
   ]
