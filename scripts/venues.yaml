@@ -109,7 +109,7 @@ tier1_major:
   wermland_opera:
     name: Wermland Opera
     location: Karlstad
-    address: Karlstad CCC
+    address: Malmtorgsgatan 2, 653 40 Karlstad
     type:
     - Opera
     - Teater
@@ -125,6 +125,70 @@ tier1_major:
         title: h2, h3, .event-title
         date: .date, time
         link: a[href]
+    active: true
+  christinateatern:
+    name: Christinateatern
+    location: Kristinehamn
+    address: Kungsgatan 54, 681 31 Kristinehamn
+    type:
+    - Teater
+    - Scene
+    urls:
+      home: https://www.christinateatern.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  vastana_musik_teater:
+    name: Västanå Musik & Teater
+    location: Sunne
+    type:
+    - Teater
+    - Konsert
+    - Musik
+    urls:
+      home: https://www.vastanateater.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  ritz_arvika:
+    name: Ritz
+    location: Arvika
+    address: Hamngatan 12A, Arvika
+    type:
+    - Konsertlokal
+    - Kulturhus
+    urls:
+      home: https://www.arvika.se/ritz
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  karlstads_simhall:
+    name: Karlstads Simhall
+    location: Karlstad
+    address: Älvgatan 15, 652 24 Karlstad
+    type:
+    - Simhall
+    - Sport
+    urls:
+      home: https://karlstad.se/
+    scraper:
+      type: manual
+    active: true
+  filmstaden_karlstad:
+    name: Filmstaden Karlstad
+    location: Karlstad
+    address: Drottninggatan 33, 651 10 Karlstad
+    type:
+    - Biograf
+    - Film
+    urls:
+      home: https://www.filmstaden.se/
+    scraper:
+      type: static
+      method: beautifulsoup
     active: true
   karlstad_ccc:
     name: Karlstad CCC
@@ -381,7 +445,7 @@ tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
     location: Karlstad
-    address: Sandgrundsudden
+    address: Sandgrundsudden, Västra Torggatan 31, 652 24 Karlstad
     type:
     - Utställningar
     - Föreläsningar
@@ -397,6 +461,44 @@ tier2_cultural:
         event: .event, .activity
         title: h3, h4
         date: .date, time
+    active: true
+  kristinehamns_konstmuseum:
+    name: Kristinehamns Konstmuseum
+    location: Kristinehamn
+    address: Dr Enwalls väg 13C, 681 84 Kristinehamn
+    type:
+    - Konstmuseum
+    - Utställningar
+    urls:
+      home: https://www.kristinehamn.se/kristinehamns-konstmuseum
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  rackstadmuseet:
+    name: Rackstadmuseet
+    location: Arvika
+    address: Kungsvägen 11, 671 41 Arvika
+    type:
+    - Konstmuseum
+    - Utställningar
+    urls:
+      home: https://www.rackstadmuseet.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  brigadmuseum:
+    name: Brigadmuseum
+    location: Karlstad
+    address: Sandbäcksgatan 31, 653 40 Karlstad
+    type:
+    - Militärhistoriskt museum
+    urls:
+      home: https://www.brigadmuseum.se/
+    scraper:
+      type: static
+      method: beautifulsoup
     active: true
   sandgrund_lars_lerin:
     name: Sandgrund Lars Lerin
