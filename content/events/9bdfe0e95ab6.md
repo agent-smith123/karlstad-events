@@ -1,5 +1,5 @@
 ---
-title: "STORA DIALEKTSHOWEN - AV OCH MED FREDRIK LINDSTRÖM"
+title: "Stora Dialektshowen - av och med Fredrik Lindström"
 date: 2026-03-05
 venue: "Ticketmaster"
 location: "Karlstad"

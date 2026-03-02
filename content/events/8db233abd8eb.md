@@ -1,5 +1,5 @@
 ---
-title: "ERIC CLAPTON TRIBUTE"
+title: "Eric Clapton Tribute"
 date: 2026-03-07
 venue: "Ticketmaster"
 location: "Karlstad"

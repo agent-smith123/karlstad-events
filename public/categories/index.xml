@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Evenemang Karlstad</title><link>https://karlstad-events.netlify.app/categories/</link><description>Recent content in Categories on Evenemang Karlstad</description><generator>Hugo</generator><language>sv-se</language><lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://karlstad-events.netlify.app/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Opera/Teater</title><link>https://karlstad-events.netlify.app/categories/opera/teater/</link><pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/opera/teater/</guid><description/></item><item><title>Komedin</title><link>https://karlstad-events.netlify.app/categories/komedin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/komedin/</guid><description/></item><item><title>Show</title><link>https://karlstad-events.netlify.app/categories/show/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/show/</guid><description/></item><item><title>Konsert</title><link>https://karlstad-events.netlify.app/categories/konsert/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/konsert/</guid><description/></item><item><title>Musik</title><link>https://karlstad-events.netlify.app/categories/musik/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/musik/</guid><description/></item><item><title>Schlager</title><link>https://karlstad-events.netlify.app/categories/schlager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/schlager/</guid><description/></item><item><title>Kultur</title><link>https://karlstad-events.netlify.app/categories/kultur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/kultur/</guid><description/></item><item><title>ABBA</title><link>https://karlstad-events.netlify.app/categories/abba/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karlstad-events.netlify.app/categories/abba/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Evenemang Karlstad</title>
+    <link>https://karlstad-events.netlify.app/categories/</link>
+    <description>Recent content in Categories on Evenemang Karlstad</description>
+    <generator>Hugo</generator>
+    <language>sv-se</language>
+    <lastBuildDate>Thu, 26 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://karlstad-events.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opera/Teater</title>
+      <link>https://karlstad-events.netlify.app/categories/opera/teater/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://karlstad-events.netlify.app/categories/opera/teater/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

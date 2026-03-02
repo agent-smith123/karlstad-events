@@ -13,9 +13,75 @@ import requests
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from urllib.parse import urljoin, urlparse
 import logging
+
+# Swedish-specific title case exceptions (keep lowercase in titles)
+SWEDISH_LOWER_WORDS = {
+    'och', 'eller', 'i', 'på', 'med', 'för', 'av', 'till', 'från', 'under',
+    'över', 'utan', 'inom', 'om', 'efter', 'före', 'mellan', 'genom',
+    'en', 'ett', 'den', 'det', 'de', 'är', 'var', 'är', 'blir', 'får',
+    'kan', 'ska', 'vill', 'skall', 'borde', 'måste', 'haft', 'varit',
+    'sen', 'så', 'bara', 'än', 'då', 'nu', 'idag', 'igår', 'imorgon'
+}
+
+def normalize_title_case(title: str) -> str:
+    """
+    Convert title to proper title case.
+    - Detects ALL CAPS and converts to title case
+    - Preserves existing mixed case
+    - Handles Swedish characters (å, ä, ö, etc.)
+    """
+    if not title:
+        return title
+    
+    # Check if title is ALL CAPS (or mostly caps with some lowercase like Swedish chars)
+    upper_count = sum(1 for c in title if c.isupper())
+    alpha_count = sum(1 for c in title if c.isalpha())
+    
+    # If less than 30% lowercase letters, treat as ALL CAPS
+    if alpha_count > 0 and (alpha_count - upper_count) / alpha_count < 0.3:
+        # Convert to title case using Python's title() with Swedish handling
+        words = title.split()
+        title_cased = []
+        
+        for i, word in enumerate(words):
+            # Clean punctuation from word for checking
+            clean_word = re.sub(r'[^\wåäöÅÄÖ]', '', word)
+            if not clean_word:
+                title_cased.append(word)
+                continue
+            
+            # Preserve original punctuation positions
+            prefix = ''
+            suffix = ''
+            for j, c in enumerate(word):
+                if c.isalpha():
+                    prefix = word[:j]
+                    break
+            
+            # Find suffix (trailing non-alpha)
+            for j in range(len(word) - 1, -1, -1):
+                if word[j].isalpha():
+                    suffix = word[j+1:]
+                    break
+            
+            clean_word_lower = clean_word.lower()
+            
+            # Always capitalize first and last word
+            if i == 0 or i == len(words) - 1:
+                title_cased.append(prefix + clean_word_lower.capitalize() + suffix)
+            # Keep short common words lowercase in middle
+            elif clean_word_lower in SWEDISH_LOWER_WORDS:
+                title_cased.append(prefix + clean_word_lower + suffix)
+            else:
+                title_cased.append(prefix + clean_word_lower.capitalize() + suffix)
+        
+        return ' '.join(title_cased)
+    
+    # Title already has mixed case - return as-is
+    return title
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -50,6 +116,10 @@ class Event:
     category: Optional[str] = None
     image_url: Optional[str] = None
     source: Optional[str] = None
+    
+    def __post_init__(self):
+        """Normalize title case on creation."""
+        self.title = normalize_title_case(self.title)
     
     def to_markdown(self) -> str:
         """Convert to Hugo markdown format."""
