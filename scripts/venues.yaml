@@ -1,0 +1,284 @@
+# Venue configuration for Karlstad Events
+# Defines all known venues, their URLs, and scraping strategies
+
+metadata:
+  version: "1.0"
+  last_updated: "2026-03-02"
+  areas:
+    - Karlstad
+    - Forshaga
+    - Kil
+    - Molkom
+    - Skattkärr
+    - Väse
+    - Vålberg
+    - Deje
+
+# Tier 1: Major Venues
+tier1_major:
+  wermland_opera:
+    name: "Wermland Opera"
+    location: "Karlstad"
+    address: "Karlstad CCC"
+    type: ["Opera", "Teater", "Klassisk musik"]
+    urls:
+      events: "https://www.wermlandopera.com/evenemang/"
+      calendar: "https://www.wermlandopera.com/kalendarium-2025-2026/"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+      selectors:
+        event: ".event-item, .program-item"
+        title: "h2, h3, .event-title"
+        date: ".date, time"
+        link: "a[href]"
+    active: true
+
+  karlstad_ccc:
+    name: "Karlstad CCC"
+    location: "Karlstad"
+    type: ["Konserter", "Mässor", "Kongress"]
+    urls:
+      events: "https://www.karlstadccc.se/17/38/program-biljetter/"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+  scalateatern:
+    name: "Scalateatern"
+    location: "Karlstad"
+    type: ["Teater", "Konserter", "Stand-up"]
+    urls:
+      events: "https://www.scalateatern.com/vara-evenemang/"
+      tickets: "https://www.ticketmaster.se/venue/scalateatern-karlstad-biljetter/scl/416"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+  nojesfabriken:
+    name: "Nöjesfabriken"
+    location: "Karlstad"
+    type: ["Klubb", "Konserter", "Quiz", "Live music"]
+    urls:
+      events: "https://www.nojesfabriken.se/nojeskalendern/"
+    scraper:
+      type: "dynamic"
+      method: "playwright"
+      wait_for: ".event-list, .calendar"
+    active: true
+
+  lofbergs_arena:
+    name: "Löfbergs Arena"
+    location: "Karlstad"
+    type: ["Arena", "Stora evenemang", "Ishockey"]
+    urls:
+      home: "https://www.lofbergsarena.se/"
+      tickets: "https://www.tickster.com/se/sv/events/in/karlstad"
+    scraper:
+      type: "external"
+      source: "tickster"
+    active: true
+
+# Tier 2: Cultural Institutions
+tier2_cultural:
+  varmlands_museum:
+    name: "Värmlands Museum"
+    location: "Karlstad"
+    address: "Sandgrundsudden"
+    type: ["Utställningar", "Föreläsningar", "Guidade visningar", "Familjeaktiviteter"]
+    urls:
+      calendar: "https://varmlandsmuseum.se/evenemangskalender/"
+      exhibitions: "https://varmlandsmuseum.se/utstallningar/"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+      selectors:
+        event: ".event, .activity"
+        title: "h3, h4"
+        date: ".date, time"
+    active: true
+
+  sandgrund_lars_lerin:
+    name: "Sandgrund Lars Lerin"
+    location: "Karlstad"
+    type: ["Konsthall", "Permanent utställning"]
+    urls:
+      home: "https://sandgrund.org/"
+    scraper:
+      type: "manual"
+      note: "Permanent exhibition, check for rotating exhibitions"
+    active: true
+
+  bibliotekshuset:
+    name: "Bibliotekshuset"
+    location: "Karlstad"
+    type: ["Föreläsningar", "Film", "Kultur", "Workshops"]
+    urls:
+      calendar: "https://karlstad.se/uppleva-och-gora/bibliotek/kalender-for-biblioteken-i-karlstad"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+  mariebergsskogen:
+    name: "Mariebergsskogen"
+    location: "Karlstad"
+    type: ["Friluftsteater", "Natur", "Familjeaktiviteter", "Valborg"]
+    urls:
+      events: "https://karlstad.se/mariebergsskogen/evenemang"
+      summer_theater: "https://www.scalateatern.com/"  # Friluftsteatern
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+# Tier 3: Smaller Venues
+tier3_small:
+  granden_kbk:
+    name: "Gränden - Käk & Bärs"
+    location: "Karlstad"
+    type: ["Pub", "Live music", "Quiz"]
+    urls:
+      facebook: "https://www.facebook.com/grandenkb"
+    scraper:
+      type: "manual"
+    active: true
+
+  verket:
+    name: "VERKET"
+    location: "Karlstad"
+    type: ["Kulturlokal", "Indie", "Konserter"]
+    urls:
+      facebook: "https://www.facebook.com/verketkarlstad"
+    scraper:
+      type: "manual"
+    active: true
+
+  bishops_arms:
+    name: "The Bishops Arms"
+    location: "Karlstad"
+    type: ["Pub", "Quiz", "Live bands", "Ölprovning"]
+    urls:
+      events: "https://www.bishopsarms.com/evenemang/"
+      quiz: "https://www.bishopsarms.com/evenemang/quiz-754173750908641-7201/"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+# Tier 4: Aggregators & External Sources
+tier4_aggregators:
+  ticketmaster:
+    name: "Ticketmaster"
+    type: "aggregator"
+    urls:
+      karlstad: "https://www.ticketmaster.se/discover/karlstad"
+    api:
+      available: true
+      endpoint: "https://app.ticketmaster.com/discovery/v2/events.json"
+      auth: "apikey"
+      docs: "https://developer.ticketmaster.com/"
+    scraper:
+      type: "api"
+      method: "rest"
+    active: true
+
+  tickster:
+    name: "Tickster"
+    type: "aggregator"
+    urls:
+      karlstad: "https://www.tickster.com/se/sv/events/in/karlstad"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+      note: "No public API, HTML scraping only"
+    active: true
+
+  karlstad_com:
+    name: "Karlstad.com"
+    type: "local_aggregator"
+    urls:
+      events: "https://www.karlstad.com/evenemang"
+    scraper:
+      type: "dynamic"
+      method: "playwright"
+      note: "Filters by Ticketmaster, Tickster, Nöje.se"
+    active: true
+
+  stadsevent:
+    name: "Stadsevent"
+    type: "local_aggregator"
+    urls:
+      karlstad: "https://stadsevent.se/karlstad/"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+  noje_se:
+    name: "Nöje.se"
+    type: "national_aggregator"
+    urls:
+      karlstad: "https://www.noje.se/karlstad/evenemang"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+# Tier 5: Municipal Sources
+tier5_municipal:
+  karlstad_se:
+    name: "Karlstads kommun"
+    type: "municipal"
+    urls:
+      events: "https://karlstad.se/uppleva-och-gora/evenemang"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+  visit_varmland:
+    name: "Visit Värmland"
+    type: "tourism"
+    urls:
+      events: "https://www.visitvarmland.com/evenemang"
+    scraper:
+      type: "static"
+      method: "beautifulsoup"
+    active: true
+
+# Special Events
+special:
+  sm_veckan_2026:
+    name: "SM-veckan Sommar 2026"
+    location: "Karlstad"
+    dates: "2026-06-23 to 2026-06-28"
+    type: ["Idrott", "Festival", "Stort evenemang"]
+    urls:
+      info: "https://karlstad.se/flytta-till-karlstadsregionen/sm-veckan-2026"
+    venues:
+      - "Stora torget"
+      - "Inre hamn"
+      - "Solstadens sportcenter"
+      - "Mariebergsskogen"
+      - "Kalvholmen"
+    active: true
+
+  fryksdalsdansen:
+    name: "Fryksdalsdansen"
+    location: "Sunne (nearby)"
+    dates: "2026-07-24 to 2026-07-25"
+    type: ["Festival", "Dansband"]
+    urls:
+      home: "https://fryksdalsdansen.se/"
+    active: true
+
+  synth_i_molkom:
+    name: "Synth i Molkom"
+    location: "Molkom"
+    type: ["Festival", "Synth", "Elektronisk musik"]
+    urls:
+      home: "https://synthimolkom.se/"
+    active: true

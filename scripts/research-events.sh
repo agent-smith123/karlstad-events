@@ -1,84 +1,60 @@
 #!/bin/bash
-# Research events in Karlstad area
+# Enhanced Event Research for Karlstad Area
+# Multi-source aggregation: APIs, venue websites, aggregators
 # Run: ./scripts/research-events.sh
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-CONTENT_DIR="$PROJECT_DIR/content/events"
 BUILD_HOOK="https://api.netlify.com/build_hooks/69a4aba1e906bcb08f79cbb2"
 
-echo "🔍 Researching events in Karlstad area..."
+echo "🔍 Enhanced Karlstad Events Research"
+echo "====================================="
+echo "📁 Project: $PROJECT_DIR"
+echo "📅 Date: $(date '+%Y-%m-%d %H:%M')"
+echo ""
 
-# Track found events
-EVENTS_FOUND=()
+# Check dependencies
+echo "📦 Checking dependencies..."
+if ! python3 -c "import requests" 2>/dev/null; then
+    echo "⚠️  Installing dependencies..."
+    pip3 install -q -r "$PROJECT_DIR/requirements.txt"
+fi
 
-# Helper function to extract event info
-extract_events() {
-    local source="$1"
-    local url="$2"
+# Run enhanced research
+echo ""
+echo "🚀 Running enhanced research..."
+python3 "$SCRIPT_DIR/enhanced_research.py"
+RESULT=$?
+
+if [ $RESULT -eq 0 ]; then
+    echo ""
+    echo "✅ Research completed successfully!"
     
-    echo "  Checking $source..."
-    
-    # Fetch page content
-    content=$(curl -s "$url" 2>/dev/null || echo "")
-    
-    if [ -z "$content" ]; then
-        echo "    No content fetched"
-        return
+    # Commit any new content
+    cd "$PROJECT_DIR"
+    if [ -n "$(git status --porcelain)" ]; then
+        echo ""
+        echo "📦 Committing changes..."
+        git add -A
+        git commit -m "Auto: Event research $(date '+%Y-%m-%d')"
+        git push origin main
     fi
     
-    # Simple extraction - look for event patterns
-    # This is a basic implementation - can be enhanced
-    echo "    Found data from $source"
-}
-
-# Research from various sources
-echo ""
-echo "📡 Checking event sources..."
-
-# 1. Wermland Opera
-extract_events "Wermland Opera" "https://www.wermlandopera.com/evenemang/"
-
-# 2. Nöjesfabriken  
-extract_events "Nöjesfabriken" "https://www.nojesfabriken.se/nojeskalendern/"
-
-# 3. Karlstad CCC
-extract_events "Karlstad CCC" "https://www.karlstadccc.se/17/38/program-biljetter/"
-
-# 4. Kulturhuset
-extract_events "Kulturhuset" "https://kulturhusetstadsteatern.se/kalender"
-
-# 5. StadsEvent
-extract_events "StadsEvent" "https://stadsevent.se/karlstad/"
-
-echo ""
-echo "✅ Research complete. Found ${#EVENTS_FOUND[@]} potential events."
-
-# For now, we'll just note the research was done
-# Full automation of event extraction would require more sophisticated parsing
-echo ""
-echo "📝 Note: Manual event curation still needed for optimal quality."
-echo "   Add new events as markdown files in content/events/"
-
-# Commit any new content
-cd "$PROJECT_DIR"
-if [ -n "$(git status --porcelain)" ]; then
+    # Trigger Netlify build
     echo ""
-    echo "📦 Committing changes..."
-    git add content/events/
-    git commit -m "Add new events - $(date '+%Y-%m-%d')"
-    git push origin main
-    
-    echo ""
-    echo "🚀 Triggering Netlify build..."
-    curl -s -X POST "$BUILD_HOOK" > /dev/null
-    echo "   Build triggered!"
+    echo "🌐 Triggering Netlify build..."
+    if curl -s -X POST "$BUILD_HOOK" > /dev/null; then
+        echo "✅ Build triggered!"
+    else
+        echo "⚠️  Build hook failed (site will update on next commit)"
+    fi
 else
     echo ""
-    echo "ℹ️ No new content to commit."
+    echo "❌ Research failed with exit code $RESULT"
+    exit $RESULT
 fi
 
 echo ""
-echo "✨ Research complete!"
+echo "✨ Done! Visit: https://karlstad-events.netlify.app"
