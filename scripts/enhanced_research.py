@@ -473,16 +473,109 @@ def run_venue_discovery():
         print(f"  ⚠️ Could not run discovery: {e}")
 
 
+def run_smart_scrapers() -> List[Event]:
+    """Run smart scrapers with auto-healing"""
+    print("\n🤖 Running Smart Scrapers")
+    print("=" * 40)
+    
+    try:
+        # Import smart scraper
+        import sys
+        sys.path.insert(0, str(SCRIPT_DIR))
+        from smart_scraper import SmartScraperManager, ScrapedEvent
+        
+        # Load venues
+        with open(VENUES_FILE) as f:
+            venues = yaml.safe_load(f)
+        
+        manager = SmartScraperManager()
+        scraped_events = manager.run_all(venues)
+        
+        # Convert to Event format
+        events = []
+        for se in scraped_events:
+            events.append(Event(
+                title=se.title,
+                date=se.date,
+                venue=se.venue,
+                location=se.location,
+                time=se.time,
+                link=se.link,
+                description=se.description,
+                category=se.category
+            ))
+        
+        return events
+        
+    except Exception as e:
+        print(f"  ❌ Smart scraper error: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
+def run_auto_fix():
+    """Run auto-fix system for broken scrapers"""
+    print("\n🔧 Running Auto-Fix System")
+    print("=" * 40)
+    
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["python3", str(SCRIPT_DIR / "auto_fix.py")],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        print(result.stdout)
+        if result.returncode != 0:
+            print(f"  ⚠️ Auto-fix warning: {result.stderr}")
+    except Exception as e:
+        print(f"  ⚠️ Auto-fix failed: {e}")
+
+
 def main():
     """Entry point with error handling and fallback"""
     success = False
     total_events = 0
     
     try:
+        # Phase 1: Run auto-fix first to repair any broken scrapers
+        run_auto_fix()
+        
+        # Phase 2: Run smart scrapers
+        print("\n" + "="*50)
+        print("PHASE 1: Smart Scrapers")
+        print("="*50)
+        smart_events = run_smart_scrapers()
+        
+        # Phase 3: Run traditional research as backup
+        print("\n" + "="*50)
+        print("PHASE 2: Traditional Research")
+        print("="*50)
         researcher = EnhancedResearcher()
-        total_events = researcher.run_research()
+        traditional_events = researcher.run_research()
+        
+        # Combine events (smart scrapers take priority)
+        all_events = smart_events + traditional_events
+        
+        # Deduplicate
+        seen_slugs = set()
+        unique_events = []
+        for evt in all_events:
+            if evt.slug() not in seen_slugs:
+                seen_slugs.add(evt.slug())
+                unique_events.append(evt)
+        
+        total_events = len(unique_events)
         success = True
-        print(f"\n✅ Research complete! Found {total_events} new events.")
+        
+        print(f"\n" + "="*50)
+        print(f"✅ Research Complete!")
+        print(f"   Smart scrapers: {len(smart_events)} events")
+        print(f"   Traditional: {len(traditional_events)} events")
+        print(f"   Unique total: {total_events} events")
+        print("="*50)
         
     except Exception as e:
         print(f"\n❌ Research failed: {e}")

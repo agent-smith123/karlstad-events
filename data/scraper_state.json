@@ -1,0 +1,162 @@
+{
+  "wermland_opera": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:19.917358",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 8.0,
+    "consecutive_failures": 0
+  },
+  "karlstad_ccc": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:19.997629",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "scalateatern": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:20.476832",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "nojesfabriken": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:20.478870",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "lofbergs_arena": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:21.547394",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "varmlands_museum": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:22.063256",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 5.0,
+    "consecutive_failures": 0
+  },
+  "bibliotekshuset": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:22.635913",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "mariebergsskogen": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:23.089973",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "bishops_arms": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:23.402604",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "ticketmaster": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:24.947110",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 20.0,
+    "consecutive_failures": 0
+  },
+  "tickster": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:25.045028",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "karlstad_com": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:25.849955",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "stadsevent": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:28.779073",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "noje_se": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:28.950367",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "karlstad_se": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:29.200515",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  },
+  "visit_varmland": {
+    "attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2026-03-02T14:35:29.456556",
+    "last_failure": null,
+    "last_error": null,
+    "avg_events": 0.0,
+    "consecutive_failures": 0
+  }
+}
