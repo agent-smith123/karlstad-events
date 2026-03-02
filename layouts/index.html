@@ -1,71 +1,397 @@
-{{ define "main" }}
-<section class="hero-section">
-  <h1>📅 Evenemang i Karlstad</h1>
-  <p class="subtitle">Vad händer i Karlstad, Forshaga, Kil, Molkom, Skattkärr, Väse, Vålberg & Deje?</p>
-  <p class="updated">Uppdaterad: {{ now.Format "2006-01-02 15:04" }}</p>
-</section>
-
-{{ $events := where (index .Site.Data "events") "date" "ge" "2026-03-02" }}
-
-<section class="events-section">
-  <h2> Kommande evenemang</h2>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evenemang Karlstad</title>
+  <meta name="description" content="Evenemang och happenings i Karlstad med omnejd">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2c5282;
+      --accent: #e53e3e;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #2d3748;
+      --text-light: #718096;
+      --border: #e2e8f0;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    header {
+      background: var(--primary);
+      padding: 1.5rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(26, 54, 93, 0.15);
+    }
+    
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo-icon {
+      font-size: 1.8rem;
+    }
+    
+    .updated {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    /* Main */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    /* Events */
+    .events-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .event-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid var(--border);
+    }
+    
+    .event-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    
+    /* Date badge */
+    .date-badge {
+      text-align: center;
+      min-width: 70px;
+      padding: 0.75rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    
+    .date-badge .month {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.9;
+    }
+    
+    .date-badge .day {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    
+    .date-badge .weekday {
+      font-size: 0.7rem;
+      opacity: 0.8;
+      margin-top: 0.25rem;
+    }
+    
+    /* Event info */
+    .event-info {
+      flex: 1;
+    }
+    
+    .event-info h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+    
+    .event-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    
+    .event-description {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .category-tag {
+      display: inline-block;
+      background: #edf2f7;
+      color: var(--text-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+    
+    /* Action */
+    .event-action {
+      flex-shrink: 0;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-light);
+    }
+    
+    .btn-soldout {
+      background: var(--accent);
+      color: white;
+      cursor: not-allowed;
+    }
+    
+    /* Sold out */
+    .sold-out-badge {
+      background: var(--accent);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    /* Areas */
+    .areas-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    
+    .areas-section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+    
+    .areas-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .area-tag {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .event-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .date-badge {
+        margin: 0 auto;
+      }
+      
+      .event-meta {
+        justify-content: center;
+      }
+      
+      .event-action {
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-icon">📅</span>
+        <span>Karlstad Events</span>
+      </a>
+      <span class="updated">Uppdaterad: {{ now.Format "02 Jan 2006" }}</span>
+    </div>
+  </header>
   
-  {{ if $events }}
-  <div class="events-grid">
-    {{ range $events }}
-    <article class="event-card">
-      {{ if .soldOut }}
-      <div class="sold-out-badge">SLUTSÅLT</div>
-      {{ end }}
-      <div class="event-date">
-        <span class="day">{{ dateFormat "02" .date }}</span>
-        <span class="month">{{ dateFormat "Jan" .date }}</span>
-      </div>
-      <div class="event-content">
-        <h3>{{ .title }}</h3>
-        <p class="event-venue">📍 {{ .venue }}</p>
-        <p class="event-location">🗺️ {{ .location }}</p>
-        {{ if .time }}<p class="event-time">🕐 {{ .time }}</p>{{ end }}
-        <p class="event-description">{{ .description }}</p>
-        <div class="event-links">
-          {{ if .ticketLink }}
-            {{ if .soldOut }}
-              <span class="event-link sold-out">🎫 SLUTSÅLT</span>
-            {{ else }}
-              <a href="{{ .ticketLink }}" target="_blank" rel="noopener" class="event-link">🎫 Köp biljetter →</a>
-            {{ end }}
+  <section class="hero">
+    <h1>Evenemang i Karlstad</h1>
+    <p>Vad händer i Karlstad, Forshaga, Kil, Munkfors, Molkom, Skattkärr, Väse, Vålberg, Deje, Ransäter, Sunne, Torsby, Grums, Säffle, Filipstad Karlstad, Forshaga, Kil, Molkom, Skattkärr, Väse, Vålberg & Deje Kristinehamn?</p>
+  </section>
+  
+  <main>
+    {{ $events := where (index .Site.Data "events") "date" "ge" "2026-03-02" }}
+    {{ $sortedEvents := sort $events "date" }}
+    
+    <h2 class="section-title">📋 Kommande evenemang</h2>
+    
+    <div class="events-list">
+      {{ range $sortedEvents }}
+      <article class="event-card">
+        <div class="date-badge">
+          <div class="month">{{ dateFormat "Jan" .date }}</div>
+          <div class="day">{{ dateFormat "02" .date }}</div>
+          <div class="weekday">{{ dateFormat "Mon" .date }}</div>
+        </div>
+        
+        <div class="event-info">
+          <h3>{{ .title }}</h3>
+          <div class="event-meta">
+            <span>📍 {{ .venue }}</span>
+            <span>🗺️ {{ .location }}</span>
+            {{ if .time }}<span>🕐 {{ .time }}</span>{{ end }}
+          </div>
+          <p class="event-description">{{ .description }}</p>
+          <span class="category-tag">{{ .category }}</span>
+        </div>
+        
+        <div class="event-action">
+          {{ if .soldOut }}
+          <span class="btn btn-soldout">🎫 SLUTSÅLT</span>
+          {{ else if .ticketLink }}
+          <a href="{{ .ticketLink }}" target="_blank" rel="noopener" class="btn btn-primary">🎫 Köp biljetter</a>
           {{ else if .link }}
-            <a href="{{ .link }}" target="_blank" rel="noopener" class="event-link">Läs mer →</a>
+          <a href="{{ .link }}" target="_blank" rel="noopener" class="btn btn-primary">Läs mer</a>
           {{ end }}
         </div>
+      </article>
+      {{ else }}
+      <p style="text-align: center; color: var(--text-light); padding: 3rem;">
+        Inga evenemang hittades för tillfället.
+      </p>
+      {{ end }}
+    </div>
+    
+    <section class="areas-section">
+      <h2>📍 Täckta områden</h2>
+      <div class="areas-list">
+        <span class="area-tag">Karlstad</span>
+        <span class="area-tag">Forshaga</span>
+        <span class="area-tag">Kil</span>
+        <span class="area-tag">Molkom</span>
+        <span class="area-tag">Skattkärr</span>
+        <span class="area-tag">Väse</span>
+        <span class="area-tag">Vålberg</span>
+        <span class="area-tag">Deje</span>
+        <span class="area-tag">Munkfors</span>
+        <span class="area-tag">Ransäter</span>
+        <span class="area-tag">Sunne</span>
+        <span class="area-tag">Torsby</span>
+        <span class="area-tag">Grums</span>
+        <span class="area-tag">Säffle</span>
+        <span class="area-tag">Filipstad</span>
+        <span class="area-tag">Kristinehamn</span>
       </div>
-    </article>
-    {{ end }}
-  </div>
-  {{ else }}
-  <p class="no-events">Inga evenemang hittades för tillfället. Kolla tillbaka snart!</p>
-  {{ end }}
-</section>
-
-<section class="areas-section">
-  <h2>📍 Täckta områden</h2>
-  <div class="areas-list">
-    <span class="area-tag">Karlstad</span>
-    <span class="area-tag">Forshaga</span>
-    <span class="area-tag">Kil</span>
-    <span class="area-tag">Molkom</span>
-    <span class="area-tag">Skattkärr</span>
-    <span class="area-tag">Väse</span>
-    <span class="area-tag">Vålberg</span>
-    <span class="area-tag">Deje</span>
-  </div>
-</section>
-{{ end }}
-
-{{ define "header" }}
-<header>
-  <nav>
-    <a href="/" class="logo">🏠 Karlstad Events</a>
-  </nav>
-</header>
-{{ end }}
+    </section>
+  </main>
+  
+  <footer>
+    <p>Samlar evenemang från Karlstad med omnejd • Uppdateras varje måndag</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Drivs av OpenClaw</p>
+  </footer>
+</body>
+</html>

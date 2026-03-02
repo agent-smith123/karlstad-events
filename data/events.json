@@ -1,12 +1,53 @@
 [
   {
+    "title": "Färjestad BK - HV71",
+    "date": "2026-03-10",
+    "venue": "Löfbergs Arena",
+    "location": "Karlstad",
+    "time": "19:00",
+    "ticketLink": "https://www.farjestadbk.se/",
+    "description": "SHL-hockey. Färjestad BK tar emot HV71 i viktig seriematch.",
+    "category": "Sport"
+  },
+  {
+    "title": "Storloppis på Nöjesfabriken",
+    "date": "2026-03-07",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "time": "09:30-14:00",
+    "link": "https://www.nojesfabriken.se/event/storloppis/",
+    "description": "Storloppis i Mässhallen. Fynda allt möjligt!",
+    "category": "Marknad"
+  },
+  {
+    "title": "Torkild Sköld - Föreläsning",
+    "date": "2026-03-16",
+    "venue": "Karlstad",
+    "location": "Karlstad",
+    "time": "19:00",
+    "ticketLink": "https://www.torkildskold.se/forelasning/260316-karlstad/",
+    "description": "Livet ska levas, inte bara överlevas - inspirerande föreläsning med Torkild Sköld.",
+    "category": "Föreläsning"
+  },
+  {
     "title": "Thank You For The Music - Part Two",
     "date": "2026-03-06",
     "venue": "Karlstad CCC",
     "location": "Karlstad",
     "time": "19:30",
     "ticketLink": "https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416",
-    "description": "En hyllningsshow till ABBA med klassiska hits."
+    "description": "Hyllningsshow till ABBA med klassiska hits.",
+    "category": "Musik"
+  },
+  {
+    "title": "Weeping Willows",
+    "date": "2026-03-06",
+    "venue": "Sundstaåulan",
+    "location": "Karlstad",
+    "time": "19:30",
+    "ticketLink": "https://www.ticketmaster.se/discover/karlstad",
+    "description": "Weeping Willows vårturné 2026.",
+    "category": "Musik"
   },
   {
     "title": "Leva Livet - Wermland Opera",
@@ -15,7 +56,8 @@
     "location": "Molkom",
     "time": "14:00",
     "link": "https://www.wermlandopera.com/evenemang/leva-livet/",
-    "description": "Symfonisk konsert med kör och solister. Fri entre."
+    "description": "Symfonisk konsert med kör och solister. Fri entre.",
+    "category": "Kultur"
   },
   {
     "title": "En Jäkla Massa Schlagers",
@@ -24,16 +66,28 @@
     "location": "Karlstad",
     "time": "19:30",
     "ticketLink": "https://www.ticketmaster.se/discover/karlstad",
-    "description": "Schlagerexplosion med Sveriges mest kända schlagerstjärnor."
+    "description": "Sveriges schlagerstjärnor levererar en fartfylld kväll.",
+    "category": "Musik"
   },
   {
-    "title": "Tomas Andersson Wij - Konsert",
+    "title": "Tomas Andersson Wij",
     "date": "2026-03-14",
     "venue": "Tingvallakyrkan",
     "location": "Karlstad",
     "time": "19:00",
     "ticketLink": "https://www.greateventofkarlstad.se/kommande-evenemang/",
-    "description": "Konsert i Tingvallakyrkan."
+    "description": "Konsert i vackra Tingvallakyrkan.",
+    "category": "Musik"
+  },
+  {
+    "title": "Helhetsmässa i Karlstad",
+    "date": "2026-05-30",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "time": "10:00-17:00",
+    "link": "https://www.nojesfabriken.se/event/helhetsmassa-i-karlstad/",
+    "description": "En unik mötesplats där det spirituella, vetenskapliga och holistiska får samverka.",
+    "category": "Mässa"
   },
   {
     "title": "Leva Livet - Wermland Opera",
@@ -42,7 +96,8 @@
     "location": "Väse",
     "time": "15:00",
     "link": "https://www.wermlandopera.com/evenemang/leva-livet/",
-    "description": "Symfonisk konsert i Väse. Fri entre."
+    "description": "Symfonisk konsert i Väse. Fri entre.",
+    "category": "Kultur"
   },
   {
     "title": "Eric Idle - The One Man Show",
@@ -51,6 +106,7 @@
     "location": "Karlstad",
     "time": "19:30",
     "ticketLink": "https://www.karlstadccc.se/17/38/program-biljetter/",
-    "description": "Eric Idle från Monty Python presenterar sin nya one-man-show."
+    "description": "Eric Idle från Monty Python presenterar sin nya show.",
+    "category": "Show"
   }
 ]
