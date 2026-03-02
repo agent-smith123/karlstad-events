@@ -3,394 +3,309 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Evenemang Karlstad</title>
-  <meta name="description" content="Evenemang och happenings i Karlstad med omnejd">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <title>Evenemang Karlstad med omnejd</title>
+  <meta name="description" content="Kommande evenemang, konserter och föreställningar i Karlstad och Värmland.">
   <style>
-    :root {
-      --primary: #1a365d;
-      --primary-light: #2c5282;
-      --accent: #e53e3e;
-      --bg: #f8f9fa;
-      --card-bg: #ffffff;
-      --text: #2d3748;
-      --text-light: #718096;
-      --border: #e2e8f0;
-    }
-    
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
     body {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
+      background: #f5f5f5;
     }
     
     /* Header */
     header {
-      background: var(--primary);
-      padding: 1.5rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 20px rgba(26, 54, 93, 0.15);
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
     }
     
-    header .container {
-      max-width: 1100px;
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #222;
+    }
+    
+    header p {
+      font-size: 0.875rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+    
+    /* Main content */
+    main {
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 1.5rem 2rem;
+    }
+    
+    /* Info bar */
+    .info-bar {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.8125rem;
+      color: #666;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .info-bar strong {
+      color: #333;
     }
     
-    .logo-icon {
-      font-size: 1.8rem;
+    /* Table container */
+    .table-container {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
     }
     
-    .updated {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.85rem;
+    /* Event table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
     }
     
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
+    thead {
+      background: #fafafa;
+      border-bottom: 2px solid #ddd;
     }
     
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    
-    /* Main */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    .section-title {
-      font-size: 1.5rem;
+    th {
+      text-align: left;
+      padding: 0.75rem 1rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    /* Events */
-    .events-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .event-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 1.5rem;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 1.5rem;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-      border: 1px solid var(--border);
-    }
-    
-    .event-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    
-    /* Date badge */
-    .date-badge {
-      text-align: center;
-      min-width: 70px;
-      padding: 0.75rem;
-      background: var(--primary);
-      color: white;
-      border-radius: 10px;
-      flex-shrink: 0;
-    }
-    
-    .date-badge .month {
+      color: #555;
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      opacity: 0.9;
+      letter-spacing: 0.025em;
     }
     
-    .date-badge .day {
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1;
+    tbody tr {
+      border-bottom: 1px solid #eee;
     }
     
-    .date-badge .weekday {
-      font-size: 0.7rem;
-      opacity: 0.8;
-      margin-top: 0.25rem;
+    tbody tr:hover {
+      background: #f9f9f9;
     }
     
-    /* Event info */
-    .event-info {
-      flex: 1;
+    tbody tr:last-child {
+      border-bottom: none;
     }
     
-    .event-info h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
+    td {
+      padding: 0.875rem 1rem;
+      vertical-align: top;
     }
     
-    .event-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-bottom: 0.5rem;
-    }
-    
-    .event-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-    
-    .event-description {
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
-    
-    .category-tag {
-      display: inline-block;
-      background: #edf2f7;
-      color: var(--text-light);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
+    /* Date column */
+    .date {
+      white-space: nowrap;
       font-weight: 500;
-      margin-top: 0.5rem;
+      color: #222;
     }
     
-    /* Action */
-    .event-action {
-      flex-shrink: 0;
+    .date .day {
+      font-size: 1rem;
     }
     
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+    .date .weekday {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: lowercase;
+    }
+    
+    /* Title column */
+    .title {
+      font-weight: 500;
+      color: #222;
+      max-width: 400px;
+    }
+    
+    .title a {
+      color: #2563eb;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.2s;
+    }
+    
+    .title a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Venue column */
+    .venue {
+      color: #555;
       white-space: nowrap;
     }
     
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-    
-    .btn-primary:hover {
-      background: var(--primary-light);
-    }
-    
-    .btn-soldout {
-      background: var(--accent);
-      color: white;
-      cursor: not-allowed;
-    }
-    
-    /* Sold out */
-    .sold-out-badge {
-      background: var(--accent);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 4px;
+    .location {
       font-size: 0.75rem;
-      font-weight: 600;
+      color: #888;
     }
     
-    /* Areas */
-    .areas-section {
-      margin-top: 3rem;
-      padding: 2rem;
-      background: var(--card-bg);
-      border-radius: 12px;
-      border: 1px solid var(--border);
+    /* Category column */
+    .category {
+      font-size: 0.75rem;
     }
     
-    .areas-section h2 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: var(--text-light);
+    .tag {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      background: #e5e7eb;
+      border-radius: 3px;
+      color: #374151;
     }
     
-    .areas-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    /* Time column */
+    .time {
+      color: #666;
+      font-size: 0.8125rem;
     }
     
-    .area-tag {
-      background: var(--primary);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
     }
     
     /* Footer */
     footer {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      font-size: 0.75rem;
+      color: #888;
       text-align: center;
-      padding: 2rem;
-      color: var(--text-light);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--border);
-      margin-top: 3rem;
     }
     
-    /* Responsive */
+    /* Mobile responsive */
     @media (max-width: 768px) {
-      .event-card {
-        grid-template-columns: 1fr;
+      main {
+        padding: 1rem;
+      }
+      
+      .info-bar {
+        flex-direction: column;
+        gap: 0.5rem;
         text-align: center;
       }
       
-      .date-badge {
-        margin: 0 auto;
+      /* Stack table on mobile */
+      table, thead, tbody, th, td, tr {
+        display: block;
       }
       
-      .event-meta {
-        justify-content: center;
+      thead {
+        display: none;
       }
       
-      .event-action {
-        text-align: center;
+      tbody tr {
+        padding: 1rem;
+        border-bottom: 2px solid #ddd;
       }
       
-      .hero h1 {
-        font-size: 1.8rem;
+      td {
+        padding: 0.25rem 0;
+        border: none;
+      }
+      
+      td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #666;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+      
+      .date, .venue, .location, .time {
+        white-space: normal;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <a href="/" class="logo">
-        <span class="logo-icon">📅</span>
-        <span>Karlstad Events</span>
-      </a>
-      <span class="updated">Uppdaterad: {{ now.Format "02 Jan 2006" }}</span>
-    </div>
+    <h1>Evenemang Karlstad med omnejd</h1>
+    <p>Kommande konserter, teaterföreställningar och kulturarrangemang</p>
   </header>
-  
-  <section class="hero">
-    <h1>Evenemang i Karlstad</h1>
-    <p>Vad händer i Karlstad, Forshaga, Kil, Munkfors, Molkom, Skattkärr, Väse, Vålberg, Deje, Ransäter, Sunne, Torsby, Grums, Säffle, Filipstad Karlstad, Forshaga, Kil, Molkom, Skattkärr, Väse, Vålberg & Deje Kristinehamn?</p>
-  </section>
   
   <main>
     {{ $allEvents := where .Site.RegularPages "Section" "events" }}
     {{ $futureEvents := where $allEvents "Date" ">=" now }}
     {{ $sortedEvents := $futureEvents.ByDate }}
     
-    <h2 class="section-title">📋 Kommande evenemang</h2>
-    
-    <div class="events-list">
-      {{ range $sortedEvents }}
-      <article class="event-card">
-        <div class="date-badge">
-          <div class="month">{{ .Date.Format "Jan" }}</div>
-          <div class="day">{{ .Date.Format "02" }}</div>
-          <div class="weekday">{{ .Date.Format "Mon" }}</div>
-        </div>
-        
-        <div class="event-info">
-          <h3>{{ .Title }}</h3>
-          <div class="event-meta">
-            <span>📍 {{ .Params.venue }}</span>
-            <span>🗺️ {{ .Params.location }}</span>
-            {{ if .Params.time }}<span>🕐 {{ .Params.time }}</span>{{ end }}
-          </div>
-          <p class="event-description">{{ .Summary }}</p>
-          {{ if .Params.categories }}<span class="category-tag">{{ index .Params.categories 0 }}</span>{{ end }}
-        </div>
-        
-        <div class="event-action">
-          {{ if .Params.soldOut }}
-          <span class="btn btn-soldout">🎫 SLUTSÅLT</span>
-          {{ else if .Params.link }}
-          <a href="{{ .Params.link }}" target="_blank" rel="noopener" class="btn btn-primary">🎫 Köp biljetter</a>
-          {{ end }}
-        </div>
-      </article>
-      {{ else }}
-      <p style="text-align: center; color: var(--text-light); padding: 3rem;">
-        Inga evenemang hittades för tillfället.
-      </p>
-      {{ end }}
+    <div class="info-bar">
+      <span><strong>{{ len $sortedEvents }}</strong> evenemang från {{ now.Format "2 jan" }} och framåt</span>
+      <span>Uppdaterad {{ now.Format "2 jan 2006" }}</span>
     </div>
     
-    <section class="areas-section">
-      <h2>📍 Täckta områden</h2>
-      <div class="areas-list">
-        <span class="area-tag">Karlstad</span>
-        <span class="area-tag">Forshaga</span>
-        <span class="area-tag">Kil</span>
-        <span class="area-tag">Molkom</span>
-        <span class="area-tag">Skattkärr</span>
-        <span class="area-tag">Väse</span>
-        <span class="area-tag">Vålberg</span>
-        <span class="area-tag">Deje</span>
-        <span class="area-tag">Munkfors</span>
-        <span class="area-tag">Ransäter</span>
-        <span class="area-tag">Sunne</span>
-        <span class="area-tag">Torsby</span>
-        <span class="area-tag">Grums</span>
-        <span class="area-tag">Säffle</span>
-        <span class="area-tag">Filipstad</span>
-        <span class="area-tag">Kristinehamn</span>
-      </div>
-    </section>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 90px;">Datum</th>
+            <th>Tid</th>
+            <th>Evenemang</th>
+            <th>Plats</th>
+            <th style="width: 100px;">Typ</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range $sortedEvents }}
+          <tr>
+            <td class="date" data-label="Datum">
+              <span class="day">{{ .Date.Format "2 jan" }}</span>
+              <span class="weekday">{{ .Date.Format "Mon" }}</span>
+            </td>
+            <td class="time" data-label="Tid">
+              {{ if .Params.time }}{{ .Params.time }}{{ else }}-{{ end }}
+            </td>
+            <td class="title" data-label="Evenemang">
+              {{ if .Params.link }}
+                <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+              {{ else }}
+                {{ .Title }}
+              {{ end }}
+            </td>
+            <td class="venue" data-label="Plats">
+              {{ .Params.venue }}
+              {{ if .Params.location }}
+                <span class="location">{{ .Params.location }}</span>
+              {{ end }}
+            </td>
+            <td class="category" data-label="Typ">
+              {{ if .Params.categories }}
+                <span class="tag">{{ index .Params.categories 0 }}</span>
+              {{ else }}
+                <span class="tag">Evenemang</span>
+              {{ end }}
+            </td>
+          </tr>
+          {{ else }}
+          <tr>
+            <td colspan="5" class="empty">
+              Inga kommande evenemang just nu.
+            </td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
   </main>
   
   <footer>
-    <p>Samlar evenemang från Karlstad med omnejd • Uppdateras varje måndag</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Drivs av OpenClaw</p>
+    <p>Karlstad Events • Samlar evenemang från Karlstad, Forshaga, Kil, Molkom, Kristinehamn och övriga Värmland</p>
   </footer>
 </body>
 </html>
