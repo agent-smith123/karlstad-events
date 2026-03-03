@@ -528,6 +528,21 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  rotnas_gardsbutik:
+    name: Rotnäs Gårdsbutik
+    location: Värmland
+    type:
+    - Evenemang
+    - Gård
+    - Butik
+    urls:
+      kalender: http://rotnasgardsbutik.se/kalender
+      home: http://rotnasgardsbutik.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+      note: No events currently, but will be monitored for future events
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
