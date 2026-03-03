@@ -1761,6 +1761,19 @@ tier5_municipal:
       type: static
       method: beautifulsoup
     active: true
+  forshaga_kommun:
+    name: Forshaga kommun
+    location: Forshaga
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      evenemang: https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/evenemang.4.5a7e8c8b1428e21336480c.html
+      home: https://www.forshaga.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 special:
   sm_veckan_2026:
     name: SM-veckan Sommar 2026
