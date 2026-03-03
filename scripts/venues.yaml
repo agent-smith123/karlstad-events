@@ -501,6 +501,19 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  frykens_konstrunda:
+    name: Frykens Konstrunda
+    location: Sunne/Fryken
+    type:
+    - Konst
+    - Kultur
+    - Utställning
+    urls:
+      home: https://frykenskonstrunda.com/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
