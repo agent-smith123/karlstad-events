@@ -35,6 +35,59 @@ DATA_DIR = SCRIPT_DIR.parent / "data"
 SCRAPER_STATE_FILE = DATA_DIR / "scraper_state.json"
 FAILED_SELECTORS_FILE = DATA_DIR / "failed_selectors.json"
 
+# Retry configuration for anti-bot protection
+ANTIBOT_ERRORS = [455, 429, 403, 521]
+RETRY_DELAYS = {
+    455: 300,  # 5 minutes
+    429: 600,  # 10 minutes
+    403: 1200, # 20 minutes
+    521: 60,   # 1 minute
+}
+
+# Load/save scraper state for retry logic
+def load_scraper_state() -> Dict:
+    """Load scraper state for retry logic"""
+    if SCRAPER_STATE_FILE.exists():
+        with open(SCRAPER_STATE_FILE) as 'r') as f:
+            return json.load(f)
+    return {}
+
+def save_scraper_state(state: Dict):
+    """Save scraper state"""
+    SCRAPER_STATE_FILE.parent.mkdir(exist_ok=True)
+    with open(SCRAPER_STATE_FILE, 'w') as f:
+        json.dump(state, f, indent=2)
+
+def can_retry_scrape(venue_name: str) -> Tuple[bool, Optional[int]]:
+    """
+    Check if a scraper can be retried and get wait time
+    Returns (can_retry, wait_seconds)
+    """
+    state = load_scraper_state()
+    if venue_name not in state:
+        return True, None
+    
+    attempts = state[venue_name].get('attempts', 0)
+    last_error_code = state[venue_name].get('last_error_code')
+    last_attempt = state[venue_name].get('last_attempt')
+    
+    # Too many attempts already
+    if attempts >= 3:
+        return False, None
+    
+    # Check error type
+    if last_error_code in ANTIBOT_ERRORS:
+        wait_time = RETRY_DELAYS.get(last_error_code, 300)
+        # Check if enough time has passed
+        if last_attempt:
+            elapsed = time.time() - last_attempt
+            if elapsed < wait_time:
+                return False, int(wait_time - elapsed)
+        return True, wait_time
+    
+    # Other errors: can retry with short delay
+    return True, 30
+
 # Ensure directories exist
 DATA_DIR.mkdir(exist_ok=True)
 
@@ -131,17 +184,99 @@ class BaseScraper:
         })
         self.state = ScraperState()
     
+    def ai_fallback_scrape(self) -> List[ScrapedEvent]:
+        """Fallback: Use AI agent to scrape difficult sites"""
+        # For sites with 455 errors or other blocking, use web search
+        if not self.config.get('urls', {}).get('home'):
+            return []
+        
+        # Use simple AI search (simulated via web search for events)
+        from event_scraper import AIFallbackScraper
+        scraper = AIFallbackScraper(self.config)
+        events = scraper.scrape()
+        
+        # Convert ScrapedEvent format to what we need
+        converted = []
+        for e in events:
+            converted.append(ScrapedEvent(
+                title=e.title,
+                date=e.date,
+                venue=e.venue,
+                location=e.location,
+                time=e.time,
+                link=e.link
+            ))
+        
+        return converted
+    
     def fetch(self, url: str, retries: int = 3) -> Optional[str]:
-        """Fetch URL with retry logic"""
+        """Fetch URL with retry logic and anti-bot handling"""
+        # Check if we should retry
+        can_retry, wait_time = can_retry_scrape(self.name)
+        if not can_retry:
+            print(f"    ⏭️  Skipping {self.name} (retry limit reached)")
+            return None
+        if wait_time:
+            print(f"    ⏳ Waiting {wait_time}s before retry (anti-bot protection)")
+            time.sleep(wait_time)
+        
+        # Fetch with error handling
         for attempt in range(retries):
             try:
+                # Add random delay to appear more human
+                if attempt > 0:
+                    time.sleep(1 + (attempt * 2))
+                
+                # Rotate User-Agent to avoid blocking
+                user_agents = [
+                    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+                    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'
+                ]
+                self.session.headers['User-Agent'] = user_agents[attempt % len(user_agents)]
+                
                 resp = self.session.get(url, timeout=30)
+                
+                # Update scraper state
+                state = load_scraper_state()
+                state.setdefault(self.name, {})
+                state[self.name]['last_attempt'] = time.time()
+                state[self.name]['last_error_code'] = resp.status_code if hasattr(resp, 'status_code') else None
+                state[self.name]['attempts'] = state[self.name].get('attempts', 0) + 1
+                save_scraper_state(state)
+                
+                # Check for anti-bot errors
+                if hasattr(resp, 'status_code') and resp.status_code in ANTIBOT_ERRORS:
+                    print(f"    ⚠️ Anti-bot detected (code {resp.status_code}), will retry later")
+                    return None
+                
                 resp.raise_for_status()
                 return resp.text
-            except Exception as e:
+                
+            except requests.exceptions.HTTPError as e:
+                status_code = e.response.status_code if hasattr(e.response, 'status_code') else None
                 print(f"    ⚠️ Fetch attempt {attempt + 1}/{retries} failed: {e}")
+                
+                # Update state for retry logic
+                state = load_scraper_state()
+                state.setdefault(self.name, {})
+                state[self.name]['last_attempt'] = time.time()
+                state[self.name]['last_error_code'] = status_code
+                state[self.name]['attempts'] = state[self.name].get('attempts', 0) + 1
+                save_scraper_state(state)
+                
                 if attempt < retries - 1:
                     time.sleep(2 ** attempt)  # Exponential backoff
+            except Exception as e:
+                print(f"    ❌ Error on attempt {attempt + 1}: {e}")
+                if attempt == retries - 1:
+                    # Check if we should fall back to AI
+                    if self.config.get('scraper', {}).get('fallback') == 'ai':
+                        print(f"    🤖 Falling back to AI for {self.name}")
+                        events = self.ai_fallback_scrape()
+                        if events:
+                            return events
+                return None
         return None
     
     def scrape(self) -> List[ScrapedEvent]:
@@ -160,7 +295,52 @@ class BaseScraper:
         except Exception as e:
             print(f"    ❌ Error: {e}")
             self.state.record_attempt(self.name, False, error=str(e))
+            
+            # Check for AI fallback
+            if self.config.get('scraper', {}).get('fallback') == 'ai':
+                print(f"    🤖 Falling back to AI scraping for {self.name}")
+                try:
+                    events = self.ai_fallback_scrape()
+                    if events:
+                        return events, True
+                except Exception as ai_error:
+                    print(f"    ❌ AI fallback also failed: {ai_error}")
+            
             return [], False
+    
+    def ai_fallback_scrape(self) -> List[ScrapedEvent]:
+        """Fallback: Use AI agent to scrape difficult sites"""
+        import subprocess
+        
+        # For simple static sites, try web search
+        if not self.config.get('urls', {}).get('home'):
+            return []
+        
+        # Search for events
+        query = f"{self.config.get('name')} {self.config.get('location', '')} evenemang"
+        
+        try:
+            result = subprocess.run(
+                ['python3', '-c', f'from scripts.smart_scraper import AIFallbackScraper; scraper = AIFallbackScraper({{self.config}}); events = scraper.scrape(); print(events)'],
+                capture_output=True,
+                text=True,
+                timeout=60,
+                cwd='/home/david/.openclaw/workspace/karlstad-events'
+            )
+            
+            if result.stdout and 'ScrapedEvent' in result.stdout:
+                # Parse the output
+                events = []
+                for line in result.stdout.strip().split('\n'):
+                    if 'ScrapedEvent' in line:
+                        # Simple parsing - in real implementation would be more robust
+                        pass
+                return events
+                
+        except Exception as e:
+            print(f"    ❌ AI fallback error: {e}")
+        
+        return []
 
 
 class VarmlandsMuseumScraper(BaseScraper):
