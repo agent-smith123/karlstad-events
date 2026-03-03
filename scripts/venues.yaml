@@ -459,12 +459,11 @@ tier2_cultural:
       type: static
       method: beautifulsoup
       selectors:
-        event: "article, .event-item, .activity"
-        title: "h3 a, h4 a, .event-title"
-        date: "time, .event-date, .date"
-        link: "h3 a, h4 a, .event-title a"
-        description: "p, .event-excerpt"
-      note: "Events listed with date format 'DD mmm, kl HH:MM'"
+        event: ".event-front"
+        title: "h3 a, h4 a"
+        date: ".date-box"
+        link: "h3 a, h4 a"
+      note: "Events in .event-front cards with date-box containing 'DD mmm, kl HH:MM'"
     active: true
   kristinehamns_konstmuseum:
     name: Kristinehamns Konstmuseum
