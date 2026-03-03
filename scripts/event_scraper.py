@@ -177,7 +177,7 @@ class StaticScraper(BaseScraper):
         
         events = []
         urls = self.config.get('urls', {})
-        max_pages = self.config.get('scraper', {}).get('max_pages', 10)
+        max_pages = self.config.get('scraper', {}).get('max_pages', 999)
         
         for url_name, url in urls.items():
             if 'events' in url_name or 'calendar' in url_name:
