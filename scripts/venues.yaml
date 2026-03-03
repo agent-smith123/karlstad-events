@@ -573,6 +573,19 @@ tier1_major:
       fallback: ai
       note: Not easily parseable - use AI agent to read and identify events
     active: true
+  varmlandsteatern:
+    name: Värmlandsteatern
+    location: Karlstad
+    type:
+    - Teater
+    - Scenkonst
+    urls:
+      produktioner: https://varmlandsteatern.se/aktuella-produktioner/
+      home: https://varmlandsteatern.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
