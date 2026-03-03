@@ -1609,6 +1609,20 @@ tier_markets:
     urls:
       home: https://marknadsdager.se/grums-grums-varmarknad
     active: true
+  minmarknad_nu:
+    name: Min Marknad - Värmland
+    location: Värmland
+    type:
+    - Marknad
+    - Marknadskalender
+    urls:
+      varmland: https://www.minmarknad.nu/tag/varmland/
+      home: https://www.minmarknad.nu/
+    scraper:
+      type: static
+      method: beautifulsoup
+      note: Market calendar with events across Värmland
+    active: true
 tier_nightlife:
   nöjesfabriken:
     name: Nöjesfabriken
