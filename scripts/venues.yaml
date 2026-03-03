@@ -1520,6 +1520,20 @@ tier5_municipal:
       method: beautifulsoup
       max_pages: 999
     active: true
+  regionvarmland:
+    name: Region Värmland
+    location: Värmland
+    type:
+    - Evenemang
+    - Kultur
+    - Regional
+    urls:
+      events: https://www.regionvarmland.se/regionvarmland/evenemangslista
+    scraper:
+      type: static
+      method: beautifulsoup
+      note: Region Värmland event calendar
+    active: true
 special:
   sm_veckan_2026:
     name: SM-veckan Sommar 2026
