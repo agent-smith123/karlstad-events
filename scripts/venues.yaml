@@ -1056,6 +1056,7 @@ tier3_small:
     - evenemangslokal
     urls:
       main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal
+      evenemang: https://karlstad.se/alsters-herrgard/evenemang
     scraper:
       type: manual
       fallback: ai
