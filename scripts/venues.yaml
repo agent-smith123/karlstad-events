@@ -21,6 +21,7 @@ metadata:
   - Årjäng
   - Filipstad
   - Borgvik
+  - Skoghall
 tier1_major:
   farjestad_bk:
     name: Färjestad BK
@@ -638,6 +639,32 @@ tier1_major:
     urls:
       program: https://www.borgviksgard.se/gardens-program
       home: https://www.borgviksgard.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  skoghalls_folkets_hus:
+    name: Skoghalls Folkets Hus
+    location: Skoghall
+    type:
+    - Evenemang
+    - Folkets Hus
+    - Kultur
+    urls:
+      home: https://skoghallsfolketshus.se/mobil/index.php
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  hammaro_kommun:
+    name: Hammaro.se Evenemang
+    location: Hammarö
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      evenemang: https://hammaro.se/uppleva-och-gora/evenemang
+      home: https://hammaro.se/
     scraper:
       type: static
       method: beautifulsoup
