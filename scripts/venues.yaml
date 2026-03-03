@@ -487,6 +487,20 @@ tier1_major:
       method: beautifulsoup
       note: Sagolika Sunne tourism events
     active: true
+  kulturveckan_sunne:
+    name: Kulturveckan i Sunne
+    location: Sunne
+    type:
+    - Evenemang
+    - Kultur
+    - Festival
+    urls:
+      program: https://www.kulturveckanisunne.se/program
+      home: https://www.kulturveckanisunne.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
