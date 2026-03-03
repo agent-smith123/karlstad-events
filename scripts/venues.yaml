@@ -1578,6 +1578,19 @@ tier5_municipal:
       method: beautifulsoup
       note: Region Värmland event calendar
     active: true
+  saffle_kommun:
+    name: Säffle kommun
+    location: Säffle
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://saffle.se/arkiv/evenemang.html
+      home: https://www.saffle.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 special:
   sm_veckan_2026:
     name: SM-veckan Sommar 2026
