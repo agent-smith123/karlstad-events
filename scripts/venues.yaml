@@ -154,6 +154,8 @@ tier1_major:
     - Musik
     urls:
       home: https://www.vastanateater.se/
+      biljetter: https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/
+      events: https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/
     scraper:
       type: static
       method: beautifulsoup
