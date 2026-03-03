@@ -600,6 +600,19 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  almalov:
+    name: ÅmålOV
+    location: Åmål
+    type:
+    - Evenemang
+    - Organisation
+    urls:
+      kalender: https://www.almalov.se/kalender/skogen-hanna-kulle-och-klabbe-horngren-30-augusti/
+      home: https://www.almalov.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
