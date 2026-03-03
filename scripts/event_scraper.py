@@ -734,7 +734,7 @@ class EventAggregator:
         logger.info("Starting event aggregation...")
         
         # Process each tier
-        for tier_name in ['tier1_major', 'tier2_cultural', 'tier3_small']:
+        for tier_name in ['tier1_major', 'tier2_cultural', 'tier3_small', 'tier4_aggregators', 'tier5_municipal']:
             tier = self.venues.get(tier_name, {})
             for venue_id, venue_config in tier.items():
                 if venue_config.get('active', False):
