@@ -48,7 +48,7 @@ RETRY_DELAYS = {
 def load_scraper_state() -> Dict:
     """Load scraper state for retry logic"""
     if SCRAPER_STATE_FILE.exists():
-        with open(SCRAPER_STATE_FILE) as 'r') as f:
+        with open(SCRAPER_STATE_FILE, 'r') as f:
             return json.load(f)
     return {}
 

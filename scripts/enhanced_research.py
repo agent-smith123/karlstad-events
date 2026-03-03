@@ -559,6 +559,12 @@ def main():
         researcher = EnhancedResearcher()
         traditional_events = researcher.run_research()
         
+        # Ensure we have lists (defensive programming)
+        if not isinstance(smart_events, list):
+            smart_events = []
+        if not isinstance(traditional_events, list):
+            traditional_events = []
+        
         # Combine events (smart scrapers take priority)
         all_events = smart_events + traditional_events
         
