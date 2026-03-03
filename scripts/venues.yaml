@@ -63,10 +63,9 @@ tier1_major:
     - Mässor
     - Evenemang
     urls:
-      home: https://www.kristinehamnarena.se/
+      tickets: https://www.ticketmaster.se/venue/kristinehamn-arena-kristinehamn-biljetter/kra/416
     scraper:
-      type: static
-      method: beautifulsoup
+      type: ticketmaster
     active: true
   torsby_skidtunnel:
     name: Torsby Skidtunnel & Sportcenter
@@ -80,6 +79,8 @@ tier1_major:
     note: Världens första skidtunnel - 1.3 km lång
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
   safle_simhall:
     name: Säffle Simhall
@@ -93,6 +94,8 @@ tier1_major:
     note: Värmlands första 50-meters bassäng
     scraper:
       type: manual
+      note: Check if has events - otherwise AI fallback - Use AI to fetch events
+      fallback: ai
     active: true
   arvika_simhall:
     name: Arvika Simhall
@@ -105,6 +108,8 @@ tier1_major:
       home: https://www.arvika.se/
     scraper:
       type: manual
+      note: Check if has events - otherwise AI fallback - Use AI to fetch events
+      fallback: ai
     active: true
   wermland_opera:
     name: Wermland Opera
@@ -177,6 +182,8 @@ tier1_major:
       home: https://karlstad.se/
     scraper:
       type: manual
+      note: Check if has events - otherwise AI fallback - Use AI to fetch events
+      fallback: ai
     active: true
   filmstaden_karlstad:
     name: Filmstaden Karlstad
@@ -253,9 +260,9 @@ tier1_major:
     type:
     - konserthall
     urls:
-      main: https://www.karlstadccc.se/
+      tickets: https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416
     scraper:
-      type: manual
+      type: ticketmaster
     active: true
     discovered_date: '2026-03-02T15:44:12.394356'
     source: subagent_discovery
@@ -266,9 +273,9 @@ tier1_major:
     type:
     - teater
     urls:
-      main: https://www.wermlandopera.com/
+      tickets: https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416
     scraper:
-      type: manual
+      type: ticketmaster
     active: true
     discovered_date: '2026-03-02T15:44:12.394398'
     source: subagent_discovery
@@ -279,9 +286,9 @@ tier1_major:
     type:
     - teater
     urls:
-      main: https://varmlandsteatern.se/
+      tickets: https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416
     scraper:
-      type: manual
+      type: ticketmaster
     active: true
     discovered_date: '2026-03-02T15:44:12.394417'
     source: subagent_discovery
@@ -309,6 +316,8 @@ tier1_major:
       main: https://www.wermlandopera.com/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394444'
     source: subagent_discovery
@@ -319,9 +328,9 @@ tier1_major:
     type:
     - teater
     urls:
-      main: https://varmlandsteatern.se/scener-lokaler/tempelriddaren/
+      tickets: https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416
     scraper:
-      type: manual
+      type: ticketmaster
     active: true
     discovered_date: '2026-03-02T15:44:12.394495'
     source: subagent_discovery
@@ -335,6 +344,8 @@ tier1_major:
       main: https://karlstad.se/uppleva-och-gora/kultur/teater-och-dans
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394546'
     source: subagent_discovery
@@ -348,6 +359,8 @@ tier1_major:
       main: http://www.forshagafh.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394744'
     source: subagent_discovery
@@ -361,6 +374,8 @@ tier1_major:
       main: https://www.riksteatern.se/forening/forshaga-deje-teaterforening---en-del-av-riksteatern/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394786'
     source: subagent_discovery
@@ -374,6 +389,8 @@ tier1_major:
       main: https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/sevardheter.4.211785d1545641708e1d6.html
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394798'
     source: subagent_discovery
@@ -387,6 +404,8 @@ tier1_major:
       main: https://kulturhusetkilarena.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394857'
     source: subagent_discovery
@@ -400,6 +419,8 @@ tier1_major:
       main: https://kunskapsteatern.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394903'
     source: subagent_discovery
@@ -413,6 +434,8 @@ tier1_major:
       main: https://www.kulturaktiebolaget.se/venues/upperudslogen-i-molkom
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395029'
     source: subagent_discovery
@@ -426,6 +449,8 @@ tier1_major:
       main: https://www.saffleoperan.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395724'
     source: subagent_discovery
@@ -439,6 +464,8 @@ tier1_major:
       main: https://www.regionvarmland.se/kulturpoolen/kulturaktorer/totalteatern
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395820'
     source: subagent_discovery
@@ -459,11 +486,11 @@ tier2_cultural:
       type: static
       method: beautifulsoup
       selectors:
-        event: ".event-front"
-        title: "h3 a, h4 a"
-        date: ".date-box"
-        link: "h3 a, h4 a"
-      note: "Events in .event-front cards with date-box containing 'DD mmm, kl HH:MM'"
+        event: .event-front
+        title: h3 a, h4 a
+        date: .date-box
+        link: h3 a, h4 a
+      note: Events in .event-front cards with date-box containing 'DD mmm, kl HH:MM'
     active: true
   kristinehamns_konstmuseum:
     name: Kristinehamns Konstmuseum
@@ -480,11 +507,11 @@ tier2_cultural:
       type: static
       method: beautifulsoup
       selectors:
-        event: ".activity-item, article, .event"
-        title: "h3, h4, .title"
-        date: "time, .date"
-        description: "p"
-      note: "Activities listed in text format with inline dates"
+        event: .accordionitemblock
+        title: h2, h3, h4
+        date: h2, h3, h4
+        link: a
+      note: Activities in accordion blocks with date in heading (DD mmm - Title)
     active: true
   rackstadmuseet:
     name: Rackstadmuseet
@@ -501,11 +528,11 @@ tier2_cultural:
       type: static
       method: beautifulsoup
       selectors:
-        event: ".event-item, .exhibition, article"
-        title: "h2, h3, .title"
-        date: ".date, time, .event-date"
-        description: ".description, p"
-      note: "Museum has rotating exhibitions, check calendar for guided tours and special events"
+        event: article.blog-output-post
+        title: h2 a, h2
+        date: h2, h2 a
+        link: h2 a
+      note: Exhibitions in blog posts with dates in heading format (DD mmm – DD mmm)
     active: true
   brigadmuseum:
     name: Brigadmuseum
@@ -535,11 +562,12 @@ tier2_cultural:
       type: static
       method: beautifulsoup
       selectors:
-        event: ".exhibition, .event, article"
-        title: "h2, h3, a[href*='sandgrund'], a[href*='kabusa']"
-        date: ".date, time"
-        description: "p"
-      note: "Has permanent Lars Lerin collection plus rotating guest exhibitions at Sandgrund and Kabusa venues"
+        event: .exhibition, .event, article
+        title: h2, h3, a[href*='sandgrund'], a[href*='kabusa']
+        date: .date, time
+        description: p
+      note: Has permanent Lars Lerin collection plus rotating guest exhibitions at
+        Sandgrund and Kabusa venues
     active: true
   bibliotekshuset:
     name: Bibliotekshuset (Stadsbiblioteket Karlstad)
@@ -554,7 +582,7 @@ tier2_cultural:
       calendar: https://karlstad.se/uppleva-och-gora/bibliotek/kalender-for-biblioteken-i-karlstad
     scraper:
       type: static
-      method: beautifulsoup
+      note: Library events via karlstad.se
     active: true
   kristinehamns_bibliotek:
     name: Kristinehamns bibliotek
@@ -645,6 +673,8 @@ tier2_cultural:
       main: https://gjuteriet.nu/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394458'
     source: subagent_discovery
@@ -658,6 +688,8 @@ tier2_cultural:
       main: https://www.forshaga.se/upplevaochgora/kultur/kulturhuset.4.725330be11efa4b0a3f80003549.html
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394760'
     source: subagent_discovery
@@ -671,6 +703,8 @@ tier2_cultural:
       main: https://www.forshaga.se/upplevaochgora/kultur/kulturhusetideje.4.725330be11efa4b0a3f80003549.html
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394773'
     source: subagent_discovery
@@ -683,6 +717,8 @@ tier2_cultural:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394892'
     source: subagent_discovery
@@ -696,6 +732,8 @@ tier2_cultural:
       main: https://www.biblioteken.se/molkoms-bibliotek/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395075'
     source: subagent_discovery
@@ -709,6 +747,8 @@ tier2_cultural:
       main: https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395117'
     source: subagent_discovery
@@ -722,6 +762,8 @@ tier2_cultural:
       main: https://www.saffle.se/medis
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395708'
     source: subagent_discovery
@@ -735,6 +777,8 @@ tier2_cultural:
       main: https://www.arvika.se/upplevaochgora/ritzkulturochaktivitetshus.2722.html
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395786'
     source: subagent_discovery
@@ -748,6 +792,8 @@ tier2_cultural:
       main: https://koloninarvika.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395810'
     source: subagent_discovery
@@ -761,6 +807,8 @@ tier2_cultural:
       main: https://www.biblioteken.se/grums-bibliotek/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395845'
     source: subagent_discovery
@@ -776,6 +824,8 @@ tier3_small:
       facebook: https://www.facebook.com/grandenkb
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
   verket:
     name: VERKET
@@ -788,6 +838,8 @@ tier3_small:
       facebook: https://www.facebook.com/verketkarlstad
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
   bishops_arms:
     name: The Bishops Arms
@@ -814,6 +866,8 @@ tier3_small:
       main: https://www.facebook.com/thebullbarkarlstad/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394471'
     source: subagent_discovery
@@ -827,6 +881,8 @@ tier3_small:
       main: http://www.theleprechaun.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394483'
     source: subagent_discovery
@@ -840,6 +896,8 @@ tier3_small:
       main: https://www.ulvsbygarden.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394508'
     source: subagent_discovery
@@ -867,6 +925,8 @@ tier3_small:
       main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394534'
     source: subagent_discovery
@@ -879,6 +939,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394559'
     source: subagent_discovery
@@ -892,6 +954,8 @@ tier3_small:
       main: https://www.pitchers.se/aktiviteter/karlstad-nattklubb
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394572'
     source: subagent_discovery
@@ -904,6 +968,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394810'
     source: subagent_discovery
@@ -917,6 +983,8 @@ tier3_small:
       main: https://forshaga-kok-bar.webnode.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394823'
     source: subagent_discovery
@@ -930,6 +998,8 @@ tier3_small:
       main: https://lunalucet.se/pub-luna/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394834'
     source: subagent_discovery
@@ -943,6 +1013,8 @@ tier3_small:
       main: https://lunalucet.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394846'
     source: subagent_discovery
@@ -956,6 +1028,8 @@ tier3_small:
       main: https://gladakillingen.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394869'
     source: subagent_discovery
@@ -968,6 +1042,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.394881'
     source: subagent_discovery
@@ -981,6 +1057,8 @@ tier3_small:
       main: https://www.angsbacka.com/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395048'
     source: subagent_discovery
@@ -994,6 +1072,8 @@ tier3_small:
       main: https://regionvarmland.se/folkhogskolor/molkoms-folkhogskola/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395063'
     source: subagent_discovery
@@ -1006,6 +1086,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395088'
     source: subagent_discovery
@@ -1019,6 +1101,8 @@ tier3_small:
       main: https://hittafestlokal.se/festlokalen-stiftelsen-vart-hus-i-skattkarr-skattkarr/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395104'
     source: subagent_discovery
@@ -1032,6 +1116,8 @@ tier3_small:
       main: https://www.skattkarrspizza.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395132'
     source: subagent_discovery
@@ -1045,6 +1131,8 @@ tier3_small:
       main: https://www.evenemang.se/se/v%C3%A4rmland/forshaga/deje-folkets-hus-kulturhuset
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395271'
     source: subagent_discovery
@@ -1058,6 +1146,8 @@ tier3_small:
       main: https://dejeforsmusikkar.com/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395287'
     source: subagent_discovery
@@ -1070,6 +1160,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395299'
     source: subagent_discovery
@@ -1083,6 +1175,8 @@ tier3_small:
       main: https://www.facebook.com/p/%C3%84lven%C3%A4s-Bygdeg%C3%A5rdsf%C3%B6rening-100063540765101/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395314'
     source: subagent_discovery
@@ -1095,6 +1189,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395329'
     source: subagent_discovery
@@ -1107,6 +1203,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395344'
     source: subagent_discovery
@@ -1120,6 +1218,8 @@ tier3_small:
       main: https://www.facebook.com/p/R%C3%A4vens-Bistro-100063593528512/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395357'
     source: subagent_discovery
@@ -1133,6 +1233,8 @@ tier3_small:
       main: https://www.rasta.se/varmland/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395370'
     source: subagent_discovery
@@ -1146,6 +1248,8 @@ tier3_small:
       main: https://equmeniakyrkanvase.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395383'
     source: subagent_discovery
@@ -1159,6 +1263,8 @@ tier3_small:
       main: https://dejespizzahouse.se/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395395'
     source: subagent_discovery
@@ -1171,6 +1277,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395737'
     source: subagent_discovery
@@ -1183,6 +1291,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395749'
     source: subagent_discovery
@@ -1195,6 +1305,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395761'
     source: subagent_discovery
@@ -1207,6 +1319,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395774'
     source: subagent_discovery
@@ -1220,6 +1334,8 @@ tier3_small:
       main: https://www.facebook.com/wilmas.arvika.musik.krog/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395797'
     source: subagent_discovery
@@ -1233,6 +1349,8 @@ tier3_small:
       main: https://www.folketshusochparker.se/arrangor/grums-folkets-hus/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395833'
     source: subagent_discovery
@@ -1245,6 +1363,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395858'
     source: subagent_discovery
@@ -1257,6 +1377,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395870'
     source: subagent_discovery
@@ -1269,6 +1391,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395882'
     source: subagent_discovery
@@ -1282,6 +1406,8 @@ tier3_small:
       main: https://www.rasta.se/grums/
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395893'
     source: subagent_discovery
@@ -1294,6 +1420,8 @@ tier3_small:
     urls: {}
     scraper:
       type: manual
+      fallback: ai
+      note: ' - Use AI to fetch events'
     active: true
     discovered_date: '2026-03-02T15:44:12.395905'
     source: subagent_discovery
@@ -1407,8 +1535,6 @@ special:
     urls:
       home: https://synthimolkom.se/
     active: true
-
-# Markets (Marknader) in Värmland area
 tier_markets:
   putte_i_parken:
     name: Putte i Parken
@@ -1468,10 +1594,7 @@ tier_markets:
     urls:
       home: https://marknadsdager.se/grums-grums-varmarknad
     active: true
-
-# Nightlife & Entertainment venues
 tier_nightlife:
-  # Karlstad
   nöjesfabriken:
     name: Nöjesfabriken
     location: Karlstad
@@ -1565,8 +1688,6 @@ tier_nightlife:
     urls:
       home: https://visitvarmland.com/
     active: true
-
-  # Kristinehamn
   king_street_bar:
     name: King Street Bar
     location: Kristinehamn
@@ -1577,8 +1698,6 @@ tier_nightlife:
     urls:
       home: https://facebook.com/KingStreetBarKristinehamn
     active: true
-
-  # Arvika
   ritz_club:
     name: Ritz Club
     location: Arvika
@@ -1597,8 +1716,6 @@ tier_nightlife:
     urls:
       home: https://visitvarmland.com/
     active: true
-
-  # Sunne
   kolsnasparken:
     name: Kolsnäsparken
     location: Sunne
@@ -1619,8 +1736,6 @@ tier_nightlife:
     urls:
       home: https://tumul tkultur.se/
     active: true
-
-# Sports venues
 tier_sports:
   lofbergs_arena:
     name: Löfbergs Arena
@@ -1691,8 +1806,6 @@ tier_sports:
     urls:
       home: https://saffle.se/
     active: true
-
-# Outdoor & Festival venues
 tier_outdoor:
   stora_torget_karlstad:
     name: Stora Torget

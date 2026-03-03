@@ -638,6 +638,82 @@ class TicketmasterHTMLScraper(BaseScraper):
         return ''
 
 
+class AIFallbackScraper(BaseScraper):
+    """
+    AI-powered fallback scraper for venues with no structured data.
+    Uses web search to find upcoming events at venues.
+    """
+    
+    def __init__(self, config: Dict):
+        super().__init__(config)
+        self.venue_name = config.get('name', 'Unknown')
+        self.venue_location = config.get('location', 'Karlstad')
+        self.venue_urls = config.get('urls', {})
+    
+    def scrape(self) -> List[Event]:
+        """Use web search to find events at this venue."""
+        events = []
+        
+        # Build search query
+        query = f"{self.venue_name} {self.venue_location} evenemang 2026"
+        
+        try:
+            # Use a simple web search approach
+            search_url = f"https://www.google.com/search?q={requests.utils.quote(query)}&hl=sv"
+            
+            self.session.headers.update({
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            })
+            
+            response = self.session.get(search_url, timeout=15)
+            
+            if response.status_code == 200:
+                # Parse results to find event-like content
+                events = self._parse_search_results(response.text)
+                
+        except Exception as e:
+            logger.debug(f"AI fallback search failed for {self.venue_name}: {e}")
+        
+        return events
+    
+    def _parse_search_results(self, html: str) -> List[Event]:
+        """Parse search results to find event information."""
+        events = []
+        
+        # Simple extraction - look for patterns that indicate events
+        # Look for dates in Swedish format
+        date_pattern = r'(\d{1,2})\s+(januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)\s+(\d{4})'
+        
+        matches = re.finditer(date_pattern, html, re.IGNORECASE)
+        
+        months = {
+            'januari': 1, 'februari': 2, 'mars': 3, 'april': 4,
+            'maj': 5, 'juni': 6, 'juli': 7, 'augusti': 8,
+            'september': 9, 'oktober': 10, 'november': 11, 'december': 12
+        }
+        
+        for match in matches[:10]:  # Limit results
+            try:
+                day = int(match.group(1))
+                month_name = match.group(2).lower()
+                year = int(match.group(3))
+                
+                if year >= 2026 and month_name in months:
+                    date_str = f"{year}-{months[month_name]:02d}-{day:02d}"
+                    
+                    events.append(Event(
+                        title=f"Event at {self.venue_name}",
+                        date=date_str,
+                        venue=self.venue_name,
+                        location=self.venue_location,
+                        source='AI Search'
+                    ))
+            except:
+                continue
+        
+        return events
+
+
 class EventAggregator:
     """Main aggregator that coordinates all scrapers."""
     
@@ -682,7 +758,17 @@ class EventAggregator:
             elif scraper_type == 'ticketmaster_html':
                 scraper = TicketmasterHTMLScraper(config)
             elif scraper_type == 'manual':
-                logger.info(f"Skipping manual venue: {config.get('name')}")
+                # Check if AI fallback is enabled
+                if config.get('scraper', {}).get('fallback') == 'ai':
+                    try:
+                        scraper = AIFallbackScraper(config)
+                        events = scraper.scrape()
+                        self._add_events(events)
+                        logger.info(f"Found {len(events)} AI events from {config.get('name')}")
+                    except Exception as e:
+                        logger.debug(f"AI fallback failed for {config.get('name')}: {e}")
+                else:
+                    logger.info(f"Skipping manual venue: {config.get('name')}")
                 return
             else:
                 logger.warning(f"Unknown scraper type: {scraper_type}")
