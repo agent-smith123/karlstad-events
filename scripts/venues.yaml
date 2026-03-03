@@ -1042,6 +1042,7 @@ tier3_small:
     urls:
       main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal/boka-lokal-for-kulturarrangemang
       tickets: https://www.ticketmaster.se/venue/sundstaaulan-karlstad-biljetter/sau/416
+      events: https://karlstad.se/uppleva-och-gora/kultur/sundstaaulan
     scraper:
       type: ticketmaster
     active: true
