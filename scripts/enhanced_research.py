@@ -458,20 +458,22 @@ class EnhancedResearcher:
 
 def run_venue_discovery():
     """Run venue discovery cycle"""
-    print("\n🔍 Running venue discovery...")
-    try:
-        import subprocess
-        result = subprocess.run(
-            ["python3", str(SCRIPT_DIR / "venue_discovery.py")],
-            capture_output=True,
-            text=True,
-            timeout=120
-        )
-        print(result.stdout)
-        if result.returncode != 0:
-            print(f"  ⚠️ Discovery warning: {result.stderr}")
-    except Exception as e:
-        print(f"  ⚠️ Could not run discovery: {e}")
+    # DISABLED: Finding too many false positives (1664 pending review)
+    # print("\n🔍 Running venue discovery...")
+    # try:
+    #     import subprocess
+    #     result = subprocess.run(
+    #         ["python3", str(SCRIPT_DIR / "venue_discovery.py")],
+    #         capture_output=True,
+    #         text=True,
+    #         timeout=120
+    #     )
+    #     print(result.stdout)
+    #     if result.returncode != 0:
+    #         print(f"  ⚠️ Discovery warning: {result.stderr}")
+    # except Exception as e:
+    #     print(f"  ⚠️ Could not run discovery: {e}")
+    print("⏭️  Venue discovery disabled (too many false positives)")
 
 
 def run_smart_scrapers() -> List[Event]:
