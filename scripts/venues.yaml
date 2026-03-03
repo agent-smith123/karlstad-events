@@ -669,6 +669,19 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  kil_kommun:
+    name: Kil kommun
+    location: Kil
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      evenemang: https://kil.se/arkiv/evenemang
+      home: https://kil.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
