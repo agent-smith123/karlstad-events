@@ -628,6 +628,20 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  borgviksgard:
+    name: Borgviks Gård
+    location: Borgvik
+    type:
+    - Evenemang
+    - Gård
+    - Trädgård
+    urls:
+      program: https://www.borgviksgard.se/gardens-program
+      home: https://www.borgviksgard.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
