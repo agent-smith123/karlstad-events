@@ -163,6 +163,12 @@ tier1_major:
     scraper:
       type: static
       method: beautifulsoup
+      selectors:
+        event: "article, .event-item, .forestallning, [class*='event']"
+        title: "h1, h2, h3, .title, a[href*='tickster']"
+        date: "time, .date, [class*='datum']"
+        link: "a[href]"
+      note: Skip date-only text as titles - look for actual event names
     active: true
   ritz_arvika:
     name: Ritz
@@ -668,6 +674,12 @@ tier1_major:
     scraper:
       type: static
       method: beautifulsoup
+      selectors:
+        event: ".event-item, article.event, [class*='evenemang']"
+        title: "h1, h2, h3, .title"
+        date: "time, .date, [class*='datum']"
+        link: "a[href]"
+      note: Only scrape actual events, not news articles
     active: true
   kil_kommun:
     name: Kil kommun

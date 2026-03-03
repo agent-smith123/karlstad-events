@@ -386,6 +386,23 @@ class EventFetcher:
                 return None
             title = title_elem.get_text(strip=True)
             
+            # Skip obvious non-events
+            skip_patterns = [
+                r'^\d{1,2}\s+[A-Za-z]+\s+\d{4}$',  # Date-only like "15 Apr 2026"
+                r'^\d{1,2}/\d{1,2}',  # Date ranges like "20/6-5/9"
+                r'fakturor',  # Invoice-related
+                r'avstängning',  # Road closures
+                r'driftmeddelande',  # Service announcements
+                r'lediga jobb',  # Job postings
+            ]
+            for pattern in skip_patterns:
+                if re.search(pattern, title, re.IGNORECASE):
+                    return None
+            
+            # Skip very short titles (likely noise)
+            if len(title) < 5:
+                return None
+            
             # Date
             date_sel = selectors.get('date', '.date, time, .datetime')
             date_elem = elem.select_one(date_sel)
@@ -723,45 +740,69 @@ class EventPublisher:
             json.dump(events_data, f, indent=2, ensure_ascii=False)
         print(f"  ✓ Wrote {len(events)} events to events.json")
         
-        # Write markdown files
+        # Get list of new slugs
+        new_slugs = {event.slug() for event in events}
+        
+        # Clear old markdown files that are no longer in events.json
+        cleared = 0
+        for md_file in self.content_dir.glob("*.md"):
+            if md_file.name == "_index.md":
+                continue
+            slug = md_file.stem
+            if slug not in new_slugs:
+                md_file.unlink()
+                cleared += 1
+        
+        if cleared > 0:
+            print(f"  🗑️  Removed {cleared} old markdown files")
+        
+        # Write markdown files (overwrite existing to ensure fresh content)
         written = 0
         for event in events:
             md_file = self.content_dir / f"{event.slug()}.md"
-            if not md_file.exists():
-                with open(md_file, 'w') as f:
-                    f.write(self._to_markdown(event))
-                written += 1
+            with open(md_file, 'w') as f:
+                f.write(self._to_markdown(event))
+            written += 1
         
-        print(f"  ✓ Wrote {written} new markdown files")
+        print(f"  ✓ Wrote {written} markdown files")
         
         return {
             'json_events': len(events),
-            'new_markdown': written
+            'markdown_files': written,
+            'cleared_old': cleared
         }
     
     def _to_markdown(self, event: Event) -> str:
         """Convert event to Hugo markdown"""
+        # Escape quotes in YAML values
+        def yaml_escape(s: str) -> str:
+            if not s:
+                return ""
+            # Escape backslashes and double quotes
+            s = s.replace('\\', '\\\\').replace('"', '\\"')
+            return s
+        
         md = f"""---
-title: "{event.title}"
+title: "{yaml_escape(event.title)}"
 date: {event.date}
-venue: "{event.venue}"
-location: "{event.location}"
+venue: "{yaml_escape(event.venue)}"
+location: "{yaml_escape(event.location)}"
 """
         if event.time:
-            md += f'time: "{event.time}"\n'
+            md += f'time: "{yaml_escape(event.time)}"\n'
         if event.link:
-            md += f'link: "{event.link}"\n'
+            md += f'link: "{yaml_escape(event.link)}"\n'
         if event.ticketLink:
-            md += f'ticketLink: "{event.ticketLink}"\n'
+            md += f'ticketLink: "{yaml_escape(event.ticketLink)}"\n'
         if event.category:
-            md += f'categories: ["{event.category}"]\n'
+            md += f'categories: ["{yaml_escape(event.category)}"]\n'
         if event.source:
-            md += f'source: "{event.source}"\n'
+            md += f'source: "{yaml_escape(event.source)}"\n'
         if event.soldOut:
             md += f'soldOut: true\n'
         md += "---\n\n"
         if event.description:
-            md += f"{event.description}\n"
+            md += f"{yaml_escape(event.description)}\n"
         return md
     
     def deploy_to_surge(self) -> bool:
