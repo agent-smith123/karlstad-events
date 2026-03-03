@@ -196,25 +196,52 @@ class StaticScraper(BaseScraper):
     
     def _parse_events(self, soup: 'BeautifulSoup') -> List[Event]:
         """Parse events from BeautifulSoup object. Override per site."""
-        # Generic implementation - override for specific sites
         events = []
         selectors = self.config.get('scraper', {}).get('selectors', {})
         
-        event_items = soup.select(selectors.get('event', '.event'))
+        # Get custom selectors or use defaults
+        event_selector = selectors.get('event', '.event')
+        title_selector = selectors.get('title', 'h2, h3')
+        date_selector = selectors.get('date', '.date, time')
+        link_selector = selectors.get('link', 'a')
+        category_selector = selectors.get('category', None)
         
-        for item in event_items[:10]:  # Limit to first 10 for safety
+        event_items = soup.select(event_selector)
+        
+        for item in event_items:
             try:
-                title_elem = item.select_one(selectors.get('title', 'h2, h3'))
-                date_elem = item.select_one(selectors.get('date', '.date, time'))
-                link_elem = item.select_one(selectors.get('link', 'a'))
+                title_elem = item.select_one(title_selector)
+                date_elems = item.select(date_selector)
+                link_elem = item.select_one(link_selector)
+                category_elem = item.select_one(category_selector) if category_selector else None
                 
-                if title_elem and date_elem:
+                if title_elem and date_elems:
+                    # Get the first date (for date ranges, use the first date)
+                    first_date_elem = date_elems[0]
+                    
+                    # Try to get datetime attribute first, fallback to text content
+                    date_value = first_date_elem.get('datetime', '').strip()
+                    if not date_value:
+                        date_value = first_date_elem.get_text(strip=True)
+                    
+                    # Get category if available
+                    category = category_elem.get_text(strip=True) if category_elem else None
+                    
+                    # Get link - make it absolute if needed
+                    link = link_elem.get('href', '') if link_elem else None
+                    if link and link.startswith('/'):
+                        link = f"https://www.wermlandopera.com{link}"
+                    
+                    # Get venue from config, fallback to name
+                    venue = selectors.get('venue', self.name)
+                    
                     event = Event(
                         title=title_elem.get_text(strip=True),
-                        date=self._parse_date(date_elem.get_text()),
-                        venue=self.name,
+                        date=self._parse_date(date_value),
+                        venue=venue,
                         location=self.config.get('location', 'Karlstad'),
-                        link=link_elem.get('href') if link_elem else None,
+                        link=link,
+                        category=category,
                         source=self.name
                     )
                     events.append(event)
@@ -394,6 +421,216 @@ class TicketmasterAPIScraper(BaseScraper):
             return None
 
 
+class TicketmasterHTMLScraper(BaseScraper):
+    """Scrape Ticketmaster search results pages directly (no API key needed)."""
+    
+    def __init__(self, config: Dict):
+        super().__init__(config)
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'sv-SE,sv;q=0.9,en;q=0.8',
+        })
+    
+    def scrape(self) -> List[Event]:
+        """Scrape events from Ticketmaster search pages."""
+        events = []
+        
+        # Search URLs for different locations in Värmland
+        search_urls = [
+            ('karlstad', 'https://www.ticketmaster.se/discover/karlstad'),
+            ('kristinehamn', 'https://www.ticketmaster.se/discover/kristinehamn'),
+            ('arvika', 'https://www.ticketmaster.se/discover/arvika'),
+            ('saffle', 'https://www.ticketmaster.se/discover/saffle'),
+        ]
+        
+        for location, url in search_urls:
+            try:
+                logger.info(f"Scraping Ticketmaster: {location}")
+                response = self.session.get(url, timeout=30)
+                response.raise_for_status()
+                
+                soup = BeautifulSoup(response.content, 'html.parser')
+                page_events = self._parse_search_results(soup, location)
+                events.extend(page_events)
+                
+            except Exception as e:
+                logger.debug(f"Error scraping {location}: {e}")
+        
+        return events
+    
+    def _parse_search_results(self, soup: 'BeautifulSoup', default_location: str) -> List[Event]:
+        """Parse events from Ticketmaster search results HTML."""
+        events = []
+        
+        # Look for event cards - Ticketmaster uses various structures
+        # Try multiple selectors
+        event_selectors = [
+            '[data-event-id]',
+            '.event-listing',
+            '.event-card',
+            '.search-result',
+            'article[data-component="event-card"]',
+        ]
+        
+        event_items = []
+        for selector in event_selectors:
+            event_items = soup.select(selector)
+            if event_items:
+                break
+        
+        for item in event_items[:50]:  # Limit to 50 events
+            try:
+                # Extract title
+                title_elem = (
+                    item.select_one('h2, h3, .event-title, [data-test="event-title"], .name') or
+                    item.select_one('a') if item.name == 'a' else None
+                )
+                title = title_elem.get_text(strip=True) if title_elem else ''
+                
+                if not title:
+                    # Try getting title from link
+                    link = item.select_one('a[href*="/event/"]')
+                    if link:
+                        title = link.get_text(strip=True) or link.get('aria-label', '')
+                
+                if not title:
+                    continue
+                
+                # Extract date
+                date_elem = (
+                    item.select_one('.date, .event-date, [data-test="date"], time') or
+                    item.select_one('[class*="date"]')
+                )
+                date_text = date_elem.get_text(strip=True) if date_elem else ''
+                date_str = self._parse_date(date_text)
+                
+                # Extract time
+                time_elem = item.select_one('.time, [data-test="time"]')
+                time_str = time_elem.get_text(strip=True) if time_elem else None
+                
+                # Extract venue
+                venue_elem = (
+                    item.select_one('.venue, .event-venue, [data-test="venue"], [class*="venue"]') or
+                    item.select_one('[class*="location"]')
+                )
+                venue = venue_elem.get_text(strip=True) if venue_elem else 'Ticketmaster'
+                
+                # Extract link
+                link_elem = item.select_one('a[href*="/event/"]')
+                link = link_elem.get('href', '') if link_elem else ''
+                if link and not link.startswith('http'):
+                    link = 'https://www.ticketmaster.se' + link
+                
+                if date_str and title:
+                    events.append(Event(
+                        title=title,
+                        date=date_str,
+                        venue=venue,
+                        location=default_location.title(),
+                        time=time_str,
+                        link=link,
+                        source='Ticketmaster'
+                    ))
+                    
+            except Exception as e:
+                logger.debug(f"Error parsing event item: {e}")
+        
+        # Fallback: try to extract from JSON-LD
+        scripts = soup.find_all('script', type='application/ld+json')
+        for script in scripts:
+            try:
+                import json
+                data = json.loads(script.string)
+                if isinstance(data, dict) and data.get('@type') == 'Event':
+                    event = self._parse_jsonld_event(data, default_location)
+                    if event:
+                        events.append(event)
+            except:
+                pass
+        
+        return events
+    
+    def _parse_jsonld_event(self, data: Dict, default_location: str) -> Optional[Event]:
+        """Parse event from JSON-LD structured data."""
+        try:
+            name = data.get('name', '')
+            start_date = data.get('startDate', '')
+            
+            # Parse date
+            date_str = ''
+            if start_date:
+                try:
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
+                    date_str = dt.strftime('%Y-%m-%d')
+                except:
+                    pass
+            
+            # Parse time
+            time_str = None
+            if start_date and 'T' in start_date:
+                try:
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
+                    time_str = dt.strftime('%H:%M')
+                except:
+                    pass
+            
+            # Get venue
+            location = data.get('location', {})
+            if isinstance(location, dict):
+                venue = location.get('name', 'Ticketmaster')
+            else:
+                venue = str(location) if location else 'Ticketmaster'
+            
+            # Get URL
+            url = data.get('url', '')
+            
+            if date_str and name:
+                return Event(
+                    title=name,
+                    date=date_str,
+                    venue=venue,
+                    location=default_location.title(),
+                    time=time_str,
+                    link=url,
+                    source='Ticketmaster'
+                )
+        except Exception as e:
+            logger.debug(f"Error parsing JSON-LD: {e}")
+        
+        return None
+    
+    def _parse_date(self, date_text: str) -> str:
+        """Parse date from various formats."""
+        date_text = date_text.strip().lower()
+        
+        # Swedish months
+        months = {
+            'januari': 1, 'februari': 2, 'mars': 3, 'april': 4,
+            'maj': 5, 'juni': 6, 'juli': 7, 'augusti': 8,
+            'september': 9, 'oktober': 10, 'november': 11, 'december': 12
+        }
+        
+        # Try Swedish format: 15 mars 2026
+        for month_sv, month_num in months.items():
+            if month_sv in date_text:
+                match = re.search(r'(\d{1,2})\s+' + month_sv + r'\s+(\d{4})', date_text)
+                if match:
+                    return f"{match.group(2)}-{month_num:02d}-{int(match.group(1)):02d}"
+                match = re.search(r'(\d{1,2})\s+' + month_sv, date_text)
+                if match:
+                    return f"{datetime.now().year}-{month_num:02d}-{int(match.group(1)):02d}"
+        
+        # ISO format
+        match = re.search(r'(\d{4})-(\d{2})-(\d{2})', date_text)
+        if match:
+            return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+        
+        return ''
+
+
 class EventAggregator:
     """Main aggregator that coordinates all scrapers."""
     
@@ -453,14 +690,38 @@ class EventAggregator:
         """Scrape API-based sources."""
         # Ticketmaster
         tm_config = self.venues.get('tier4_aggregators', {}).get('ticketmaster', {})
-        if tm_config.get('active') and 'ticketmaster' in self.api_keys:
-            try:
-                scraper = TicketmasterAPIScraper(tm_config, self.api_keys['ticketmaster'])
-                events = scraper.scrape()
-                self._add_events(events)
-                logger.info(f"Found {len(events)} events from Ticketmaster API")
-            except Exception as e:
-                logger.error(f"Error with Ticketmaster API: {e}")
+        
+        if tm_config.get('active'):
+            # Try API first if key is available
+            if 'ticketmaster' in self.api_keys and self.api_keys['ticketmaster']:
+                try:
+                    scraper = TicketmasterAPIScraper(tm_config, self.api_keys['ticketmaster'])
+                    events = scraper.scrape()
+                    self._add_events(events)
+                    logger.info(f"Found {len(events)} events from Ticketmaster API")
+                except Exception as e:
+                    logger.error(f"Error with Ticketmaster API: {e}")
+                    # Fall back to HTML scraping
+                    self._scrape_ticketmaster_html()
+            else:
+                # No API key - use HTML scraping
+                logger.info("No Ticketmaster API key - using HTML scraper")
+                self._scrape_ticketmaster_html()
+    
+    def _scrape_ticketmaster_html(self):
+        """Scrape Ticketmaster search pages directly."""
+        try:
+            config = {
+                'name': 'Ticketmaster HTML',
+                'location': 'Värmland',
+                'urls': {}
+            }
+            scraper = TicketmasterHTMLScraper(config)
+            events = scraper.scrape()
+            self._add_events(events)
+            logger.info(f"Found {len(events)} events from Ticketmaster HTML")
+        except Exception as e:
+            logger.error(f"Error with Ticketmaster HTML scraping: {e}")
     
     def _add_events(self, events: List[Event]):
         """Add events with deduplication."""

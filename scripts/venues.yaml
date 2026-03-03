@@ -116,15 +116,16 @@ tier1_major:
     - Klassisk musik
     urls:
       events: https://www.wermlandopera.com/evenemang/
-      calendar: https://www.wermlandopera.com/kalendarium-2025-2026/
     scraper:
       type: static
       method: beautifulsoup
       selectors:
-        event: .event-item, .program-item
-        title: h2, h3, .event-title
-        date: .date, time
-        link: a[href]
+        event: article.post-item
+        category: .post-item__meta--category
+        title: .post-item__title h2
+        date: .post-item__meta--date time
+        link: .post-item__button-holder a
+      venue: Wermland Opera
     active: true
   christinateatern:
     name: Christinateatern
