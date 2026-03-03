@@ -141,6 +141,8 @@ tier1_major:
     - Scene
     urls:
       home: https://www.christinateatern.se/
+      kalender: http://www.christinateatern.se/kalender.php
+      events: http://www.christinateatern.se/kalender.php
     scraper:
       type: static
       method: beautifulsoup
