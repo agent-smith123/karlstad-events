@@ -724,6 +724,20 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  lillerudsdagarna:
+    name: Lillerudsdagarna
+    location: Värmland
+    type:
+    - Evenemang
+    - Årligt
+    - Festival
+    urls:
+      home: https://lillerudsdagarna.se/
+    scraper:
+      type: manual
+      fallback: ai
+      note: No structured data - AI agent needed to read and extract event info
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
