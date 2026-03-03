@@ -514,6 +514,20 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  ransater:
+    name: Räntemäklens Gård / Ransäter
+    location: Ransäter
+    type:
+    - Evenemang
+    - Kultur
+    - Gård
+    urls:
+      events: https://www.ransater.com/evenemang/
+      home: https://www.ransater.com/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
