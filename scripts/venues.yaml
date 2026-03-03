@@ -682,6 +682,20 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  marbacka:
+    name: Marbacka
+    location: Sunne
+    type:
+    - Evenemang
+    - Gård
+    - Kultur
+    urls:
+      kalendarium: https://marbacka.com/kalendarium/
+      home: https://marbacka.com/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
