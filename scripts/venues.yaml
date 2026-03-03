@@ -470,6 +470,21 @@ tier1_major:
     active: true
     discovered_date: '2026-03-02T15:44:12.395820'
     source: subagent_discovery
+  sagolika_sunne:
+    name: Sagolika Sunne
+    location: Sunne
+    type:
+    - Evenemang
+    - Turism
+    - Kultur
+    urls:
+      events: https://sagolikasunne.se/gora/noje-evenemang/evenemang/
+      home: https://sagolikasunne.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+      note: Sagolika Sunne tourism events
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
