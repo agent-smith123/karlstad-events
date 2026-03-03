@@ -738,6 +738,19 @@ tier1_major:
       fallback: ai
       note: No structured data - AI agent needed to read and extract event info
     active: true
+  hammaro_kulturbygd:
+    name: Hammarö Kulturbygd
+    location: Hammarö
+    type:
+    - Evenemang
+    - Kultur
+    urls:
+      kalender: https://www.hammarokulturbygd.se/startsida/Evenemangskalender
+      home: https://www.hammarokulturbygd.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
