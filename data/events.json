@@ -1,112 +1,290 @@
 [
   {
-    "title": "Färjestad BK - HV71",
-    "date": "2026-03-10",
-    "venue": "Löfbergs Arena",
-    "location": "Karlstad",
-    "time": "19:00",
-    "ticketLink": "https://www.farjestadbk.se/",
-    "description": "SHL-hockey. Färjestad BK tar emot HV71 i viktig seriematch.",
-    "category": "Sport"
-  },
-  {
-    "title": "Storloppis på Nöjesfabriken",
-    "date": "2026-03-07",
-    "venue": "Nöjesfabriken",
-    "location": "Karlstad",
-    "time": "09:30-14:00",
-    "link": "https://www.nojesfabriken.se/event/storloppis/",
-    "description": "Storloppis i Mässhallen. Fynda allt möjligt!",
-    "category": "Marknad"
-  },
-  {
-    "title": "Torkild Sköld - Föreläsning",
-    "date": "2026-03-16",
-    "venue": "Karlstad",
-    "location": "Karlstad",
-    "time": "19:00",
-    "ticketLink": "https://www.torkildskold.se/forelasning/260316-karlstad/",
-    "description": "Livet ska levas, inte bara överlevas - inspirerande föreläsning med Torkild Sköld.",
-    "category": "Föreläsning"
-  },
-  {
-    "title": "Thank You For The Music - Part Two",
-    "date": "2026-03-06",
-    "venue": "Karlstad CCC",
-    "location": "Karlstad",
-    "time": "19:30",
-    "ticketLink": "https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416",
-    "description": "Hyllningsshow till ABBA med klassiska hits.",
-    "category": "Musik"
-  },
-  {
-    "title": "Weeping Willows",
-    "date": "2026-03-06",
-    "venue": "Sundstaåulan",
-    "location": "Karlstad",
-    "time": "19:30",
-    "ticketLink": "https://www.ticketmaster.se/discover/karlstad",
-    "description": "Weeping Willows vårturné 2026.",
-    "category": "Musik"
-  },
-  {
-    "title": "Leva Livet - Wermland Opera",
+    "title": "Mendelssohn och Tjajkovskij",
     "date": "2026-03-05",
-    "venue": "Åsbacka",
-    "location": "Molkom",
-    "time": "14:00",
-    "link": "https://www.wermlandopera.com/evenemang/leva-livet/",
-    "description": "Symfonisk konsert med kör och solister. Fri entre.",
-    "category": "Kultur"
-  },
-  {
-    "title": "En Jäkla Massa Schlagers",
-    "date": "2026-03-13",
-    "venue": "Karlstad CCC",
+    "venue": "Wermland Opera",
     "location": "Karlstad",
-    "time": "19:30",
-    "ticketLink": "https://www.ticketmaster.se/discover/karlstad",
-    "description": "Sveriges schlagerstjärnor levererar en fartfylld kväll.",
-    "category": "Musik"
+    "link": "https://www.wermlandopera.com/evenemang/konsert/mendelssohn-och-tjajkovskij/",
+    "source": "Wermland Opera",
+    "source_url": "https://www.wermlandopera.com/evenemang/"
   },
   {
-    "title": "Tomas Andersson Wij",
+    "title": "Klassisk Lördag 2025/2026",
     "date": "2026-03-14",
-    "venue": "Tingvallakyrkan",
+    "venue": "Wermland Opera",
     "location": "Karlstad",
-    "time": "19:00",
-    "ticketLink": "https://www.greateventofkarlstad.se/kommande-evenemang/",
-    "description": "Konsert i vackra Tingvallakyrkan.",
-    "category": "Musik"
+    "link": "https://www.wermlandopera.com/evenemang/konsert/klassisk-lordag-2025-2026/",
+    "source": "Wermland Opera",
+    "source_url": "https://www.wermlandopera.com/evenemang/"
   },
   {
-    "title": "Helhetsmässa i Karlstad",
-    "date": "2026-05-30",
-    "venue": "Nöjesfabriken",
+    "title": "Both Sides Now",
+    "date": "2026-04-17",
+    "venue": "Wermland Opera",
     "location": "Karlstad",
-    "time": "10:00-17:00",
-    "link": "https://www.nojesfabriken.se/event/helhetsmassa-i-karlstad/",
-    "description": "En unik mötesplats där det spirituella, vetenskapliga och holistiska får samverka.",
-    "category": "Mässa"
+    "link": "https://www.wermlandopera.com/evenemang/konsert/both-sides-now/",
+    "source": "Wermland Opera",
+    "source_url": "https://www.wermlandopera.com/evenemang/"
   },
   {
-    "title": "Leva Livet - Wermland Opera",
+    "title": "Bruckners romantiska symfoni",
+    "date": "2026-04-23",
+    "venue": "Wermland Opera",
+    "location": "Karlstad",
+    "link": "https://www.wermlandopera.com/evenemang/konsert/bruckners-romantiska-symfoni/",
+    "source": "Wermland Opera",
+    "source_url": "https://www.wermlandopera.com/evenemang/"
+  },
+  {
+    "title": "Majas alfabetssånger",
+    "date": "2026-05-27",
+    "venue": "Wermland Opera",
+    "location": "Karlstad",
+    "link": "https://www.wermlandopera.com/evenemang/barn-ungdom/majas-alfabetssanger/",
+    "source": "Wermland Opera",
+    "source_url": "https://www.wermlandopera.com/evenemang/"
+  },
+  {
+    "title": "15 Apr 2026",
+    "date": "2026-04-15",
+    "venue": "Västanå Musik & Teater",
+    "location": "Sunne",
+    "link": "https://secure.tickster.com/z3kuv2tw3n8cupe",
+    "source": "Västanå Musik & Teater",
+    "source_url": "https://www.vastanateater.se/"
+  },
+  {
+    "title": "20 Jun–5 Sep 2026",
+    "date": "2026-09-05",
+    "venue": "Västanå Musik & Teater",
+    "location": "Sunne",
+    "link": "https://secure.tickster.com/y9xub6zdb5hkbet",
+    "source": "Västanå Musik & Teater",
+    "source_url": "https://www.vastanateater.se/"
+  },
+  {
+    "title": "BerättarkvällhosVästanå",
+    "date": "2026-04-15",
+    "venue": "Västanå Musik & Teater",
+    "location": "Sunne",
+    "link": "https://secure.tickster.com/z3kuv2tw3n8cupe",
+    "source": "Västanå Musik & Teater",
+    "source_url": "https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/"
+  },
+  {
+    "title": "Liljecronashem",
+    "date": "2026-09-05",
+    "venue": "Västanå Musik & Teater",
+    "location": "Sunne",
+    "link": "https://secure.tickster.com/y9xub6zdb5hkbet",
+    "source": "Västanå Musik & Teater",
+    "source_url": "https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/"
+  },
+  {
+    "title": "Nu kan du se dina fakturor i Mina sidor!",
+    "date": "2026-03-03",
+    "venue": "Hammaro.se Evenemang",
+    "location": "Hammarö",
+    "link": "https://hammaro.se/arkiv/nyheter/2026/2026-03-03-nu-kan-du-se-dina-fakturor-i-mina-sidor",
+    "source": "Hammaro.se Evenemang",
+    "source_url": "https://hammaro.se/"
+  },
+  {
+    "title": "Avstängning av väg: del av Bergsvägen",
+    "date": "2026-03-03",
+    "venue": "Hammaro.se Evenemang",
+    "location": "Hammarö",
+    "link": "https://hammaro.se/arkiv/driftmeddelanden/arkiv/2026-03-03-avstangning-av-vag-del-av-bergsvagen",
+    "source": "Hammaro.se Evenemang",
+    "source_url": "https://hammaro.se/"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-03-05",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Stickcafé",
+    "date": "2026-03-06",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Legoutställning på Kil Arena",
+    "date": "2026-03-07",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-07-legoutstallning-pa-kil-arena",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "High school musical- på is!",
+    "date": "2026-03-07",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-07-high-school-musical--pa-is",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Historisk bild- och textutställning",
+    "date": "2026-03-10",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-10-historisk-bild--och-textutstallning",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Föreläsning med odlingsexperten Farbror Grön",
+    "date": "2026-03-10",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-10-forelasning-med-odlingsexperten-farbror-gron",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-03-12",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Stickcafé",
+    "date": "2026-03-13",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-03-19",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Stickcafé",
     "date": "2026-03-20",
-    "venue": "Granberga",
-    "location": "Väse",
-    "time": "15:00",
-    "link": "https://www.wermlandopera.com/evenemang/leva-livet/",
-    "description": "Symfonisk konsert i Väse. Fri entre.",
-    "category": "Kultur"
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
   },
   {
-    "title": "Eric Idle - The One Man Show",
-    "date": "2026-04-24",
-    "venue": "Karlstad CCC",
-    "location": "Karlstad",
-    "time": "19:30",
-    "ticketLink": "https://www.karlstadccc.se/17/38/program-biljetter/",
-    "description": "Eric Idle från Monty Python presenterar sin nya show.",
-    "category": "Show"
+    "title": "Pyssel för STORA och små",
+    "date": "2026-03-21",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-21-pyssel-for-stora-och-sma",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Andreas Jonsson & Wermland Big Band \"Sinatra concert - The classics\"",
+    "date": "2026-03-22",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-22-andreas-jonsson--wermland-big-band-sinatra-concert---the-classics",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-03-26",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Stickcafé",
+    "date": "2026-03-27",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-04-02",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-04-09",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Stickcafé",
+    "date": "2026-04-10",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Power Cup 2026 Innebandycup Sverige",
+    "date": "2026-04-11",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-04-11-power-cup-2026-innebandycup-sverige",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Vårens böcker och körsång",
+    "date": "2026-04-14",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-04-14-varens-bocker-och-korsang",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Babytorsdag",
+    "date": "2026-04-16",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
+  },
+  {
+    "title": "Stickcafé",
+    "date": "2026-04-17",
+    "venue": "Kil kommun",
+    "location": "Kil",
+    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
+    "source": "Kil kommun",
+    "source_url": "https://kil.se/arkiv/evenemang"
   }
 ]

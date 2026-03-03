@@ -11,7 +11,7 @@ import yaml
 import hashlib
 import requests
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta, timedelta
 from difflib import SequenceMatcher
 from urllib.parse import urlparse
 
@@ -177,6 +177,10 @@ class QualityGate:
         venue = event_data.get('venue', '')
         link = event_data.get('link') or event_data.get('ticketLink')
         
+        # Get current year for validation
+        current_year = datetime.now().year
+        current_date = datetime.now().date()
+        
         # Check for duplicates (pass filename to exclude self)
         dup_check = self.check_duplicate(title, date, venue, filename)
         if dup_check['is_duplicate']:
@@ -186,6 +190,34 @@ class QualityGate:
                 'message': f"Duplicate of {dup_check['existing_file']} ({dup_check.get('similarity', 1.0):.0%} match)",
                 'existing_file': dup_check['existing_file']
             })
+        
+        # Check for year validation - reject events from previous years
+        if date:
+            try:
+                event_date = datetime.strptime(str(date), '%Y-%m-%d').date()
+                event_year = event_date.year
+                
+                # Reject events from previous years
+                if event_year < current_year:
+                    issues.append({
+                        'type': 'old_year',
+                        'severity': 'high',
+                        'message': f"Event is from year {event_year} (current: {current_year}) - should be removed"
+                    })
+                
+                # Warn about events too far in the past (but same year)
+                elif event_date < current_date - timedelta(days=30):
+                    warnings.append({
+                        'type': 'past_event',
+                        'severity': 'medium',
+                        'message': f"Event date {event_date} is more than 30 days in the past"
+                    })
+            except Exception as e:
+                issues.append({
+                    'type': 'invalid_date',
+                    'severity': 'medium',
+                    'message': f"Could not parse date: {date}"
+                })
         
         # Check for link
         if not link:
