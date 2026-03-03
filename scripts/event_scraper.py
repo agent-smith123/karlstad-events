@@ -866,12 +866,21 @@ class EventAggregator:
                     logger.info(f"Found {len(events)} events from Ticketmaster API")
                 except Exception as e:
                     logger.error(f"Error with Ticketmaster API: {e}")
-                    # Fall back to HTML scraping
+                    # Fallback to HTML scraping
                     self._scrape_ticketmaster_html()
             else:
                 # No API key - use HTML scraping
                 logger.info("No Ticketmaster API key - using HTML scraper")
                 self._scrape_ticketmaster_html()
+                # If HTML scraping fails, try AI fallback
+                if tm_config.get('fallback') == 'ai':
+                    try:
+                        scraper = AIFallbackScraper(tm_config)
+                        events = scraper.scrape()
+                        self._add_events(events)
+                        logger.info(f"Found {len(events)} AI-fallback events from Ticketmaster")
+                    except Exception as e:
+                        logger.error(f"Error with Ticketmaster AI fallback: {e}")
     
     def _scrape_ticketmaster_html(self):
         """Scrape Ticketmaster search pages directly."""
