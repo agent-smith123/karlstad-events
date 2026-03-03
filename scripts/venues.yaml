@@ -696,6 +696,20 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  filipstads_trav:
+    name: Filipstads Travbana (F-Trav)
+    location: Filipstad
+    type:
+    - Sport
+    - Trav
+    - Evenemang
+    urls:
+      alla_event: https://www.ftrav.se/alla-event/
+      home: https://www.ftrav.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
