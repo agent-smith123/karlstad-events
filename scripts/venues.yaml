@@ -1493,21 +1493,21 @@ tier4_aggregators:
       type: static
       method: beautifulsoup
     active: true
+  visit_varmland:
+    name: Visit Värmland
+    type: tourism
+    urls:
+      events: https://www.visitvarmland.com/evenemang
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier5_municipal:
   karlstad_se:
     name: Karlstads kommun
     type: municipal
     urls:
       events: https://karlstad.se/uppleva-och-gora/evenemang
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  visit_varmland:
-    name: Visit Värmland
-    type: tourism
-    urls:
-      events: https://www.visitvarmland.com/evenemang
     scraper:
       type: static
       method: beautifulsoup
