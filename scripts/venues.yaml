@@ -559,6 +559,20 @@ tier1_major:
       method: beautifulsoup
       note: Riksteatern performances in Värmland (länid=17)
     active: true
+  krutkonst:
+    name: Krutrundan / Krutkonst
+    location: Värmland
+    type:
+    - Konst
+    - Konstrunda
+    - Evenemang
+    urls:
+      home: http://krutkonst.se/
+    scraper:
+      type: manual
+      fallback: ai
+      note: Not easily parseable - use AI agent to read and identify events
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
