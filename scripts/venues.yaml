@@ -219,8 +219,9 @@ tier1_major:
     - Konserter
     - Stand-up
     urls:
-      events: https://www.ticketmaster.se/discover/karlstad
+      events: https://www.scalateatern.com/vara-evenemang/
       tickets: https://www.ticketmaster.se/venue/scalateatern-karlstad-biljetter/scl/416
+      home: https://www.scalateatern.com/
     scraper:
       type: ticketmaster_html
       venue_filter: SCALATEATERN
