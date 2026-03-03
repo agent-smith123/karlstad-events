@@ -177,22 +177,87 @@ class StaticScraper(BaseScraper):
         
         events = []
         urls = self.config.get('urls', {})
+        max_pages = self.config.get('scraper', {}).get('max_pages', 10)
         
         for url_name, url in urls.items():
             if 'events' in url_name or 'calendar' in url_name:
                 try:
                     logger.info(f"Scraping {self.name} from {url}")
-                    response = self.session.get(url, timeout=30)
-                    response.raise_for_status()
                     
-                    soup = BeautifulSoup(response.content, 'html.parser')
-                    venue_events = self._parse_events(soup)
-                    events.extend(venue_events)
+                    # Handle pagination - scrape multiple pages
+                    page_num = 1
+                    while url and page_num <= max_pages:
+                        response = self.session.get(url, timeout=30)
+                        response.raise_for_status()
+                        
+                        soup = BeautifulSoup(response.content, 'html.parser')
+                        venue_events = self._parse_events(soup)
+                        events.extend(venue_events)
+                        
+                        logger.info(f"  Page {page_num}: found {len(venue_events)} events")
+                        
+                        # Check for next page
+                        url = self._find_next_page(soup, url)
+                        page_num += 1
+                        
+                        if not url:
+                            break
                     
                 except Exception as e:
                     logger.error(f"Error scraping {url}: {e}")
         
         return events
+    
+    def _find_next_page(self, soup: 'BeautifulSoup', current_url: str) -> Optional[str]:
+        """Find next page URL from pagination links."""
+        # Common pagination selectors
+        pagination_selectors = [
+            'a.next',
+            'a[rel="next"]',
+            '.pagination a.next',
+            '.pager a.next',
+            'a.page-next',
+            '.pagination a:contains("Nästa")',
+            'a:contains("Nästa")',
+            'a:contains("Next")',
+            'a[aria-label="Next"]',
+            'button[aria-label="Next"]',
+            '.pagination li.next a',
+            'ul.pagination a:last-child:not([href="#"])',
+        ]
+        
+        # Also check for ?page=X or ?p=X patterns
+        parsed = urllib.parse.urlparse(current_url)
+        
+        for selector in pagination_selectors:
+            next_link = soup.select_one(selector)
+            if next_link and next_link.get('href'):
+                href = next_link.get('href')
+                if href.startswith('http'):
+                    return href
+                elif href.startswith('/'):
+                    # Relative URL
+                    base = f"{parsed.scheme}://{parsed.netloc}"
+                    return base + href
+                else:
+                    return urllib.parse.urljoin(current_url, href)
+        
+        # Try to construct next page from query params
+        query = dict(urllib.parse.parse_qsl(parsed.query))
+        if 'page' in query:
+            query['page'] = str(int(query['page']) + 1)
+            new_query = urllib.parse.urlencode(query)
+            return urllib.parse.urlunparse((
+                parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment
+            ))
+        elif 'p' in query:
+            query['p'] = str(int(query['p']) + 1)
+            new_query = urllib.parse.urlencode(query)
+            return urllib.parse.urlunparse((
+                parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment
+            ))
+        
+        return None
     
     def _parse_events(self, soup: 'BeautifulSoup') -> List[Event]:
         """Parse events from BeautifulSoup object. Override per site."""

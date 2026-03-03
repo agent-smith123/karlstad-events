@@ -1454,6 +1454,7 @@ tier4_aggregators:
     scraper:
       type: api
       method: rest
+      max_pages: 5
     active: true
   tickster:
     name: Tickster
@@ -1464,6 +1465,7 @@ tier4_aggregators:
       type: static
       method: beautifulsoup
       note: No public API, HTML scraping only
+      max_pages: 5
     active: true
   karlstad_com:
     name: Karlstad.com
@@ -1474,6 +1476,7 @@ tier4_aggregators:
       type: dynamic
       method: playwright
       note: Filters by Ticketmaster, Tickster, Nöje.se
+      max_pages: 5
     active: true
   stadsevent:
     name: Stadsevent
@@ -1483,6 +1486,7 @@ tier4_aggregators:
     scraper:
       type: static
       method: beautifulsoup
+      max_pages: 5
     active: true
   noje_se:
     name: Nöje.se
@@ -1492,6 +1496,7 @@ tier4_aggregators:
     scraper:
       type: static
       method: beautifulsoup
+      max_pages: 5
     active: true
   visit_varmland:
     name: Visit Värmland
@@ -1501,6 +1506,7 @@ tier4_aggregators:
     scraper:
       type: static
       method: beautifulsoup
+      max_pages: 5
     active: true
 tier5_municipal:
   karlstad_se:
@@ -1511,6 +1517,7 @@ tier5_municipal:
     scraper:
       type: static
       method: beautifulsoup
+      max_pages: 5
     active: true
 special:
   sm_veckan_2026:
