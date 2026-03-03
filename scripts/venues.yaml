@@ -20,6 +20,7 @@ metadata:
   - Torsby
   - Årjäng
   - Filipstad
+  - Borgvik
 tier1_major:
   farjestad_bk:
     name: Färjestad BK
@@ -609,6 +610,20 @@ tier1_major:
     urls:
       kalender: https://www.almalov.se/kalender/skogen-hanna-kulle-och-klabbe-horngren-30-augusti/
       home: https://www.almalov.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  sliperiet:
+    name: Sliperiet
+    location: Borgvik
+    type:
+    - Evenemang
+    - Kultur
+    - Konst
+    urls:
+      evenemang: https://sliperiet.se/evenemang/
+      home: https://sliperiet.se/
     scraper:
       type: static
       method: beautifulsoup
