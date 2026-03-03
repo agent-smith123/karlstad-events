@@ -812,6 +812,21 @@ tier2_cultural:
     active: true
     discovered_date: '2026-03-02T15:44:12.395845'
     source: subagent_discovery
+  bibliotek_varmland:
+    name: Bibliotek Värmland
+    location: Värmland
+    address: Multiple locations
+    type:
+    - Bibliotek
+    - Evenemang
+    - Kultur
+    urls:
+      events: https://www.bibliotekvarmland.se/evenemang#/
+    scraper:
+      type: manual
+      fallback: ai
+      note: JavaScript SPA - use AI to fetch events via web search
+    active: true
 tier3_small:
   granden_kbk:
     name: Gränden - Käk & Bärs
