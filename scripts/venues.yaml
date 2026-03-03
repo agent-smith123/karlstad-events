@@ -545,6 +545,20 @@ tier1_major:
       method: beautifulsoup
       note: No events currently, but will be monitored for future events
     active: true
+  riksteatern_varmland:
+    name: Riksteatern - Värmland
+    location: Värmland
+    type:
+    - Teater
+    - Scenkonst
+    urls:
+      forestallningar: https://www.riksteatern.se/forestallningar/#!?lanid=17
+      home: https://www.riksteatern.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+      note: Riksteatern performances in Värmland (länid=17)
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
