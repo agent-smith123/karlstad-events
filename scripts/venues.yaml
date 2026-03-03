@@ -212,11 +212,11 @@ tier1_major:
     - Konserter
     - Stand-up
     urls:
-      events: https://www.scalateatern.com/vara-evenemang/
+      events: https://www.ticketmaster.se/discover/karlstad
       tickets: https://www.ticketmaster.se/venue/scalateatern-karlstad-biljetter/scl/416
     scraper:
-      type: static
-      method: beautifulsoup
+      type: ticketmaster_html
+      venue_filter: SCALATEATERN
     active: true
   nojesfabriken:
     name: Nöjesfabriken

@@ -536,13 +536,20 @@ class TicketmasterHTMLScraper(BaseScraper):
             except Exception as e:
                 logger.debug(f"Error parsing event item: {e}")
         
-        # Fallback: try to extract from JSON-LD
+        # Fallback: try to extract from JSON-LD (primary method for Ticketmaster)
         scripts = soup.find_all('script', type='application/ld+json')
         for script in scripts:
             try:
                 import json
                 data = json.loads(script.string)
-                if isinstance(data, dict) and data.get('@type') == 'Event':
+                # Handle both array and single object
+                if isinstance(data, list):
+                    for item in data:
+                        if isinstance(item, dict) and item.get('@type') == 'Event':
+                            event = self._parse_jsonld_event(item, default_location)
+                            if event:
+                                events.append(event)
+                elif isinstance(data, dict) and data.get('@type') == 'Event':
                     event = self._parse_jsonld_event(data, default_location)
                     if event:
                         events.append(event)
@@ -672,6 +679,8 @@ class EventAggregator:
                 scraper = StaticScraper(config)
             elif scraper_type == 'dynamic':
                 scraper = DynamicScraper(config)
+            elif scraper_type == 'ticketmaster_html':
+                scraper = TicketmasterHTMLScraper(config)
             elif scraper_type == 'manual':
                 logger.info(f"Skipping manual venue: {config.get('name')}")
                 return
@@ -680,6 +689,11 @@ class EventAggregator:
                 return
             
             events = scraper.scrape()
+            # Filter by venue if specified
+            venue_filter = config.get('scraper', {}).get('venue_filter')
+            if venue_filter:
+                events = [e for e in events if venue_filter.upper() in e.venue.upper()]
+            
             self._add_events(events)
             logger.info(f"Found {len(events)} events from {config.get('name')}")
             
