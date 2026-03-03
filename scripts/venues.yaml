@@ -586,6 +586,20 @@ tier1_major:
       type: static
       method: beautifulsoup
     active: true
+  gamlakraftstationen:
+    name: Gamla Kraftstationen
+    location: Deje
+    type:
+    - Kultur
+    - Evenemang
+    - Konst
+    urls:
+      evenemang: https://www.gamlakraftstationen.se/evenemang/
+      home: https://www.gamlakraftstationen.se/
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
 tier2_cultural:
   varmlands_museum:
     name: Värmlands Museum
