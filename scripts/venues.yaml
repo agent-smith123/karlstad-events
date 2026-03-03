@@ -1,6 +1,6 @@
 metadata:
-  version: '1.1'
-  last_updated: '2026-03-02'
+  version: '1.2'
+  last_updated: '2026-03-03'
   areas:
   - Karlstad
   - Forshaga
@@ -228,10 +228,9 @@ tier1_major:
     - Live music
     urls:
       events: https://www.nojesfabriken.se/nojeskalendern/
+      tickets: https://www.ticketmaster.se/venue/nojesfabriken-karlstad-biljetter/njf/416
     scraper:
-      type: dynamic
-      method: playwright
-      wait_for: .event-list, .calendar
+      type: ticketmaster
     active: true
   lofbergs_arena:
     name: Löfbergs Arena
@@ -294,8 +293,9 @@ tier1_major:
     - teater
     urls:
       main: https://karlstad.se/uppleva-och-gora/kultur/arenan---bio-musik-teater
+      tickets: https://www.ticketmaster.se/venue/arenan-bibliotekshuset-karlstad-biljetter/aer/416
     scraper:
-      type: manual
+      type: ticketmaster
     active: true
     discovered_date: '2026-03-02T15:44:12.394431'
     source: subagent_discovery
@@ -459,9 +459,12 @@ tier2_cultural:
       type: static
       method: beautifulsoup
       selectors:
-        event: .event, .activity
-        title: h3, h4
-        date: .date, time
+        event: "article, .event-item, .activity"
+        title: "h3 a, h4 a, .event-title"
+        date: "time, .event-date, .date"
+        link: "h3 a, h4 a, .event-title a"
+        description: "p, .event-excerpt"
+      note: "Events listed with date format 'DD mmm, kl HH:MM'"
     active: true
   kristinehamns_konstmuseum:
     name: Kristinehamns Konstmuseum
@@ -472,9 +475,17 @@ tier2_cultural:
     - Utställningar
     urls:
       home: https://www.kristinehamn.se/kristinehamns-konstmuseum
+      activities: https://www.kristinehamn.se/kristinehamns-konstmuseum/program/aktiviteter-och-kurser/
+      exhibitions: https://www.kristinehamn.se/kristinehamns-konstmuseum/utstallningar/
     scraper:
       type: static
       method: beautifulsoup
+      selectors:
+        event: ".activity-item, article, .event"
+        title: "h3, h4, .title"
+        date: "time, .date"
+        description: "p"
+      note: "Activities listed in text format with inline dates"
     active: true
   rackstadmuseet:
     name: Rackstadmuseet
@@ -485,9 +496,17 @@ tier2_cultural:
     - Utställningar
     urls:
       home: https://www.rackstadmuseet.se/
+      calendar: https://www.rackstadmuseet.se/sv/kommande-utstallningar
+      exhibitions: https://www.rackstadmuseet.se/sv/aktuella-utstallningar
     scraper:
       type: static
       method: beautifulsoup
+      selectors:
+        event: ".event-item, .exhibition, article"
+        title: "h2, h3, .title"
+        date: ".date, time, .event-date"
+        description: ".description, p"
+      note: "Museum has rotating exhibitions, check calendar for guided tours and special events"
     active: true
   brigadmuseum:
     name: Brigadmuseum
@@ -504,18 +523,29 @@ tier2_cultural:
   sandgrund_lars_lerin:
     name: Sandgrund Lars Lerin
     location: Karlstad
+    address: Västra Torggatan 31, 652 24 Karlstad
     type:
     - Konsthall
     - Permanent utställning
+    - Gästutställningar
     urls:
       home: https://sandgrund.org/
+      sandgrund: https://sandgrund.org/sandgrund/
+      kabusa: https://sandgrund.org/kabusa-lars-lerin/
     scraper:
-      type: manual
-      note: Permanent exhibition, check for rotating exhibitions
+      type: static
+      method: beautifulsoup
+      selectors:
+        event: ".exhibition, .event, article"
+        title: "h2, h3, a[href*='sandgrund'], a[href*='kabusa']"
+        date: ".date, time"
+        description: "p"
+      note: "Has permanent Lars Lerin collection plus rotating guest exhibitions at Sandgrund and Kabusa venues"
     active: true
   bibliotekshuset:
-    name: Bibliotekshuset
+    name: Bibliotekshuset (Stadsbiblioteket Karlstad)
     location: Karlstad
+    address: Västra Torggatan 26, 651 84 Karlstad
     type:
     - Föreläsningar
     - Film
@@ -523,6 +553,70 @@ tier2_cultural:
     - Workshops
     urls:
       calendar: https://karlstad.se/uppleva-och-gora/bibliotek/kalender-for-biblioteken-i-karlstad
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  kristinehamns_bibliotek:
+    name: Kristinehamns bibliotek
+    location: Kristinehamn
+    address: Kungsgatan 30, 681 31 Kristinehamn
+    type:
+    - Bibliotek
+    - Föreläsningar
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      calendar: https://www.kristinehamn.se/kultur-och-fritid/kristinehamns-bibliotek/kalender/
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/kristinehamns-bibliotek
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  arvika_bibliotek:
+    name: Arvika bibliotek
+    location: Arvika
+    address: Kungsvägen 11, 671 41 Arvika
+    type:
+    - Bibliotek
+    - Föreläsningar
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      calendar: https://www.bibliotekvarmland.se/-/arvika-bibliotek
+      kommun: https://www.arvika.se/upplevaochgora/bibliotek.1455.html
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  saffle_bibliotek:
+    name: Säffle bibliotek
+    location: Säffle
+    address: Kanaltorget 1, 661 80 Säffle
+    type:
+    - Bibliotek
+    - Föreläsningar
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      calendar: https://saffle.se/uppleva-och-gora/bibliotek/kalender.html
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/saffle-bibliotek
+    scraper:
+      type: static
+      method: beautifulsoup
+    active: true
+  forshaga_bibliotek:
+    name: Forshaga bibliotek
+    location: Forshaga
+    address: Storgatan 52, 667 32 Forshaga
+    type:
+    - Bibliotek
+    - Föreläsningar
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      calendar: https://www.forshaga.se/upplevaochgora/bibliotek.4.725330be11efa4b0a3f80003519.html
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/forshaga-bibliotek
     scraper:
       type: static
       method: beautifulsoup
@@ -758,8 +852,9 @@ tier3_small:
     - evenemangslokal
     urls:
       main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal/boka-lokal-for-kulturarrangemang
+      tickets: https://www.ticketmaster.se/venue/sundstaaulan-karlstad-biljetter/sau/416
     scraper:
-      type: manual
+      type: ticketmaster
     active: true
     discovered_date: '2026-03-02T15:44:12.394521'
     source: subagent_discovery
