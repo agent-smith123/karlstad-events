@@ -104,9 +104,18 @@ def parse_events_with_ai(html: str, venue_name: str, location: str, url: str) ->
                         if loc_name and loc_name not in ['Ticketmaster', 'Tickster', venue_name]:
                             actual_venue = loc_name
                     
+                    # Get start and end dates
+                    start_date = item.get('startDate', '')[:10] if 'startDate' in item else ''
+                    end_date = item.get('endDate', '')[:10] if 'endDate' in item else None
+                    
+                    # Handle multi-day events
+                    if end_date and end_date != start_date:
+                        pass  # Keep end_date for multi-day events
+                    
                     event = {
                         'title': item.get('name', ''),
-                        'date': item.get('startDate', '')[:10] if 'startDate' in item else '',
+                        'date': start_date,
+                        'end_date': end_date if end_date and end_date != start_date else None,
                         'venue': actual_venue,
                         'location': location,
                         'link': item.get('url', url),

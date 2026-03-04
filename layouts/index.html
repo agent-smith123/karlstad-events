@@ -17,6 +17,7 @@
     @media (hover: hover) { .event-item:hover { background: var(--row-hover); } }
     .date { flex-shrink: 0; width: 44px; text-align: center; }
     .date-day { display: block; font-size: 20px; font-weight: 600; line-height: 1; letter-spacing: -0.5px; }
+    .date-range { font-size: 16px; }
     .date-weekday { display: block; font-size: 10px; color: var(--text-secondary); text-transform: lowercase; margin-top: 1px; }
     .event-content { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
     .event-title { font-size: 14px; font-weight: 400; line-height: 1.3; }
@@ -40,7 +41,15 @@
   {{ $dataFile := resources.Get "data/events.json" }}
   {{ $events := $dataFile | transform.Unmarshal }}
   {{ $now := now.Format "2006-01-02" }}
-  {{ $futureEvents := where $events "date" "ge" $now }}
+  
+  {{/* Filter events: keep if start date >= now OR (has end_date AND end_date >= now) */}}
+  {{ $futureEvents := slice }}
+  {{ range $events }}
+    {{ $isFuture := or (ge .date $now) (and .end_date (ge .end_date $now)) }}
+    {{ if $isFuture }}
+      {{ $futureEvents = $futureEvents | append . }}
+    {{ end }}
+  {{ end }}
   
   <ul class="event-list">
     {{ $currentMonth := "" }}
@@ -48,12 +57,12 @@
     {{ $weekdays := dict "Monday" "mån" "Tuesday" "tis" "Wednesday" "ons" "Thursday" "tor" "Friday" "fre" "Saturday" "lör" "Sunday" "sön" }}
     
     {{ range sort $futureEvents "date" }}
-      {{ $dateObj := time .date }}
-      {{ $monthNum := $dateObj.Format "01" }}
+      {{ $startDate := time .date }}
+      {{ $monthNum := $startDate.Format "01" }}
       {{ $monthSv := index $months $monthNum }}
       {{ if ne $monthSv $currentMonth }}
         {{ $currentMonth = $monthSv }}
-        <li class="month-divider">{{ $monthSv }} {{ $dateObj.Format "2006" }}</li>
+        <li class="month-divider">{{ $monthSv }} {{ $startDate.Format "2006" }}</li>
       {{ end }}
       
       {{ if .link }}
@@ -61,9 +70,23 @@
       {{ end }}
       <li class="event-item">
         <div class="date">
-          <span class="date-day">{{ $dateObj.Format "2" }}</span>
-          {{ $wdEn := $dateObj.Format "Monday" }}
-          <span class="date-weekday">{{ index $weekdays $wdEn }}</span>
+          {{ if .end_date }}
+            {{/* Multi-day event: show date range */}}
+            {{ $endDate := time .end_date }}
+            {{ if eq ($startDate.Format "01") ($endDate.Format "01") }}
+              {{/* Same month: show "1-6" format */}}
+              <span class="date-day date-range">{{ $startDate.Format "2" }}-{{ $endDate.Format "2" }}</span>
+            {{ else }}
+              {{/* Different months: show "31/1-6/2" format */}}
+              <span class="date-day date-range">{{ $startDate.Format "2" }}/{{ $startDate.Format "1" }}-{{ $endDate.Format "2" }}/{{ $endDate.Format "1" }}</span>
+            {{ end }}
+            <span class="date-weekday">{{ index $weekdays ($startDate.Format "Monday") }}–{{ index $weekdays ($endDate.Format "Monday") }}</span>
+          {{ else }}
+            {{/* Single-day event */}}
+            <span class="date-day">{{ $startDate.Format "2" }}</span>
+            {{ $wdEn := $startDate.Format "Monday" }}
+            <span class="date-weekday">{{ index $weekdays $wdEn }}</span>
+          {{ end }}
         </div>
         <div class="event-content">
           <div class="event-title">{{ .title }}</div>

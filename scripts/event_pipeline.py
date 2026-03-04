@@ -87,9 +87,10 @@ CONTENT_DIR.mkdir(exist_ok=True)
 class Event:
     """Standardized event data structure"""
     title: str
-    date: str  # ISO format YYYY-MM-DD
+    date: str  # ISO format YYYY-MM-DD (start date)
     venue: str
     location: str
+    end_date: Optional[str] = None  # ISO format YYYY-MM-DD (for multi-day events)
     time: Optional[str] = None
     link: Optional[str] = None
     ticketLink: Optional[str] = None
@@ -123,9 +124,11 @@ class Event:
             return False
     
     def is_future(self) -> bool:
-        """Check if event is in the future"""
+        """Check if event is in the future (uses end_date for multi-day events)"""
         try:
-            event_date = datetime.strptime(self.date, '%Y-%m-%d').date()
+            # Use end_date if available, otherwise start date
+            check_date = self.end_date if self.end_date else self.date
+            event_date = datetime.strptime(check_date, '%Y-%m-%d').date()
             return event_date >= datetime.now().date()
         except:
             return False

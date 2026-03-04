@@ -301,11 +301,13 @@ class AIEventFetcher:
         """Use web search to find events at venue"""
         events = []
         
-        # Construct search queries
+        # Construct search queries - include various event types
         queries = [
             f'"{venue_name}" {location} evenemang 2026',
             f'"{venue_name}" program kalender',
-            f'"{venue_name}" konserter föreställningar'
+            f'"{venue_name}" konserter föreställningar',
+            f'"{venue_name}" utställning marknad 2026',
+            f'"{venue_name}" seminarium föreläsning 2026',
         ]
         
         for query in queries:
