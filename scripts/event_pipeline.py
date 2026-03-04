@@ -54,6 +54,30 @@ QUALITY_REPORT_FILE = DATA_DIR / "quality_report.json"
 CURRENT_YEAR = datetime.now().year
 VALID_YEARS = {CURRENT_YEAR, CURRENT_YEAR + 1}  # Only current and next year
 
+
+def normalize_case(text: str) -> str:
+    """
+    Normalize text to proper case (Title Case).
+    Handles ALL CAPS and mixed case strings.
+    Always applies title case for consistency.
+    """
+    if not text:
+        return text
+    
+    # Always convert to title case for consistency
+    words = text.lower().split()
+    result = []
+    for i, word in enumerate(words):
+        # Keep certain words lowercase unless first word or after punctuation
+        lower_words = {'och', 'eller', 'i', 'på', 'med', 'till', 'från', 'av', 'för', 
+                       'the', 'and', 'of', 'in', 'at', 'to', 'for', 'a', 'an'}
+        if i > 0 and word in lower_words:
+            result.append(word)
+        else:
+            result.append(word.capitalize())
+    
+    return ' '.join(result)
+
 # Ensure directories exist
 DATA_DIR.mkdir(exist_ok=True)
 CONTENT_DIR.mkdir(exist_ok=True)
@@ -75,6 +99,11 @@ class Event:
     source: Optional[str] = None
     source_url: Optional[str] = None
     soldOut: Optional[bool] = None
+    
+    def __post_init__(self):
+        """Normalize title and venue to proper case"""
+        self.title = normalize_case(self.title) if self.title else self.title
+        self.venue = normalize_case(self.venue) if self.venue else self.venue
     
     def slug(self) -> str:
         """Generate unique slug for deduplication"""
