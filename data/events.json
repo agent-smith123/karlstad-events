@@ -181,7 +181,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/thank-you-for-the-music-part-two-biljetter/1581115088",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "EN JÄKLA MASSA SCHLAGER",
@@ -189,7 +189,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/en-jakla-massa-schlager-biljetter/696804415",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "BJÖRN GUSTAFSSON LIVE",
@@ -197,7 +197,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/bjorn-gustafsson-live-biljetter/828386328",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "En kväll med Jöback",
@@ -205,7 +205,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/en-kvall-med-joback-biljetter/2056003260",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "Eric Idle - Always Look on the Bright Side of Life, LIVE!",
@@ -213,7 +213,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/eric-idle-always-look-on-the-bright-side-of-life-live-biljetter/1763304232",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "Pjäsen som går åt helvete",
@@ -221,7 +221,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/pjasen-som-gar-at-helvete-biljetter/1496077554",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "Oh What a Night",
@@ -229,7 +229,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/oh-what-a-night-biljetter/61356810",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "ALICE I UNDERLANDET",
@@ -237,7 +237,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/alice-i-underlandet-biljetter/582056843",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "DJUNGELBOKEN - THE MUSICAL",
@@ -245,7 +245,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/djungelboken-the-musical-biljetter/29917391",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "THE BABOON SHOW + support: The Headlines",
@@ -720,6 +720,14 @@
     "source": "Wermland Opera"
   },
   {
+    "title": "Mendelssohn och Tjajkovskij",
+    "date": "2026-03-05",
+    "venue": "Wermland Opera",
+    "location": "Karlstad",
+    "link": "https://www.wermlandopera.com/evenemang/",
+    "source": "Wermland Opera"
+  },
+  {
     "title": "Klassisk Lördag 2025/2026",
     "date": "2026-03-28",
     "venue": "Wermland Opera",
@@ -730,6 +738,14 @@
   {
     "title": "Both Sides Now",
     "date": "2026-04-17",
+    "venue": "Wermland Opera",
+    "location": "Karlstad",
+    "link": "https://www.wermlandopera.com/evenemang/",
+    "source": "Wermland Opera"
+  },
+  {
+    "title": "Bruckners romantiska symfoni",
+    "date": "2026-04-23",
     "venue": "Wermland Opera",
     "location": "Karlstad",
     "link": "https://www.wermlandopera.com/evenemang/",
@@ -880,14 +896,6 @@
     "source": "Sundstaaulan"
   },
   {
-    "title": "HITTADE 134 EVENEMANG I  Karlstad",
-    "date": "2027-02-28",
-    "venue": "Nöje.se",
-    "location": "Karlstad",
-    "link": "https://www.noje.se/karlstad/evenemang",
-    "source": "Nöje.se"
-  },
-  {
     "title": "HITTADE 134 EVENEMANG",
     "date": "2026-03-04",
     "venue": "Karlstad.com",
@@ -902,5 +910,13 @@
     "location": "Karlstad",
     "link": "https://www.karlstad.com/evenemang",
     "source": "Karlstad.com"
+  },
+  {
+    "title": "HITTADE 134 EVENEMANG I  Karlstad",
+    "date": "2027-02-28",
+    "venue": "Nöje.se",
+    "location": "Karlstad",
+    "link": "https://www.noje.se/karlstad/evenemang",
+    "source": "Nöje.se"
   }
 ]

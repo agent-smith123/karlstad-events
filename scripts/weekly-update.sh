@@ -1,4 +1,7 @@
 #!/bin/bash
+# Weekly Event Calendar Update
+# Fetches events, validates, deduplicates, quality gates, and deploys
+
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -10,15 +13,24 @@ log() { echo "[$(date '+%Y-%m-%d %H:%M')] $1" | tee -a "$LOG_FILE"; }
 log "🔄 Weekly Karlstad Events Update"
 cd "$PROJECT_DIR"
 
-log "🏗️ Building..."
-hugo >> "$LOG_FILE" 2>&1
+log "📥 Fetching and processing events..."
+python3 scripts/pipeline.py >> "$LOG_FILE" 2>&1
 
-log "🚀 Deploying..."
-cd public && surge . karlstad-events.surge.sh >> "$LOG_FILE" 2>&1 && cd "$PROJECT_DIR"
+if [ $? -ne 0 ]; then
+    log "❌ Pipeline failed - check logs"
+    exit 1
+fi
 
 SITE_URL="https://karlstad-events.surge.sh"
 WEEK=$(date '+%W')
 YEAR=$(date '+%Y')
+
+# Generate event list for email
+EVENT_COUNT=$(python3 -c "
+import json
+with open('data/events.json') as f:
+    print(len(json.load(f)))
+" 2>/dev/null || echo "0")
 
 EVENT_LIST=$(python3 -c "
 import json
@@ -27,46 +39,41 @@ from datetime import datetime
 with open('data/events.json') as f:
     events = json.load(f)
 
-today = '2026-03-02'
-for e in sorted(events, key=lambda x: x['date']):
-    if e['date'] >= today:
-        dt = datetime.strptime(e['date'], '%Y-%m-%d')
-        week = dt.isocalendar()[1]
-        weekday = ['Mån','Tis','Ons','Tor','Fre','Lör','Sön'][dt.weekday()]
-        print(f\"📅 v{week} {e['date']} ({weekday})\")
-        print(f\"   {e['title']}\")
-        print(f\"   📍 {e['venue']}, {e['location']}\")
-        if 'time' in e:
-            print(f\"   🕐 {e['time']}\")
-        if e.get('soldOut'):
-            print(f\"   🎫 SLUTSÅLT\")
-        elif 'ticketLink' in e:
-            print(f\"   🎫 Biljetter: {e['ticketLink']}\")
-        elif 'link' in e:
-            print(f\"   🔗 {e['link']}\")
-        print()
+today = datetime.now().date().isoformat()
+upcoming = [e for e in events if e['date'] >= today]
+
+for e in sorted(upcoming, key=lambda x: x['date'])[:10]:  # First 10 events
+    dt = datetime.strptime(e['date'], '%Y-%m-%d')
+    week = dt.isocalendar()[1]
+    weekday = ['Mån','Tis','Ons','Tor','Fre','Lör','Sön'][dt.weekday()]
+    print(f\"📅 {e['date']} ({weekday})\")
+    print(f\"   {e['title'][:50]}...\")
+    print(f\"   📍 {e['venue']}, {e['location']}\")
+    print()
 " 2>/dev/null)
 
 EMAIL_BODY="Hej David!
 
-🔔 Nya evenemang i Karlstad
+🔔 Karlstad Events - Uppdatering v${WEEK}, ${YEAR}
 
-📅 Vecka $WEEK, $YEAR
 🌐 ${SITE_URL}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-$EVENT_LIST
+Totalt ${EVENT_COUNT} evenemang
+
+Kommande evenemang (första 10):
+${EVENT_LIST}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📍 Områden: Karlstad, Forshaga, Kil, Munkfors, Molkom, Skattkärr, Väse, Vålberg, Deje, Ransäter, Sunne, Torsby, Grums, Säffle, Filipstad, Kristinehamn
+Se alla event på: ${SITE_URL}
 
 // OpenClaw
 "
 
-git add data/events.json layouts/ hugo.toml
-git commit -m "Update events - $(date '+%Y-%m-%d')" 2>/dev/null || true
+git add -A
+git commit -m "Auto: Weekly update v${WEEK}, ${YEAR} (${EVENT_COUNT} events)" 2>/dev/null || true
 git push origin main 2>/dev/null || true
 
-/home/david/.openclaw/workspace/scripts/agentmail.sh send "david.nossebro@gmail.com" "Karlstad Events - Vecka $WEEK" "$EMAIL_BODY" 2>> "$LOG_FILE" || true
+/home/david/.openclaw/workspace/scripts/agentmail.sh send "david.nossebro@gmail.com" "Karlstad Events - Vecka ${WEEK}" "$EMAIL_BODY" 2>> "$LOG_FILE" || true
 
 log "✅ Klart!"

@@ -77,7 +77,7 @@ def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
 def parse_events_with_ai(html: str, venue_name: str, location: str, url: str) -> List[Dict]:
     """
     Use AI to parse events from HTML content
-    This is a simplified version - in production you'd use an LLM API
+    Extracts actual venue from event data, not just source name
     """
     events = []
     
@@ -96,13 +96,13 @@ def parse_events_with_ai(html: str, venue_name: str, location: str, url: str) ->
             event_list = data if isinstance(data, list) else [data]
             for item in event_list:
                 if isinstance(item, dict) and item.get('@type') == 'Event':
-                    # Extract actual venue from JSON-LD
+                    # Extract actual venue from JSON-LD location
                     actual_venue = venue_name
                     location_obj = item.get('location', {})
                     if isinstance(location_obj, dict):
-                        actual_venue = location_obj.get('name', venue_name)
-                        if not actual_venue or actual_venue in ['Ticketmaster', 'Tickster']:
-                            actual_venue = venue_name
+                        loc_name = location_obj.get('name', '')
+                        if loc_name and loc_name not in ['Ticketmaster', 'Tickster', venue_name]:
+                            actual_venue = loc_name
                     
                     event = {
                         'title': item.get('name', ''),

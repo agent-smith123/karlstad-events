@@ -657,15 +657,19 @@ class EventDeduplicator:
                           'Ticketmaster Web', 'Nöje.se', 'Visit Värmland'}
     
     def deduplicate(self, events: List[Event]) -> List[Event]:
-        """Remove duplicate events, preferring venue-specific over aggregator sources"""
-        # Group events by (date, normalized_title)
+        """Remove duplicate events, preferring venue-specific over aggregator sources
+        
+        Uses case-insensitive comparison for titles and venues
+        """
+        # Group events by (date, normalized_title, normalized_venue)
         from collections import defaultdict
         groups = defaultdict(list)
         
         for event in events:
-            # Normalize title for grouping
+            # Normalize title and venue for grouping (case-insensitive)
             norm_title = self._normalize_title(event.title)
-            key = (event.date, norm_title)
+            norm_venue = self._normalize_venue(event.venue)
+            key = (event.date, norm_title, norm_venue)
             groups[key].append(event)
         
         unique_events = []
@@ -675,7 +679,7 @@ class EventDeduplicator:
             if len(group) == 1:
                 unique_events.append(group[0])
             else:
-                # Multiple events with same date + title - pick the best one
+                # Multiple events with same date + title + venue - pick the best one
                 best = self._pick_best_event(group)
                 unique_events.append(best)
                 duplicates_found += len(group) - 1
@@ -684,12 +688,22 @@ class EventDeduplicator:
         return unique_events
     
     def _normalize_title(self, title: str) -> str:
-        """Normalize title for comparison"""
+        """Normalize title for comparison (case-insensitive)"""
         t = title.lower().strip()
         # Remove common variations
         t = re.sub(r'\s+', ' ', t)
         t = re.sub(r'[-–—]', '-', t)
         return t
+    
+    def _normalize_venue(self, venue: str) -> str:
+        """Normalize venue name for comparison (case-insensitive)"""
+        v = venue.lower().strip()
+        # Common venue name variations
+        v = re.sub(r'\s+', ' ', v)
+        # Handle common abbreviations/variations
+        v = v.replace('wermlands', 'wermland')
+        v = v.replace('operan', 'opera')
+        return v
     
     def _pick_best_event(self, events: List[Event]) -> Event:
         """Pick the best event from a group of duplicates
