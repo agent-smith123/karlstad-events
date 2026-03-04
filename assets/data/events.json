@@ -1,13 +1,5 @@
 [
   {
-    "title": "HITTADE 134 EVENEMANG",
-    "date": "2026-03-04",
-    "venue": "Karlstad.com",
-    "location": "Karlstad",
-    "link": "https://www.karlstad.com/evenemang",
-    "source": "Karlstad.com"
-  },
-  {
     "title": "Mendelssohn och Tjajkovskij",
     "date": "2026-03-05",
     "venue": "Karlstad CCC",
@@ -37,7 +29,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/thank-you-for-the-music-part-two-biljetter/1581115088",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "CARL-EINAR HÄCKNER - SILUETTER",
@@ -349,7 +341,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/bjorn-gustafsson-live-biljetter/828386328",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "SHOUSE IT OUT LOUD! - Nicke Andersson, Philip Shouse & co",
@@ -661,7 +653,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/eric-idle-always-look-on-the-bright-side-of-life-live-biljetter/1763304232",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "Storseans med Christoffer Norén",
@@ -805,7 +797,7 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/oh-what-a-night-biljetter/61356810",
-    "source": "Karlstad CCC (Congress Culture Centre)"
+    "source": "Karlstads Teater"
   },
   {
     "title": "Alice i Underlandet: Den legendariska cirkusshowen är tillbaka!",
@@ -853,22 +845,6 @@
     "venue": "KARLSTAD CCC",
     "location": "Karlstad",
     "link": "https://www.ticketmaster.se/event/djungelboken-the-musical-biljetter/29917391",
-    "source": "Karlstad CCC (Congress Culture Centre)"
-  },
-  {
-    "title": "HITTADE 134 EVENEMANG I  Karlstad",
-    "date": "2027-02-28",
-    "venue": "Nöje.se",
-    "location": "Karlstad",
-    "link": "https://www.noje.se/karlstad/evenemang",
-    "source": "Nöje.se"
-  },
-  {
-    "title": "HITTADE 134 EVENEMANG",
-    "date": "2027-03-04",
-    "venue": "Karlstad.com",
-    "location": "Karlstad",
-    "link": "https://www.karlstad.com/evenemang",
-    "source": "Karlstad.com"
+    "source": "Karlstads Teater"
   }
 ]

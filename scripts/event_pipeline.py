@@ -833,6 +833,21 @@ class QualityGate:
         """Validate a single event"""
         issues = []
         
+        # Check for scraping errors (page text captured as event titles)
+        title_lower = event.title.lower() if event.title else ''
+        scraping_error_patterns = [
+            r'hittade\s+\d+\s+evenemang',  # "Hittade 134 evenemang"
+            r'evenemang i\s+\w+\s*$',  # "Evenemang i Karlstad"
+            r'^\d+\s+evenemang',  # "134 evenemang"
+            r'visar\s+\d+',  # "Visar 10"
+            r'laddar',  # "Laddar..."
+        ]
+        
+        for pattern in scraping_error_patterns:
+            if re.search(pattern, title_lower):
+                issues.append({'type': 'scraping_error', 'severity': 'high', 'detail': f"Title: {event.title}"})
+                return issues  # Return early - not a real event
+        
         # Check required fields
         if not event.title:
             issues.append({'type': 'missing_title', 'severity': 'high'})
