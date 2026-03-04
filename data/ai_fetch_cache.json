@@ -1,0 +1,297 @@
+{
+  "torsby_skidtunnel": {
+    "timestamp": "2026-03-03T21:38:04.302149",
+    "events": []
+  },
+  "safle_simhall": {
+    "timestamp": "2026-03-03T21:38:11.718674",
+    "events": [
+      {
+        "title": "Evenemang fr\u00e5n3 mars",
+        "date": "2026-03-03",
+        "venue": "S\u00e4ffle Simhall",
+        "location": "S\u00e4ffle",
+        "time": null,
+        "link": "https://www.saffle.se/arkiv/evenemang/evenemang/2026-03-05-arsmote--foredrag-varfor-ar-vatmarker-viktiga.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Evenemang fr\u00e5n3 mars",
+        "date": "2026-03-03",
+        "venue": "S\u00e4ffle Simhall",
+        "location": "S\u00e4ffle",
+        "time": null,
+        "link": "https://www.saffle.se/arkiv/evenemang/evenemang/2026-03-05-arsmote--foredrag-varfor-ar-vatmarker-viktiga.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Evenemang fr\u00e5n3 mars",
+        "date": "2026-03-03",
+        "venue": "S\u00e4ffle Simhall",
+        "location": "S\u00e4ffle",
+        "time": null,
+        "link": "https://www.saffle.se/arkiv/evenemang/evenemang/2026-03-05-arsmote--foredrag-varfor-ar-vatmarker-viktiga.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Evenemang fr\u00e5n3 mars",
+        "date": "2026-03-03",
+        "venue": "S\u00e4ffle Simhall",
+        "location": "S\u00e4ffle",
+        "time": null,
+        "link": null,
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      }
+    ]
+  },
+  "arvika_simhall": {
+    "timestamp": "2026-03-03T21:38:17.598774",
+    "events": [
+      {
+        "title": "Dags att ans\u00f6ka om skolskjuts",
+        "date": "2026-03-03",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/dagsattansokaomskolskjuts.7782.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Internationella Kvinnodagen p\u00e5 Ritz",
+        "date": "2026-03-03",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/internationellakvinnodagenparitz.7814.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Kommunen avslutar vindkrafts\u00e4rende",
+        "date": "2026-03-03",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/kommunenavslutarvindkraftsarende.7817.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Klart med nya hyror hos Arvika Fastighet",
+        "date": "2026-03-02",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/klartmednyahyrorhosarvikafastighet.7813.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Det h\u00e4nder p\u00e5 Arvika bibliotek vecka 10",
+        "date": "2026-02-27",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/dethanderpaarvikabibliotekvecka10.7781.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Ungdomar med A-traktor kan f\u00e5 jobb inom v\u00e5rden i sommar",
+        "date": "2026-02-26",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/ungdomarmedatraktorkanfajobbinomvardenisommar.7780.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Nu kan du ans\u00f6ka om pr\u00f6vning",
+        "date": "2026-02-24",
+        "venue": "Arvika Simhall",
+        "location": "Arvika",
+        "time": null,
+        "link": "https://www.arvika.se/kommunochpolitik/pressochinformationsmaterial/nyheter/nyhetsarkiv/nukanduansokaomprovning.7759.html",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      }
+    ]
+  },
+  "karlstads_simhall": {
+    "timestamp": "2026-03-03T21:38:25.101426",
+    "events": [
+      {
+        "title": "Skattjakt i skogen",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=115315",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Skattjakt i skogen",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=115315",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Skattjakt i skogen",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=115315",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Skattjakt i skogen",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=115315",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "G\u00f6mda djur",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=111485",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Tipspromenad: Kroppen \u2013 f\u00f6r hela familjen!",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=115878",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Fotoutst\u00e4llning: Ung blick p\u00e5 naturen",
+        "date": "2026-03-03",
+        "venue": "Karlstads Simhall",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://karlstad.se/uppleva-och-gora/evenemang/event?eventID=116147",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      }
+    ]
+  },
+  "spinneriet__wermland_opera": {
+    "timestamp": "2026-03-03T21:38:26.329036",
+    "events": [
+      {
+        "title": "Selma",
+        "date": "2026-03-07",
+        "venue": "Spinneriet (Wermland Opera)",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://www.wermlandopera.com/evenemang/opera/selma/",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Selma",
+        "date": "2026-03-07",
+        "venue": "Spinneriet (Wermland Opera)",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://www.wermlandopera.com/evenemang/opera/selma/",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      },
+      {
+        "title": "Mendelssohn och Tjajkovskij",
+        "date": "2026-03-05",
+        "venue": "Spinneriet (Wermland Opera)",
+        "location": "Karlstad",
+        "time": null,
+        "link": "https://www.wermlandopera.com/evenemang/konsert/mendelssohn-och-tjajkovskij/",
+        "description": null,
+        "category": null,
+        "confidence": 0.6
+      }
+    ]
+  },
+  "friluftsteatern_mariebergsskogen": {
+    "timestamp": "2026-03-03T21:38:33.087189",
+    "events": []
+  },
+  "forshaga_folkets_hus": {
+    "timestamp": "2026-03-03T21:38:38.552376",
+    "events": []
+  },
+  "forshaga_deje_teaterf_rening": {
+    "timestamp": "2026-03-03T21:38:45.065960",
+    "events": []
+  },
+  "gamla_kraftstationen_i_deje": {
+    "timestamp": "2026-03-03T21:38:51.242766",
+    "events": []
+  },
+  "kulturhuset_kilarena": {
+    "timestamp": "2026-03-03T21:38:53.038606",
+    "events": []
+  },
+  "kunskapsteatern": {
+    "timestamp": "2026-03-03T21:38:59.065318",
+    "events": []
+  },
+  "upperudslogen_i_molkom": {
+    "timestamp": "2026-03-03T21:39:06.370558",
+    "events": []
+  },
+  "s_ffleoperan": {
+    "timestamp": "2026-03-03T21:39:38.359004",
+    "events": []
+  },
+  "totalteatern": {
+    "timestamp": "2026-03-03T21:39:44.381169",
+    "events": []
+  },
+  "krutkonst": {
+    "timestamp": "2026-03-03T21:40:21.316782",
+    "events": []
+  }
+}

@@ -1,263 +1,906 @@
 [
   {
+    "title": "ALLT JAG INTE SA - ENCIMA DANSSTUDIO",
+    "date": "2026-03-07",
+    "venue": "ARENAN BIBLIOTEKSHUSET",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/allt-jag-inte-sa-encima-dansstudio-biljetter/526817926",
+    "source": "Arenan (Bibliotekshuset)"
+  },
+  {
+    "title": "Den sårade divan - om Agnes von K, Sigrid H och Nelly S",
+    "date": "2026-03-10",
+    "venue": "ARENAN BIBLIOTEKSHUSET",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/den-sarade-divan-om-agnes-von-k-sigrid-h-och-nelly-s-biljetter/2056962001",
+    "source": "Arenan (Bibliotekshuset)"
+  },
+  {
+    "title": "EWA PERSSON - FNISS, SKRATT & TÅRAR",
+    "date": "2026-03-29",
+    "venue": "ARENAN BIBLIOTEKSHUSET",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/ewa-persson-fniss-skratt--tarar-biljetter/1456658885",
+    "source": "Arenan (Bibliotekshuset)"
+  },
+  {
+    "title": "KNAPPARNA",
+    "date": "2026-04-14",
+    "venue": "ARENAN BIBLIOTEKSHUSET",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/knapparna-biljetter/597963946",
+    "source": "Arenan (Bibliotekshuset)"
+  },
+  {
+    "title": "Hasse Brontén - Daddy Deluxe",
+    "date": "2026-04-18",
+    "venue": "ARENAN BIBLIOTEKSHUSET",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/hasse-bronten-daddy-deluxe-biljetter/2008328436",
+    "source": "Arenan (Bibliotekshuset)"
+  },
+  {
+    "title": "MECENATENS ÅTERKOMST",
+    "date": "2026-04-29",
+    "venue": "ARENAN BIBLIOTEKSHUSET",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/mecenatens-aterkomst-biljetter/1012933794",
+    "source": "Arenan (Bibliotekshuset)"
+  },
+  {
     "title": "Mendelssohn och Tjajkovskij",
     "date": "2026-03-05",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "En hyllning till Björn & Benny – Thank you for the music! Part two!",
+    "date": "2026-03-06",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Svansjön – en kväll med balett i världsklass",
+    "date": "2026-03-07",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "\"En Jäkla Massa Schlager” gör comeback – hits, glitter och fest på turné 2026",
+    "date": "2026-03-13",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Niklas Strömstedt - TYCK OM MIG – sånger, sanningar, och skvaller!",
+    "date": "2026-03-15",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Albin Lee Meldau & Arvid Nero – Min vän och jag",
+    "date": "2026-03-21",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "En tonsatt kväll med Björn Gustafsson",
+    "date": "2026-03-28",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Bruckners romantiska symfoni",
+    "date": "2026-04-23",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "En kväll med Jöback & Nils-Petter Ankarblom",
+    "date": "2026-05-02",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Storseans med Christoffer Norén",
+    "date": "2026-05-09",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Pjäsen som går åt helvete - Kaoskomedi i bästa Cluedo mordmystik-tappning",
+    "date": "2026-05-10",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Tommy Körberg – Dinnershow",
+    "date": "2026-05-15",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Alice i Underlandet: Den legendariska cirkusshowen är tillbaka!",
+    "date": "2026-10-31",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "Elvis, Elvis, Elvis! – 2026",
+    "date": "2026-11-08",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "HippHipp Live!",
+    "date": "2026-11-21",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "HippHipp Live!",
+    "date": "2026-11-22",
+    "venue": "Karlstad CCC",
+    "location": "Karlstad",
+    "link": "https://www.karlstadccc.se/17/38/program-biljetter/",
+    "source": "Karlstad CCC"
+  },
+  {
+    "title": "THANK YOU FOR THE MUSIC - PART TWO",
+    "date": "2026-03-06",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/thank-you-for-the-music-part-two-biljetter/1581115088",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "EN JÄKLA MASSA SCHLAGER",
+    "date": "2026-03-13",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/en-jakla-massa-schlager-biljetter/696804415",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "BJÖRN GUSTAFSSON LIVE",
+    "date": "2026-03-28",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/bjorn-gustafsson-live-biljetter/828386328",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "En kväll med Jöback",
+    "date": "2026-05-02",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/en-kvall-med-joback-biljetter/2056003260",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "Eric Idle - Always Look on the Bright Side of Life, LIVE!",
+    "date": "2026-05-03",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/eric-idle-always-look-on-the-bright-side-of-life-live-biljetter/1763304232",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "Pjäsen som går åt helvete",
+    "date": "2026-05-10",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/pjasen-som-gar-at-helvete-biljetter/1496077554",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "Oh What a Night",
+    "date": "2026-10-30",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/oh-what-a-night-biljetter/61356810",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "ALICE I UNDERLANDET",
+    "date": "2026-10-31",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/alice-i-underlandet-biljetter/582056843",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "DJUNGELBOKEN - THE MUSICAL",
+    "date": "2027-02-21",
+    "venue": "KARLSTAD CCC",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/djungelboken-the-musical-biljetter/29917391",
+    "source": "Karlstad CCC (Congress Culture Centre)"
+  },
+  {
+    "title": "THE BABOON SHOW + support: The Headlines",
+    "date": "2026-03-14",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-baboon-show--support-the-headlines-biljetter/230821600",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "SHOUSE IT OUT LOUD! - Nicke Andersson, Philip Shouse & co",
+    "date": "2026-03-28",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/shouse-it-out-loud-nicke-andersson-philip-shouse--co-biljetter/926973993",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "HUGGORM",
+    "date": "2026-04-11",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/huggorm-biljetter/943506879",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "STANDUP'N WALK: MESSIAH HALLBERG & AHMED BERHAN",
+    "date": "2026-04-18",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/standupn-walk-messiah-hallberg--ahmed-berhan-biljetter/1291348854",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "CHARTA 77 + BONTA FRÅN ASTA KASK",
+    "date": "2026-04-18",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/charta-77--bonta-fran-asta-kask-biljetter/1675544961",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "LARS DEMIAN, TALLROTH & MEYERSSON",
+    "date": "2026-04-24",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/lars-demian-tallroth--meyersson-biljetter/1092861019",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "KORSLAGDA KUKAR",
+    "date": "2026-04-25",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/korslagda-kukar-biljetter/1424017867",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "DANKO JONES",
+    "date": "2026-05-01",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/danko-jones-biljetter/851699370",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "JOHN HOLM MED BAND",
+    "date": "2026-05-16",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/john-holm-med-band-biljetter/861986870",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "EVA EASTWOOD",
+    "date": "2026-05-23",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/eva-eastwood-biljetter/1732318747",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "OSKAR LINNROS",
+    "date": "2026-05-30",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/oskar-linnros-biljetter/1278398149",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "BROMESA",
+    "date": "2026-06-06",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/bromesa-biljetter/1909185765",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "BILLY OPEL",
+    "date": "2026-06-13",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/billy-opel-biljetter/2033330250",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "DIVISION 7",
+    "date": "2026-06-26",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/division-7-biljetter/130713922",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "MAXIDA MÄRAK",
+    "date": "2026-06-27",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/maxida-marak-biljetter/1470112821",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "LASTKAJ 14",
+    "date": "2026-07-04",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/lastkaj-14-biljetter/1936785368",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "ROB COFFINSHAKER",
+    "date": "2026-07-10",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/rob-coffinshaker-biljetter/1520285245",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "TITIYO",
+    "date": "2026-07-18",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/titiyo-biljetter/69551092",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "UNO SVENNINGSSON",
+    "date": "2026-07-24",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/uno-svenningsson-biljetter/543517771",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "STEVE 'N' SEAGULLS",
+    "date": "2026-08-01",
+    "venue": "Nöjesfabriken",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/steve-n-seagulls-biljetter/1215633465",
+    "source": "Nöjesfabriken"
+  },
+  {
+    "title": "STORA DIALEKTSHOWEN - AV OCH MED FREDRIK LINDSTRÖM",
+    "date": "2026-03-05",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/stora-dialektshowen-av-och-med-fredrik-lindstrom-biljetter/1169360264",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "CARL-EINAR HÄCKNER - SILUETTER",
+    "date": "2026-03-06",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/carl-einar-hackner-siluetter-biljetter/1601504218",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "ERIC CLAPTON TRIBUTE",
+    "date": "2026-03-07",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/eric-clapton-tribute-biljetter/1187455337",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "Sven Ingvars - Igår. Idag. Imorgon. 70 år.",
+    "date": "2026-03-11",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/sven-ingvars-igar-idag-imorgon-70-ar-biljetter/1208213585",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "Sven Ingvars - Igår. Idag. Imorgon. 70 år.",
+    "date": "2026-03-12",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/sven-ingvars-igar-idag-imorgon-70-ar-biljetter/499030538",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "Sven Ingvars - Igår. Idag. Imorgon. 70 år.",
+    "date": "2026-03-13",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/sven-ingvars-igar-idag-imorgon-70-ar-biljetter/1839480239",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "Sven Ingvars - Igår. Idag. Imorgon. 70 år.",
+    "date": "2026-03-14",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/sven-ingvars-igar-idag-imorgon-70-ar-biljetter/725465867",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "THE BEST OF CHRISTER SJÖGREN",
+    "date": "2026-03-19",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-best-of-christer-sjogren-biljetter/1660403208",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "PEPPERLAND - PLAY THE BEATLES!",
+    "date": "2026-03-20",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/pepperland-play-the-beatles-biljetter/355609093",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "Enkel, Vacker, Öm - En hyllning till Monica Z med Frida Öhrn",
+    "date": "2026-03-21",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/enkel-vacker-om-en-hyllning-till-monica-z-med-frida-ohrn-biljetter/225640996",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "BARA HITS - Showen om Mariann Grammofon!",
+    "date": "2026-03-22",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/bara-hits-showen-om-mariann-grammofon-biljetter/118381124",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "MAT & MYT - HENRIK WIDEGREN",
+    "date": "2026-03-25",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/mat--myt-henrik-widegren-biljetter/605204338",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "LADY L",
+    "date": "2026-03-26",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/lady-l-biljetter/2074887620",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "MARIKA CARLSSON OCH KLIMAKTERIET",
+    "date": "2026-03-27",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/marika-carlsson-och-klimakteriet-biljetter/22401607",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "ROBERT WELLS - 40 ÅR VID FLYGELN",
+    "date": "2026-03-28",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/robert-wells-40-ar-vid-flygeln-biljetter/371706175",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "KlubbN och Jens Hult",
+    "date": "2026-04-01",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/klubbn-och-jens-hult-biljetter/1259887733",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "THE ANIMALS - 60th Anniversary World Tour",
+    "date": "2026-04-07",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-animals-60th-anniversary-world-tour-biljetter/502762169",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "DIYARI MAHMOUD - JALLA, VÄX UPP!",
+    "date": "2026-04-10",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/diyari-mahmoud-jalla-vax-upp-biljetter/511613671",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "AMANDA BERGMAN",
+    "date": "2026-04-17",
+    "venue": "SCALATEATERN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/amanda-bergman-biljetter/1449628719",
+    "source": "Scalateatern"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-07",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1607555619",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-11",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/957473405",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-12",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/2060700235",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-14",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1135081021",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-18",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1589304468",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-19",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/343279340",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-21",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1142483361",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-25",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/484578849",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-28",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1091444227",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-03-29",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1903484654",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-01",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/2045090650",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-11",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1741724879",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-12",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1461626398",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-15",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/2080957421",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-18",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/766667661",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-19",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/463614455",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-22",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/16069358",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-23",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/785503491",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "OCH SEN VAR INGEN KVAR",
+    "date": "2026-04-25",
+    "venue": "TEMPELRIDDAREN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/och-sen-var-ingen-kvar-biljetter/1924888323",
+    "source": "Tempelriddaren"
+  },
+  {
+    "title": "Stora konsertserien 2025-2026",
+    "date": "2026-04-23",
     "venue": "Wermland Opera",
     "location": "Karlstad",
-    "link": "https://www.wermlandopera.com/evenemang/konsert/mendelssohn-och-tjajkovskij/",
-    "source": "Wermland Opera",
-    "source_url": "https://www.wermlandopera.com/evenemang/"
+    "link": "https://www.wermlandopera.com/evenemang/",
+    "source": "Wermland Opera"
   },
   {
     "title": "Klassisk Lördag 2025/2026",
-    "date": "2026-03-14",
+    "date": "2026-03-28",
     "venue": "Wermland Opera",
     "location": "Karlstad",
-    "link": "https://www.wermlandopera.com/evenemang/konsert/klassisk-lordag-2025-2026/",
-    "source": "Wermland Opera",
-    "source_url": "https://www.wermlandopera.com/evenemang/"
+    "link": "https://www.wermlandopera.com/evenemang/",
+    "source": "Wermland Opera"
   },
   {
     "title": "Both Sides Now",
     "date": "2026-04-17",
     "venue": "Wermland Opera",
     "location": "Karlstad",
-    "link": "https://www.wermlandopera.com/evenemang/konsert/both-sides-now/",
-    "source": "Wermland Opera",
-    "source_url": "https://www.wermlandopera.com/evenemang/"
-  },
-  {
-    "title": "Bruckners romantiska symfoni",
-    "date": "2026-04-23",
-    "venue": "Wermland Opera",
-    "location": "Karlstad",
-    "link": "https://www.wermlandopera.com/evenemang/konsert/bruckners-romantiska-symfoni/",
-    "source": "Wermland Opera",
-    "source_url": "https://www.wermlandopera.com/evenemang/"
+    "link": "https://www.wermlandopera.com/evenemang/",
+    "source": "Wermland Opera"
   },
   {
     "title": "Majas alfabetssånger",
-    "date": "2026-05-27",
+    "date": "2026-05-30",
     "venue": "Wermland Opera",
     "location": "Karlstad",
-    "link": "https://www.wermlandopera.com/evenemang/barn-ungdom/majas-alfabetssanger/",
-    "source": "Wermland Opera",
-    "source_url": "https://www.wermlandopera.com/evenemang/"
+    "link": "https://www.wermlandopera.com/evenemang/",
+    "source": "Wermland Opera"
   },
   {
-    "title": "20 Jun–5 Sep 2026",
-    "date": "2026-09-05",
-    "venue": "Västanå Musik & Teater",
-    "location": "Sunne",
-    "link": "https://secure.tickster.com/y9xub6zdb5hkbet",
-    "source": "Västanå Musik & Teater",
-    "source_url": "https://www.vastanateater.se/"
-  },
-  {
-    "title": "BerättarkvällhosVästanå",
-    "date": "2026-04-15",
-    "venue": "Västanå Musik & Teater",
-    "location": "Sunne",
-    "link": "https://secure.tickster.com/z3kuv2tw3n8cupe",
-    "source": "Västanå Musik & Teater",
-    "source_url": "https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/"
-  },
-  {
-    "title": "Liljecronashem",
-    "date": "2026-09-05",
-    "venue": "Västanå Musik & Teater",
-    "location": "Sunne",
-    "link": "https://secure.tickster.com/y9xub6zdb5hkbet",
-    "source": "Västanå Musik & Teater",
-    "source_url": "https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/"
-  },
-  {
-    "title": "Babytorsdag",
-    "date": "2026-03-05",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Stickcafé",
-    "date": "2026-03-06",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Legoutställning på Kil Arena",
-    "date": "2026-03-07",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-07-legoutstallning-pa-kil-arena",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "High school musical- på is!",
-    "date": "2026-03-07",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-07-high-school-musical--pa-is",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Historisk bild- och textutställning",
-    "date": "2026-03-10",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-10-historisk-bild--och-textutstallning",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Föreläsning med odlingsexperten Farbror Grön",
-    "date": "2026-03-10",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-10-forelasning-med-odlingsexperten-farbror-gron",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Babytorsdag",
-    "date": "2026-03-12",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Stickcafé",
-    "date": "2026-03-13",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Babytorsdag",
-    "date": "2026-03-19",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Stickcafé",
-    "date": "2026-03-20",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
-  },
-  {
-    "title": "Pyssel för STORA och små",
+    "title": "Svenne Rubins",
     "date": "2026-03-21",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-21-pyssel-for-stora-och-sma",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "venue": "Medis - Säffle Medborgarhus",
+    "location": "Säffle",
+    "link": "https://www.saffle.se/medis",
+    "source": "Medis - Säffle Medborgarhus"
   },
   {
-    "title": "Andreas Jonsson & Wermland Big Band \"Sinatra concert - The classics\"",
-    "date": "2026-03-22",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-03-22-andreas-jonsson--wermland-big-band-sinatra-concert---the-classics",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "Robert Wells in concert",
+    "date": "2026-03-14",
+    "venue": "Medis - Säffle Medborgarhus",
+    "location": "Säffle",
+    "link": "https://www.saffle.se/medis",
+    "source": "Medis - Säffle Medborgarhus"
   },
   {
-    "title": "Babytorsdag",
-    "date": "2026-03-26",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "Italo Brothers",
+    "date": "2026-03-28",
+    "venue": "Medis - Säffle Medborgarhus",
+    "location": "Säffle",
+    "link": "https://www.saffle.se/medis",
+    "source": "Medis - Säffle Medborgarhus"
   },
   {
-    "title": "Stickcafé",
-    "date": "2026-03-27",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "Johan Östling - Pjäs",
+    "date": "2026-03-20",
+    "venue": "Medis - Säffle Medborgarhus",
+    "location": "Säffle",
+    "link": "https://www.saffle.se/medis",
+    "source": "Medis - Säffle Medborgarhus"
   },
   {
-    "title": "Babytorsdag",
-    "date": "2026-04-02",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "Weeping Willows vårturné 2026",
+    "date": "2026-03-06",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/weeping-willows-varturne-2026-biljetter/229661621",
+    "source": "Sundstaaulan"
   },
   {
-    "title": "Babytorsdag",
-    "date": "2026-04-09",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "TRAD ON THE PROM - THE CONCERT",
+    "date": "2026-03-07",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/trad-on-the-prom-the-concert-biljetter/2066457320",
+    "source": "Sundstaaulan"
   },
   {
-    "title": "Stickcafé",
-    "date": "2026-04-10",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "DEN SVENSKA SÅNGBOKEN",
+    "date": "2026-03-13",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/den-svenska-sangboken-biljetter/1775834093",
+    "source": "Sundstaaulan"
   },
   {
-    "title": "Power Cup 2026 Innebandycup Sverige",
-    "date": "2026-04-11",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-04-11-power-cup-2026-innebandycup-sverige",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "Sagan Om Ringen, Hobbit och Maktens Ringar - In Concert",
+    "date": "2026-03-19",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/sagan-om-ringen-hobbit-och-maktens-ringar-in-concert-biljetter/227949620",
+    "source": "Sundstaaulan"
   },
   {
-    "title": "Vårens böcker och körsång",
-    "date": "2026-04-14",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-04-14-varens-bocker-och-korsang",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "THE MUSIC OF HANS ZIMMER AND OTHERS - IN CONCERT",
+    "date": "2026-03-19",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-music-of-hans-zimmer-and-others-in-concert-biljetter/108975229",
+    "source": "Sundstaaulan"
   },
   {
-    "title": "Babytorsdag",
-    "date": "2026-04-16",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-22-babytorsdag",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "KIKKI DANIELSSON - Avskedsturnén",
+    "date": "2026-03-21",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/kikki-danielsson-avskedsturnen-biljetter/520119701",
+    "source": "Sundstaaulan"
   },
   {
-    "title": "Stickcafé",
-    "date": "2026-04-17",
-    "venue": "Kil kommun",
-    "location": "Kil",
-    "link": "https://kil.se/arkiv/evenemang/evenemang/2026-01-23-stickcafe",
-    "source": "Kil kommun",
-    "source_url": "https://kil.se/arkiv/evenemang"
+    "title": "MARILYN",
+    "date": "2026-04-21",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/marilyn-biljetter/1210116411",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "SÅNGFÖRENINGEN MANHEM - VÅR & VÄRME",
+    "date": "2026-04-25",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/sangforeningen-manhem-var--varme-biljetter/439597777",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "THE WALL - IN CONCERT",
+    "date": "2026-04-28",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-wall-in-concert-biljetter/1064068463",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "THE DARK SIDE OF THE MOON - LIVE IN CONCERT",
+    "date": "2026-04-28",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-dark-side-of-the-moon-live-in-concert-biljetter/1706304929",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "ROCK SYMPHO SHOW - PRIME ORCHESTRA",
+    "date": "2026-04-29",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/rock-sympho-show-prime-orchestra-biljetter/164244043",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "FOREVER JACKSON",
+    "date": "2026-05-11",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/forever-jackson-biljetter/306071126",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "The AMAZING HITS by KISS",
+    "date": "2027-02-03",
+    "venue": "SUNDSTAAULAN",
+    "location": "Karlstad",
+    "link": "https://www.ticketmaster.se/event/the-amazing-hits-by-kiss-biljetter/595490583",
+    "source": "Sundstaaulan"
+  },
+  {
+    "title": "HITTADE 134 EVENEMANG I  Karlstad",
+    "date": "2027-02-28",
+    "venue": "Nöje.se",
+    "location": "Karlstad",
+    "link": "https://www.noje.se/karlstad/evenemang",
+    "source": "Nöje.se"
+  },
+  {
+    "title": "HITTADE 134 EVENEMANG",
+    "date": "2026-03-04",
+    "venue": "Karlstad.com",
+    "location": "Karlstad",
+    "link": "https://www.karlstad.com/evenemang",
+    "source": "Karlstad.com"
+  },
+  {
+    "title": "HITTADE 134 EVENEMANG",
+    "date": "2027-03-04",
+    "venue": "Karlstad.com",
+    "location": "Karlstad",
+    "link": "https://www.karlstad.com/evenemang",
+    "source": "Karlstad.com"
   }
 ]

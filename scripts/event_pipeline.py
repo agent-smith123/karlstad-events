@@ -149,8 +149,8 @@ class EventFetcher:
         """Fetch events from all configured sources"""
         all_events = []
         
-        # 1. API sources (Ticketmaster)
-        print("\n📡 Phase 1: API Sources")
+        # 1. API sources (Ticketmaster web scrape)
+        print("\n📡 Phase 1: API Sources + Ticketmaster Web")
         api_events = self._fetch_api_sources()
         all_events.extend(api_events)
         
@@ -159,16 +159,30 @@ class EventFetcher:
         static_events = self._fetch_static_sources()
         all_events.extend(static_events)
         
-        # 3. Dynamic scrapers (JS-heavy sites)
+        # 3. Dynamic scrapers (JS-heavy sites) - with timeout
         print("\n⚡ Phase 3: Dynamic Scrapers")
-        dynamic_events = self._fetch_dynamic_sources()
-        all_events.extend(dynamic_events)
+        try:
+            dynamic_events = self._fetch_dynamic_sources()
+            all_events.extend(dynamic_events)
+        except Exception as e:
+            print(f"  ⚠️ Dynamic scrapers timed out: {e}")
         
-        # 4. Handle failed sources with AI fallback
+        # 4. AI Fallback - only run if explicitly enabled and with timeout
+        ai_enabled = os.getenv('ENABLE_AI_FALLBACK', '').lower() == 'true'
+        if ai_enabled:
+            print("\n🤖 Phase 4: AI Fallback for Manual Venues (enabled)")
+            try:
+                ai_events = self._fetch_ai_venues()
+                all_events.extend(ai_events)
+            except Exception as e:
+                print(f"  ⚠️ AI fallback error: {e}")
+        else:
+            print("\n⏭️  Phase 4: AI Fallback (disabled - set ENABLE_AI_FALLBACK=true)")
+        
+        # 5. Handle failed sources
         if self.failed_sources:
-            print(f"\n🤖 Phase 4: AI Fallback for {len(self.failed_sources)} failed sources")
-            ai_events = self._ai_fallback_fetch()
-            all_events.extend(ai_events)
+            print(f"\n🔄 Phase 5: {len(self.failed_sources)} sources failed - logged")
+            self._log_failed_sources()
         
         return all_events
     
@@ -176,14 +190,63 @@ class EventFetcher:
         """Fetch from API sources (Ticketmaster, etc.)"""
         events = []
         
-        # Ticketmaster API
+        # Try Ticketmaster API first (if key available)
         api_key = os.getenv('TICKETMASTER_API_KEY')
         if api_key:
+            print("  🎫 Using Ticketmaster API...")
             events.extend(self._fetch_ticketmaster(api_key))
         else:
-            print("  ⚠️ No TICKETMASTER_API_KEY configured")
+            print("  ⚠️ No TICKETMASTER_API_KEY - skipping Ticketmaster")
+            print("     (Set TICKETMASTER_API_KEY env var to enable)")
+        
+        # Ticketmaster web scraper temporarily disabled (too slow with Playwright)
+        # To enable: set ENABLE_TICKETMASTER_WEB=true
+        if os.getenv('ENABLE_TICKETMASTER_WEB', '').lower() == 'true':
+            print("  🎫 Scraping Ticketmaster venue pages...")
+            try:
+                tm_events = self._fetch_ticketmaster_web()
+                events.extend(tm_events)
+            except Exception as e:
+                print(f"    ⚠️ Ticketmaster web scrape error: {e}")
         
         return events
+    
+    def _fetch_ticketmaster_web(self) -> List[Event]:
+        """Scrape events from Ticketmaster venue pages with timeout"""
+        events = []
+        
+        try:
+            import sys
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from ticketmaster_scraper import scrape_all_ticketmaster_venues
+            
+            tm_events = scrape_all_ticketmaster_venues(self.venues)
+            
+            for e in tm_events:
+                events.append(Event(
+                    title=e['title'],
+                    date=e['date'],
+                    venue=e['venue'],
+                    location=e['location'],
+                    link=e.get('link'),
+                    source='Ticketmaster Web',
+                    source_url=e.get('link')
+                ))
+                
+        except Exception as e:
+            print(f"    ❌ Ticketmaster web scrape failed: {e}")
+        
+        return events
+    
+    def _log_failed_sources(self):
+        """Log failed sources for later review"""
+        failed_log = DATA_DIR / "failed_sources.json"
+        log_data = {
+            "timestamp": datetime.now().isoformat(),
+            "failed": self.failed_sources
+        }
+        with open(failed_log, 'w') as f:
+            json.dump(log_data, f, indent=2)
     
     def _fetch_ticketmaster(self, api_key: str, max_pages: int = 10) -> List[Event]:
         """Fetch from Ticketmaster API with pagination"""
@@ -269,21 +332,29 @@ class EventFetcher:
             return None
     
     def _fetch_static_sources(self) -> List[Event]:
-        """Fetch from static HTML sources"""
+        """Fetch from static HTML sources using AI-based parsing"""
         events = []
         
-        for tier in ['tier1_major', 'tier2_cultural', 'tier3_small', 'tier4_aggregators', 'tier5_municipal']:
-            tier_venues = self.venues.get(tier, {})
-            for venue_key, config in tier_venues.items():
-                if not config.get('active', False):
-                    continue
-                
-                scraper_type = config.get('scraper', {}).get('type', 'static')
-                if scraper_type not in ['static', 'api']:
-                    continue
-                
-                venue_events = self._scrape_venue(venue_key, config)
-                events.extend(venue_events)
+        try:
+            import sys
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from ai_parser_fetcher import fetch_all_venues_with_ai
+            
+            # Use AI-based parsing for all venues with URLs
+            ai_events = fetch_all_venues_with_ai(self.venues, max_workers=5)
+            
+            for e in ai_events:
+                events.append(Event(
+                    title=e['title'],
+                    date=e['date'],
+                    venue=e['venue'],
+                    location=e['location'],
+                    link=e.get('link'),
+                    source=e.get('source', 'AI Parser')
+                ))
+            
+        except Exception as e:
+            print(f"  ❌ AI fetcher error: {e}")
         
         return events
     
@@ -462,6 +533,40 @@ class EventFetcher:
         
         return None
     
+    def _fetch_ai_venues(self) -> List[Event]:
+        """Fetch events from venues marked as manual with AI fallback using parallel processing"""
+        events = []
+        
+        try:
+            import sys
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from parallel_ai_fetcher import parallel_fetch_venues
+            
+            # Fetch events in parallel (5 workers, 30s timeout per venue)
+            ai_events = parallel_fetch_venues(self.venues, max_workers=5, timeout=30)
+            
+            # Convert to Event format
+            for e in ai_events:
+                events.append(Event(
+                    title=e['title'],
+                    date=e['date'],
+                    venue=e['venue'],
+                    location=e['location'],
+                    link=e.get('link'),
+                    description=e.get('description'),
+                    category=e.get('category'),
+                    source=e.get('source', 'AI Fallback')
+                ))
+            
+            print(f"  ✓ AI Fallback: {len(events)} events from parallel fetch")
+            
+        except Exception as e:
+            print(f"  ❌ AI Fallback error: {e}")
+            import traceback
+            traceback.print_exc()
+        
+        return events
+    
     def _fetch_dynamic_sources(self) -> List[Event]:
         """Fetch from JS-heavy sources using Playwright"""
         events = []
@@ -547,56 +652,78 @@ class EventFetcher:
 class EventDeduplicator:
     """Deduplicate events across sources"""
     
+    # Aggregator sources that shouldn't be used as venue names
+    AGGREGATOR_SOURCES = {'Ticketmaster', 'Tickster', 'Stadsevent', 'Karlstad.com', 
+                          'Ticketmaster Web', 'Nöje.se', 'Visit Värmland'}
+    
     def deduplicate(self, events: List[Event]) -> List[Event]:
-        """Remove duplicate events"""
-        seen_slugs: Set[str] = set()
-        unique_events: List[Event] = []
-        duplicates_found = 0
+        """Remove duplicate events, preferring venue-specific over aggregator sources"""
+        # Group events by (date, normalized_title)
+        from collections import defaultdict
+        groups = defaultdict(list)
         
         for event in events:
-            slug = event.slug()
-            if slug in seen_slugs:
-                duplicates_found += 1
-                continue
-            
-            # Also check for similar events on same date
-            is_similar = False
-            for existing in unique_events:
-                if existing.date == event.date and existing.venue == event.venue:
-                    # Check title similarity
-                    if self._similar_title(existing.title, event.title):
-                        is_similar = True
-                        duplicates_found += 1
-                        break
-            
-            if not is_similar:
-                seen_slugs.add(slug)
-                unique_events.append(event)
+            # Normalize title for grouping
+            norm_title = self._normalize_title(event.title)
+            key = (event.date, norm_title)
+            groups[key].append(event)
+        
+        unique_events = []
+        duplicates_found = 0
+        
+        for key, group in groups.items():
+            if len(group) == 1:
+                unique_events.append(group[0])
+            else:
+                # Multiple events with same date + title - pick the best one
+                best = self._pick_best_event(group)
+                unique_events.append(best)
+                duplicates_found += len(group) - 1
         
         print(f"\n🔄 Deduplication: {duplicates_found} duplicates removed, {len(unique_events)} unique events")
         return unique_events
     
-    def _similar_title(self, title1: str, title2: str) -> bool:
-        """Check if two titles are similar enough to be duplicates"""
-        t1 = title1.lower().strip()
-        t2 = title2.lower().strip()
+    def _normalize_title(self, title: str) -> str:
+        """Normalize title for comparison"""
+        t = title.lower().strip()
+        # Remove common variations
+        t = re.sub(r'\s+', ' ', t)
+        t = re.sub(r'[-–—]', '-', t)
+        return t
+    
+    def _pick_best_event(self, events: List[Event]) -> Event:
+        """Pick the best event from a group of duplicates
         
-        # Exact match
-        if t1 == t2:
-            return True
+        Prefers:
+        1. Non-aggregator venues (actual venue name)
+        2. Events with more complete info (link, time, etc.)
+        """
+        # Score each event
+        scored = []
+        for e in events:
+            score = 0
+            
+            # Prefer non-aggregator venues
+            if e.venue not in self.AGGREGATOR_SOURCES:
+                score += 100
+            
+            # Prefer events with links
+            if e.link:
+                score += 10
+            
+            # Prefer events with time
+            if e.time:
+                score += 5
+            
+            # Prefer events with description
+            if e.description:
+                score += 3
+            
+            scored.append((score, e))
         
-        # One contains the other
-        if t1 in t2 or t2 in t1:
-            return True
-        
-        # Simple similarity check
-        words1 = set(t1.split())
-        words2 = set(t2.split())
-        if len(words1) == 0 or len(words2) == 0:
-            return False
-        
-        overlap = len(words1 & words2) / max(len(words1), len(words2))
-        return overlap > 0.8
+        # Sort by score descending, return best
+        scored.sort(key=lambda x: -x[0])
+        return scored[0][1]
 
 
 class QualityGate:

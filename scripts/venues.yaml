@@ -1,1865 +1,43 @@
 metadata:
-  version: '1.2'
-  last_updated: '2026-03-03'
   areas:
   - Karlstad
   - Forshaga
   - Kil
   - Molkom
-  - Skattkärr
-  - Väse
-  - Vålberg
+  - "Skattk\xE4rr"
+  - "V\xE4se"
+  - "V\xE5lberg"
   - Deje
-  - Hammarö
+  - "Hammar\xF6"
   - Kristinehamn
   - Arvika
-  - Säffle
+  - "S\xE4ffle"
   - Grums
   - Hagfors
   - Sunne
   - Torsby
-  - Årjäng
+  - "\xC5rj\xE4ng"
   - Filipstad
   - Borgvik
   - Skoghall
-tier1_major:
-  farjestad_bk:
-    name: Färjestad BK
-    location: Karlstad
-    address: Löfbergs Arena, Fjällruvsvägen 1, 652 21 Karlstad
-    type:
-    - Ishockey
-    - SHL
-    - Sport
-    urls:
-      schedule: https://www.farjestadbk.se/game-schedule
-      tickets: https://www.ticketmaster.se/venue/lofbergs-arena-karlstad-biljetter/lof/416
-      home: https://www.farjestadbk.se/
-    scraper:
-      type: external
-      source: ticketmaster
-    active: true
-  if_boltic:
-    name: IF Boltic (Bandy)
-    location: Karlstad
-    address: Tingvalla isstadion, Stadionvägen 2-4, 653 39 Karlstad
-    type:
-    - Bandy
-    - Elitserien
-    - Sport
-    urls:
-      schedule: https://www.ifboltic.com/nyheter/
-      home: https://www.ifboltic.com/
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: Swedish bandy season runs October-March
-    active: true
-  kristinehamn_arena:
-    name: Kristinehamn Arena
-    location: Kristinehamn
-    address: Kristinehamn
-    type:
-    - Multi-sport
-    - Konserter
-    - Mässor
-    - Evenemang
-    urls:
-      tickets: https://www.ticketmaster.se/venue/kristinehamn-arena-kristinehamn-biljetter/kra/416
-    scraper:
-      type: ticketmaster
-    active: true
-  torsby_skidtunnel:
-    name: Torsby Skidtunnel & Sportcenter
-    location: Torsby
-    type:
-    - Skidåkning
-    - Biathlon
-    - Evenemang
-    urls:
-      home: https://www.visitvarmland.com/
-    note: Världens första skidtunnel - 1.3 km lång
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-  safle_simhall:
-    name: Säffle Simhall
-    location: Säffle
-    type:
-    - Simhall
-    - Sport
-    - Evenemang
-    urls:
-      home: https://www.saffle.se/
-    note: Värmlands första 50-meters bassäng
-    scraper:
-      type: manual
-      note: Check if has events - otherwise AI fallback - Use AI to fetch events
-      fallback: ai
-    active: true
-  arvika_simhall:
-    name: Arvika Simhall
-    location: Arvika
-    address: Skolgatan 34, Arvika
-    type:
-    - Simhall
-    - Sport
-    urls:
-      home: https://www.arvika.se/
-    scraper:
-      type: manual
-      note: Check if has events - otherwise AI fallback - Use AI to fetch events
-      fallback: ai
-    active: true
-  wermland_opera:
-    name: Wermland Opera
-    location: Karlstad
-    address: Malmtorgsgatan 2, 653 40 Karlstad
-    type:
-    - Opera
-    - Teater
-    - Klassisk musik
-    urls:
-      events: https://www.wermlandopera.com/evenemang/
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: article.post-item
-        category: .post-item__meta--category
-        title: .post-item__title h2
-        date: .post-item__meta--date time
-        link: .post-item__button-holder a
-      venue: Wermland Opera
-    active: true
-  christinateatern:
-    name: Christinateatern
-    location: Kristinehamn
-    address: Kungsgatan 54, 681 31 Kristinehamn
-    type:
-    - Teater
-    - Scene
-    urls:
-      home: https://www.christinateatern.se/
-      kalender: http://www.christinateatern.se/kalender.php
-      events: http://www.christinateatern.se/kalender.php
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  vastana_musik_teater:
-    name: Västanå Musik & Teater
-    location: Sunne
-    type:
-    - Teater
-    - Konsert
-    - Musik
-    urls:
-      home: https://www.vastanateater.se/
-      biljetter: https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/
-      events: https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: "article, .event-item, .forestallning, [class*='event']"
-        title: "h1, h2, h3, .title, a[href*='tickster']"
-        date: "time, .date, [class*='datum']"
-        link: "a[href]"
-      note: Skip date-only text as titles - look for actual event names
-    active: true
-  ritz_arvika:
-    name: Ritz
-    location: Arvika
-    address: Hamngatan 12A, Arvika
-    type:
-    - Konsertlokal
-    - Kulturhus
-    urls:
-      home: https://www.arvika.se/ritz
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  karlstads_simhall:
-    name: Karlstads Simhall
-    location: Karlstad
-    address: Älvgatan 15, 652 24 Karlstad
-    type:
-    - Simhall
-    - Sport
-    urls:
-      home: https://karlstad.se/
-    scraper:
-      type: manual
-      note: Check if has events - otherwise AI fallback - Use AI to fetch events
-      fallback: ai
-    active: true
-  filmstaden_karlstad:
-    name: Filmstaden Karlstad
-    location: Karlstad
-    address: Drottninggatan 33, 651 10 Karlstad
-    type:
-    - Biograf
-    - Film
-    urls:
-      home: https://www.filmstaden.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  karlstad_ccc:
-    name: Karlstad CCC
-    location: Karlstad
-    type:
-    - Konserter
-    - Mässor
-    - Kongress
-    urls:
-      events: https://www.karlstadccc.se/17/38/program-biljetter/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  scalateatern:
-    name: Scalateatern
-    location: Karlstad
-    type:
-    - Teater
-    - Konserter
-    - Stand-up
-    urls:
-      events: https://www.scalateatern.com/vara-evenemang/
-      tickets: https://www.ticketmaster.se/venue/scalateatern-karlstad-biljetter/scl/416
-      home: https://www.scalateatern.com/
-    scraper:
-      type: ticketmaster_html
-      venue_filter: SCALATEATERN
-    active: true
-  nojesfabriken:
-    name: Nöjesfabriken
-    location: Karlstad
-    type:
-    - Klubb
-    - Konserter
-    - Quiz
-    - Live music
-    urls:
-      events: https://www.nojesfabriken.se/nojeskalendern/
-      tickets: https://www.ticketmaster.se/venue/nojesfabriken-karlstad-biljetter/njf/416
-    scraper:
-      type: ticketmaster
-    active: true
-  lofbergs_arena:
-    name: Löfbergs Arena
-    location: Karlstad
-    type:
-    - Arena
-    - Stora evenemang
-    - Ishockey
-    urls:
-      home: https://www.lofbergsarena.se/
-      tickets: https://www.tickster.com/se/sv/events/in/karlstad
-    scraper:
-      type: external
-      source: tickster
-    active: true
-  karlstad_ccc__congress_culture_centre:
-    name: Karlstad CCC (Congress Culture Centre)
-    location: Karlstad
-    address: Tage Erlandergatan 8A-F, 652 20 Karlstad
-    type:
-    - konserthall
-    urls:
-      tickets: https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416
-    scraper:
-      type: ticketmaster
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394356'
-    source: subagent_discovery
-  karlstads_teater:
-    name: Karlstads Teater
-    location: Karlstad
-    address: Malmtorgsgatan 2, 652 30 Karlstad
-    type:
-    - teater
-    urls:
-      tickets: https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416
-    scraper:
-      type: ticketmaster
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394398'
-    source: subagent_discovery
-  v_rmlandsteatern:
-    name: Värmlandsteatern
-    location: Karlstad
-    address: Pihlgrensgatan 3, 652 25 Karlstad
-    type:
-    - teater
-    urls:
-      tickets: https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416
-    scraper:
-      type: ticketmaster
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394417'
-    source: subagent_discovery
-  arenan__bibliotekshuset:
-    name: Arenan (Bibliotekshuset)
-    location: Karlstad
-    address: Västra Torggatan 26, 651 84 Karlstad
-    type:
-    - teater
-    urls:
-      main: https://karlstad.se/uppleva-och-gora/kultur/arenan---bio-musik-teater
-      tickets: https://www.ticketmaster.se/venue/arenan-bibliotekshuset-karlstad-biljetter/aer/416
-    scraper:
-      type: ticketmaster
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394431'
-    source: subagent_discovery
-  spinneriet__wermland_opera:
-    name: Spinneriet (Wermland Opera)
-    location: Karlstad
-    address: Älvgatan 49, 652 30 Karlstad
-    type:
-    - teater
-    urls:
-      main: https://www.wermlandopera.com/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394444'
-    source: subagent_discovery
-  tempelriddaren:
-    name: Tempelriddaren
-    location: Karlstad
-    address: Karlstad
-    type:
-    - teater
-    urls:
-      tickets: https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416
-    scraper:
-      type: ticketmaster
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394495'
-    source: subagent_discovery
-  friluftsteatern_mariebergsskogen:
-    name: Friluftsteatern Mariebergsskogen
-    location: Karlstad
-    address: Mariebergsskogen, Karlstad
-    type:
-    - teater
-    urls:
-      main: https://karlstad.se/uppleva-och-gora/kultur/teater-och-dans
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394546'
-    source: subagent_discovery
-  forshaga_folkets_hus:
-    name: Forshaga Folkets Hus
-    location: Forshaga
-    address: Vinkelgatan 18, 667 31 Forshaga
-    type:
-    - konserthall
-    urls:
-      main: http://www.forshagafh.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394744'
-    source: subagent_discovery
-  forshaga_deje_teaterf_rening:
-    name: Forshaga Deje Teaterförening
-    location: Forshaga
-    address: Forshaga kommun
-    type:
-    - teater
-    urls:
-      main: https://www.riksteatern.se/forening/forshaga-deje-teaterforening---en-del-av-riksteatern/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394786'
-    source: subagent_discovery
-  gamla_kraftstationen_i_deje:
-    name: Gamla Kraftstationen i Deje
-    location: Forshaga
-    address: Deje
-    type:
-    - teater
-    urls:
-      main: https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/sevardheter.4.211785d1545641708e1d6.html
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394798'
-    source: subagent_discovery
-  kulturhuset_kilarena:
-    name: Kulturhuset KilArena
-    location: Kil
-    address: Industrigatan 1, 665 33 Kil
-    type:
-    - konserthall
-    urls:
-      main: https://kulturhusetkilarena.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394857'
-    source: subagent_discovery
-  kunskapsteatern:
-    name: Kunskapsteatern
-    location: Kil
-    address: Kil
-    type:
-    - teater
-    urls:
-      main: https://kunskapsteatern.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394903'
-    source: subagent_discovery
-  upperudslogen_i_molkom:
-    name: Upperudslogen i Molkom
-    location: Molkom
-    address: Upperudsvägen 1, 65560 Molkom
-    type:
-    - Konserthall/Eventlokal
-    urls:
-      main: https://www.kulturaktiebolaget.se/venues/upperudslogen-i-molkom
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395029'
-    source: subagent_discovery
-  s_ffleoperan:
-    name: SäffleOperan
-    location: Säffle
-    address: Magasinsgatan 2, 661 30 Säffle
-    type:
-    - teater
-    urls:
-      main: https://www.saffleoperan.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395724'
-    source: subagent_discovery
-  totalteatern:
-    name: Totalteatern
-    location: Arvika
-    address: ''
-    type:
-    - teater
-    urls:
-      main: https://www.regionvarmland.se/kulturpoolen/kulturaktorer/totalteatern
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395820'
-    source: subagent_discovery
-  sagolika_sunne:
-    name: Sagolika Sunne
-    location: Sunne
-    type:
-    - Evenemang
-    - Turism
-    - Kultur
-    urls:
-      events: https://sagolikasunne.se/gora/noje-evenemang/evenemang/
-      home: https://sagolikasunne.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: Sagolika Sunne tourism events
-    active: true
-  kulturveckan_sunne:
-    name: Kulturveckan i Sunne
-    location: Sunne
-    type:
-    - Evenemang
-    - Kultur
-    - Festival
-    urls:
-      program: https://www.kulturveckanisunne.se/program
-      home: https://www.kulturveckanisunne.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  frykens_konstrunda:
-    name: Frykens Konstrunda
-    location: Sunne/Fryken
-    type:
-    - Konst
-    - Kultur
-    - Utställning
-    urls:
-      home: https://frykenskonstrunda.com/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  ransater:
-    name: Räntemäklens Gård / Ransäter
-    location: Ransäter
-    type:
-    - Evenemang
-    - Kultur
-    - Gård
-    urls:
-      events: https://www.ransater.com/evenemang/
-      home: https://www.ransater.com/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  rotnas_gardsbutik:
-    name: Rotnäs Gårdsbutik
-    location: Värmland
-    type:
-    - Evenemang
-    - Gård
-    - Butik
-    urls:
-      kalender: http://rotnasgardsbutik.se/kalender
-      home: http://rotnasgardsbutik.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: No events currently, but will be monitored for future events
-    active: true
-  riksteatern_varmland:
-    name: Riksteatern - Värmland
-    location: Värmland
-    type:
-    - Teater
-    - Scenkonst
-    urls:
-      forestallningar: https://www.riksteatern.se/forestallningar/#!?lanid=17
-      home: https://www.riksteatern.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: Riksteatern performances in Värmland (länid=17)
-    active: true
-  krutkonst:
-    name: Krutrundan / Krutkonst
-    location: Värmland
-    type:
-    - Konst
-    - Konstrunda
-    - Evenemang
-    urls:
-      home: http://krutkonst.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: Not easily parseable - use AI agent to read and identify events
-    active: true
-  varmlandsteatern:
-    name: Värmlandsteatern
-    location: Karlstad
-    type:
-    - Teater
-    - Scenkonst
-    urls:
-      produktioner: https://varmlandsteatern.se/aktuella-produktioner/
-      home: https://varmlandsteatern.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  gamlakraftstationen:
-    name: Gamla Kraftstationen
-    location: Deje
-    type:
-    - Kultur
-    - Evenemang
-    - Konst
-    urls:
-      evenemang: https://www.gamlakraftstationen.se/evenemang/
-      home: https://www.gamlakraftstationen.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  almalov:
-    name: ÅmålOV
-    location: Åmål
-    type:
-    - Evenemang
-    - Organisation
-    urls:
-      kalender: https://www.almalov.se/kalender/skogen-hanna-kulle-och-klabbe-horngren-30-augusti/
-      home: https://www.almalov.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  sliperiet:
-    name: Sliperiet
-    location: Borgvik
-    type:
-    - Evenemang
-    - Kultur
-    - Konst
-    urls:
-      evenemang: https://sliperiet.se/evenemang/
-      home: https://sliperiet.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  borgviksgard:
-    name: Borgviks Gård
-    location: Borgvik
-    type:
-    - Evenemang
-    - Gård
-    - Trädgård
-    urls:
-      program: https://www.borgviksgard.se/gardens-program
-      home: https://www.borgviksgard.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  skoghalls_folkets_hus:
-    name: Skoghalls Folkets Hus
-    location: Skoghall
-    type:
-    - Evenemang
-    - Folkets Hus
-    - Kultur
-    urls:
-      home: https://skoghallsfolketshus.se/mobil/index.php
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  hammaro_kommun:
-    name: Hammaro.se Evenemang
-    location: Hammarö
-    type:
-    - Evenemang
-    - Kommunal
-    urls:
-      evenemang: https://hammaro.se/uppleva-och-gora/evenemang
-      home: https://hammaro.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: ".event-item, article.event, [class*='evenemang']"
-        title: "h1, h2, h3, .title"
-        date: "time, .date, [class*='datum']"
-        link: "a[href]"
-      note: Only scrape actual events, not news articles
-    active: true
-  kil_kommun:
-    name: Kil kommun
-    location: Kil
-    type:
-    - Evenemang
-    - Kommunal
-    urls:
-      evenemang: https://kil.se/arkiv/evenemang
-      home: https://kil.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  marbacka:
-    name: Marbacka
-    location: Sunne
-    type:
-    - Evenemang
-    - Gård
-    - Kultur
-    urls:
-      kalendarium: https://marbacka.com/kalendarium/
-      home: https://marbacka.com/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  filipstads_trav:
-    name: Filipstads Travbana (F-Trav)
-    location: Filipstad
-    type:
-    - Sport
-    - Trav
-    - Evenemang
-    urls:
-      alla_event: https://www.ftrav.se/alla-event/
-      home: https://www.ftrav.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  gammelvala:
-    name: Gammelvala
-    location: Filipstad
-    type:
-    - Evenemang
-    - Gård
-    - Kultur
-    urls:
-      program: https://gammelvala.se/program/veckoprogram.html
-      home: https://gammelvala.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  lillerudsdagarna:
-    name: Lillerudsdagarna
-    location: Värmland
-    type:
-    - Evenemang
-    - Årligt
-    - Festival
-    urls:
-      home: https://lillerudsdagarna.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: No structured data - AI agent needed to read and extract event info
-    active: true
-  hammaro_kulturbygd:
-    name: Hammarö Kulturbygd
-    location: Hammarö
-    type:
-    - Evenemang
-    - Kultur
-    urls:
-      kalender: https://www.hammarokulturbygd.se/startsida/Evenemangskalender
-      home: https://www.hammarokulturbygd.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-tier2_cultural:
-  varmlands_museum:
-    name: Värmlands Museum
-    location: Karlstad
-    address: Sandgrundsudden, Västra Torggatan 31, 652 24 Karlstad
-    type:
-    - Utställningar
-    - Föreläsningar
-    - Guidade visningar
-    - Familjeaktiviteter
-    urls:
-      calendar: https://varmlandsmuseum.se/evenemangskalender/
-      exhibitions: https://varmlandsmuseum.se/utstallningar/
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: .event-front
-        title: h3 a, h4 a
-        date: .date-box
-        link: h3 a, h4 a
-      note: Events in .event-front cards with date-box containing 'DD mmm, kl HH:MM'
-    active: true
-  kristinehamns_konstmuseum:
-    name: Kristinehamns Konstmuseum
-    location: Kristinehamn
-    address: Dr Enwalls väg 13C, 681 84 Kristinehamn
-    type:
-    - Konstmuseum
-    - Utställningar
-    urls:
-      home: https://www.kristinehamn.se/kristinehamns-konstmuseum
-      activities: https://www.kristinehamn.se/kristinehamns-konstmuseum/program/aktiviteter-och-kurser/
-      exhibitions: https://www.kristinehamn.se/kristinehamns-konstmuseum/utstallningar/
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: .accordionitemblock
-        title: h2, h3, h4
-        date: h2, h3, h4
-        link: a
-      note: Activities in accordion blocks with date in heading (DD mmm - Title)
-    active: true
-  rackstadmuseet:
-    name: Rackstadmuseet
-    location: Arvika
-    address: Kungsvägen 11, 671 41 Arvika
-    type:
-    - Konstmuseum
-    - Utställningar
-    urls:
-      home: https://www.rackstadmuseet.se/
-      calendar: https://www.rackstadmuseet.se/sv/kommande-utstallningar
-      exhibitions: https://www.rackstadmuseet.se/sv/aktuella-utstallningar
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: article.blog-output-post
-        title: h2 a, h2
-        date: h2, h2 a
-        link: h2 a
-      note: Exhibitions in blog posts with dates in heading format (DD mmm – DD mmm)
-    active: true
-  brigadmuseum:
-    name: Brigadmuseum
-    location: Karlstad
-    address: Sandbäcksgatan 31, 653 40 Karlstad
-    type:
-    - Militärhistoriskt museum
-    urls:
-      home: https://www.brigadmuseum.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  sandgrund_lars_lerin:
-    name: Sandgrund Lars Lerin
-    location: Karlstad
-    address: Västra Torggatan 31, 652 24 Karlstad
-    type:
-    - Konsthall
-    - Permanent utställning
-    - Gästutställningar
-    urls:
-      home: https://sandgrund.org/
-      sandgrund: https://sandgrund.org/sandgrund/
-      kabusa: https://sandgrund.org/kabusa-lars-lerin/
-    scraper:
-      type: static
-      method: beautifulsoup
-      selectors:
-        event: .exhibition, .event, article
-        title: h2, h3, a[href*='sandgrund'], a[href*='kabusa']
-        date: .date, time
-        description: p
-      note: Has permanent Lars Lerin collection plus rotating guest exhibitions at
-        Sandgrund and Kabusa venues
-    active: true
-  bibliotekshuset:
-    name: Bibliotekshuset (Stadsbiblioteket Karlstad)
-    location: Karlstad
-    address: Västra Torggatan 26, 651 84 Karlstad
-    type:
-    - Föreläsningar
-    - Film
-    - Kultur
-    - Workshops
-    urls:
-      calendar: https://karlstad.se/uppleva-och-gora/bibliotek/kalender-for-biblioteken-i-karlstad
-    scraper:
-      type: static
-      note: Library events via karlstad.se
-    active: true
-  kristinehamns_bibliotek:
-    name: Kristinehamns bibliotek
-    location: Kristinehamn
-    address: Kungsgatan 30, 681 31 Kristinehamn
-    type:
-    - Bibliotek
-    - Föreläsningar
-    - Barnaktiviteter
-    - Bokcirkel
-    urls:
-      calendar: https://www.kristinehamn.se/kultur-och-fritid/kristinehamns-bibliotek/kalender/
-      bibliotekvarmland: https://www.bibliotekvarmland.se/-/kristinehamns-bibliotek
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  arvika_bibliotek:
-    name: Arvika bibliotek
-    location: Arvika
-    address: Kungsvägen 11, 671 41 Arvika
-    type:
-    - Bibliotek
-    - Föreläsningar
-    - Barnaktiviteter
-    - Bokcirkel
-    urls:
-      calendar: https://www.bibliotekvarmland.se/-/arvika-bibliotek
-      kommun: https://www.arvika.se/upplevaochgora/bibliotek.1455.html
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  saffle_bibliotek:
-    name: Säffle bibliotek
-    location: Säffle
-    address: Kanaltorget 1, 661 80 Säffle
-    type:
-    - Bibliotek
-    - Föreläsningar
-    - Barnaktiviteter
-    - Bokcirkel
-    urls:
-      calendar: https://saffle.se/uppleva-och-gora/bibliotek/kalender.html
-      bibliotekvarmland: https://www.bibliotekvarmland.se/-/saffle-bibliotek
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  forshaga_bibliotek:
-    name: Forshaga bibliotek
-    location: Forshaga
-    address: Storgatan 52, 667 32 Forshaga
-    type:
-    - Bibliotek
-    - Föreläsningar
-    - Barnaktiviteter
-    - Bokcirkel
-    urls:
-      calendar: https://www.forshaga.se/upplevaochgora/bibliotek.4.725330be11efa4b0a3f80003519.html
-      bibliotekvarmland: https://www.bibliotekvarmland.se/-/forshaga-bibliotek
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  mariebergsskogen:
-    name: Mariebergsskogen
-    location: Karlstad
-    type:
-    - Friluftsteater
-    - Natur
-    - Familjeaktiviteter
-    - Valborg
-    urls:
-      events: https://karlstad.se/mariebergsskogen/evenemang
-      summer_theater: https://www.scalateatern.com/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  gjuteriet:
-    name: Gjuteriet
-    location: Karlstad
-    address: Verkstadsgatan 1, 652 19 Karlstad
-    type:
-    - kulturhus
-    urls:
-      main: https://gjuteriet.nu/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394458'
-    source: subagent_discovery
-  kulturhuset_forshaga:
-    name: Kulturhuset Forshaga
-    location: Forshaga
-    address: Storgatan 52, 667 32 Forshaga
-    type:
-    - kulturhus
-    urls:
-      main: https://www.forshaga.se/upplevaochgora/kultur/kulturhuset.4.725330be11efa4b0a3f80003549.html
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394760'
-    source: subagent_discovery
-  kulturhuset_i_deje:
-    name: Kulturhuset i Deje
-    location: Forshaga
-    address: Brogatan 11, 669 30 Deje
-    type:
-    - kulturhus
-    urls:
-      main: https://www.forshaga.se/upplevaochgora/kultur/kulturhusetideje.4.725330be11efa4b0a3f80003549.html
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394773'
-    source: subagent_discovery
-  kils_bibliotek:
-    name: Kils bibliotek
-    location: Kil
-    address: Kil
-    type:
-    - kulturhus
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394892'
-    source: subagent_discovery
-  molkoms_bibliotek:
-    name: Molkoms bibliotek
-    location: Molkom
-    address: Molkom
-    type:
-    - Bibliotek
-    urls:
-      main: https://www.biblioteken.se/molkoms-bibliotek/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395075'
-    source: subagent_discovery
-  skattk_rrs_bibliotek:
-    name: Skattkärrs bibliotek
-    location: Skattkärr
-    address: Skattkärrsvägen 39, Skattkärr
-    type:
-    - Bibliotek
-    urls:
-      main: https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395117'
-    source: subagent_discovery
-  medis___s_ffle_medborgarhus:
-    name: Medis - Säffle Medborgarhus
-    location: Säffle
-    address: Magasinsgatan 2, 661 30 Säffle
-    type:
-    - kulturhus
-    urls:
-      main: https://www.saffle.se/medis
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395708'
-    source: subagent_discovery
-  ritz:
-    name: Ritz
-    location: Arvika
-    address: Kyrkogatan, 671 31 Arvika
-    type:
-    - kulturhus
-    urls:
-      main: https://www.arvika.se/upplevaochgora/ritzkulturochaktivitetshus.2722.html
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395786'
-    source: subagent_discovery
-  kolonin_arvika:
-    name: Kolonin Arvika
-    location: Arvika
-    address: Kyrkogatan 42, Arvika
-    type:
-    - kulturhus
-    urls:
-      main: https://koloninarvika.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395810'
-    source: subagent_discovery
-  grums_bibliotek:
-    name: Grums Bibliotek
-    location: Grums
-    address: ''
-    type:
-    - bibliotek
-    urls:
-      main: https://www.biblioteken.se/grums-bibliotek/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395845'
-    source: subagent_discovery
-  bibliotek_varmland:
-    name: Bibliotek Värmland
-    location: Värmland
-    address: Multiple locations
-    type:
-    - Bibliotek
-    - Evenemang
-    - Kultur
-    urls:
-      events: https://www.bibliotekvarmland.se/evenemang#/
-    scraper:
-      type: manual
-      fallback: ai
-      note: JavaScript SPA - use AI to fetch events via web search
-    active: true
-tier3_small:
-  granden_kbk:
-    name: Gränden - Käk & Bärs
-    location: Karlstad
-    type:
-    - Pub
-    - Live music
-    - Quiz
-    urls:
-      facebook: https://www.facebook.com/grandenkb
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-  verket:
-    name: VERKET
-    location: Karlstad
-    type:
-    - Kulturlokal
-    - Indie
-    - Konserter
-    urls:
-      facebook: https://www.facebook.com/verketkarlstad
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-  bishops_arms:
-    name: The Bishops Arms
-    location: Karlstad
-    type:
-    - Pub
-    - Quiz
-    - Live bands
-    - Ölprovning
-    urls:
-      events: https://www.bishopsarms.com/evenemang/
-      quiz: https://www.bishopsarms.com/evenemang/quiz-754173750908641-7201/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  the_bull_bar:
-    name: The Bull Bar
-    location: Karlstad
-    address: Östra Torggatan 8, 652 24 Karlstad
-    type:
-    - pub
-    urls:
-      main: https://www.facebook.com/thebullbarkarlstad/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394471'
-    source: subagent_discovery
-  the_leprechaun_pub:
-    name: The Leprechaun Pub
-    location: Karlstad
-    address: Östra Torggatan 4, 652 24 Karlstad
-    type:
-    - pub
-    urls:
-      main: http://www.theleprechaun.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394483'
-    source: subagent_discovery
-  ulvsbyg_rden:
-    name: Ulvsbygården
-    location: Karlstad
-    address: Ulvsbygården (outside Karlstad)
-    type:
-    - evenemangslokal
-    urls:
-      main: https://www.ulvsbygarden.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394508'
-    source: subagent_discovery
-  sundstaaulan:
-    name: Sundstaaulan
-    location: Karlstad
-    address: Sundsta-Älvkule gymnasiet, Karlstad
-    type:
-    - evenemangslokal
-    urls:
-      main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal/boka-lokal-for-kulturarrangemang
-      tickets: https://www.ticketmaster.se/venue/sundstaaulan-karlstad-biljetter/sau/416
-      events: https://karlstad.se/uppleva-och-gora/kultur/sundstaaulan
-    scraper:
-      type: ticketmaster
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394521'
-    source: subagent_discovery
-  alsters_herrg_rd:
-    name: Alsters Herrgård
-    location: Karlstad
-    address: Alster, Karlstad
-    type:
-    - evenemangslokal
-    urls:
-      main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal
-      evenemang: https://karlstad.se/alsters-herrgard/evenemang
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394534'
-    source: subagent_discovery
-  jaguar_bar___nattklubb:
-    name: Jaguar Bar & Nattklubb
-    location: Karlstad
-    address: Karlstad (central)
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394559'
-    source: subagent_discovery
-  k12__pitcher_s:
-    name: K12 (Pitcher's)
-    location: Karlstad
-    address: Karlstad
-    type:
-    - pub
-    urls:
-      main: https://www.pitchers.se/aktiviteter/karlstad-nattklubb
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394572'
-    source: subagent_discovery
-  dallas_pizzeria___pub:
-    name: Dallas Pizzeria & Pub
-    location: Forshaga
-    address: Forshaga
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394810'
-    source: subagent_discovery
-  forshaga_k_k___bar:
-    name: Forshaga Kök & Bar
-    location: Forshaga
-    address: Bruksgatan 10, 667 32 Forshaga
-    type:
-    - pub
-    urls:
-      main: https://forshaga-kok-bar.webnode.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394823'
-    source: subagent_discovery
-  pub_luna:
-    name: Pub Luna
-    location: Forshaga
-    address: Esplanaden 2, 667 30 Forshaga
-    type:
-    - pub
-    urls:
-      main: https://lunalucet.se/pub-luna/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394834'
-    source: subagent_discovery
-  restaurant_luna_lucet:
-    name: Restaurant Luna Lucet
-    location: Forshaga
-    address: Esplanaden 2, 667 30 Forshaga
-    type:
-    - restaurant
-    urls:
-      main: https://lunalucet.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394846'
-    source: subagent_discovery
-  glada_killingen_pub___restaurang:
-    name: Glada Killingen Pub & Restaurang
-    location: Kil
-    address: Storgatan 51, 665 30 Kil
-    type:
-    - pub
-    urls:
-      main: https://gladakillingen.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394869'
-    source: subagent_discovery
-  guldapan:
-    name: Guldapan
-    location: Kil
-    address: Kil
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.394881'
-    source: subagent_discovery
-  ngsbacka_course___festival_center:
-    name: Ängsbacka Course & Festival Center
-    location: Molkom
-    address: Molkom, Värmland
-    type:
-    - Kursgård/Festival
-    urls:
-      main: https://www.angsbacka.com/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395048'
-    source: subagent_discovery
-  molkoms_folkh_gskola:
-    name: Molkoms folkhögskola
-    location: Molkom
-    address: Mejerivägen 3, 660 60 Molkom
-    type:
-    - Folkhögskola/Eventlokal
-    urls:
-      main: https://regionvarmland.se/folkhogskolor/molkoms-folkhogskola/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395063'
-    source: subagent_discovery
-  restaurang___pizzeria_lilla_huset:
-    name: Restaurang & Pizzeria Lilla Huset
-    location: Molkom
-    address: Graningevägen 4, 660 60 Molkom
-    type:
-    - Restaurang
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395088'
-    source: subagent_discovery
-  stiftelsen_v_rt_hus_i_skattk_rr:
-    name: Stiftelsen Vårt Hus i Skattkärr
-    location: Skattkärr
-    address: Skogsvallsvägen 45, 656 72 Skattkärr
-    type:
-    - Festlokal
-    urls:
-      main: https://hittafestlokal.se/festlokalen-stiftelsen-vart-hus-i-skattkarr-skattkarr/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395104'
-    source: subagent_discovery
-  skattk_rrs_pizzeria_och_pub:
-    name: Skattkärrs Pizzeria och Pub
-    location: Skattkärr
-    address: Tallstigen 4, 656 71 Skattkärr
-    type:
-    - Pub/Restaurang
-    urls:
-      main: https://www.skattkarrspizza.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395132'
-    source: subagent_discovery
-  deje_folkets_husf_rening:
-    name: Deje Folkets husförening
-    location: Deje
-    address: Brogatan 11, 669 30 Deje (c/o Kulturhuset)
-    type:
-    - Folkets Hus/Community Hall
-    urls:
-      main: https://www.evenemang.se/se/v%C3%A4rmland/forshaga/deje-folkets-hus-kulturhuset
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395271'
-    source: subagent_discovery
-  dejefors_musikk_r:
-    name: Dejefors Musikkår
-    location: Deje
-    address: Brogatan 11, 669 30 Deje (at Kulturhuset)
-    type:
-    - Music Association
-    urls:
-      main: https://dejeforsmusikkar.com/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395287'
-    source: subagent_discovery
-  hubben_deje:
-    name: Hubben Deje
-    location: Deje
-    address: Brogatan 11, 669 30 Deje (basement of Kulturhuset)
-    type:
-    - Youth Center
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395299'
-    source: subagent_discovery
-  lven_s_bygdeg_rdsf_rening:
-    name: Älvenäs Bygdegårdsförening
-    location: Vålberg
-    address: Vålberg
-    type:
-    - Bygdegård/Village Hall
-    urls:
-      main: https://www.facebook.com/p/%C3%84lven%C3%A4s-Bygdeg%C3%A5rdsf%C3%B6rening-100063540765101/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395314'
-    source: subagent_discovery
-  sosen_restaurang__bar_o__pizzeria:
-    name: Sosen Restaurang, Bar o. Pizzeria
-    location: Vålberg
-    address: Norsbrovägen 3, Vålberg
-    type:
-    - Restaurant/Bar/Pizzeria
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395329'
-    source: subagent_discovery
-  v_se_b_ckelids_bygdeg_rd:
-    name: Väse-Bäckelids Bygdegård
-    location: Väse
-    address: Väse
-    type:
-    - Bygdegård/Village Hall
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395344'
-    source: subagent_discovery
-  r_vens_bistro:
-    name: Rävens Bistro
-    location: Väse
-    address: Väse
-    type:
-    - Restaurant/Bar
-    urls:
-      main: https://www.facebook.com/p/R%C3%A4vens-Bistro-100063593528512/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395357'
-    source: subagent_discovery
-  rasta_v_rmland:
-    name: Rasta Värmland
-    location: Väse
-    address: E18, Väse (between Stockholm and Oslo, 22 km east of Karlstad)
-    type:
-    - Restaurant/Roadhouse
-    urls:
-      main: https://www.rasta.se/varmland/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395370'
-    source: subagent_discovery
-  equmeniakyrkan_v_se:
-    name: Equmeniakyrkan Väse
-    location: Väse
-    address: Väse
-    type:
-    - Church
-    urls:
-      main: https://equmeniakyrkanvase.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395383'
-    source: subagent_discovery
-  dejes_pizzahouse:
-    name: Dejes Pizzahouse
-    location: Deje
-    address: Deje
-    type:
-    - Restaurant/Pizzeria
-    urls:
-      main: https://dejespizzahouse.se/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395395'
-    source: subagent_discovery
-  sir_william_wallace_pub:
-    name: Sir William Wallace Pub
-    location: Säffle
-    address: Östra Storgatan 11, Säffle
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395737'
-    source: subagent_discovery
-  harrys_s_ffle:
-    name: Harrys Säffle
-    location: Säffle
-    address: Östra Storgatan 3, Säffle
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395749'
-    source: subagent_discovery
-  dany_s_sport_bar:
-    name: Dany's Sport Bar
-    location: Säffle
-    address: Kyrkogatan 24, Säffle
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395761'
-    source: subagent_discovery
-  n_bben_k_k___bar:
-    name: Näbben Kök & Bar
-    location: Säffle
-    address: ''
-    type:
-    - bar
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395774'
-    source: subagent_discovery
-  wilmas_musik_pub:
-    name: Wilmas Musik Pub
-    location: Arvika
-    address: Magasinsgatan 8, 671 31 Arvika
-    type:
-    - pub
-    urls:
-      main: https://www.facebook.com/wilmas.arvika.musik.krog/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395797'
-    source: subagent_discovery
-  grums_bio___folkets_hus:
-    name: Grums Bio - Folkets Hus
-    location: Grums
-    address: ''
-    type:
-    - biograf
-    urls:
-      main: https://www.folketshusochparker.se/arrangor/grums-folkets-hus/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395833'
-    source: subagent_discovery
-  grums_bar___k_k:
-    name: Grums Bar & Kök
-    location: Grums
-    address: Hotellgatan 2, Grums
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395858'
-    source: subagent_discovery
-  cheers_restaurang_och_pub:
-    name: Cheers Restaurang och Pub
-    location: Grums
-    address: ''
-    type:
-    - pub
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395870'
-    source: subagent_discovery
-  segmons_folkets_hus:
-    name: Segmons Folkets Hus
-    location: Grums
-    address: ''
-    type:
-    - samlingslokal
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395882'
-    source: subagent_discovery
-  rasta_grums:
-    name: Rasta Grums
-    location: Grums
-    address: Nyängsgatan 1, 664 34 Grums
-    type:
-    - restaurang
-    urls:
-      main: https://www.rasta.se/grums/
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395893'
-    source: subagent_discovery
-  anderssons_restaurang:
-    name: Anderssons Restaurang
-    location: Grums
-    address: Sveagatan 142, 664 34 Grums
-    type:
-    - restaurang
-    urls: {}
-    scraper:
-      type: manual
-      fallback: ai
-      note: ' - Use AI to fetch events'
-    active: true
-    discovered_date: '2026-03-02T15:44:12.395905'
-    source: subagent_discovery
-tier4_aggregators:
-  ticketmaster:
-    name: Ticketmaster
-    type: aggregator
-    urls:
-      karlstad: https://www.ticketmaster.se/discover/karlstad
-    api:
-      available: true
-      endpoint: https://app.ticketmaster.com/discovery/v2/events.json
-      auth: apikey
-      docs: https://developer.ticketmaster.com/
-    scraper:
-      type: api
-      method: rest
-      max_pages: 999
-    active: true
-  tickster:
-    name: Tickster
-    type: aggregator
-    urls:
-      karlstad: https://www.tickster.com/se/sv/events/in/karlstad
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: No public API, HTML scraping only
-      max_pages: 999
-    active: true
-  karlstad_com:
-    name: Karlstad.com
-    type: local_aggregator
-    urls:
-      events: https://www.karlstad.com/evenemang
-    scraper:
-      type: dynamic
-      method: playwright
-      note: Filters by Ticketmaster, Tickster, Nöje.se
-      max_pages: 999
-    active: true
-  stadsevent:
-    name: Stadsevent
-    type: local_aggregator
-    urls:
-      karlstad: https://stadsevent.se/karlstad/
-    scraper:
-      type: static
-      method: beautifulsoup
-      max_pages: 999
-    active: true
-  noje_se:
-    name: Nöje.se
-    type: national_aggregator
-    urls:
-      karlstad: https://www.noje.se/karlstad/evenemang
-    scraper:
-      type: static
-      method: beautifulsoup
-      max_pages: 999
-    active: true
-  visit_varmland:
-    name: Visit Värmland
-    type: tourism
-    urls:
-      events: https://www.visitvarmland.com/evenemang
-    scraper:
-      type: static
-      method: beautifulsoup
-      max_pages: 999
-    active: true
-tier5_municipal:
-  karlstad_se:
-    name: Karlstads kommun
-    type: municipal
-    urls:
-      events: https://karlstad.se/uppleva-och-gora/evenemang
-    scraper:
-      type: static
-      method: beautifulsoup
-      max_pages: 999
-    active: true
-  regionvarmland:
-    name: Region Värmland
-    location: Värmland
-    type:
-    - Evenemang
-    - Kultur
-    - Regional
-    urls:
-      events: https://www.regionvarmland.se/regionvarmland/evenemangslista
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: Region Värmland event calendar
-    active: true
-  saffle_kommun:
-    name: Säffle kommun
-    location: Säffle
-    type:
-    - Evenemang
-    - Kommunal
-    urls:
-      events: https://saffle.se/arkiv/evenemang.html
-      home: https://www.saffle.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
-  forshaga_kommun:
-    name: Forshaga kommun
-    location: Forshaga
-    type:
-    - Evenemang
-    - Kommunal
-    urls:
-      evenemang: https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/evenemang.4.5a7e8c8b1428e21336480c.html
-      home: https://www.forshaga.se/
-    scraper:
-      type: static
-      method: beautifulsoup
-    active: true
+  last_updated: '2026-03-03'
+  version: '1.2'
 special:
+  fryksdalsdansen:
+    active: true
+    dates: 2026-07-24 to 2026-07-25
+    location: Sunne (nearby)
+    name: Fryksdalsdansen
+    type:
+    - Festival
+    - Dansband
+    urls:
+      home: https://fryksdalsdansen.se/
   sm_veckan_2026:
-    name: SM-veckan Sommar 2026
-    location: Karlstad
+    active: true
     dates: 2026-06-23 to 2026-06-28
+    location: Karlstad
+    name: SM-veckan Sommar 2026
     type:
     - Idrott
     - Festival
@@ -1872,365 +50,2206 @@ special:
     - Solstadens sportcenter
     - Mariebergsskogen
     - Kalvholmen
-    active: true
-  fryksdalsdansen:
-    name: Fryksdalsdansen
-    location: Sunne (nearby)
-    dates: 2026-07-24 to 2026-07-25
-    type:
-    - Festival
-    - Dansband
-    urls:
-      home: https://fryksdalsdansen.se/
-    active: true
   synth_i_molkom:
-    name: Synth i Molkom
+    active: true
     location: Molkom
+    name: Synth i Molkom
     type:
     - Festival
     - Synth
     - Elektronisk musik
     urls:
       home: https://synthimolkom.se/
+tier1_major:
+  almalov:
     active: true
-tier_markets:
-  putte_i_parken:
-    name: Putte i Parken
-    location: Karlstad
+    location: "\xC5m\xE5l"
+    name: "\xC5m\xE5lOV"
+    scraper:
+      method: beautifulsoup
+      type: static
     type:
-    - Marknad
-    - Musikfestival
-    dates: Usually August (check annual schedule)
+    - Evenemang
+    - Organisation
     urls:
-      home: https://putteiparken.se/
+      home: https://www.almalov.se/
+      kalender: https://www.almalov.se/kalender/skogen-hanna-kulle-och-klabbe-horngren-30-augusti/
+  arenan__bibliotekshuset:
     active: true
+    address: "V\xE4stra Torggatan 26, 651 84 Karlstad"
+    discovered_date: '2026-03-02T15:44:12.394431'
+    location: Karlstad
+    name: Arenan (Bibliotekshuset)
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://karlstad.se/uppleva-och-gora/kultur/arenan---bio-musik-teater
+      tickets: https://www.ticketmaster.se/venue/arenan-bibliotekshuset-karlstad-biljetter/aer/416
+  arvika_simhall:
+    active: true
+    address: Skolgatan 34, Arvika
+    location: Arvika
+    name: Arvika Simhall
+    scraper:
+      fallback: ai
+      note: Check if has events - otherwise AI fallback - Use AI to fetch events
+      type: manual
+    type:
+    - Simhall
+    - Sport
+    urls:
+      home: https://www.arvika.se/
+  borgviksgard:
+    active: true
+    location: Borgvik
+    name: "Borgviks G\xE5rd"
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - "G\xE5rd"
+    - "Tr\xE4dg\xE5rd"
+    urls:
+      home: https://www.borgviksgard.se/
+      program: https://www.borgviksgard.se/gardens-program
+  christinateatern:
+    active: true
+    address: Kungsgatan 54, 681 31 Kristinehamn
+    location: Kristinehamn
+    name: Christinateatern
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Teater
+    - Scene
+    urls:
+      events: http://www.christinateatern.se/kalender.php
+      home: https://www.christinateatern.se/
+      kalender: http://www.christinateatern.se/kalender.php
+  farjestad_bk:
+    active: true
+    address: "L\xF6fbergs Arena, Fj\xE4llruvsv\xE4gen 1, 652 21 Karlstad"
+    location: Karlstad
+    name: "F\xE4rjestad BK"
+    scraper:
+      source: ticketmaster
+      type: external
+    type:
+    - Ishockey
+    - SHL
+    - Sport
+    urls:
+      home: https://www.farjestadbk.se/
+      schedule: https://www.farjestadbk.se/game-schedule
+      tickets: https://www.ticketmaster.se/venue/lofbergs-arena-karlstad-biljetter/lof/416
+  filipstads_trav:
+    active: true
+    location: Filipstad
+    name: Filipstads Travbana (F-Trav)
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Sport
+    - Trav
+    - Evenemang
+    urls:
+      alla_event: https://www.ftrav.se/alla-event/
+      home: https://www.ftrav.se/
+  filmstaden_karlstad:
+    active: true
+    address: Drottninggatan 33, 651 10 Karlstad
+    location: Karlstad
+    name: Filmstaden Karlstad
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Biograf
+    - Film
+    urls:
+      home: https://www.filmstaden.se/
+  forshaga_deje_teaterf_rening:
+    active: true
+    address: Forshaga kommun
+    discovered_date: '2026-03-02T15:44:12.394786'
+    location: Forshaga
+    name: "Forshaga Deje Teaterf\xF6rening"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://www.riksteatern.se/forening/forshaga-deje-teaterforening---en-del-av-riksteatern/
+  forshaga_folkets_hus:
+    active: true
+    address: Vinkelgatan 18, 667 31 Forshaga
+    discovered_date: '2026-03-02T15:44:12.394744'
+    location: Forshaga
+    name: Forshaga Folkets Hus
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - konserthall
+    urls:
+      main: http://www.forshagafh.se/
+  friluftsteatern_mariebergsskogen:
+    active: true
+    address: Mariebergsskogen, Karlstad
+    discovered_date: '2026-03-02T15:44:12.394546'
+    location: Karlstad
+    name: Friluftsteatern Mariebergsskogen
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://karlstad.se/uppleva-och-gora/kultur/teater-och-dans
+  frykens_konstrunda:
+    active: true
+    location: Sunne/Fryken
+    name: Frykens Konstrunda
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Konst
+    - Kultur
+    - "Utst\xE4llning"
+    urls:
+      home: https://frykenskonstrunda.com/
+  gamla_kraftstationen_i_deje:
+    active: true
+    address: Deje
+    discovered_date: '2026-03-02T15:44:12.394798'
+    location: Forshaga
+    name: Gamla Kraftstationen i Deje
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/sevardheter.4.211785d1545641708e1d6.html
+  gamlakraftstationen:
+    active: true
+    location: Deje
+    name: Gamla Kraftstationen
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Kultur
+    - Evenemang
+    - Konst
+    urls:
+      evenemang: https://www.gamlakraftstationen.se/evenemang/
+      home: https://www.gamlakraftstationen.se/
+  gammelvala:
+    active: true
+    location: Filipstad
+    name: Gammelvala
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - "G\xE5rd"
+    - Kultur
+    urls:
+      home: https://gammelvala.se/
+      program: https://gammelvala.se/program/veckoprogram.html
+  hammaro_kommun:
+    active: true
+    location: "Hammar\xF6"
+    name: Hammaro.se Evenemang
+    scraper:
+      method: beautifulsoup
+      note: Only scrape actual events, not news articles
+      selectors:
+        date: time, .date, [class*='datum']
+        event: .event-item, article.event, [class*='evenemang']
+        link: a[href]
+        title: h1, h2, h3, .title
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      evenemang: https://hammaro.se/uppleva-och-gora/evenemang
+      home: https://hammaro.se/
+  hammaro_kulturbygd:
+    active: true
+    location: "Hammar\xF6"
+    name: "Hammar\xF6 Kulturbygd"
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kultur
+    urls:
+      home: https://www.hammarokulturbygd.se/
+      kalender: https://www.hammarokulturbygd.se/startsida/Evenemangskalender
+  if_boltic:
+    active: true
+    address: "Tingvalla isstadion, Stadionv\xE4gen 2-4, 653 39 Karlstad"
+    location: Karlstad
+    name: IF Boltic (Bandy)
+    scraper:
+      method: beautifulsoup
+      note: Swedish bandy season runs October-March
+      type: static
+    type:
+    - Bandy
+    - Elitserien
+    - Sport
+    urls:
+      home: https://www.ifboltic.com/
+      schedule: https://www.ifboltic.com/nyheter/
+  karlstad_ccc:
+    active: true
+    location: Karlstad
+    name: Karlstad CCC
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Konserter
+    - "M\xE4ssor"
+    - Kongress
+    urls:
+      events: https://www.karlstadccc.se/17/38/program-biljetter/
+  karlstad_ccc__congress_culture_centre:
+    active: true
+    address: Tage Erlandergatan 8A-F, 652 20 Karlstad
+    discovered_date: '2026-03-02T15:44:12.394356'
+    location: Karlstad
+    name: Karlstad CCC (Congress Culture Centre)
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    source: subagent_discovery
+    type:
+    - konserthall
+    urls:
+      tickets: https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416
+  karlstads_simhall:
+    active: true
+    address: "\xC4lvgatan 15, 652 24 Karlstad"
+    location: Karlstad
+    name: Karlstads Simhall
+    scraper:
+      fallback: ai
+      note: Check if has events - otherwise AI fallback - Use AI to fetch events
+      type: manual
+    type:
+    - Simhall
+    - Sport
+    urls:
+      home: https://karlstad.se/
+  karlstads_teater:
+    active: true
+    address: Malmtorgsgatan 2, 652 30 Karlstad
+    discovered_date: '2026-03-02T15:44:12.394398'
+    location: Karlstad
+    name: Karlstads Teater
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      tickets: https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416
+  kil_kommun:
+    active: true
+    location: Kil
+    name: Kil kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      evenemang: https://kil.se/arkiv/evenemang
+      home: https://kil.se/
+  kristinehamn_arena:
+    active: true
+    address: Kristinehamn
+    location: Kristinehamn
+    name: Kristinehamn Arena
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    type:
+    - Multi-sport
+    - Konserter
+    - "M\xE4ssor"
+    - Evenemang
+    urls:
+      tickets: https://www.ticketmaster.se/venue/kristinehamn-arena-kristinehamn-biljetter/kra/416
+  krutkonst:
+    active: true
+    location: "V\xE4rmland"
+    name: Krutrundan / Krutkonst
+    scraper:
+      fallback: ai
+      note: Not easily parseable - use AI agent to read and identify events
+      type: manual
+    type:
+    - Konst
+    - Konstrunda
+    - Evenemang
+    urls:
+      home: http://krutkonst.se/
+  kulturhuset_kilarena:
+    active: true
+    address: Industrigatan 1, 665 33 Kil
+    discovered_date: '2026-03-02T15:44:12.394857'
+    location: Kil
+    name: Kulturhuset KilArena
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - konserthall
+    urls:
+      main: https://kulturhusetkilarena.se/
+  kulturveckan_sunne:
+    active: true
+    location: Sunne
+    name: Kulturveckan i Sunne
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kultur
+    - Festival
+    urls:
+      home: https://www.kulturveckanisunne.se/
+      program: https://www.kulturveckanisunne.se/program
+  kunskapsteatern:
+    active: true
+    address: Kil
+    discovered_date: '2026-03-02T15:44:12.394903'
+    location: Kil
+    name: Kunskapsteatern
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://kunskapsteatern.se/
+  lillerudsdagarna:
+    active: true
+    location: "V\xE4rmland"
+    name: Lillerudsdagarna
+    scraper:
+      fallback: ai
+      note: No structured data - AI agent needed to read and extract event info
+      type: manual
+    type:
+    - Evenemang
+    - "\xC5rligt"
+    - Festival
+    urls:
+      home: https://lillerudsdagarna.se/
+  lofbergs_arena:
+    active: true
+    location: Karlstad
+    name: "L\xF6fbergs Arena"
+    scraper:
+      source: tickster
+      type: external
+    type:
+    - Arena
+    - Stora evenemang
+    - Ishockey
+    urls:
+      home: https://www.lofbergsarena.se/
+      tickets: https://www.tickster.com/se/sv/events/in/karlstad
+  marbacka:
+    active: true
+    location: Sunne
+    name: Marbacka
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - "G\xE5rd"
+    - Kultur
+    urls:
+      home: https://marbacka.com/
+      kalendarium: https://marbacka.com/kalendarium/
+  nojesfabriken:
+    active: true
+    location: Karlstad
+    name: "N\xF6jesfabriken"
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    type:
+    - Klubb
+    - Konserter
+    - Quiz
+    - Live music
+    urls:
+      events: https://www.nojesfabriken.se/nojeskalendern/
+      tickets: https://www.ticketmaster.se/venue/nojesfabriken-karlstad-biljetter/njf/416
+  ransater:
+    active: true
+    location: "Rans\xE4ter"
+    name: "R\xE4ntem\xE4klens G\xE5rd / Rans\xE4ter"
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kultur
+    - "G\xE5rd"
+    urls:
+      events: https://www.ransater.com/evenemang/
+      home: https://www.ransater.com/
+  riksteatern_varmland:
+    active: true
+    location: "V\xE4rmland"
+    name: "Riksteatern - V\xE4rmland"
+    scraper:
+      method: beautifulsoup
+      note: "Riksteatern performances in V\xE4rmland (l\xE4nid=17)"
+      type: static
+    type:
+    - Teater
+    - Scenkonst
+    urls:
+      forestallningar: https://www.riksteatern.se/forestallningar/#!?lanid=17
+      home: https://www.riksteatern.se/
+  ritz_arvika:
+    active: true
+    address: Hamngatan 12A, Arvika
+    location: Arvika
+    name: Ritz
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Konsertlokal
+    - Kulturhus
+    urls:
+      home: https://www.arvika.se/ritz
+  rotnas_gardsbutik:
+    active: true
+    location: "V\xE4rmland"
+    name: "Rotn\xE4s G\xE5rdsbutik"
+    scraper:
+      method: beautifulsoup
+      note: No events currently, but will be monitored for future events
+      type: static
+    type:
+    - Evenemang
+    - "G\xE5rd"
+    - Butik
+    urls:
+      home: http://rotnasgardsbutik.se/
+      kalender: http://rotnasgardsbutik.se/kalender
+  s_ffleoperan:
+    active: true
+    address: "Magasinsgatan 2, 661 30 S\xE4ffle"
+    discovered_date: '2026-03-02T15:44:12.395724'
+    location: "S\xE4ffle"
+    name: "S\xE4ffleOperan"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://www.saffleoperan.se/
+  safle_simhall:
+    active: true
+    location: "S\xE4ffle"
+    name: "S\xE4ffle Simhall"
+    note: "V\xE4rmlands f\xF6rsta 50-meters bass\xE4ng"
+    scraper:
+      fallback: ai
+      note: Check if has events - otherwise AI fallback - Use AI to fetch events
+      type: manual
+    type:
+    - Simhall
+    - Sport
+    - Evenemang
+    urls:
+      home: https://www.saffle.se/
+  sagolika_sunne:
+    active: true
+    location: Sunne
+    name: Sagolika Sunne
+    scraper:
+      method: beautifulsoup
+      note: Sagolika Sunne tourism events
+      type: static
+    type:
+    - Evenemang
+    - Turism
+    - Kultur
+    urls:
+      events: https://sagolikasunne.se/gora/noje-evenemang/evenemang/
+      home: https://sagolikasunne.se/
+  scalateatern:
+    active: true
+    location: Karlstad
+    name: Scalateatern
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+      venue_filter: SCALATEATERN
+    type:
+    - Teater
+    - Konserter
+    - Stand-up
+    urls:
+      events: https://www.scalateatern.com/vara-evenemang/
+      home: https://www.scalateatern.com/
+      tickets: https://www.ticketmaster.se/venue/scalateatern-karlstad-biljetter/scl/416
+  skoghalls_folkets_hus:
+    active: true
+    location: Skoghall
+    name: Skoghalls Folkets Hus
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Folkets Hus
+    - Kultur
+    urls:
+      home: https://skoghallsfolketshus.se/mobil/index.php
+  sliperiet:
+    active: true
+    location: Borgvik
+    name: Sliperiet
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kultur
+    - Konst
+    urls:
+      evenemang: https://sliperiet.se/evenemang/
+      home: https://sliperiet.se/
+  spinneriet__wermland_opera:
+    active: true
+    address: "\xC4lvgatan 49, 652 30 Karlstad"
+    discovered_date: '2026-03-02T15:44:12.394444'
+    location: Karlstad
+    name: Spinneriet (Wermland Opera)
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://www.wermlandopera.com/
+  tempelriddaren:
+    active: true
+    address: Karlstad
+    discovered_date: '2026-03-02T15:44:12.394495'
+    location: Karlstad
+    name: Tempelriddaren
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      tickets: https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416
+  torsby_skidtunnel:
+    active: true
+    location: Torsby
+    name: Torsby Skidtunnel & Sportcenter
+    note: "V\xE4rldens f\xF6rsta skidtunnel - 1.3 km l\xE5ng"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    type:
+    - "Skid\xE5kning"
+    - Biathlon
+    - Evenemang
+    urls:
+      home: https://www.visitvarmland.com/
+  totalteatern:
+    active: true
+    address: ''
+    discovered_date: '2026-03-02T15:44:12.395820'
+    location: Arvika
+    name: Totalteatern
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      main: https://www.regionvarmland.se/kulturpoolen/kulturaktorer/totalteatern
+  upperudslogen_i_molkom:
+    active: true
+    address: "Upperudsv\xE4gen 1, 65560 Molkom"
+    discovered_date: '2026-03-02T15:44:12.395029'
+    location: Molkom
+    name: Upperudslogen i Molkom
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Konserthall/Eventlokal
+    urls:
+      main: https://www.kulturaktiebolaget.se/venues/upperudslogen-i-molkom
+  v_rmlandsteatern:
+    active: true
+    address: Pihlgrensgatan 3, 652 25 Karlstad
+    discovered_date: '2026-03-02T15:44:12.394417'
+    location: Karlstad
+    name: "V\xE4rmlandsteatern"
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    source: subagent_discovery
+    type:
+    - teater
+    urls:
+      tickets: https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416
+  varmlandsteatern:
+    active: true
+    location: Karlstad
+    name: "V\xE4rmlandsteatern"
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Teater
+    - Scenkonst
+    urls:
+      home: https://varmlandsteatern.se/
+      produktioner: https://varmlandsteatern.se/aktuella-produktioner/
+  vastana_musik_teater:
+    active: true
+    location: Sunne
+    name: "V\xE4stan\xE5 Musik & Teater"
+    scraper:
+      method: beautifulsoup
+      note: Skip date-only text as titles - look for actual event names
+      selectors:
+        date: time, .date, [class*='datum']
+        event: article, .event-item, .forestallning, [class*='event']
+        link: a[href]
+        title: h1, h2, h3, .title, a[href*='tickster']
+      type: static
+    type:
+    - Teater
+    - Konsert
+    - Musik
+    urls:
+      biljetter: https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/
+      events: https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/
+      home: https://www.vastanateater.se/
+  wermland_opera:
+    active: true
+    address: Malmtorgsgatan 2, 653 40 Karlstad
+    location: Karlstad
+    name: Wermland Opera
+    scraper:
+      method: beautifulsoup
+      selectors:
+        category: .post-item__meta--category
+        date: .post-item__meta--date time
+        event: article.post-item
+        link: .post-item__button-holder a
+        title: .post-item__title h2
+      type: static
+      venue: Wermland Opera
+    type:
+    - Opera
+    - Teater
+    - Klassisk musik
+    urls:
+      events: https://www.wermlandopera.com/evenemang/
+tier2_cultural:
+  arvika_bibliotek:
+    active: true
+    address: "Kungsv\xE4gen 11, 671 41 Arvika"
+    location: Arvika
+    name: Arvika bibliotek
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Bibliotek
+    - "F\xF6rel\xE4sningar"
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      calendar: https://www.bibliotekvarmland.se/-/arvika-bibliotek
+      kommun: https://www.arvika.se/upplevaochgora/bibliotek.1455.html
+  bibliotek_varmland:
+    active: true
+    address: Multiple locations
+    location: "V\xE4rmland"
+    name: "Bibliotek V\xE4rmland"
+    scraper:
+      fallback: ai
+      note: JavaScript SPA - use AI to fetch events via web search
+      type: manual
+    type:
+    - Bibliotek
+    - Evenemang
+    - Kultur
+    urls:
+      events: https://www.bibliotekvarmland.se/evenemang#/
+  bibliotekshuset:
+    active: true
+    address: "V\xE4stra Torggatan 26, 651 84 Karlstad"
+    location: Karlstad
+    name: Bibliotekshuset (Stadsbiblioteket Karlstad)
+    scraper:
+      note: Library events via karlstad.se
+      type: static
+    type:
+    - "F\xF6rel\xE4sningar"
+    - Film
+    - Kultur
+    - Workshops
+    urls:
+      calendar: https://karlstad.se/uppleva-och-gora/bibliotek/kalender-for-biblioteken-i-karlstad
+  brigadmuseum:
+    active: true
+    address: "Sandb\xE4cksgatan 31, 653 40 Karlstad"
+    location: Karlstad
+    name: Brigadmuseum
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - "Milit\xE4rhistoriskt museum"
+    urls:
+      home: https://www.brigadmuseum.se/
+  forshaga_bibliotek:
+    active: true
+    address: Storgatan 52, 667 32 Forshaga
+    location: Forshaga
+    name: Forshaga bibliotek
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Bibliotek
+    - "F\xF6rel\xE4sningar"
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/forshaga-bibliotek
+      calendar: https://www.forshaga.se/upplevaochgora/bibliotek.4.725330be11efa4b0a3f80003519.html
+  gjuteriet:
+    active: true
+    address: Verkstadsgatan 1, 652 19 Karlstad
+    discovered_date: '2026-03-02T15:44:12.394458'
+    location: Karlstad
+    name: Gjuteriet
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls:
+      main: https://gjuteriet.nu/
+  grums_bibliotek:
+    active: true
+    address: ''
+    discovered_date: '2026-03-02T15:44:12.395845'
+    location: Grums
+    name: Grums Bibliotek
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - bibliotek
+    urls:
+      main: https://www.biblioteken.se/grums-bibliotek/
+  kils_bibliotek:
+    active: true
+    address: Kil
+    discovered_date: '2026-03-02T15:44:12.394892'
+    location: Kil
+    name: Kils bibliotek
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls: {}
+  kolonin_arvika:
+    active: true
+    address: Kyrkogatan 42, Arvika
+    discovered_date: '2026-03-02T15:44:12.395810'
+    location: Arvika
+    name: Kolonin Arvika
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls:
+      main: https://koloninarvika.se/
+  kristinehamns_bibliotek:
+    active: true
+    address: Kungsgatan 30, 681 31 Kristinehamn
+    location: Kristinehamn
+    name: Kristinehamns bibliotek
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Bibliotek
+    - "F\xF6rel\xE4sningar"
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/kristinehamns-bibliotek
+      calendar: https://www.kristinehamn.se/kultur-och-fritid/kristinehamns-bibliotek/kalender/
+  kristinehamns_konstmuseum:
+    active: true
+    address: "Dr Enwalls v\xE4g 13C, 681 84 Kristinehamn"
+    location: Kristinehamn
+    name: Kristinehamns Konstmuseum
+    scraper:
+      method: beautifulsoup
+      note: Activities in accordion blocks with date in heading (DD mmm - Title)
+      selectors:
+        date: h2, h3, h4
+        event: .accordionitemblock
+        link: a
+        title: h2, h3, h4
+      type: static
+    type:
+    - Konstmuseum
+    - "Utst\xE4llningar"
+    urls:
+      activities: https://www.kristinehamn.se/kristinehamns-konstmuseum/program/aktiviteter-och-kurser/
+      exhibitions: https://www.kristinehamn.se/kristinehamns-konstmuseum/utstallningar/
+      home: https://www.kristinehamn.se/kristinehamns-konstmuseum
+  kulturhuset_forshaga:
+    active: true
+    address: Storgatan 52, 667 32 Forshaga
+    discovered_date: '2026-03-02T15:44:12.394760'
+    location: Forshaga
+    name: Kulturhuset Forshaga
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls:
+      main: https://www.forshaga.se/upplevaochgora/kultur/kulturhuset.4.725330be11efa4b0a3f80003549.html
+  kulturhuset_i_deje:
+    active: true
+    address: Brogatan 11, 669 30 Deje
+    discovered_date: '2026-03-02T15:44:12.394773'
+    location: Forshaga
+    name: Kulturhuset i Deje
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls:
+      main: https://www.forshaga.se/upplevaochgora/kultur/kulturhusetideje.4.725330be11efa4b0a3f80003549.html
+  mariebergsskogen:
+    active: true
+    location: Karlstad
+    name: Mariebergsskogen
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Friluftsteater
+    - Natur
+    - Familjeaktiviteter
+    - Valborg
+    urls:
+      events: https://karlstad.se/mariebergsskogen/evenemang
+      summer_theater: https://www.scalateatern.com/
+  medis___s_ffle_medborgarhus:
+    active: true
+    address: "Magasinsgatan 2, 661 30 S\xE4ffle"
+    discovered_date: '2026-03-02T15:44:12.395708'
+    location: "S\xE4ffle"
+    name: "Medis - S\xE4ffle Medborgarhus"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls:
+      main: https://www.saffle.se/medis
+  molkoms_bibliotek:
+    active: true
+    address: Molkom
+    discovered_date: '2026-03-02T15:44:12.395075'
+    location: Molkom
+    name: Molkoms bibliotek
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Bibliotek
+    urls:
+      main: https://www.biblioteken.se/molkoms-bibliotek/
+  rackstadmuseet:
+    active: true
+    address: "Kungsv\xE4gen 11, 671 41 Arvika"
+    location: Arvika
+    name: Rackstadmuseet
+    scraper:
+      method: beautifulsoup
+      note: "Exhibitions in blog posts with dates in heading format (DD mmm \u2013\
+        \ DD mmm)"
+      selectors:
+        date: h2, h2 a
+        event: article.blog-output-post
+        link: h2 a
+        title: h2 a, h2
+      type: static
+    type:
+    - Konstmuseum
+    - "Utst\xE4llningar"
+    urls:
+      calendar: https://www.rackstadmuseet.se/sv/kommande-utstallningar
+      exhibitions: https://www.rackstadmuseet.se/sv/aktuella-utstallningar
+      home: https://www.rackstadmuseet.se/
+  ritz:
+    active: true
+    address: Kyrkogatan, 671 31 Arvika
+    discovered_date: '2026-03-02T15:44:12.395786'
+    location: Arvika
+    name: Ritz
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - kulturhus
+    urls:
+      main: https://www.arvika.se/upplevaochgora/ritzkulturochaktivitetshus.2722.html
+  saffle_bibliotek:
+    active: true
+    address: "Kanaltorget 1, 661 80 S\xE4ffle"
+    location: "S\xE4ffle"
+    name: "S\xE4ffle bibliotek"
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Bibliotek
+    - "F\xF6rel\xE4sningar"
+    - Barnaktiviteter
+    - Bokcirkel
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/saffle-bibliotek
+      calendar: https://saffle.se/uppleva-och-gora/bibliotek/kalender.html
+  sandgrund_lars_lerin:
+    active: true
+    address: "V\xE4stra Torggatan 31, 652 24 Karlstad"
+    location: Karlstad
+    name: Sandgrund Lars Lerin
+    scraper:
+      method: beautifulsoup
+      note: Has permanent Lars Lerin collection plus rotating guest exhibitions at
+        Sandgrund and Kabusa venues
+      selectors:
+        date: .date, time
+        description: p
+        event: .exhibition, .event, article
+        title: h2, h3, a[href*='sandgrund'], a[href*='kabusa']
+      type: static
+    type:
+    - Konsthall
+    - "Permanent utst\xE4llning"
+    - "G\xE4stutst\xE4llningar"
+    urls:
+      home: https://sandgrund.org/
+      kabusa: https://sandgrund.org/kabusa-lars-lerin/
+      sandgrund: https://sandgrund.org/sandgrund/
+  skattk_rrs_bibliotek:
+    active: true
+    address: "Skattk\xE4rrsv\xE4gen 39, Skattk\xE4rr"
+    discovered_date: '2026-03-02T15:44:12.395117'
+    location: "Skattk\xE4rr"
+    name: "Skattk\xE4rrs bibliotek"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Bibliotek
+    urls:
+      main: https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek
+  varmlands_museum:
+    active: true
+    address: "Sandgrundsudden, V\xE4stra Torggatan 31, 652 24 Karlstad"
+    location: Karlstad
+    name: "V\xE4rmlands Museum"
+    scraper:
+      method: beautifulsoup
+      note: Events in .event-front cards with date-box containing 'DD mmm, kl HH:MM'
+      selectors:
+        date: .date-box
+        event: .event-front
+        link: h3 a, h4 a
+        title: h3 a, h4 a
+      type: static
+    type:
+    - "Utst\xE4llningar"
+    - "F\xF6rel\xE4sningar"
+    - Guidade visningar
+    - Familjeaktiviteter
+    urls:
+      calendar: https://varmlandsmuseum.se/evenemangskalender/
+      exhibitions: https://varmlandsmuseum.se/utstallningar/
+tier3_small:
+  alsters_herrg_rd:
+    active: true
+    address: Alster, Karlstad
+    discovered_date: '2026-03-02T15:44:12.394534'
+    location: Karlstad
+    name: "Alsters Herrg\xE5rd"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - evenemangslokal
+    urls:
+      evenemang: https://karlstad.se/alsters-herrgard/evenemang
+      main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal
+  anderssons_restaurang:
+    active: true
+    address: Sveagatan 142, 664 34 Grums
+    discovered_date: '2026-03-02T15:44:12.395905'
+    location: Grums
+    name: Anderssons Restaurang
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - restaurang
+    urls: {}
+  bishops_arms:
+    active: true
+    location: Karlstad
+    name: The Bishops Arms
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Pub
+    - Quiz
+    - Live bands
+    - "\xD6lprovning"
+    urls:
+      events: https://www.bishopsarms.com/evenemang/
+      quiz: https://www.bishopsarms.com/evenemang/quiz-754173750908641-7201/
+  cheers_restaurang_och_pub:
+    active: true
+    address: ''
+    discovered_date: '2026-03-02T15:44:12.395870'
+    location: Grums
+    name: Cheers Restaurang och Pub
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  dallas_pizzeria___pub:
+    active: true
+    address: Forshaga
+    discovered_date: '2026-03-02T15:44:12.394810'
+    location: Forshaga
+    name: Dallas Pizzeria & Pub
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  dany_s_sport_bar:
+    active: true
+    address: "Kyrkogatan 24, S\xE4ffle"
+    discovered_date: '2026-03-02T15:44:12.395761'
+    location: "S\xE4ffle"
+    name: Dany's Sport Bar
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  deje_folkets_husf_rening:
+    active: true
+    address: Brogatan 11, 669 30 Deje (c/o Kulturhuset)
+    discovered_date: '2026-03-02T15:44:12.395271'
+    location: Deje
+    name: "Deje Folkets husf\xF6rening"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Folkets Hus/Community Hall
+    urls:
+      main: https://www.evenemang.se/se/v%C3%A4rmland/forshaga/deje-folkets-hus-kulturhuset
+  dejefors_musikk_r:
+    active: true
+    address: Brogatan 11, 669 30 Deje (at Kulturhuset)
+    discovered_date: '2026-03-02T15:44:12.395287'
+    location: Deje
+    name: "Dejefors Musikk\xE5r"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Music Association
+    urls:
+      main: https://dejeforsmusikkar.com/
+  dejes_pizzahouse:
+    active: true
+    address: Deje
+    discovered_date: '2026-03-02T15:44:12.395395'
+    location: Deje
+    name: Dejes Pizzahouse
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Restaurant/Pizzeria
+    urls:
+      main: https://dejespizzahouse.se/
+  equmeniakyrkan_v_se:
+    active: true
+    address: "V\xE4se"
+    discovered_date: '2026-03-02T15:44:12.395383'
+    location: "V\xE4se"
+    name: "Equmeniakyrkan V\xE4se"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Church
+    urls:
+      main: https://equmeniakyrkanvase.se/
+  forshaga_k_k___bar:
+    active: true
+    address: Bruksgatan 10, 667 32 Forshaga
+    discovered_date: '2026-03-02T15:44:12.394823'
+    location: Forshaga
+    name: "Forshaga K\xF6k & Bar"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: https://forshaga-kok-bar.webnode.se/
+  glada_killingen_pub___restaurang:
+    active: true
+    address: Storgatan 51, 665 30 Kil
+    discovered_date: '2026-03-02T15:44:12.394869'
+    location: Kil
+    name: Glada Killingen Pub & Restaurang
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: https://gladakillingen.se/
+  granden_kbk:
+    active: true
+    location: Karlstad
+    name: "Gr\xE4nden - K\xE4k & B\xE4rs"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    type:
+    - Pub
+    - Live music
+    - Quiz
+    urls:
+      facebook: https://www.facebook.com/grandenkb
+  grums_bar___k_k:
+    active: true
+    address: Hotellgatan 2, Grums
+    discovered_date: '2026-03-02T15:44:12.395858'
+    location: Grums
+    name: "Grums Bar & K\xF6k"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  grums_bio___folkets_hus:
+    active: true
+    address: ''
+    discovered_date: '2026-03-02T15:44:12.395833'
+    location: Grums
+    name: Grums Bio - Folkets Hus
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - biograf
+    urls:
+      main: https://www.folketshusochparker.se/arrangor/grums-folkets-hus/
+  guldapan:
+    active: true
+    address: Kil
+    discovered_date: '2026-03-02T15:44:12.394881'
+    location: Kil
+    name: Guldapan
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  harrys_s_ffle:
+    active: true
+    address: "\xD6stra Storgatan 3, S\xE4ffle"
+    discovered_date: '2026-03-02T15:44:12.395749'
+    location: "S\xE4ffle"
+    name: "Harrys S\xE4ffle"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  hubben_deje:
+    active: true
+    address: Brogatan 11, 669 30 Deje (basement of Kulturhuset)
+    discovered_date: '2026-03-02T15:44:12.395299'
+    location: Deje
+    name: Hubben Deje
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Youth Center
+    urls: {}
+  jaguar_bar___nattklubb:
+    active: true
+    address: Karlstad (central)
+    discovered_date: '2026-03-02T15:44:12.394559'
+    location: Karlstad
+    name: Jaguar Bar & Nattklubb
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  k12__pitcher_s:
+    active: true
+    address: Karlstad
+    discovered_date: '2026-03-02T15:44:12.394572'
+    location: Karlstad
+    name: K12 (Pitcher's)
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: https://www.pitchers.se/aktiviteter/karlstad-nattklubb
+  lven_s_bygdeg_rdsf_rening:
+    active: true
+    address: "V\xE5lberg"
+    discovered_date: '2026-03-02T15:44:12.395314'
+    location: "V\xE5lberg"
+    name: "\xC4lven\xE4s Bygdeg\xE5rdsf\xF6rening"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - "Bygdeg\xE5rd/Village Hall"
+    urls:
+      main: https://www.facebook.com/p/%C3%84lven%C3%A4s-Bygdeg%C3%A5rdsf%C3%B6rening-100063540765101/
+  molkoms_folkh_gskola:
+    active: true
+    address: "Mejeriv\xE4gen 3, 660 60 Molkom"
+    discovered_date: '2026-03-02T15:44:12.395063'
+    location: Molkom
+    name: "Molkoms folkh\xF6gskola"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - "Folkh\xF6gskola/Eventlokal"
+    urls:
+      main: https://regionvarmland.se/folkhogskolor/molkoms-folkhogskola/
+  n_bben_k_k___bar:
+    active: true
+    address: ''
+    discovered_date: '2026-03-02T15:44:12.395774'
+    location: "S\xE4ffle"
+    name: "N\xE4bben K\xF6k & Bar"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - bar
+    urls: {}
+  ngsbacka_course___festival_center:
+    active: true
+    address: "Molkom, V\xE4rmland"
+    discovered_date: '2026-03-02T15:44:12.395048'
+    location: Molkom
+    name: "\xC4ngsbacka Course & Festival Center"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - "Kursg\xE5rd/Festival"
+    urls:
+      main: https://www.angsbacka.com/
+  pub_luna:
+    active: true
+    address: Esplanaden 2, 667 30 Forshaga
+    discovered_date: '2026-03-02T15:44:12.394834'
+    location: Forshaga
+    name: Pub Luna
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: https://lunalucet.se/pub-luna/
+  r_vens_bistro:
+    active: true
+    address: "V\xE4se"
+    discovered_date: '2026-03-02T15:44:12.395357'
+    location: "V\xE4se"
+    name: "R\xE4vens Bistro"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Restaurant/Bar
+    urls:
+      main: https://www.facebook.com/p/R%C3%A4vens-Bistro-100063593528512/
+  rasta_grums:
+    active: true
+    address: "Ny\xE4ngsgatan 1, 664 34 Grums"
+    discovered_date: '2026-03-02T15:44:12.395893'
+    location: Grums
+    name: Rasta Grums
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - restaurang
+    urls:
+      main: https://www.rasta.se/grums/
+  rasta_v_rmland:
+    active: true
+    address: "E18, V\xE4se (between Stockholm and Oslo, 22 km east of Karlstad)"
+    discovered_date: '2026-03-02T15:44:12.395370'
+    location: "V\xE4se"
+    name: "Rasta V\xE4rmland"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Restaurant/Roadhouse
+    urls:
+      main: https://www.rasta.se/varmland/
+  restaurang___pizzeria_lilla_huset:
+    active: true
+    address: "Graningev\xE4gen 4, 660 60 Molkom"
+    discovered_date: '2026-03-02T15:44:12.395088'
+    location: Molkom
+    name: Restaurang & Pizzeria Lilla Huset
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Restaurang
+    urls: {}
+  restaurant_luna_lucet:
+    active: true
+    address: Esplanaden 2, 667 30 Forshaga
+    discovered_date: '2026-03-02T15:44:12.394846'
+    location: Forshaga
+    name: Restaurant Luna Lucet
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - restaurant
+    urls:
+      main: https://lunalucet.se/
+  segmons_folkets_hus:
+    active: true
+    address: ''
+    discovered_date: '2026-03-02T15:44:12.395882'
+    location: Grums
+    name: Segmons Folkets Hus
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - samlingslokal
+    urls: {}
+  sir_william_wallace_pub:
+    active: true
+    address: "\xD6stra Storgatan 11, S\xE4ffle"
+    discovered_date: '2026-03-02T15:44:12.395737'
+    location: "S\xE4ffle"
+    name: Sir William Wallace Pub
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls: {}
+  skattk_rrs_pizzeria_och_pub:
+    active: true
+    address: "Tallstigen 4, 656 71 Skattk\xE4rr"
+    discovered_date: '2026-03-02T15:44:12.395132'
+    location: "Skattk\xE4rr"
+    name: "Skattk\xE4rrs Pizzeria och Pub"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Pub/Restaurang
+    urls:
+      main: https://www.skattkarrspizza.se/
+  sosen_restaurang__bar_o__pizzeria:
+    active: true
+    address: "Norsbrov\xE4gen 3, V\xE5lberg"
+    discovered_date: '2026-03-02T15:44:12.395329'
+    location: "V\xE5lberg"
+    name: Sosen Restaurang, Bar o. Pizzeria
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Restaurant/Bar/Pizzeria
+    urls: {}
+  stiftelsen_v_rt_hus_i_skattk_rr:
+    active: true
+    address: "Skogsvallsv\xE4gen 45, 656 72 Skattk\xE4rr"
+    discovered_date: '2026-03-02T15:44:12.395104'
+    location: "Skattk\xE4rr"
+    name: "Stiftelsen V\xE5rt Hus i Skattk\xE4rr"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - Festlokal
+    urls:
+      main: https://hittafestlokal.se/festlokalen-stiftelsen-vart-hus-i-skattkarr-skattkarr/
+  sundstaaulan:
+    active: true
+    address: "Sundsta-\xC4lvkule gymnasiet, Karlstad"
+    discovered_date: '2026-03-02T15:44:12.394521'
+    location: Karlstad
+    name: Sundstaaulan
+    scraper:
+      method: playwright
+      note: Ticketmaster venue page - use Playwright
+      type: static
+    source: subagent_discovery
+    type:
+    - evenemangslokal
+    urls:
+      events: https://karlstad.se/uppleva-och-gora/kultur/sundstaaulan
+      main: https://karlstad.se/uppleva-och-gora/boka-och-hyra-lokal/boka-lokal-for-kulturarrangemang
+      tickets: https://www.ticketmaster.se/venue/sundstaaulan-karlstad-biljetter/sau/416
+  the_bull_bar:
+    active: true
+    address: "\xD6stra Torggatan 8, 652 24 Karlstad"
+    discovered_date: '2026-03-02T15:44:12.394471'
+    location: Karlstad
+    name: The Bull Bar
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: https://www.facebook.com/thebullbarkarlstad/
+  the_leprechaun_pub:
+    active: true
+    address: "\xD6stra Torggatan 4, 652 24 Karlstad"
+    discovered_date: '2026-03-02T15:44:12.394483'
+    location: Karlstad
+    name: The Leprechaun Pub
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: http://www.theleprechaun.se/
+  ulvsbyg_rden:
+    active: true
+    address: "Ulvsbyg\xE5rden (outside Karlstad)"
+    discovered_date: '2026-03-02T15:44:12.394508'
+    location: Karlstad
+    name: "Ulvsbyg\xE5rden"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - evenemangslokal
+    urls:
+      main: https://www.ulvsbygarden.se/
+  v_se_b_ckelids_bygdeg_rd:
+    active: true
+    address: "V\xE4se"
+    discovered_date: '2026-03-02T15:44:12.395344'
+    location: "V\xE4se"
+    name: "V\xE4se-B\xE4ckelids Bygdeg\xE5rd"
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - "Bygdeg\xE5rd/Village Hall"
+    urls: {}
+  verket:
+    active: true
+    location: Karlstad
+    name: VERKET
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    type:
+    - Kulturlokal
+    - Indie
+    - Konserter
+    urls:
+      facebook: https://www.facebook.com/verketkarlstad
+  wilmas_musik_pub:
+    active: true
+    address: Magasinsgatan 8, 671 31 Arvika
+    discovered_date: '2026-03-02T15:44:12.395797'
+    location: Arvika
+    name: Wilmas Musik Pub
+    scraper:
+      fallback: ai
+      note: ' - Use AI to fetch events'
+      type: manual
+    source: subagent_discovery
+    type:
+    - pub
+    urls:
+      main: https://www.facebook.com/wilmas.arvika.musik.krog/
+tier4_aggregators:
+  karlstad_com:
+    active: true
+    name: Karlstad.com
+    scraper:
+      max_pages: 999
+      method: playwright
+      note: "Filters by Ticketmaster, Tickster, N\xF6je.se"
+      type: dynamic
+    type: local_aggregator
+    urls:
+      events: https://www.karlstad.com/evenemang
+  noje_se:
+    active: true
+    name: "N\xF6je.se"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: national_aggregator
+    urls:
+      karlstad: https://www.noje.se/karlstad/evenemang
+  stadsevent:
+    active: true
+    name: Stadsevent
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: local_aggregator
+    urls:
+      karlstad: https://stadsevent.se/karlstad/
+  ticketmaster:
+    active: true
+    api:
+      auth: apikey
+      available: true
+      docs: https://developer.ticketmaster.com/
+      endpoint: https://app.ticketmaster.com/discovery/v2/events.json
+    name: Ticketmaster
+    scraper:
+      max_pages: 999
+      method: rest
+      type: api
+    type: aggregator
+    urls:
+      karlstad: https://www.ticketmaster.se/discover/karlstad
+  tickster:
+    active: true
+    name: Tickster
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      note: No public API, HTML scraping only
+      type: static
+    type: aggregator
+    urls:
+      karlstad: https://www.tickster.com/se/sv/events/in/karlstad
+  visit_varmland:
+    active: true
+    name: "Visit V\xE4rmland"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://www.visitvarmland.com/evenemang
+tier5_municipal:
+  forshaga_kommun:
+    active: true
+    location: Forshaga
+    name: Forshaga kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      evenemang: https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/evenemang.4.5a7e8c8b1428e21336480c.html
+      home: https://www.forshaga.se/
+  karlstad_se:
+    active: true
+    name: Karlstads kommun
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: municipal
+    urls:
+      events: https://karlstad.se/uppleva-och-gora/evenemang
+  regionvarmland:
+    active: true
+    location: "V\xE4rmland"
+    name: "Region V\xE4rmland"
+    scraper:
+      method: beautifulsoup
+      note: "Region V\xE4rmland event calendar"
+      type: static
+    type:
+    - Evenemang
+    - Kultur
+    - Regional
+    urls:
+      events: https://www.regionvarmland.se/regionvarmland/evenemangslista
+  saffle_kommun:
+    active: true
+    location: "S\xE4ffle"
+    name: "S\xE4ffle kommun"
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://saffle.se/arkiv/evenemang.html
+      home: https://www.saffle.se/
+tier_markets:
   alsters_herrgard_hostmarknad:
-    name: Höstmarknad på Alsters Herrgård
+    active: true
+    dates: Usually September
     location: Karlstad (Alster)
+    name: "H\xF6stmarknad p\xE5 Alsters Herrg\xE5rd"
     type:
     - Marknad
     - Hantverk
     - Lokal mat
-    dates: Usually September
     urls:
       info: https://visitvarmland.com/karlstad/evenemang/marknad/hostmarknad-pa-alsters-herrgard
-    active: true
-  varmland_market:
-    name: Smaka på Värmland
-    location: Kristinehamn
-    type:
-    - Matmarknad
-    - Lokal mat
-    dates: Usually annually
-    urls:
-      home: https://www.visitvarmland.com/kristinehamn/evenemang
-    active: true
   forshaga_market:
-    name: Forshaga Marknad
+    active: true
+    dates: Usually spring/autumn
     location: Forshaga
+    name: Forshaga Marknad
     type:
     - Marknad
-    dates: Usually spring/autumn
     urls:
       home: https://marknadsdager.se/forshaga-forshaga-marknad
-    active: true
-  hagfors_market:
-    name: Hagfors Vårmarknad
-    location: Hagfors
-    type:
-    - Marknad
-    dates: Usually May
-    urls:
-      home: https://marknadsdager.se/hagfors-hagfors-varmarknad
-    active: true
   grums_market:
-    name: Grums Vårmarknad
+    active: true
+    dates: Usually spring
     location: Grums
+    name: "Grums V\xE5rmarknad"
     type:
     - Marknad
-    dates: Usually spring
     urls:
       home: https://marknadsdager.se/grums-grums-varmarknad
+  hagfors_market:
     active: true
+    dates: Usually May
+    location: Hagfors
+    name: "Hagfors V\xE5rmarknad"
+    type:
+    - Marknad
+    urls:
+      home: https://marknadsdager.se/hagfors-hagfors-varmarknad
   minmarknad_nu:
-    name: Min Marknad - Värmland
-    location: Värmland
+    active: true
+    location: "V\xE4rmland"
+    name: "Min Marknad - V\xE4rmland"
+    scraper:
+      method: beautifulsoup
+      note: "Market calendar with events across V\xE4rmland"
+      type: static
     type:
     - Marknad
     - Marknadskalender
     urls:
-      varmland: https://www.minmarknad.nu/tag/varmland/
       home: https://www.minmarknad.nu/
-    scraper:
-      type: static
-      method: beautifulsoup
-      note: Market calendar with events across Värmland
+      varmland: https://www.minmarknad.nu/tag/varmland/
+  putte_i_parken:
     active: true
-tier_nightlife:
-  nöjesfabriken:
-    name: Nöjesfabriken
+    dates: Usually August (check annual schedule)
     location: Karlstad
+    name: Putte i Parken
+    type:
+    - Marknad
+    - Musikfestival
+    urls:
+      home: https://putteiparken.se/
+  varmland_market:
+    active: true
+    dates: Usually annually
+    location: Kristinehamn
+    name: "Smaka p\xE5 V\xE4rmland"
+    type:
+    - Matmarknad
+    - Lokal mat
+    urls:
+      home: https://www.visitvarmland.com/kristinehamn/evenemang
+tier_nightlife:
+  bishops_arms_karlstad:
+    active: true
+    location: Karlstad
+    name: The Bishops Arms
+    type:
+    - Pub
+    - Restaurang
+    urls:
+      home: https://www.bishopsarms.com/
+  carlstad_olhall:
+    active: true
+    location: Karlstad
+    name: "Carlstad \xD6lhall"
+    type:
+    - "\xD6lhall"
+    urls:
+      home: https://visitvarmland.com/
+  glada_ankan:
+    active: true
+    location: Karlstad
+    name: Glada Ankan
+    type:
+    - Rock club
+    - Nattklubb
+    urls:
+      home: https://karlstad.com/
+  good_guys_beer_pizza:
+    active: true
+    location: Karlstad
+    name: Good Guys Beer & Pizza
+    type:
+    - Pub
+    - Restaurang
+    urls:
+      home: https://visitvarmland.com/
+  king_street_bar:
+    active: true
+    address: Kungsgatan 34, 681 30 Kristinehamn
+    location: Kristinehamn
+    name: King Street Bar
+    type:
+    - Pub
+    - Darts
+    urls:
+      home: https://facebook.com/KingStreetBarKristinehamn
+  kolsnasparken:
+    active: true
+    address: Sunne Camping
+    location: Sunne
+    name: "Kolsn\xE4sparken"
+    type:
+    - Festivalarena
+    - Dansband
+    urls:
+      home: https://sagolikasunne.se/
+  "n\xF6jesfabriken":
+    active: true
     address: Karlagatan 42, 652 23 Karlstad
+    location: Karlstad
+    name: "N\xF6jesfabriken"
     type:
     - Nattklubb
     - Bowling
     - Live music
     urls:
       home: https://www.nojesfabriken.se/
+  o_learys_karlstad:
     active: true
-  verket_karlstad:
-    name: Verket (Nöjesfabriken)
     location: Karlstad
+    name: O'Learys Karlstad
     type:
-    - Nattklubb
-    - Musik
+    - Sportbar
+    - "Underh\xE5llning"
     urls:
-      home: https://www.nojesfabriken.se/
+      home: https://www.olearys.com/
+  olssons_brygga:
     active: true
-  the_bull_bar:
-    name: The Bull Bar
-    location: Karlstad
-    address: Östra Torggatan 8, 652 24 Karlstad
+    location: Arvika
+    name: Olssons Brygga
     type:
-    - Pub
+    - Restaurang
     - Live music
     urls:
-      home: https://thebullbar.se/
-    active: true
-  the_leprechaun_pub:
-    name: The Leprechaun Pub
-    location: Karlstad
-    address: Östra Torggatan 4, 652 24 Karlstad
-    type:
-    - Pub
-    - Irsk pub
-    urls:
-      home: http://www.theleprechaun.se/
-    active: true
-  glada_ankan:
-    name: Glada Ankan
-    location: Karlstad
-    type:
-    - Rock club
-    - Nattklubb
-    urls:
-      home: https://karlstad.com/
-    active: true
+      home: https://visitvarmland.com/
   pitchers_karlstad:
-    name: Pitchers Karlstad
+    active: true
     location: Karlstad
+    name: Pitchers Karlstad
     type:
     - Sportbar
     - Nattklubb
     urls:
       home: https://www.pitchers.se/
-    active: true
-  o_learys_karlstad:
-    name: O'Learys Karlstad
-    location: Karlstad
-    type:
-    - Sportbar
-    - Underhållning
-    urls:
-      home: https://www.olearys.com/
-    active: true
-  bishops_arms_karlstad:
-    name: The Bishops Arms
-    location: Karlstad
-    type:
-    - Pub
-    - Restaurang
-    urls:
-      home: https://www.bishopsarms.com/
-    active: true
-  carlstad_olhall:
-    name: Carlstad Ölhall
-    location: Karlstad
-    type:
-    - Ölhall
-    urls:
-      home: https://visitvarmland.com/
-    active: true
-  good_guys_beer_pizza:
-    name: Good Guys Beer & Pizza
-    location: Karlstad
-    type:
-    - Pub
-    - Restaurang
-    urls:
-      home: https://visitvarmland.com/
-    active: true
-  king_street_bar:
-    name: King Street Bar
-    location: Kristinehamn
-    address: Kungsgatan 34, 681 30 Kristinehamn
-    type:
-    - Pub
-    - Darts
-    urls:
-      home: https://facebook.com/KingStreetBarKristinehamn
-    active: true
   ritz_club:
-    name: Ritz Club
+    active: true
     location: Arvika
+    name: Ritz Club
     type:
     - Nattklubb
     - Evenemangslokal
     urls:
       home: https://www.arvika.se/
+  the_bull_bar:
     active: true
-  olssons_brygga:
-    name: Olssons Brygga
-    location: Arvika
+    address: "\xD6stra Torggatan 8, 652 24 Karlstad"
+    location: Karlstad
+    name: The Bull Bar
     type:
-    - Restaurang
+    - Pub
     - Live music
     urls:
-      home: https://visitvarmland.com/
+      home: https://thebullbar.se/
+  the_leprechaun_pub:
     active: true
-  kolsnasparken:
-    name: Kolsnäsparken
-    location: Sunne
-    address: Sunne Camping
+    address: "\xD6stra Torggatan 4, 652 24 Karlstad"
+    location: Karlstad
+    name: The Leprechaun Pub
     type:
-    - Festivalarena
-    - Dansband
+    - Pub
+    - Irsk pub
     urls:
-      home: https://sagolikasunne.se/
-    active: true
+      home: http://www.theleprechaun.se/
   tumult_festival:
-    name: Tumult Festival
+    active: true
+    dates: Late June
     location: Sunne
+    name: Tumult Festival
     type:
     - Festival
     - Kultur
-    dates: Late June
     urls:
       home: https://tumul tkultur.se/
+  verket_karlstad:
     active: true
-tier_sports:
-  lofbergs_arena:
-    name: Löfbergs Arena
     location: Karlstad
-    address: Norra Infarten 78-79, 654 65 Karlstad
+    name: "Verket (N\xF6jesfabriken)"
     type:
-    - Ishockey
-    - Arena
+    - Nattklubb
+    - Musik
+    urls:
+      home: https://www.nojesfabriken.se/
+tier_outdoor:
+  angsbacka:
+    active: true
+    location: Molkom
+    name: "\xC4ngsbacka"
+    type:
+    - "Kursg\xE5rd"
+    - Festival
+    urls:
+      home: https://www.angsbacka.com/
+  kajen_festival:
+    active: true
+    dates: July
+    location: Karlstad
+    name: KAJEN Festival
+    type:
+    - Festival
+    - Mat & Vin
+    urls:
+      home: https://kajenksd.se/
+  kvarteret_almen:
+    active: true
+    location: Karlstad
+    name: Kvarteret Almen
+    type:
+    - Utomhusarena
     - Konserter
     urls:
-      home: https://www.lofbergsarena.se/
+      home: https://visitvarmland.com/
+  stadstradgarden:
     active: true
-  tingvalla_isstadion:
-    name: Tingvalla Isstadion
     location: Karlstad
-    address: Stadionvägen 2-4, 653 39-40 Karlstad
+    name: "Stadstr\xE4dg\xE5rden"
     type:
-    - Bandy
-    - Ishockey
+    - Park
+    - Utomhuskonserter
     urls:
       home: https://karlstad.se/
+  stora_torget_karlstad:
     active: true
-  tingvalla_ip:
-    name: Tingvalla IP
     location: Karlstad
-    address: Regementsgatan 8, Karlstad
+    name: Stora Torget
     type:
-    - Fotboll
-    - Amerikansk fotboll
-    urls:
-      home: https://karlstad.se/
-    active: true
-  kristinehamn_arena:
-    name: Kristinehamn Arena
-    location: Kristinehamn
-    type:
-    - Arena
-    - Simhall
+    - Torg
     - Evenemang
     urls:
-      home: https://kristinehamnarena.se/
+      home: https://karlstad.se/
+  vastana_musik_teater:
     active: true
+    location: Sunne
+    name: "V\xE4stan\xE5 Musik & Teater"
+    type:
+    - Teater
+    - Musik
+    urls:
+      home: https://vastanateater.se/
+tier_sports:
   karlstad_racketcenter:
-    name: Karlstad Racketcenter
+    active: true
     location: Karlstad
+    name: Karlstad Racketcenter
     type:
     - Badminton
     - Tennis
     - Squash
     urls:
       home: https://karlstad.se/
+  kristinehamn_arena:
     active: true
-  torsby_skidtunnel:
-    name: Torsby Skidtunnel & Sportcenter
-    location: Torsby
+    location: Kristinehamn
+    name: Kristinehamn Arena
     type:
-    - Skidtunnel
-    - evenemang
+    - Arena
+    - Simhall
+    - Evenemang
     urls:
-      home: https://visitvarmland.com/
+      home: https://kristinehamnarena.se/
+  lofbergs_arena:
     active: true
+    address: Norra Infarten 78-79, 654 65 Karlstad
+    location: Karlstad
+    name: "L\xF6fbergs Arena"
+    type:
+    - Ishockey
+    - Arena
+    - Konserter
+    urls:
+      home: https://www.lofbergsarena.se/
   saffle_simhall:
-    name: Säffle Simhall
-    location: Säffle
+    active: true
+    location: "S\xE4ffle"
+    name: "S\xE4ffle Simhall"
     type:
     - Simhall
     - 50-meters pool
     urls:
       home: https://saffle.se/
+  tingvalla_ip:
     active: true
-tier_outdoor:
-  stora_torget_karlstad:
-    name: Stora Torget
+    address: Regementsgatan 8, Karlstad
     location: Karlstad
+    name: Tingvalla IP
     type:
-    - Torg
-    - Evenemang
+    - Fotboll
+    - Amerikansk fotboll
     urls:
       home: https://karlstad.se/
+  tingvalla_isstadion:
     active: true
-  kvarteret_almen:
-    name: Kvarteret Almen
+    address: "Stadionv\xE4gen 2-4, 653 39-40 Karlstad"
     location: Karlstad
+    name: Tingvalla Isstadion
     type:
-    - Utomhusarena
-    - Konserter
+    - Bandy
+    - Ishockey
+    urls:
+      home: https://karlstad.se/
+  torsby_skidtunnel:
+    active: true
+    location: Torsby
+    name: Torsby Skidtunnel & Sportcenter
+    type:
+    - Skidtunnel
+    - evenemang
     urls:
       home: https://visitvarmland.com/
-    active: true
-  stadstradgarden:
-    name: Stadsträdgården
-    location: Karlstad
-    type:
-    - Park
-    - Utomhuskonserter
-    urls:
-      home: https://karlstad.se/
-    active: true
-  kajen_festival:
-    name: KAJEN Festival
-    location: Karlstad
-    type:
-    - Festival
-    - Mat & Vin
-    dates: July
-    urls:
-      home: https://kajenksd.se/
-    active: true
-  angsbacka:
-    name: Ängsbacka
-    location: Molkom
-    type:
-    - Kursgård
-    - Festival
-    urls:
-      home: https://www.angsbacka.com/
-    active: true
-  vastana_musik_teater:
-    name: Västanå Musik & Teater
-    location: Sunne
-    type:
-    - Teater
-    - Musik
-    urls:
-      home: https://vastanateater.se/
-    active: true
