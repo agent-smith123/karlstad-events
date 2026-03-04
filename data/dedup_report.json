@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-03-04T15:20:42.798650",
+  "original_events": 113,
+  "final_events": 109,
+  "duplicates_removed": 4,
+  "duplicates": [
+    {
+      "date": "2026-03-13",
+      "index": 1
+    },
+    {
+      "date": "2026-05-02",
+      "index": 1
+    },
+    {
+      "date": "2026-05-10",
+      "index": 1
+    },
+    {
+      "date": "2026-10-31",
+      "index": 1
+    }
+  ]
+}

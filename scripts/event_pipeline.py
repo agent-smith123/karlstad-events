@@ -656,20 +656,21 @@ class EventDeduplicator:
     AGGREGATOR_SOURCES = {'Ticketmaster', 'Tickster', 'Stadsevent', 'Karlstad.com', 
                           'Ticketmaster Web', 'Nöje.se', 'Visit Värmland'}
     
+    # Event listing venues (venues that list events at other locations)
+    EVENT_LISTING_VENUES = {'Wermland Opera', 'Wermlands Operan'}
+    
     def deduplicate(self, events: List[Event]) -> List[Event]:
         """Remove duplicate events, preferring venue-specific over aggregator sources
         
-        Uses case-insensitive comparison for titles and venues
+        Groups by (date, normalized_title) and picks best venue for duplicates
         """
-        # Group events by (date, normalized_title, normalized_venue)
+        # Group events by (date, normalized_title)
         from collections import defaultdict
         groups = defaultdict(list)
         
         for event in events:
-            # Normalize title and venue for grouping (case-insensitive)
             norm_title = self._normalize_title(event.title)
-            norm_venue = self._normalize_venue(event.venue)
-            key = (event.date, norm_title, norm_venue)
+            key = (event.date, norm_title)
             groups[key].append(event)
         
         unique_events = []
@@ -679,8 +680,8 @@ class EventDeduplicator:
             if len(group) == 1:
                 unique_events.append(group[0])
             else:
-                # Multiple events with same date + title + venue - pick the best one
-                best = self._pick_best_event(group)
+                # Multiple events with same date + title - pick the best venue
+                best = self._pick_best_venue(group)
                 unique_events.append(best)
                 duplicates_found += len(group) - 1
         
@@ -704,6 +705,45 @@ class EventDeduplicator:
         v = v.replace('wermlands', 'wermland')
         v = v.replace('operan', 'opera')
         return v
+    
+    def _pick_best_venue(self, events: List[Event]) -> Event:
+        """Pick the best event from a group of duplicates
+        
+        Priority:
+        1. Prefer non-aggregator venues
+        2. Prefer non-event-listing venues (e.g., Wermland Opera)
+        3. Prefer events with more complete info (link, time, description)
+        """
+        # Score each event
+        scored = []
+        for e in events:
+            score = 0
+            
+            # Prefer non-aggregator venues
+            if e.venue not in self.AGGREGATOR_SOURCES:
+                score += 100
+            
+            # Prefer non-event-listing venues
+            if e.venue not in self.EVENT_LISTING_VENUES:
+                score += 50
+            
+            # Prefer events with links
+            if e.link:
+                score += 10
+            
+            # Prefer events with time
+            if e.time:
+                score += 5
+            
+            # Prefer events with description
+            if e.description:
+                score += 3
+            
+            scored.append((score, e))
+        
+        # Sort by score descending, return best
+        scored.sort(key=lambda x: -x[0])
+        return scored[0][1]
     
     def _pick_best_event(self, events: List[Event]) -> Event:
         """Pick the best event from a group of duplicates
@@ -1007,23 +1047,39 @@ def main():
         all_events = fetcher.fetch_all()
         print(f"\n📊 Total fetched: {len(all_events)} events")
         
-        # Phase 2: Deduplicate
-        print("\n🔄 Phase 2: Deduplication")
+        # Phase 2: Deduplicate (script-based)
+        print("\n🔄 Phase 2: Script-Based Deduplication")
         deduplicator = EventDeduplicator()
         unique_events = deduplicator.deduplicate(all_events)
         
-        # Phase 3: Quality Gate
-        print("\n🔒 Phase 3: Quality Gate")
+        # Phase 3: AI-Based Deduplication
+        print("\n🤖 Phase 3: AI-Based Deduplication")
+        try:
+            import sys
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from ai_deduplication import analyze_duplicates_with_ai, remove_duplicates
+            
+            events_dict = [e.to_dict() for e in unique_events]
+            duplicates = analyze_duplicates_with_ai(events_dict)
+            
+            if duplicates:
+                filtered = remove_duplicates(events_dict, duplicates)
+                unique_events = [Event(**e) for e in filtered]
+        except Exception as e:
+            print(f"  ⚠️ AI deduplication error: {e}")
+        
+        # Phase 4: Quality Gate
+        print("\n🔒 Phase 4: Quality Gate")
         quality = QualityGate()
         valid_events, invalid_events = quality.validate_all(unique_events)
         quality.save_report()
         
-        # Phase 4: Publish
-        print("\n📤 Phase 4: Publishing")
+        # Phase 5: Publish
+        print("\n📤 Phase 5: Publishing")
         publisher = EventPublisher()
         publish_result = publisher.publish(valid_events)
         
-        # Phase 5: Deploy
+        # Phase 6: Deploy
         deploy_success = publisher.deploy_to_surge()
         
         # Update state

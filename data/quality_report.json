@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-04T15:10:27.943402",
+  "timestamp": "2026-03-04T15:23:59.794137",
   "issues": [
     {
       "type": "past_event",
@@ -8,15 +8,11 @@
   ],
   "warnings": [
     {
-      "event": "ALLT JAG INTE SA - ENCIMA DANSSTUDIO",
+      "event": "HITTADE 134 EVENEMANG",
       "type": "all_caps_title"
     },
     {
-      "event": "EWA PERSSON - FNISS, SKRATT & T\u00c5RAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "MECENATENS \u00c5TERKOMST",
+      "event": "STORA DIALEKTSHOWEN - AV OCH MED FREDRIK LINDSTR\u00d6M",
       "type": "all_caps_title"
     },
     {
@@ -24,7 +20,75 @@
       "type": "all_caps_title"
     },
     {
-      "event": "EN J\u00c4KLA MASSA SCHLAGER",
+      "event": "CARL-EINAR H\u00c4CKNER - SILUETTER",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "ALLT JAG INTE SA - ENCIMA DANSSTUDIO",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "ERIC CLAPTON TRIBUTE",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "TRAD ON THE PROM - THE CONCERT",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "DEN SVENSKA S\u00c5NGBOKEN",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "THE BEST OF CHRISTER SJ\u00d6GREN",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "THE MUSIC OF HANS ZIMMER AND OTHERS - IN CONCERT",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "PEPPERLAND - PLAY THE BEATLES!",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "MAT & MYT - HENRIK WIDEGREN",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "MARIKA CARLSSON OCH KLIMAKTERIET",
       "type": "all_caps_title"
     },
     {
@@ -32,11 +96,43 @@
       "type": "all_caps_title"
     },
     {
-      "event": "ALICE I UNDERLANDET",
+      "event": "ROBERT WELLS - 40 \u00c5R VID FLYGELN",
       "type": "all_caps_title"
     },
     {
-      "event": "DJUNGELBOKEN - THE MUSICAL",
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "EWA PERSSON - FNISS, SKRATT & T\u00c5RAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "DIYARI MAHMOUD - JALLA, V\u00c4X UPP!",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "AMANDA BERGMAN",
       "type": "all_caps_title"
     },
     {
@@ -48,6 +144,22 @@
       "type": "all_caps_title"
     },
     {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
       "event": "LARS DEMIAN, TALLROTH & MEYERSSON",
       "type": "all_caps_title"
     },
@@ -56,7 +168,35 @@
       "type": "all_caps_title"
     },
     {
+      "event": "OCH SEN VAR INGEN KVAR",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "S\u00c5NGF\u00d6RENINGEN MANHEM - V\u00c5R & V\u00c4RME",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "THE WALL - IN CONCERT",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "THE DARK SIDE OF THE MOON - LIVE IN CONCERT",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "MECENATENS \u00c5TERKOMST",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "ROCK SYMPHO SHOW - PRIME ORCHESTRA",
+      "type": "all_caps_title"
+    },
+    {
       "event": "DANKO JONES",
+      "type": "all_caps_title"
+    },
+    {
+      "event": "FOREVER JACKSON",
       "type": "all_caps_title"
     },
     {
@@ -88,155 +228,7 @@
       "type": "all_caps_title"
     },
     {
-      "event": "STORA DIALEKTSHOWEN - AV OCH MED FREDRIK LINDSTR\u00d6M",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "CARL-EINAR H\u00c4CKNER - SILUETTER",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "ERIC CLAPTON TRIBUTE",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "THE BEST OF CHRISTER SJ\u00d6GREN",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "PEPPERLAND - PLAY THE BEATLES!",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "MAT & MYT - HENRIK WIDEGREN",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "MARIKA CARLSSON OCH KLIMAKTERIET",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "ROBERT WELLS - 40 \u00c5R VID FLYGELN",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "DIYARI MAHMOUD - JALLA, V\u00c4X UPP!",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "AMANDA BERGMAN",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "OCH SEN VAR INGEN KVAR",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "TRAD ON THE PROM - THE CONCERT",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "DEN SVENSKA S\u00c5NGBOKEN",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "THE MUSIC OF HANS ZIMMER AND OTHERS - IN CONCERT",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "S\u00c5NGF\u00d6RENINGEN MANHEM - V\u00c5R & V\u00c4RME",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "THE WALL - IN CONCERT",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "THE DARK SIDE OF THE MOON - LIVE IN CONCERT",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "ROCK SYMPHO SHOW - PRIME ORCHESTRA",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "FOREVER JACKSON",
-      "type": "all_caps_title"
-    },
-    {
-      "event": "HITTADE 134 EVENEMANG",
+      "event": "DJUNGELBOKEN - THE MUSICAL",
       "type": "all_caps_title"
     },
     {
@@ -246,6 +238,6 @@
   ],
   "summary": {
     "total_issues": 1,
-    "total_warnings": 59
+    "total_warnings": 57
   }
 }
