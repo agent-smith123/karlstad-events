@@ -43,9 +43,10 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 CONTENT_DIR = PROJECT_DIR / "content" / "events"
 DATA_DIR = PROJECT_DIR / "data"
+ASSETS_DIR = PROJECT_DIR / "assets" / "data"
 VENUES_FILE = SCRIPT_DIR / "venues.yaml"
 STATE_FILE = DATA_DIR / "pipeline_state.json"
-EVENTS_JSON = DATA_DIR / "events.json"
+EVENTS_JSON = ASSETS_DIR / "events.json"  # Hugo reads from assets/data/
 FAILED_SCRAPES_FILE = DATA_DIR / "failed_scrapes.json"
 QUALITY_REPORT_FILE = DATA_DIR / "quality_report.json"
 
@@ -663,6 +664,7 @@ class EventDeduplicator:
         """Remove duplicate events, preferring venue-specific over aggregator sources
         
         Groups by (date, normalized_title) and picks best venue for duplicates
+        Normalizes venue names case-insensitively
         """
         # Group events by (date, normalized_title)
         from collections import defaultdict
@@ -680,10 +682,24 @@ class EventDeduplicator:
             if len(group) == 1:
                 unique_events.append(group[0])
             else:
-                # Multiple events with same date + title - pick the best venue
-                best = self._pick_best_venue(group)
-                unique_events.append(best)
-                duplicates_found += len(group) - 1
+                # Check if these are truly the same event or different shows on same date
+                # Different venues on same date = different events (usually)
+                # Same or similar venues = duplicate (different sources)
+                
+                # Normalize venue names to check if they're actually the same venue
+                normalized_venues = [self._normalize_venue(e.venue) for e in group]
+                unique_norm_venues = set(normalized_venues)
+                
+                if len(unique_norm_venues) == 1:
+                    # Same venue (normalized) = duplicate event from different sources
+                    # Pick the best one
+                    best = self._pick_best_venue(group)
+                    unique_events.append(best)
+                    duplicates_found += len(group) - 1
+                else:
+                    # Different venues = different events (keep all)
+                    for e in group:
+                        unique_events.append(e)
         
         print(f"\n🔄 Deduplication: {duplicates_found} duplicates removed, {len(unique_events)} unique events")
         return unique_events
@@ -911,46 +927,30 @@ class EventPublisher:
         self.data_dir = DATA_DIR
     
     def publish(self, events: List[Event]) -> dict:
-        """Publish events to markdown files and JSON"""
+        """Publish events to JSON only (no markdown files needed)"""
         print("\n📝 Publishing Events")
         print("=" * 50)
         
-        # Write JSON
+        # Write JSON (single source of truth)
         events_data = [e.to_dict() for e in events]
         with open(EVENTS_JSON, 'w') as f:
             json.dump(events_data, f, indent=2, ensure_ascii=False)
         print(f"  ✓ Wrote {len(events)} events to events.json")
+        print(f"  ℹ️  Hugo reads directly from JSON - no markdown files needed")
         
-        # Get list of new slugs
-        new_slugs = {event.slug() for event in events}
-        
-        # Clear old markdown files that are no longer in events.json
-        cleared = 0
-        for md_file in self.content_dir.glob("*.md"):
-            if md_file.name == "_index.md":
-                continue
-            slug = md_file.stem
-            if slug not in new_slugs:
-                md_file.unlink()
-                cleared += 1
-        
-        if cleared > 0:
-            print(f"  🗑️  Removed {cleared} old markdown files")
-        
-        # Write markdown files (overwrite existing to ensure fresh content)
-        written = 0
-        for event in events:
-            md_file = self.content_dir / f"{event.slug()}.md"
-            with open(md_file, 'w') as f:
-                f.write(self._to_markdown(event))
-            written += 1
-        
-        print(f"  ✓ Wrote {written} markdown files")
+        # Clean up old markdown files (no longer needed)
+        if self.content_dir.exists():
+            cleared = 0
+            for md_file in self.content_dir.glob("*.md"):
+                if md_file.name != "_index.md":
+                    md_file.unlink()
+                    cleared += 1
+            if cleared > 0:
+                print(f"  🗑️  Removed {cleared} old markdown files (using JSON-only now)")
         
         return {
             'json_events': len(events),
-            'markdown_files': written,
-            'cleared_old': cleared
+            'cleared_old': cleared if 'cleared' in dir() else 0
         }
     
     def _to_markdown(self, event: Event) -> str:
