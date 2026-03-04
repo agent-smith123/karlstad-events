@@ -212,6 +212,14 @@ class EventFetcher:
         else:
             print("\n⏭️  Phase 4: AI Fallback (disabled - set ENABLE_AI_FALLBACK=true)")
         
+        # 4b. AI Cultural Events (exhibitions, markets, seminars, lectures)
+        print("\n🎨 Phase 4b: AI Cultural Events Search")
+        try:
+            cultural_events = self._fetch_cultural_events()
+            all_events.extend(cultural_events)
+        except Exception as e:
+            print(f"  ⚠️ Cultural events error: {e}")
+        
         # 5. Handle failed sources
         if self.failed_sources:
             print(f"\n🔄 Phase 5: {len(self.failed_sources)} sources failed - logged")
