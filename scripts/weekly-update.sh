@@ -28,7 +28,7 @@ YEAR=$(date '+%Y')
 # Generate event list for email
 EVENT_COUNT=$(python3 -c "
 import json
-with open('data/events.json') as f:
+with open('assets/data/events.json') as f:
     print(len(json.load(f)))
 " 2>/dev/null || echo "0")
 
@@ -36,7 +36,7 @@ EVENT_LIST=$(python3 -c "
 import json
 from datetime import datetime
 
-with open('data/events.json') as f:
+with open('assets/data/events.json') as f:
     events = json.load(f)
 
 today = datetime.now().date().isoformat()

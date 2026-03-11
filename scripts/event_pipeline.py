@@ -24,6 +24,8 @@ from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Set, Tuple
 from dataclasses import dataclass, asdict
 from urllib.parse import urljoin, urlparse
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Try to import optional dependencies
 try:
@@ -49,10 +51,20 @@ STATE_FILE = DATA_DIR / "pipeline_state.json"
 EVENTS_JSON = ASSETS_DIR / "events.json"  # Hugo reads from assets/data/
 FAILED_SCRAPES_FILE = DATA_DIR / "failed_scrapes.json"
 QUALITY_REPORT_FILE = DATA_DIR / "quality_report.json"
+SOURCE_REPORT_FILE = DATA_DIR / "source_health_report.json"
 
 # Current year for validation
 CURRENT_YEAR = datetime.now().year
 VALID_YEARS = {CURRENT_YEAR, CURRENT_YEAR + 1}  # Only current and next year
+
+AGGREGATOR_NAMES = {
+    'Ticketmaster', 'Tickster', 'Stadsevent', 'Karlstad.com', 'Karlstads kommun',
+    'Karlstads kommun Evenemang', 'Visit Värmland', 'Visit Värmland Events',
+    'Visit Värmland Karlstad', 'Nöje.se', 'Ticketmaster Web', 'Web Search',
+    'AI Cultural Search', 'Comprehensive Search'
+}
+
+SWEDISH_WEEKDAYS = 'måndag|tisdag|onsdag|torsdag|fredag|lördag|söndag|mandag|tisdag|onsdag|torsdag|fredag|lordag|sondag'
 
 
 def normalize_case(text: str) -> str:
@@ -77,6 +89,47 @@ def normalize_case(text: str) -> str:
             result.append(word.capitalize())
     
     return ' '.join(result)
+
+
+def normalize_whitespace(text: str) -> str:
+    return re.sub(r'\s+', ' ', (text or '')).strip()
+
+
+def is_aggregator_name(name: Optional[str]) -> bool:
+    return normalize_whitespace(name or '') in AGGREGATOR_NAMES
+
+
+def canonicalize_title(title: str) -> str:
+    """Normalize noisy aggregator titles into a comparable canonical title."""
+    if not title:
+        return ''
+
+    cleaned = normalize_whitespace(title)
+    cleaned = re.sub(rf'^({SWEDISH_WEEKDAYS})\s+\d{{1,2}}\s+[A-Za-zÅÄÖåäö]{{3,}}\s+', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(rf'^({SWEDISH_WEEKDAYS})\s+', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'^\d{1,2}\s+[A-Za-zÅÄÖåäö]{3,}\s+', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'\s{2,}', ' ', cleaned).strip(' -–—')
+    return cleaned
+
+
+def title_looks_like_noise(title: str) -> bool:
+    if not title:
+        return True
+
+    cleaned = normalize_whitespace(title)
+    if len(cleaned) < 5:
+        return True
+
+    patterns = [
+        r'hittade\s+\d+\s+evenemang',
+        r'evenemang i\s+\w+\s*$',
+        r'^\d+\s+evenemang',
+        r'^visar\s+\d+',
+        r'^laddar',
+        rf'^({SWEDISH_WEEKDAYS})\s+\d{{1,2}}\s+[A-Za-zÅÄÖåäö]{{3,}}$',
+        r'^\d{1,2}\s+[A-Za-zÅÄÖåäö]{3,}$',
+    ]
+    return any(re.search(pattern, cleaned, re.IGNORECASE) for pattern in patterns)
 
 # Ensure directories exist
 DATA_DIR.mkdir(exist_ok=True)
@@ -167,6 +220,98 @@ class PipelineState:
         self.save()
 
 
+class SourceHealthChecker:
+    """Quick source audit so broken sources are visible before fetch."""
+
+    SKIP_DOMAINS = {'ticketmaster.se', 'ticketmaster.com', 'facebook.com', 'fb.me'}
+
+    def __init__(self, venues_config: dict):
+        self.venues = venues_config
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+
+    def run(self) -> dict:
+        jobs = []
+        for tier_name, tier_venues in self.venues.items():
+            if not isinstance(tier_venues, dict) or tier_name == 'metadata':
+                continue
+            for venue_key, config in tier_venues.items():
+                if not isinstance(config, dict) or not config.get('active', False):
+                    continue
+                urls = [
+                    (url_type, url)
+                    for url_type, url in (config.get('urls') or {}).items()
+                    if isinstance(url, str) and url.startswith('http')
+                ]
+                if urls:
+                    # Audit only the primary URL per venue to keep this cheap and useful.
+                    url_type, url = urls[0]
+                    jobs.append((tier_name, venue_key, config, url_type, url))
+
+        results = []
+        with ThreadPoolExecutor(max_workers=12) as executor:
+            futures = [executor.submit(self._check_one, *job) for job in jobs]
+            for future in as_completed(futures):
+                results.append(future.result())
+
+        summary = {
+            'timestamp': datetime.now().isoformat(),
+            'total': len(results),
+            'ok': sum(1 for r in results if r['status'] == 'ok'),
+            'skipped': sum(1 for r in results if r['status'] == 'skipped'),
+            'failed': sum(1 for r in results if r['status'] == 'failed'),
+            'results': results,
+        }
+        with open(SOURCE_REPORT_FILE, 'w') as f:
+            json.dump(summary, f, indent=2, ensure_ascii=False)
+        return summary
+
+    def _check_one(self, tier_name: str, venue_key: str, config: dict, url_type: str, url: str) -> dict:
+        domain = urlparse(url).netloc.lower()
+        if any(skip in domain for skip in self.SKIP_DOMAINS):
+            return {
+                'tier': tier_name,
+                'venue_key': venue_key,
+                'name': config.get('name', venue_key),
+                'url_type': url_type,
+                'url': url,
+                'status': 'skipped',
+                'detail': 'known bot-protected domain'
+            }
+        try:
+            resp = self.session.get(url, timeout=8, allow_redirects=True)
+            if resp.status_code < 400:
+                status = 'ok'
+                detail = f'HTTP {resp.status_code}'
+            elif resp.status_code in {403, 429, 455}:
+                status = 'skipped'
+                detail = f'HTTP {resp.status_code} (bot-protected)'
+            else:
+                status = 'failed'
+                detail = f'HTTP {resp.status_code}'
+            return {
+                'tier': tier_name,
+                'venue_key': venue_key,
+                'name': config.get('name', venue_key),
+                'url_type': url_type,
+                'url': url,
+                'status': status,
+                'detail': detail
+            }
+        except Exception as e:
+            return {
+                'tier': tier_name,
+                'venue_key': venue_key,
+                'name': config.get('name', venue_key),
+                'url_type': url_type,
+                'url': url,
+                'status': 'failed',
+                'detail': str(e)[:200]
+            }
+
+
 class EventFetcher:
     """Fetch events from multiple sources with pagination support"""
     
@@ -212,13 +357,17 @@ class EventFetcher:
         else:
             print("\n⏭️  Phase 4: AI Fallback (disabled - set ENABLE_AI_FALLBACK=true)")
         
-        # 4b. AI Cultural Events (exhibitions, markets, seminars, lectures)
-        print("\n🎨 Phase 4b: AI Cultural Events Search")
-        try:
-            cultural_events = self._fetch_cultural_events()
-            all_events.extend(cultural_events)
-        except Exception as e:
-            print(f"  ⚠️ Cultural events error: {e}")
+        # 4b. Broad web search is intentionally opt-in: it was adding noisy and out-of-region rows.
+        if os.getenv('ENABLE_COMPREHENSIVE_FETCH', '').lower() == 'true':
+            print("\n🎨 Phase 4b: Comprehensive Event Fetcher (enabled)")
+            try:
+                comprehensive_events = self._fetch_comprehensive_events()
+                all_events.extend(comprehensive_events)
+                print(f"  ✓ Comprehensive fetcher: {len(comprehensive_events)} events")
+            except Exception as e:
+                print(f"  ⚠️ Comprehensive events error: {e}")
+        else:
+            print("\n⏭️  Phase 4b: Comprehensive Event Fetcher (disabled by default for data quality)")
         
         # 5. Handle failed sources
         if self.failed_sources:
@@ -608,6 +757,36 @@ class EventFetcher:
         
         return events
     
+    def _fetch_comprehensive_events(self) -> List[Event]:
+        """Fetch events from all sources using comprehensive fetcher"""
+        events = []
+        
+        try:
+            import sys
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from comprehensive_fetcher import search_for_events
+            
+            print("  🔍 Searching web for events...")
+            search_events = search_for_events()
+            
+            for e in search_events:
+                events.append(Event(
+                    title=e['title'],
+                    date=e['date'],
+                    venue=e['venue'],
+                    location=e['location'],
+                    link=e.get('link'),
+                    category=e.get('category'),
+                    source=e.get('source', 'Comprehensive Search')
+                ))
+            
+            print(f"  ✓ Found {len(events)} events")
+            
+        except Exception as e:
+            print(f"  ⚠️ Comprehensive fetcher error: {e}")
+        
+        return events
+    
     def _fetch_dynamic_sources(self) -> List[Event]:
         """Fetch from JS-heavy sources using Playwright"""
         events = []
@@ -694,20 +873,13 @@ class EventDeduplicator:
     """Deduplicate events across sources"""
     
     # Aggregator sources that shouldn't be used as venue names
-    AGGREGATOR_SOURCES = {'Ticketmaster', 'Tickster', 'Stadsevent', 'Karlstad.com', 
-                          'Ticketmaster Web', 'Nöje.se', 'Visit Värmland'}
+    AGGREGATOR_SOURCES = AGGREGATOR_NAMES
     
     # Event listing venues (venues that list events at other locations)
     EVENT_LISTING_VENUES = {'Wermland Opera', 'Wermlands Operan'}
     
     def deduplicate(self, events: List[Event]) -> List[Event]:
-        """Remove duplicate events, preferring venue-specific over aggregator sources
-        
-        Groups by (date, normalized_title) and picks best venue for duplicates
-        Normalizes venue names case-insensitively
-        """
-        # Group events by (date, normalized_title)
-        from collections import defaultdict
+        """Remove duplicates while preferring direct venue rows over aggregators."""
         groups = defaultdict(list)
         
         for event in events:
@@ -718,39 +890,40 @@ class EventDeduplicator:
         unique_events = []
         duplicates_found = 0
         
-        for key, group in groups.items():
+        for _, group in groups.items():
             if len(group) == 1:
                 unique_events.append(group[0])
+                continue
+
+            direct = [e for e in group if not self._is_aggregator_event(e)]
+            aggregator = [e for e in group if self._is_aggregator_event(e)]
+
+            if direct and aggregator:
+                best = self._pick_best_venue(direct + aggregator)
+                unique_events.append(best)
+                duplicates_found += len(group) - 1
+                continue
+
+            normalized_venues = {self._normalize_venue(e.venue) for e in group}
+            if len(normalized_venues) == 1 or aggregator:
+                best = self._pick_best_venue(group)
+                unique_events.append(best)
+                duplicates_found += len(group) - 1
             else:
-                # Check if these are truly the same event or different shows on same date
-                # Different venues on same date = different events (usually)
-                # Same or similar venues = duplicate (different sources)
-                
-                # Normalize venue names to check if they're actually the same venue
-                normalized_venues = [self._normalize_venue(e.venue) for e in group]
-                unique_norm_venues = set(normalized_venues)
-                
-                if len(unique_norm_venues) == 1:
-                    # Same venue (normalized) = duplicate event from different sources
-                    # Pick the best one
-                    best = self._pick_best_venue(group)
-                    unique_events.append(best)
-                    duplicates_found += len(group) - 1
-                else:
-                    # Different venues = different events (keep all)
-                    for e in group:
-                        unique_events.append(e)
+                unique_events.extend(group)
         
         print(f"\n🔄 Deduplication: {duplicates_found} duplicates removed, {len(unique_events)} unique events")
         return unique_events
     
     def _normalize_title(self, title: str) -> str:
-        """Normalize title for comparison (case-insensitive)"""
-        t = title.lower().strip()
-        # Remove common variations
+        """Normalize title for comparison (case-insensitive)."""
+        t = canonicalize_title(title).lower().strip()
         t = re.sub(r'\s+', ' ', t)
         t = re.sub(r'[-–—]', '-', t)
         return t
+
+    def _is_aggregator_event(self, event: Event) -> bool:
+        return is_aggregator_name(event.source) or is_aggregator_name(event.venue)
     
     def _normalize_venue(self, venue: str) -> str:
         """Normalize venue name for comparison (case-insensitive)"""
@@ -857,6 +1030,7 @@ class QualityGate:
                 invalid.append((event, issues))
                 self.issues.extend(issues)
             else:
+                event.title = canonicalize_title(event.title)
                 valid.append(event)
         
         # Verify links
@@ -873,23 +1047,14 @@ class QualityGate:
         """Validate a single event"""
         issues = []
         
-        # Check for scraping errors (page text captured as event titles)
-        title_lower = event.title.lower() if event.title else ''
-        scraping_error_patterns = [
-            r'hittade\s+\d+\s+evenemang',  # "Hittade 134 evenemang"
-            r'evenemang i\s+\w+\s*$',  # "Evenemang i Karlstad"
-            r'^\d+\s+evenemang',  # "134 evenemang"
-            r'visar\s+\d+',  # "Visar 10"
-            r'laddar',  # "Laddar..."
-        ]
-        
-        for pattern in scraping_error_patterns:
-            if re.search(pattern, title_lower):
-                issues.append({'type': 'scraping_error', 'severity': 'high', 'detail': f"Title: {event.title}"})
-                return issues  # Return early - not a real event
+        # Check for scraping errors / title noise before doing anything else
+        normalized_title = canonicalize_title(event.title)
+        if title_looks_like_noise(event.title) or title_looks_like_noise(normalized_title):
+            issues.append({'type': 'scraping_error', 'severity': 'high', 'detail': f"Title: {event.title}"})
+            return issues  # Return early - not a real event
         
         # Check required fields
-        if not event.title:
+        if not normalized_title:
             issues.append({'type': 'missing_title', 'severity': 'high'})
         
         if not event.date:
@@ -909,6 +1074,10 @@ class QualityGate:
         # Check for ALL CAPS titles
         if event.title and event.title.isupper() and len(event.title) > 10:
             self.warnings.append({'event': event.title, 'type': 'all_caps_title'})
+
+        # Aggregator rows should not survive if they still look noisier than their canonical form
+        if (is_aggregator_name(event.source) or is_aggregator_name(event.venue)) and event.title != normalized_title:
+            self.warnings.append({'event': event.title, 'type': 'aggregator_title_normalized', 'normalized': normalized_title})
         
         return issues
     
@@ -1096,6 +1265,11 @@ def main():
     state = PipelineState()
     
     try:
+        # Phase 0: Audit sources
+        print("\n🩺 Phase 0: Source Health Audit")
+        source_report = SourceHealthChecker(venues).run()
+        print(f"  ✅ Reachable: {source_report['ok']} | ⏭️ Skipped: {source_report['skipped']} | ❌ Failed: {source_report['failed']}")
+
         # Phase 1: Fetch events
         print("\n📥 Phase 1: Fetching Events")
         fetcher = EventFetcher(venues)
