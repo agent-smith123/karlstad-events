@@ -16,3 +16,5 @@ Thumbs.db
 *.log
 __pycache__/
 hugo_stats.json
+node_modules/
+test-results/
