@@ -1,0 +1,142 @@
+# Event Sources for Karlstad & Värmland
+# Each source will be processed by an AI sub-agent
+
+sources:
+  # === PRIMARY VENUES ===
+  - name: "Karlstad CCC"
+    url: "https://www.karlstadccc.se/17/38/program-biljetter/"
+    type: "venue"
+    category: "concert"
+    location: "Karlstad"
+    
+  - name: "Scalateatern"
+    url: "https://www.scalateatern.se/forestillningar/"
+    type: "venue"
+    category: "theater"
+    location: "Karlstad"
+    
+  - name: "Nöjesfabriken"
+    url: "https://www.nojesfabriken.se/nojeskalendern/"
+    type: "venue"
+    category: "concert"
+    location: "Karlstad"
+    
+  - name: "Tempelriddaren"
+    url: "https://www.tempelriddaren.se/program/"
+    type: "venue"
+    category: "theater"
+    location: "Karlstad"
+    
+  - name: "Sundstaaulan"
+    url: "https://www.ticketmaster.se/venue/sundstaaulan-karlstad-biljetter/adr/153"
+    type: "ticketmaster"
+    category: "concert"
+    location: "Karlstad"
+    
+  - name: "Arenan Bibliotekshuset"
+    url: "https://www.ticketmaster.se/venue/arenan-bibliotekshuset-karlstad-biljetter/aer/416"
+    type: "ticketmaster"
+    category: "theater"
+    location: "Karlstad"
+    
+  - name: "Wermland Opera"
+    url: "https://www.wermlandopera.com/evenemang/"
+    type: "venue"
+    category: "opera"
+    location: "Karlstad"
+    
+  - name: "Värmlands Museum"
+    url: "https://varmlandsmuseum.se/utstallningar/"
+    type: "venue"
+    category: "museum"
+    location: "Karlstad"
+    
+  - name: "Filmstaden Karlstad"
+    url: "https://www.filmstaden.se/kalendarium/karlstad"
+    type: "venue"
+    category: "cinema"
+    location: "Karlstad"
+    
+  - name: "Mariebergsskogen"
+    url: "https://karlstad.se/mariebergsskogen"
+    type: "venue"
+    category: "park"
+    location: "Karlstad"
+
+  # === REGIONAL VENUES ===
+  - name: "Medis Säffle"
+    url: "https://www.saffle.se/medis"
+    type: "venue"
+    category: "concert"
+    location: "Säffle"
+    
+  - name: "Kristinehamns Konstmuseum"
+    url: "https://kristinehamnskonstmuseum.se/"
+    type: "venue"
+    category: "museum"
+    location: "Kristinehamn"
+    
+  - name: "Rackstadmuseet"
+    url: "https://rackstadmuseet.se/"
+    type: "venue"
+    category: "museum"
+    location: "Arvika"
+    
+  - name: "Ritz Arvika"
+    url: "https://www.ritzarvika.se/"
+    type: "venue"
+    category: "concert"
+    location: "Arvika"
+
+  # === EVENT AGGREGATORS ===
+  - name: "Karlstads Kommun Evenemang"
+    url: "https://karlstad.se/uppleva-och-gora/evenemang"
+    type: "aggregator"
+    category: "mixed"
+    location: "Karlstad"
+    
+  - name: "Centrum Karlstad"
+    url: "https://www.centrumkarlstad.se/evenemang"
+    type: "aggregator"
+    category: "mixed"
+    location: "Karlstad"
+    
+  - name: "Visit Värmland Events"
+    url: "https://www.visitvarmland.com/evenemang"
+    type: "aggregator"
+    category: "mixed"
+    location: "Värmland"
+    
+  - name: "Karlstad.com"
+    url: "https://www.karlstad.com/evenemang"
+    type: "aggregator"
+    category: "mixed"
+    location: "Karlstad"
+
+  # === SPORTS ===
+  - name: "Färjestad BK"
+    url: "https://www.farjestadbk.se/game-schedule"
+    type: "venue"
+    category: "sport"
+    location: "Karlstad"
+    
+  - name: "Löfbergs Arena"
+    url: "https://www.ticketmaster.se/venue/lofbergs-arena-karlstad-biljetter/adr/163"
+    type: "ticketmaster"
+    category: "sport"
+    location: "Karlstad"
+
+  # === SPECIAL EVENTS ===
+  - name: "SM-veckan 2026"
+    url: "https://karlstad.se/flytta-till-karlstadsregionen/sm-veckan-2026"
+    type: "special"
+    category: "sport"
+    location: "Karlstad"
+    dates: "2026-06-23 to 2026-06-28"
+
+# Configuration
+config:
+  output_file: "assets/data/events.json"
+  site_url: "https://karlstad-events.surge.sh"
+  year_range: [2026, 2027]
+  max_workers: 1  # Process one at a time for reliability

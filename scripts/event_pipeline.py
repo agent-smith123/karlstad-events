@@ -540,6 +540,7 @@ class EventFetcher:
                     venue=e['venue'],
                     location=e['location'],
                     link=e.get('link'),
+                    category=e.get('category'),
                     source=e.get('source', 'AI Parser')
                 ))
             

@@ -1,0 +1,1539 @@
+{
+  "timestamp": "2026-03-12T08:25:20.390484",
+  "total": 170,
+  "ok": 140,
+  "skipped": 22,
+  "failed": 8,
+  "results": [
+    {
+      "tier": "tier1_major",
+      "venue_key": "christinateatern",
+      "name": "Christinateatern",
+      "url_type": "events",
+      "url": "http://www.christinateatern.se/kalender.php",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "filmstaden_karlstad",
+      "name": "Filmstaden Karlstad",
+      "url_type": "home",
+      "url": "https://www.filmstaden.se/",
+      "status": "skipped",
+      "detail": "HTTP 403 (bot-protected)"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "filipstads_trav",
+      "name": "Filipstads Travbana (F-Trav)",
+      "url_type": "alla_event",
+      "url": "https://www.ftrav.se/alla-event/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "forshaga_folkets_hus",
+      "name": "Forshaga Folkets Hus",
+      "url_type": "main",
+      "url": "http://www.forshagafh.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "borgviksgard",
+      "name": "Borgviks Gård",
+      "url_type": "home",
+      "url": "https://www.borgviksgard.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "forshaga_deje_teaterf_rening",
+      "name": "Forshaga Deje Teaterförening",
+      "url_type": "main",
+      "url": "https://www.riksteatern.se/forening/forshaga-deje-teaterforening---en-del-av-riksteatern/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "special",
+      "venue_key": "synth_i_molkom",
+      "name": "Synth i Molkom",
+      "url_type": "home",
+      "url": "https://synthimolkom.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "frykens_konstrunda",
+      "name": "Frykens Konstrunda",
+      "url_type": "home",
+      "url": "https://frykenskonstrunda.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "farjestad_bk",
+      "name": "Färjestad BK",
+      "url_type": "home",
+      "url": "https://www.farjestadbk.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "gamla_kraftstationen_i_deje",
+      "name": "Gamla Kraftstationen i Deje",
+      "url_type": "main",
+      "url": "https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/sevardheter.4.211785d1545641708e1d6.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "arenan__bibliotekshuset",
+      "name": "Arenan (Bibliotekshuset)",
+      "url_type": "main",
+      "url": "https://karlstad.se/uppleva-och-gora/kultur/arenan---bio-musik-teater",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "karlstad_ccc__congress_culture_centre",
+      "name": "Karlstad CCC (Congress Culture Centre)",
+      "url_type": "tickets",
+      "url": "https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "friluftsteatern_mariebergsskogen",
+      "name": "Friluftsteatern Mariebergsskogen",
+      "url_type": "main",
+      "url": "https://karlstad.se/uppleva-och-gora/kultur/teater-och-dans",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "karlstads_teater",
+      "name": "Karlstads Teater",
+      "url_type": "tickets",
+      "url": "https://www.ticketmaster.se/venue/karlstad-ccc-karlstad-biljetter/kccc/416",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "karlstad_ccc",
+      "name": "Karlstad CCC",
+      "url_type": "events",
+      "url": "https://www.karlstadccc.se/17/38/program-biljetter/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "kristinehamn_arena",
+      "name": "Kristinehamn Arena",
+      "url_type": "tickets",
+      "url": "https://www.ticketmaster.se/venue/kristinehamn-arena-kristinehamn-biljetter/kra/416",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "arvika_simhall",
+      "name": "Arvika Simhall",
+      "url_type": "home",
+      "url": "https://www.arvika.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "hammaro_kommun",
+      "name": "Hammarö kommun",
+      "url_type": "evenemang",
+      "url": "https://hammaro.se/uppleva-och-gora/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "special",
+      "venue_key": "sm_veckan_2026",
+      "name": "SM-veckan Sommar 2026",
+      "url_type": "info",
+      "url": "https://karlstad.se/flytta-till-karlstadsregionen/sm-veckan-2026",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "kulturhuset_kilarena",
+      "name": "Kulturhuset KilArena",
+      "url_type": "main",
+      "url": "https://kulturhusetkilarena.se/",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='kulturhusetkilarena.se', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kulturhusetkilarena.se', port=443): Failed to resol"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "if_boltic",
+      "name": "IF Boltic (Bandy)",
+      "url_type": "home",
+      "url": "https://www.ifboltic.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "kunskapsteatern",
+      "name": "Kunskapsteatern",
+      "url_type": "main",
+      "url": "https://kunskapsteatern.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "special",
+      "venue_key": "fryksdalsdansen",
+      "name": "Fryksdalsdansen",
+      "url_type": "home",
+      "url": "https://fryksdalsdansen.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "almalov",
+      "name": "ÅmålOV",
+      "url_type": "home",
+      "url": "https://www.almalov.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "kil_kommun",
+      "name": "Kil kommun",
+      "url_type": "evenemang",
+      "url": "https://kil.se/uppleva-och-gora/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "hammaro_kulturbygd",
+      "name": "Hammarö Kulturbygd",
+      "url_type": "home",
+      "url": "https://www.hammarokulturbygd.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "riksteatern_varmland",
+      "name": "Riksteatern - Värmland",
+      "url_type": "forestallningar",
+      "url": "https://www.riksteatern.se/forestallningar/#!?lanid=17",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "lofbergs_arena",
+      "name": "Löfbergs Arena",
+      "url_type": "home",
+      "url": "https://www.lofbergsarena.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "marbacka",
+      "name": "Marbacka",
+      "url_type": "home",
+      "url": "https://marbacka.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "rotnas_gardsbutik",
+      "name": "Rotnäs Gårdsbutik",
+      "url_type": "home",
+      "url": "http://rotnasgardsbutik.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "sagolika_sunne",
+      "name": "Sagolika Sunne",
+      "url_type": "events",
+      "url": "https://sagolikasunne.se/gora/noje-evenemang/evenemang/",
+      "status": "skipped",
+      "detail": "HTTP 455 (bot-protected)"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "ransater",
+      "name": "Räntemäklens Gård / Ransäter",
+      "url_type": "events",
+      "url": "https://www.ransater.com/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "gamlakraftstationen",
+      "name": "Gamla Kraftstationen",
+      "url_type": "evenemang",
+      "url": "https://www.gamlakraftstationen.se/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "ritz_arvika",
+      "name": "Ritz",
+      "url_type": "home",
+      "url": "https://www.arvika.se/ritz",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "karlstads_simhall",
+      "name": "Karlstads Simhall",
+      "url_type": "home",
+      "url": "https://karlstad.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "tempelriddaren",
+      "name": "Tempelriddaren",
+      "url_type": "tickets",
+      "url": "https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "s_ffleoperan",
+      "name": "SäffleOperan",
+      "url_type": "main",
+      "url": "https://www.saffleoperan.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "scalateatern",
+      "name": "Scalateatern",
+      "url_type": "events",
+      "url": "https://www.scalateatern.com/vara-evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "safle_simhall",
+      "name": "Säffle Simhall",
+      "url_type": "home",
+      "url": "https://www.saffle.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "v_rmlandsteatern",
+      "name": "Värmlandsteatern",
+      "url_type": "tickets",
+      "url": "https://www.ticketmaster.se/venue/tempelriddaren-karlstad-tickets/7tp/416",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "sliperiet",
+      "name": "Sliperiet",
+      "url_type": "evenemang",
+      "url": "https://sliperiet.se/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "vastana_musik_teater",
+      "name": "Västanå Musik & Teater",
+      "url_type": "biljetter",
+      "url": "https://vastanateater.se/biljetter/aktuella-forestallningar-och-konserter/",
+      "status": "skipped",
+      "detail": "HTTP 455 (bot-protected)"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "gammelvala",
+      "name": "Gammelvala",
+      "url_type": "home",
+      "url": "https://gammelvala.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "torsby_skidtunnel",
+      "name": "Torsby Skidtunnel & Sportcenter",
+      "url_type": "home",
+      "url": "https://www.visitvarmland.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "totalteatern",
+      "name": "Totalteatern",
+      "url_type": "main",
+      "url": "https://www.regionvarmland.se/kulturpoolen/kulturaktorer/totalteatern",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "upperudslogen_i_molkom",
+      "name": "Upperudslogen i Molkom",
+      "url_type": "main",
+      "url": "https://www.kulturaktiebolaget.se/venues/upperudslogen-i-molkom",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "varmlandsteatern",
+      "name": "Värmlandsteatern",
+      "url_type": "home",
+      "url": "https://varmlandsteatern.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "deje_bibliotek",
+      "name": "Deje bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/deje-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "arvika_bibliotek",
+      "name": "Arvika bibliotek",
+      "url_type": "calendar",
+      "url": "https://www.bibliotekvarmland.se/-/arvika-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "bibliotekshuset",
+      "name": "Bibliotekshuset (Stadsbiblioteket Karlstad)",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/stadsbiblioteket-i-karlstad",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "krutkonst",
+      "name": "Krutrundan / Krutkonst",
+      "url_type": "home",
+      "url": "http://krutkonst.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "nojesfabriken",
+      "name": "Nöjesfabriken",
+      "url_type": "events",
+      "url": "https://www.nojesfabriken.se/nojeskalendern/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "grums_bibliotek",
+      "name": "Grums bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/grums-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kils_bibliotek",
+      "name": "Kils bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/kils-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kolonin_arvika",
+      "name": "Kolonin Arvika",
+      "url_type": "main",
+      "url": "https://koloninarvika.se/",
+      "status": "skipped",
+      "detail": "HTTP 455 (bot-protected)"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "hammaro_bibliotek",
+      "name": "Hammarö bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/hammaro-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kristinehamns_bibliotek",
+      "name": "Kristinehamns bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/kristinehamns-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "forshaga_bibliotek",
+      "name": "Forshaga bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/forshaga-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kulturhuset_forshaga",
+      "name": "Kulturhuset Forshaga",
+      "url_type": "main",
+      "url": "https://www.forshaga.se/upplevaochgora/kultur/kulturhuset.4.725330be11efa4b0a3f80003549.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kulturhuset_i_deje",
+      "name": "Kulturhuset i Deje",
+      "url_type": "main",
+      "url": "https://www.forshaga.se/upplevaochgora/kultur/kulturhusetideje.4.725330be11efa4b0a3f80003549.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "mariebergsskogen",
+      "name": "Mariebergsskogen",
+      "url_type": "events",
+      "url": "https://karlstad.se/mariebergsskogen/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "molkoms_bibliotek",
+      "name": "Molkoms bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/molkoms-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kronoparkens_bibliotek",
+      "name": "Kronoparkens bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/kronoparkens-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "medis___s_ffle_medborgarhus",
+      "name": "Medis - Säffle Medborgarhus",
+      "url_type": "main",
+      "url": "https://www.saffle.se/medis",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "saffle_bibliotek",
+      "name": "Säffle bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/saffle-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "lillerudsdagarna",
+      "name": "Lillerudsdagarna",
+      "url_type": "home",
+      "url": "https://lillerudsdagarna.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "rackstadmuseet",
+      "name": "Rackstadmuseet",
+      "url_type": "calendar",
+      "url": "https://www.rackstadmuseet.se/sv/kommande-utstallningar",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "munkfors_bibliotek",
+      "name": "Munkfors bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/munkfors-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "sandgrund_lars_lerin",
+      "name": "Sandgrund Lars Lerin",
+      "url_type": "home",
+      "url": "https://sandgrund.org/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "valbergs_bibliotek",
+      "name": "Vålbergs bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/valbergs-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "skattk_rrs_bibliotek",
+      "name": "Skattkärrs bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "skare_bibliotek",
+      "name": "Skåre bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/skare-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "kristinehamns_konstmuseum",
+      "name": "Kristinehamns Konstmuseum",
+      "url_type": "activities",
+      "url": "https://www.kristinehamn.se/kristinehamns-konstmuseum/program/aktiviteter-och-kurser/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "vase_bibliotek",
+      "name": "Väse bibliotek",
+      "url_type": "bibliotekvarmland",
+      "url": "https://www.bibliotekvarmland.se/-/vase-bibliotek",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "ritz",
+      "name": "Ritz",
+      "url_type": "main",
+      "url": "https://www.arvika.se/upplevaochgora/ritzkulturochaktivitetshus.2722.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "dejefors_musikk_r",
+      "name": "Dejefors Musikkår",
+      "url_type": "main",
+      "url": "https://dejeforsmusikkar.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "bishops_arms",
+      "name": "The Bishops Arms",
+      "url_type": "events",
+      "url": "https://www.bishopsarms.com/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "equmeniakyrkan_v_se",
+      "name": "Equmeniakyrkan Väse",
+      "url_type": "main",
+      "url": "https://equmeniakyrkanvase.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "glada_killingen_pub___restaurang",
+      "name": "Glada Killingen Pub & Restaurang",
+      "url_type": "main",
+      "url": "https://gladakillingen.se/",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='gladakillingen.se', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='gladakillingen.se', port=443): Failed to resolve 'gladak"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "granden_kbk",
+      "name": "Gränden - Käk & Bärs",
+      "url_type": "facebook",
+      "url": "https://www.facebook.com/grandenkb",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "deje_folkets_husf_rening",
+      "name": "Deje Folkets husförening",
+      "url_type": "main",
+      "url": "https://www.evenemang.se/se/v%C3%A4rmland/forshaga/deje-folkets-hus-kulturhuset",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "alsters_herrg_rd",
+      "name": "Alsters Herrgård",
+      "url_type": "evenemang",
+      "url": "https://karlstad.se/alsters-herrgard/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "lven_s_bygdeg_rdsf_rening",
+      "name": "Älvenäs Bygdegårdsförening",
+      "url_type": "main",
+      "url": "https://www.facebook.com/p/%C3%84lven%C3%A4s-Bygdeg%C3%A5rdsf%C3%B6rening-100063540765101/",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "k12__pitcher_s",
+      "name": "K12 (Pitcher's)",
+      "url_type": "main",
+      "url": "https://www.pitchers.se/aktiviteter/karlstad-nattklubb",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "kulturveckan_sunne",
+      "name": "Kulturveckan i Sunne",
+      "url_type": "home",
+      "url": "https://www.kulturveckanisunne.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "gjuteriet",
+      "name": "Gjuteriet",
+      "url_type": "main",
+      "url": "https://gjuteriet.nu/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "r_vens_bistro",
+      "name": "Rävens Bistro",
+      "url_type": "main",
+      "url": "https://www.facebook.com/p/R%C3%A4vens-Bistro-100063593528512/",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "varmlands_museum",
+      "name": "Värmlands Museum",
+      "url_type": "calendar",
+      "url": "https://varmlandsmuseum.se/evenemangskalender/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "molkoms_folkh_gskola",
+      "name": "Molkoms folkhögskola",
+      "url_type": "main",
+      "url": "https://regionvarmland.se/folkhogskolor/molkoms-folkhogskola/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "grums_bio___folkets_hus",
+      "name": "Grums Bio - Folkets Hus",
+      "url_type": "main",
+      "url": "https://www.folketshusochparker.se/arrangor/grums-folkets-hus/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "wermland_opera",
+      "name": "Wermland Opera",
+      "url_type": "events",
+      "url": "https://www.wermlandopera.com/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "spinneriet__wermland_opera",
+      "name": "Spinneriet (Wermland Opera)",
+      "url_type": "main",
+      "url": "https://www.wermlandopera.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "dejes_pizzahouse",
+      "name": "Dejes Pizzahouse",
+      "url_type": "main",
+      "url": "https://dejespizzahouse.se/",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='dejespizzahouse.se', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='dejespizzahouse.se', port=443): Failed to resolve 'deje"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "the_bull_bar",
+      "name": "The Bull Bar",
+      "url_type": "main",
+      "url": "https://www.facebook.com/thebullbarkarlstad/",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "skattk_rrs_pizzeria_och_pub",
+      "name": "Skattkärrs Pizzeria och Pub",
+      "url_type": "main",
+      "url": "https://www.skattkarrspizza.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "pub_luna",
+      "name": "Pub Luna",
+      "url_type": "main",
+      "url": "https://lunalucet.se/pub-luna/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "verket",
+      "name": "VERKET",
+      "url_type": "facebook",
+      "url": "https://www.facebook.com/verketkarlstad",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "wilmas_musik_pub",
+      "name": "Wilmas Musik Pub",
+      "url_type": "main",
+      "url": "https://www.facebook.com/wilmas.arvika.musik.krog/",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "restaurant_luna_lucet",
+      "name": "Restaurant Luna Lucet",
+      "url_type": "main",
+      "url": "https://lunalucet.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "karlstad_com",
+      "name": "Karlstad.com",
+      "url_type": "events",
+      "url": "https://www.karlstad.com/evenemang",
+      "status": "skipped",
+      "detail": "HTTP 403 (bot-protected)"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "noje_se",
+      "name": "Nöje.se",
+      "url_type": "karlstad",
+      "url": "https://www.noje.se/karlstad/evenemang",
+      "status": "skipped",
+      "detail": "HTTP 403 (bot-protected)"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "ticketmaster",
+      "name": "Ticketmaster",
+      "url_type": "karlstad",
+      "url": "https://www.ticketmaster.se/discover/karlstad",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier2_cultural",
+      "venue_key": "brigadmuseum",
+      "name": "Brigadmuseum",
+      "url_type": "home",
+      "url": "https://www.brigadmuseum.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "sundstaaulan",
+      "name": "Sundstaaulan",
+      "url_type": "events",
+      "url": "https://karlstad.se/uppleva-och-gora/kultur/sundstaaulan",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "ulvsbyg_rden",
+      "name": "Ulvsbygården",
+      "url_type": "main",
+      "url": "https://www.ulvsbygarden.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "forshaga_k_k___bar",
+      "name": "Forshaga Kök & Bar",
+      "url_type": "main",
+      "url": "https://forshaga-kok-bar.webnode.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "stadsevent",
+      "name": "Stadsevent",
+      "url_type": "karlstad",
+      "url": "https://stadsevent.se/karlstad/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "visit_varmland_karlstad",
+      "name": "Visit Värmland - Karlstad",
+      "url_type": "events",
+      "url": "https://www.visitvarmland.com/karlstad/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "visit_varmland_hammaro",
+      "name": "Visit Värmland - Hammarö",
+      "url_type": "events",
+      "url": "https://www.visitvarmland.com/hammaro/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "stiftelsen_v_rt_hus_i_skattk_rr",
+      "name": "Stiftelsen Vårt Hus i Skattkärr",
+      "url_type": "main",
+      "url": "https://hittafestlokal.se/festlokalen-stiftelsen-vart-hus-i-skattkarr-skattkarr/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "visit_varmland_munkfors",
+      "name": "Visit Värmland - Munkfors",
+      "url_type": "events",
+      "url": "https://www.visitvarmland.com/munkfors/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "visit_varmland_grums",
+      "name": "Visit Värmland - Grums",
+      "url_type": "events",
+      "url": "https://www.visitvarmland.com/grums/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "forshaga_kommun",
+      "name": "Forshaga kommun",
+      "url_type": "evenemang",
+      "url": "https://www.forshaga.se/upplevaochgora/turismattbesokaforshaga/evenemang.4.5a7e8c8b1428e21336480c.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "tickster",
+      "name": "Tickster",
+      "url_type": "karlstad",
+      "url": "https://www.tickster.com/se/sv/events/in/karlstad",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "karlstad_se",
+      "name": "Karlstads kommun",
+      "url_type": "events",
+      "url": "https://karlstad.se/uppleva-och-gora/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "kristinehamn_kommun",
+      "name": "Kristinehamns kommun",
+      "url_type": "events",
+      "url": "https://www.kristinehamn.se/kultur-och-fritid/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "grums_kommun",
+      "name": "Grums kommun",
+      "url_type": "events",
+      "url": "https://www.grums.se/upplevagora/evenemangskalender.2477.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "sunne_kommun",
+      "name": "Sunne kommun",
+      "url_type": "events",
+      "url": "https://www.sunne.se/kommun/uppleva-och-gora/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "rasta_grums",
+      "name": "Rasta Grums",
+      "url_type": "main",
+      "url": "https://www.rasta.se/grums/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "rasta_v_rmland",
+      "name": "Rasta Värmland",
+      "url_type": "main",
+      "url": "https://www.rasta.se/varmland/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "visit_varmland_forshaga",
+      "name": "Visit Värmland - Forshaga",
+      "url_type": "events",
+      "url": "https://visitvarmland.com/forshaga/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "storfors_kommun",
+      "name": "Storfors kommun",
+      "url_type": "events",
+      "url": "https://www.storfors.se/upplevaochgora/evenemang.4.34c20d5713f759f032516cb.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "filipstad_kommun",
+      "name": "Filipstads kommun",
+      "url_type": "events",
+      "url": "https://www.filipstad.se/toppmeny/upplevaochgora/turismochkultur/visitfilipstad.2891.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier4_aggregators",
+      "venue_key": "visit_varmland_kil",
+      "name": "Visit Värmland - Kil",
+      "url_type": "events",
+      "url": "https://visitvarmland.com/kil/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "the_leprechaun_pub",
+      "name": "The Leprechaun Pub",
+      "url_type": "main",
+      "url": "http://www.theleprechaun.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "torsby_kommun",
+      "name": "Torsby kommun",
+      "url_type": "events",
+      "url": "https://www.torsby.se/upplevagora/kultur/paganginomkulturenkulturkalendern.4.474ea4c8157c22e2140d2851.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "forshaga_market",
+      "name": "Forshaga Marknad",
+      "url_type": "home",
+      "url": "https://marknadsdager.se/forshaga-forshaga-marknad",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='marknadsdager.se', port=443): Max retries exceeded with url: /forshaga-forshaga-marknad (Caused by NameResolutionError(\"HTTPSConnection(host='marknadsdager.se', port=443): Fa"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "grums_market",
+      "name": "Grums Vårmarknad",
+      "url_type": "home",
+      "url": "https://marknadsdager.se/grums-grums-varmarknad",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='marknadsdager.se', port=443): Max retries exceeded with url: /grums-grums-varmarknad (Caused by NameResolutionError(\"HTTPSConnection(host='marknadsdager.se', port=443): Faile"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "regionvarmland",
+      "name": "Region Värmland",
+      "url_type": "events",
+      "url": "https://www.regionvarmland.se/regionvarmland/evenemangslista",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "eda_kommun",
+      "name": "Eda kommun",
+      "url_type": "events",
+      "url": "https://eda.se/uppleva",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "arjang_kommun",
+      "name": "Årjängs kommun",
+      "url_type": "events",
+      "url": "https://www.arjang.se/kommunalservice/startsida/upplevaochgora/evenemang.9621.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "hagfors_kommun",
+      "name": "Hagfors kommun",
+      "url_type": "events",
+      "url": "https://www.hagfors.se/undersidor/politik-och-kommun/medborgardialog/framtagandet-av-hagforsstrategin/marknader-och-evenemang-i-kommunen.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "hagfors_market",
+      "name": "Hagfors Vårmarknad",
+      "url_type": "home",
+      "url": "https://marknadsdager.se/hagfors-hagfors-varmarknad",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='marknadsdager.se', port=443): Max retries exceeded with url: /hagfors-hagfors-varmarknad (Caused by NameResolutionError(\"HTTPSConnection(host='marknadsdager.se', port=443): F"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "munkfors_kommun",
+      "name": "Munkfors kommun",
+      "url_type": "events",
+      "url": "https://www.munkfors.se/uppleva-och-gora/evenemang/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "varmland_market",
+      "name": "Smaka på Värmland",
+      "url_type": "home",
+      "url": "https://www.visitvarmland.com/kristinehamn/evenemang",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "king_street_bar",
+      "name": "King Street Bar",
+      "url_type": "home",
+      "url": "https://facebook.com/KingStreetBarKristinehamn",
+      "status": "skipped",
+      "detail": "known bot-protected domain"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "bishops_arms_karlstad",
+      "name": "The Bishops Arms",
+      "url_type": "home",
+      "url": "https://www.bishopsarms.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "arvika_kommun",
+      "name": "Arvika kommun",
+      "url_type": "events",
+      "url": "https://www.arvika.se/upplevaochgora/turismevenemangochsevardheter.1453.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "glada_ankan",
+      "name": "Glada Ankan",
+      "url_type": "home",
+      "url": "https://karlstad.com/",
+      "status": "skipped",
+      "detail": "HTTP 403 (bot-protected)"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "kolsnasparken",
+      "name": "Kolsnäsparken",
+      "url_type": "home",
+      "url": "https://sagolikasunne.se/",
+      "status": "skipped",
+      "detail": "HTTP 455 (bot-protected)"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "pitchers_karlstad",
+      "name": "Pitchers Karlstad",
+      "url_type": "home",
+      "url": "https://www.pitchers.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "nöjesfabriken",
+      "name": "Nöjesfabriken",
+      "url_type": "home",
+      "url": "https://www.nojesfabriken.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "the_bull_bar",
+      "name": "The Bull Bar",
+      "url_type": "home",
+      "url": "https://thebullbar.se/",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='thebullbar.se', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='thebullbar.se', port=443): Failed to resolve 'thebullbar.se'"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "the_leprechaun_pub",
+      "name": "The Leprechaun Pub",
+      "url_type": "home",
+      "url": "http://www.theleprechaun.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "tumult_festival",
+      "name": "Tumult Festival",
+      "url_type": "home",
+      "url": "https://tumul tkultur.se/",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='tumul%20tkultur.se', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='tumul%20tkultur.se', port=443): Failed to resolve 'tumu"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "verket_karlstad",
+      "name": "Verket (Nöjesfabriken)",
+      "url_type": "home",
+      "url": "https://www.nojesfabriken.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "o_learys_karlstad",
+      "name": "O'Learys Karlstad",
+      "url_type": "home",
+      "url": "https://www.olearys.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "alsters_herrgard_hostmarknad",
+      "name": "Höstmarknad på Alsters Herrgård",
+      "url_type": "info",
+      "url": "https://visitvarmland.com/karlstad/evenemang/marknad/hostmarknad-pa-alsters-herrgard",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "carlstad_olhall",
+      "name": "Carlstad Ölhall",
+      "url_type": "home",
+      "url": "https://visitvarmland.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "ritz_club",
+      "name": "Ritz Club",
+      "url_type": "home",
+      "url": "https://www.arvika.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "good_guys_beer_pizza",
+      "name": "Good Guys Beer & Pizza",
+      "url_type": "home",
+      "url": "https://visitvarmland.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_nightlife",
+      "venue_key": "olssons_brygga",
+      "name": "Olssons Brygga",
+      "url_type": "home",
+      "url": "https://visitvarmland.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier1_major",
+      "venue_key": "skoghalls_folkets_hus",
+      "name": "Skoghalls Folkets Hus",
+      "url_type": "home",
+      "url": "https://skoghallsfolketshus.se/mobil/index.php",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_outdoor",
+      "venue_key": "vastana_musik_teater",
+      "name": "Västanå Musik & Teater",
+      "url_type": "home",
+      "url": "https://vastanateater.se/",
+      "status": "skipped",
+      "detail": "HTTP 455 (bot-protected)"
+    },
+    {
+      "tier": "tier_outdoor",
+      "venue_key": "kajen_festival",
+      "name": "KAJEN Festival",
+      "url_type": "home",
+      "url": "https://kajenksd.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "kristinehamn_arena",
+      "name": "Kristinehamn Arena",
+      "url_type": "home",
+      "url": "https://kristinehamnarena.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "lofbergs_arena",
+      "name": "Löfbergs Arena",
+      "url_type": "home",
+      "url": "https://www.lofbergsarena.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier5_municipal",
+      "venue_key": "saffle_kommun",
+      "name": "Säffle kommun",
+      "url_type": "events",
+      "url": "https://saffle.se/arkiv/evenemang.html",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_outdoor",
+      "venue_key": "kvarteret_almen",
+      "name": "Kvarteret Almen",
+      "url_type": "home",
+      "url": "https://visitvarmland.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "saffle_simhall",
+      "name": "Säffle Simhall",
+      "url_type": "home",
+      "url": "https://saffle.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "putte_i_parken",
+      "name": "Putte i Parken",
+      "url_type": "home",
+      "url": "https://putteiparken.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_outdoor",
+      "venue_key": "stora_torget_karlstad",
+      "name": "Stora Torget",
+      "url_type": "home",
+      "url": "https://karlstad.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_outdoor",
+      "venue_key": "stadstradgarden",
+      "name": "Stadsträdgården",
+      "url_type": "home",
+      "url": "https://karlstad.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "karlstad_racketcenter",
+      "name": "Karlstad Racketcenter",
+      "url_type": "home",
+      "url": "https://karlstad.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "torsby_skidtunnel",
+      "name": "Torsby Skidtunnel & Sportcenter",
+      "url_type": "home",
+      "url": "https://visitvarmland.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "tingvalla_ip",
+      "name": "Tingvalla IP",
+      "url_type": "home",
+      "url": "https://karlstad.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier3_small",
+      "venue_key": "ngsbacka_course___festival_center",
+      "name": "Ängsbacka Course & Festival Center",
+      "url_type": "main",
+      "url": "https://www.angsbacka.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_sports",
+      "venue_key": "tingvalla_isstadion",
+      "name": "Tingvalla Isstadion",
+      "url_type": "home",
+      "url": "https://karlstad.se/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_outdoor",
+      "venue_key": "angsbacka",
+      "name": "Ängsbacka",
+      "url_type": "home",
+      "url": "https://www.angsbacka.com/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    },
+    {
+      "tier": "tier_markets",
+      "venue_key": "minmarknad_nu",
+      "name": "Min Marknad - Värmland",
+      "url_type": "home",
+      "url": "https://www.minmarknad.nu/",
+      "status": "ok",
+      "detail": "HTTP 200"
+    }
+  ]
+}

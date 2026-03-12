@@ -11,6 +11,23 @@
     header { padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--bg); }
     header h1 { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
     header p { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+    /* Category filter pills */
+    .filter-bar { padding: 10px 16px; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 6px; }
+    .filter-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 10px; border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--bg); color: var(--text-secondary);
+      font-size: 12px; font-weight: 500; cursor: pointer;
+      user-select: none; transition: all 0.1s;
+      white-space: nowrap;
+    }
+    .filter-pill:hover { border-color: #999; color: var(--text); }
+    .filter-pill.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .filter-pill .count { font-size: 10px; opacity: 0.7; }
+    .filter-pill.active .count { opacity: 0.65; }
+
     .event-list { list-style: none; }
     .event-item { display: flex; align-items: baseline; padding: 10px 16px; border-bottom: 1px solid var(--border); gap: 12px; }
     .event-item:active { background: var(--row-hover); }
@@ -29,7 +46,8 @@
     .month-divider { padding: 8px 16px; background: #f5f5f5; font-size: 11px; text-transform: uppercase; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
     .empty { padding: 40px 16px; text-align: center; color: var(--text-secondary); font-size: 14px; }
     footer { padding: 16px; text-align: center; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); border-top: 1px solid var(--border); }
-    @media (min-width: 768px) { body { max-width: 680px; margin: 0 auto; border-left: 1px solid var(--border); border-right: 1px solid var(--border); min-height: 100vh; } .event-item { padding: 12px 20px; } .date { width: 50px; } }
+    #event-count { font-variant-numeric: tabular-nums; }
+    @media (min-width: 768px) { body { max-width: 680px; margin: 0 auto; border-left: 1px solid var(--border); border-right: 1px solid var(--border); min-height: 100vh; } .event-item { padding: 12px 20px; } .date { width: 50px; } .filter-bar { padding: 10px 20px; } }
   </style>
 </head>
 <body>
@@ -37,11 +55,14 @@
     <h1>Evenemang Karlstad</h1>
     <p>Konserter, teater & kultur</p>
   </header>
-  
+
+  <!-- Category filter pills — rendered by JS after data loads -->
+  <div class="filter-bar" id="filter-bar"></div>
+
   {{ $dataFile := resources.Get "data/events.json" }}
   {{ $events := $dataFile | transform.Unmarshal }}
   {{ $now := now.Format "2006-01-02" }}
-  
+
   {{/* Filter events: keep if start date >= now OR (has end_date AND end_date >= now) */}}
   {{ $futureEvents := slice }}
   {{ range $events }}
@@ -50,59 +71,218 @@
       {{ $futureEvents = $futureEvents | append . }}
     {{ end }}
   {{ end }}
-  
-  <ul class="event-list">
-    {{ $currentMonth := "" }}
-    {{ $months := dict "01" "Januari" "02" "Februari" "03" "Mars" "04" "April" "05" "Maj" "06" "Juni" "07" "Juli" "08" "Augusti" "09" "September" "10" "Oktober" "11" "November" "12" "December" }}
-    {{ $weekdays := dict "Monday" "mån" "Tuesday" "tis" "Wednesday" "ons" "Thursday" "tor" "Friday" "fre" "Saturday" "lör" "Sunday" "sön" }}
-    
-    {{ range sort $futureEvents "date" }}
-      {{ $startDate := time .date }}
-      {{ $monthNum := $startDate.Format "01" }}
-      {{ $monthSv := index $months $monthNum }}
-      {{ if ne $monthSv $currentMonth }}
-        {{ $currentMonth = $monthSv }}
-        <li class="month-divider">{{ $monthSv }} {{ $startDate.Format "2006" }}</li>
-      {{ end }}
-      
-      {{ if .link }}
-      <a href="{{ .link }}" target="_blank" rel="noopener" class="event-link">
-      {{ end }}
-      <li class="event-item">
-        <div class="date">
-          {{ if .end_date }}
-            {{/* Multi-day event: show date range */}}
-            {{ $endDate := time .end_date }}
-            {{ if eq ($startDate.Format "01") ($endDate.Format "01") }}
-              {{/* Same month: show "1-6" format */}}
-              <span class="date-day date-range">{{ $startDate.Format "2" }}-{{ $endDate.Format "2" }}</span>
-            {{ else }}
-              {{/* Different months: show "31/1-6/2" format */}}
-              <span class="date-day date-range">{{ $startDate.Format "2" }}/{{ $startDate.Format "1" }}-{{ $endDate.Format "2" }}/{{ $endDate.Format "1" }}</span>
-            {{ end }}
-            <span class="date-weekday">{{ index $weekdays ($startDate.Format "Monday") }}–{{ index $weekdays ($endDate.Format "Monday") }}</span>
-          {{ else }}
-            {{/* Single-day event */}}
-            <span class="date-day">{{ $startDate.Format "2" }}</span>
-            {{ $wdEn := $startDate.Format "Monday" }}
-            <span class="date-weekday">{{ index $weekdays $wdEn }}</span>
-          {{ end }}
-        </div>
-        <div class="event-content">
-          <div class="event-title">{{ .title }}</div>
-          <div class="venue">{{ .venue }}{{ if .location }}, {{ .location }}{{ end }}</div>
-        </div>
-      </li>
-      {{ if .link }}
-      </a>
-      {{ end }}
-    {{ else }}
-      <li class="empty">Inga kommande evenemang</li>
-    {{ end }}
-  </ul>
-  
+
+  {{/* Embed events as JSON for the JS filter layer */}}
+  <script>
+    window.__EVENTS__ = {{ $futureEvents | jsonify }};
+  </script>
+
+  <ul class="event-list" id="event-list"></ul>
+
   <footer>
-    {{ len $futureEvents }} evenemang • Uppdaterad {{ now.Format "2/1" }}
+    <span id="event-count">{{ len $futureEvents }}</span> evenemang • Uppdaterad {{ now.Format "2/1" }}
   </footer>
+
+  <script>
+  (function () {
+    const MONTHS = ['Januari','Februari','Mars','April','Maj','Juni','Juli','Augusti','September','Oktober','November','December'];
+    const WEEKDAYS_SV = {'Monday':'mån','Tuesday':'tis','Wednesday':'ons','Thursday':'tor','Friday':'fre','Saturday':'lör','Sunday':'sön'};
+    const WEEKDAYS_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+    // Category display labels (slug → label)
+    const CAT_LABELS = {
+      'concert':  'Konserter',
+      'theater':  'Teater',
+      'opera':    'Opera',
+      'cinema':   'Bio',
+      'sport':    'Sport',
+      'museum':   'Museum',
+      'library':  'Bibliotek',
+      'festival': 'Festival',
+      'culture':  'Kultur',
+      'park':     'Natur & Park',
+      'other':    'Övrigt',
+    };
+    // Preferred display order
+    const CAT_ORDER = ['concert','theater','opera','cinema','sport','festival','museum','library','culture','park','other'];
+
+    const events = window.__EVENTS__ || [];
+    let activeCategories = new Set(['all']);
+
+    // ── Helpers ──────────────────────────────────────────────────────────────
+
+    function getDay(dateStr) {
+      // dateStr = "YYYY-MM-DD"
+      const [y, m, d] = dateStr.split('-').map(Number);
+      return new Date(y, m - 1, d).getDay(); // 0=Sun
+    }
+
+    function weekdaySv(dateStr) {
+      return WEEKDAYS_SV[WEEKDAYS_EN[getDay(dateStr)]] || '';
+    }
+
+    // ── Build category counts ─────────────────────────────────────────────────
+
+    function buildCounts(evts) {
+      const counts = {};
+      for (const e of evts) {
+        const c = e.category || 'other';
+        counts[c] = (counts[c] || 0) + 1;
+      }
+      return counts;
+    }
+
+    // ── Render filter pills ───────────────────────────────────────────────────
+
+    function renderFilters(counts) {
+      const bar = document.getElementById('filter-bar');
+      bar.innerHTML = '';
+
+      // "Alla" pill
+      const allCount = events.length;
+      const allPill = makePill('all', 'Alla', allCount);
+      bar.appendChild(allPill);
+
+      // Category pills in preferred order, then any remaining
+      const seen = new Set();
+      const ordered = [...CAT_ORDER, ...Object.keys(counts).filter(c => !CAT_ORDER.includes(c))];
+      for (const cat of ordered) {
+        if (seen.has(cat) || !counts[cat]) continue;
+        seen.add(cat);
+        const label = CAT_LABELS[cat] || cat;
+        bar.appendChild(makePill(cat, label, counts[cat]));
+      }
+    }
+
+    function makePill(cat, label, count) {
+      const btn = document.createElement('button');
+      btn.className = 'filter-pill' + (activeCategories.has(cat) ? ' active' : '');
+      btn.dataset.cat = cat;
+      btn.innerHTML = label + ' <span class="count">' + count + '</span>';
+      btn.addEventListener('click', () => onPillClick(cat));
+      return btn;
+    }
+
+    function onPillClick(cat) {
+      if (cat === 'all') {
+        activeCategories = new Set(['all']);
+      } else {
+        activeCategories.delete('all');
+        if (activeCategories.has(cat)) {
+          activeCategories.delete(cat);
+          if (activeCategories.size === 0) activeCategories = new Set(['all']);
+        } else {
+          activeCategories.add(cat);
+        }
+      }
+      // Update pill active states
+      document.querySelectorAll('.filter-pill').forEach(p => {
+        p.classList.toggle('active', activeCategories.has(p.dataset.cat));
+      });
+      renderList();
+    }
+
+    // ── Render event list ─────────────────────────────────────────────────────
+
+    function renderList() {
+      const list = document.getElementById('event-list');
+      list.innerHTML = '';
+
+      const filtered = activeCategories.has('all')
+        ? events
+        : events.filter(e => activeCategories.has(e.category || 'other'));
+
+      // Sort by date
+      const sorted = [...filtered].sort((a, b) => a.date.localeCompare(b.date));
+
+      if (sorted.length === 0) {
+        const li = document.createElement('li');
+        li.className = 'empty';
+        li.textContent = 'Inga evenemang hittades';
+        list.appendChild(li);
+        document.getElementById('event-count').textContent = '0';
+        return;
+      }
+
+      let currentMonth = '';
+      for (const ev of sorted) {
+        const [y, m, d] = ev.date.split('-').map(Number);
+        const monthLabel = MONTHS[m - 1] + ' ' + y;
+        if (monthLabel !== currentMonth) {
+          currentMonth = monthLabel;
+          const divider = document.createElement('li');
+          divider.className = 'month-divider';
+          divider.textContent = monthLabel;
+          list.appendChild(divider);
+        }
+        list.appendChild(buildEventRow(ev));
+      }
+
+      document.getElementById('event-count').textContent = filtered.length;
+    }
+
+    function buildEventRow(ev) {
+      const [sy, sm, sd] = ev.date.split('-').map(Number);
+
+      // Date block
+      let dateHTML;
+      if (ev.end_date) {
+        const [ey, em, ed] = ev.end_date.split('-').map(Number);
+        const sameMonth = sm === em;
+        const rangeStr = sameMonth
+          ? sd + '–' + ed
+          : sd + '/' + sm + '–' + ed + '/' + em;
+        const wdStart = weekdaySv(ev.date);
+        const wdEnd = weekdaySv(ev.end_date);
+        dateHTML = '<span class="date-day date-range">' + rangeStr + '</span>'
+                 + '<span class="date-weekday">' + wdStart + '–' + wdEnd + '</span>';
+      } else {
+        const wd = weekdaySv(ev.date);
+        dateHTML = '<span class="date-day">' + sd + '</span>'
+                 + '<span class="date-weekday">' + wd + '</span>';
+      }
+
+      const venueText = ev.venue + (ev.location ? ', ' + ev.location : '');
+      const titleText = esc(ev.title);
+
+      const inner =
+        '<li class="event-item">' +
+          '<div class="date">' + dateHTML + '</div>' +
+          '<div class="event-content">' +
+            '<div class="event-title">' + titleText + '</div>' +
+            '<div class="venue">' + esc(venueText) + '</div>' +
+          '</div>' +
+        '</li>';
+
+      if (ev.link) {
+        const a = document.createElement('a');
+        a.href = ev.link;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'event-link';
+        a.innerHTML = inner;
+        return a;
+      } else {
+        const frag = document.createRange().createContextualFragment(inner);
+        return frag.firstElementChild;
+      }
+    }
+
+    function esc(str) {
+      return (str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── Init ──────────────────────────────────────────────────────────────────
+
+    const counts = buildCounts(events);
+    renderFilters(counts);
+    renderList();
+
+  })();
+  </script>
 </body>
 </html>

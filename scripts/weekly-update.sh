@@ -21,6 +21,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+log "🏷️  Enriching event categories..."
+python3 scripts/enrich_categories.py >> "$LOG_FILE" 2>&1
+
 SITE_URL="https://karlstad-events.surge.sh"
 WEEK=$(date '+%W')
 YEAR=$(date '+%Y')

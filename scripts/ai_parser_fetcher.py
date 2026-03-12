@@ -12,7 +12,7 @@ import requests
 import urllib.parse
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict
+from typing import List, Dict, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SCRIPT_DIR = Path(__file__).parent
@@ -235,6 +235,54 @@ def fetch_visit_varmland_events(config: dict) -> List[Dict]:
     return unique
 
 
+# Mapping from venues.yaml 'type' values to normalized category slugs
+_TYPE_TO_CATEGORY = {
+    # Music / concerts
+    'konsert': 'concert', 'konserter': 'concert', 'konserthall': 'concert',
+    'konsertlokal': 'concert', 'live music': 'concert', 'live bands': 'concert',
+    'musik': 'concert', 'indie': 'concert', 'klassisk musik': 'concert',
+    'music association': 'concert',
+    # Theater / performing arts
+    'teater': 'theater', 'scenkonst': 'theater', 'friluftsteater': 'theater',
+    'scene': 'theater',
+    # Opera
+    'opera': 'opera',
+    # Museum / exhibitions
+    'museum': 'museum', 'utställning': 'museum', 'utställningar': 'museum',
+    'konstmuseum': 'museum', 'militärhistoriskt museum': 'museum',
+    'gästutställningar': 'museum', 'permanent utställning': 'museum',
+    'konsthall': 'museum', 'konst': 'museum',
+    # Cinema
+    'biograf': 'cinema', 'film': 'cinema',
+    # Sport
+    'sport': 'sport', 'ishockey': 'sport', 'bandy': 'sport', 'shl': 'sport',
+    'elitserien': 'sport', 'trav': 'sport', 'biathlon': 'sport',
+    'skidåkning': 'sport', 'simhall': 'sport', 'multi-sport': 'sport',
+    # Festival
+    'festival': 'festival',
+    # Culture / misc
+    'kultur': 'culture', 'kulturhus': 'culture', 'folkets hus': 'culture',
+    'föreläsningar': 'culture', 'workshops': 'culture',
+}
+
+_CATEGORY_PRIORITY = ['opera', 'theater', 'concert', 'cinema', 'sport', 'festival', 'museum', 'culture']
+
+
+def _get_venue_category(config: dict) -> Optional[str]:
+    """Derive a normalized category from a venues.yaml venue config."""
+    types = [str(t).lower() for t in (config.get('type') or [])]
+    for priority_cat in _CATEGORY_PRIORITY:
+        for t in types:
+            if _TYPE_TO_CATEGORY.get(t) == priority_cat:
+                return priority_cat
+    # Fallback: first match in type list
+    for t in types:
+        cat = _TYPE_TO_CATEGORY.get(t)
+        if cat:
+            return cat
+    return None
+
+
 def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
     """
     Fetch venue page and use AI to extract events
@@ -300,6 +348,9 @@ def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
         except Exception as e:
             print(f"    ✗ Error: {e}")
     
+    # Derive category from venue config if not already set on individual events
+    venue_category = _get_venue_category(config)
+
     # Deduplicate
     seen = set()
     unique_events = []
@@ -307,6 +358,9 @@ def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
         key = (e['title'], e['date'], e['venue'])
         if key not in seen:
             seen.add(key)
+            # Stamp venue-level category as fallback (don't override if event has its own)
+            if venue_category and not e.get('category'):
+                e['category'] = venue_category
             unique_events.append(e)
     
     return unique_events
