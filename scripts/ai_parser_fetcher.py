@@ -158,10 +158,14 @@ def fetch_visit_varmland_events(config: dict) -> List[Dict]:
 
     filter_data = json.loads(script_text[len(prefix):].rstrip(' ;'))
     index_name = filter_data.get('indexName', 'events')
-    filters = filter_data.get('filter')
+    raw_filters = filter_data.get('filter')
     locale = filter_data.get('locale', 'sv')
-    if not filters:
+    municipality = filter_data.get('municipality') or location
+    if not raw_filters and not municipality:
         return events
+
+    # Use municipality-only filtering so we include all event types/categories.
+    filters = f"dates.occasion_end_date >= {int(datetime.now().timestamp())} AND municipality:'{municipality}'"
 
     query_url = f'https://{VISIT_VARMLAND_ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/*/queries'
     headers = {

@@ -1,9 +1,48 @@
 {
-  "timestamp": "2026-03-11T20:27:55.768168",
-  "issues": [],
+  "timestamp": "2026-03-12T08:28:53.259537",
+  "issues": [
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "past_event",
+      "severity": "medium"
+    },
+    {
+      "type": "scraping_error",
+      "severity": "high",
+      "detail": "Title: Frontyard \u2013 L\u00f6pevenemang i Grums"
+    },
+    {
+      "type": "scraping_error",
+      "severity": "high",
+      "detail": "Title: Theo"
+    }
+  ],
   "warnings": [],
   "summary": {
-    "total_issues": 0,
+    "total_issues": 9,
     "total_warnings": 0
   }
 }
