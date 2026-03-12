@@ -835,13 +835,12 @@ tier2_cultural:
       calendar: https://www.bibliotekvarmland.se/-/arvika-bibliotek
       kommun: https://www.arvika.se/upplevaochgora/bibliotek.1455.html
   bibliotek_varmland:
-    active: true
+    active: false
     address: Multiple locations
-    location: "V\xE4rmland"
-    name: "Bibliotek V\xE4rmland"
+    location: "Värmland"
+    name: "Bibliotek Värmland"
     scraper:
-      fallback: ai
-      note: JavaScript SPA - use AI to fetch events via web search
+      note: Disabled in favor of library-specific Axiell-backed sources
       type: manual
     type:
     - Bibliotek
@@ -851,19 +850,36 @@ tier2_cultural:
       events: https://www.bibliotekvarmland.se/evenemang#/
   bibliotekshuset:
     active: true
-    address: "V\xE4stra Torggatan 26, 651 84 Karlstad"
+    address: "Västra Torggatan 26, 651 84 Karlstad"
+    library_location: Karlstad stadsbibliotek
     location: Karlstad
     name: Bibliotekshuset (Stadsbiblioteket Karlstad)
     scraper:
-      note: Library events via karlstad.se
-      type: static
+      provider: bibliotek_varmland_api
+      type: api
     type:
-    - "F\xF6rel\xE4sningar"
+    - "Föreläsningar"
     - Film
     - Kultur
     - Workshops
+    - Bibliotek
     urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/stadsbiblioteket-i-karlstad
       calendar: https://karlstad.se/uppleva-och-gora/bibliotek/kalender-for-biblioteken-i-karlstad
+  deje_bibliotek:
+    active: true
+    address: "Brogatan 11, 669 30 Deje"
+    library_location: Deje bibliotek
+    location: Forshaga
+    name: Deje bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/deje-bibliotek
   brigadmuseum:
     active: true
     address: "Sandb\xE4cksgatan 31, 653 40 Karlstad"
@@ -879,14 +895,15 @@ tier2_cultural:
   forshaga_bibliotek:
     active: true
     address: Storgatan 52, 667 32 Forshaga
+    library_location: Forshaga bibliotek
     location: Forshaga
     name: Forshaga bibliotek
     scraper:
-      method: beautifulsoup
-      type: static
+      provider: bibliotek_varmland_api
+      type: api
     type:
     - Bibliotek
-    - "F\xF6rel\xE4sningar"
+    - "Föreläsningar"
     - Barnaktiviteter
     - Bokcirkel
     urls:
@@ -909,33 +926,37 @@ tier2_cultural:
       main: https://gjuteriet.nu/
   grums_bibliotek:
     active: true
-    address: ''
+    address: Grums
     discovered_date: '2026-03-02T15:44:12.395845'
+    library_location: Grums bibliotek
     location: Grums
-    name: Grums Bibliotek
+    name: Grums bibliotek
     scraper:
-      fallback: ai
-      note: ' - Use AI to fetch events'
-      type: manual
+      provider: bibliotek_varmland_api
+      type: api
     source: subagent_discovery
     type:
-    - bibliotek
+    - Bibliotek
+    - Evenemang
     urls:
-      main: https://www.biblioteken.se/grums-bibliotek/
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/grums-bibliotek
   kils_bibliotek:
     active: true
     address: Kil
     discovered_date: '2026-03-02T15:44:12.394892'
+    library_location: Kils bibliotek
     location: Kil
     name: Kils bibliotek
     scraper:
-      fallback: ai
-      note: ' - Use AI to fetch events'
-      type: manual
+      provider: bibliotek_varmland_api
+      type: api
     source: subagent_discovery
     type:
-    - kulturhus
-    urls: {}
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/kils-bibliotek
+      calendar: https://kil.se/uppleva-och-gora/bibliotek
   kolonin_arvika:
     active: true
     address: Kyrkogatan 42, Arvika
@@ -1003,6 +1024,20 @@ tier2_cultural:
     - kulturhus
     urls:
       main: https://www.forshaga.se/upplevaochgora/kultur/kulturhuset.4.725330be11efa4b0a3f80003549.html
+  hammaro_bibliotek:
+    active: true
+    address: Hammarö
+    library_location: Hammarö bibliotek
+    location: Hammarö
+    name: Hammarö bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/hammaro-bibliotek
   kulturhuset_i_deje:
     active: true
     address: Brogatan 11, 669 30 Deje
@@ -1052,17 +1087,32 @@ tier2_cultural:
     active: true
     address: Molkom
     discovered_date: '2026-03-02T15:44:12.395075'
-    location: Molkom
+    library_location: Molkoms bibliotek
+    location: Karlstad
     name: Molkoms bibliotek
     scraper:
-      fallback: ai
-      note: ' - Use AI to fetch events'
-      type: manual
+      provider: bibliotek_varmland_api
+      type: api
     source: subagent_discovery
     type:
     - Bibliotek
+    - Evenemang
     urls:
-      main: https://www.biblioteken.se/molkoms-bibliotek/
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/molkoms-bibliotek
+  kronoparkens_bibliotek:
+    active: true
+    address: Karlstad
+    library_location: Kronoparkens bibliotek
+    location: Karlstad
+    name: Kronoparkens bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/kronoparkens-bibliotek
   rackstadmuseet:
     active: true
     address: "Kungsv\xE4gen 11, 671 41 Arvika"
@@ -1116,6 +1166,20 @@ tier2_cultural:
     urls:
       bibliotekvarmland: https://www.bibliotekvarmland.se/-/saffle-bibliotek
       calendar: https://saffle.se/uppleva-och-gora/bibliotek/kalender.html
+  munkfors_bibliotek:
+    active: true
+    address: Munkfors
+    library_location: Munkfors bibliotek
+    location: Munkfors
+    name: Munkfors bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/munkfors-bibliotek
   sandgrund_lars_lerin:
     active: true
     address: "V\xE4stra Torggatan 31, 652 24 Karlstad"
@@ -1141,19 +1205,62 @@ tier2_cultural:
       sandgrund: https://sandgrund.org/sandgrund/
   skattk_rrs_bibliotek:
     active: true
-    address: "Skattk\xE4rrsv\xE4gen 39, Skattk\xE4rr"
+    address: "Skattkärrsvägen 39, Skattkärr"
     discovered_date: '2026-03-02T15:44:12.395117'
-    location: "Skattk\xE4rr"
-    name: "Skattk\xE4rrs bibliotek"
+    library_location: Skattkärrs bibliotek
+    location: Karlstad
+    name: "Skattkärrs bibliotek"
     scraper:
-      fallback: ai
-      note: ' - Use AI to fetch events'
-      type: manual
+      provider: bibliotek_varmland_api
+      type: api
     source: subagent_discovery
     type:
     - Bibliotek
+    - Evenemang
     urls:
-      main: https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/skattkarrs-bibliotek
+  skare_bibliotek:
+    active: true
+    address: Skåre
+    library_location: Skåre bibliotek
+    location: Karlstad
+    name: Skåre bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/skare-bibliotek
+  valbergs_bibliotek:
+    active: true
+    address: Vålberg
+    library_location: Vålbergs bibliotek
+    location: Karlstad
+    name: Vålbergs bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/valbergs-bibliotek
+  vase_bibliotek:
+    active: true
+    address: Väse
+    library_location: Väse bibliotek
+    location: Karlstad
+    name: Väse bibliotek
+    scraper:
+      provider: bibliotek_varmland_api
+      type: api
+    type:
+    - Bibliotek
+    - Evenemang
+    urls:
+      bibliotekvarmland: https://www.bibliotekvarmland.se/-/vase-bibliotek
   varmlands_museum:
     active: true
     address: "Sandgrundsudden, V\xE4stra Torggatan 31, 652 24 Karlstad"

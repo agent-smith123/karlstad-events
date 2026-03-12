@@ -24,11 +24,109 @@ CURRENT_YEAR = datetime.now().year
 VALID_YEARS = {CURRENT_YEAR, CURRENT_YEAR + 1}
 VISIT_VARMLAND_ALGOLIA_APP_ID = "JLIO3DI59W"
 VISIT_VARMLAND_ALGOLIA_API_KEY = "c3e912c214238b637c6a86d637acfe79"
+BIBLIOTEK_VARMLAND_GROUP_ID = "493520"
 
 
 def is_visit_varmland_source(config: dict) -> bool:
     urls = config.get('urls', {})
     return any(isinstance(url, str) and 'visitvarmland.com' in url for url in urls.values())
+
+
+def is_bibliotek_varmland_source(config: dict) -> bool:
+    scraper = config.get('scraper', {})
+    if scraper.get('provider') == 'bibliotek_varmland_api':
+        return True
+    urls = config.get('urls', {})
+    return any(isinstance(url, str) and 'bibliotekvarmland.se' in url for url in urls.values()) and bool(config.get('library_locations') or config.get('library_location'))
+
+
+def _get_bibliotek_varmland_config() -> Dict:
+    config_url = f'https://www.bibliotekvarmland.se/api/jsonws/arenacalendar.calendar/get-calendar-config?groupId={BIBLIOTEK_VARMLAND_GROUP_ID}'
+    resp = requests.get(config_url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=20)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def fetch_bibliotek_varmland_events(config: dict) -> List[Dict]:
+    """Fetch structured library events from Bibliotek Värmland's Axiell API."""
+    venue_name = config.get('name', 'Bibliotek Värmland')
+    municipality = config.get('location', venue_name)
+    library_locations = config.get('library_locations') or ([config['library_location']] if config.get('library_location') else [])
+    if not library_locations:
+        return []
+
+    api_config = _get_bibliotek_varmland_config()
+    base_url = api_config['calendarApiEndpoint'].rstrip('/')
+    customer_id = api_config['customerId']
+    search_url = f'{base_url}/customers/{customer_id}/search'
+
+    range_filters = [
+        {'field': 'event.startDate', 'gte': datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).isoformat() + 'Z'}
+    ]
+    term_filters = [
+        {'field': 'event.status', 'values': ['PUBLISHED', 'CANCELLED']},
+        {'type': 'NOT_IN', 'field': 'event.deleted', 'values': [True]},
+        {'field': 'event.location.value', 'values': library_locations},
+    ]
+
+    events = []
+    start = 0
+    size = 100
+    page_url = next((url for url in (config.get('urls') or {}).values() if isinstance(url, str) and 'bibliotekvarmland.se' in url), None) or 'https://www.bibliotekvarmland.se/evenemang'
+
+    while True:
+        params = {
+            'queryString': 'event.title:* OR event.description:* OR event.location.value:*',
+            'rangeFilters': json.dumps(range_filters),
+            'termFilters': json.dumps(term_filters),
+            'sorts': json.dumps([{'field': 'event.startDate', 'order': 'ASC'}]),
+            'start': start,
+            'size': size,
+        }
+        resp = requests.get(search_url, params=params, headers={'User-Agent': 'Mozilla/5.0'}, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        hits = data.get('hits', [])
+        if not hits:
+            break
+
+        for hit in hits:
+            event = hit.get('event') or {}
+            title = event.get('title')
+            start_date = event.get('startDate')
+            if not title or not start_date:
+                continue
+            date = start_date[:10]
+            year = int(date[:4])
+            if year not in VALID_YEARS:
+                continue
+            end_date = (event.get('endDate') or '')[:10] or None
+            location_value = ((event.get('location') or {}).get('value')) or venue_name
+            tags = event.get('tags') or []
+            category = tags[0] if tags else None
+            events.append({
+                'title': title,
+                'date': date,
+                'end_date': end_date if end_date != date else None,
+                'venue': location_value,
+                'location': municipality,
+                'link': page_url,
+                'source': venue_name,
+                'category': category,
+            })
+
+        start += len(hits)
+        if start >= data.get('totalHits', 0):
+            break
+
+    seen = set()
+    unique = []
+    for e in events:
+        key = (e['title'], e['date'], e['venue'])
+        if key not in seen:
+            seen.add(key)
+            unique.append(e)
+    return unique
 
 
 def fetch_visit_varmland_events(config: dict) -> List[Dict]:
@@ -147,6 +245,19 @@ def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
         try:
             print(f"  🔄 {venue_name} (Algolia)")
             venue_events = fetch_visit_varmland_events(config)
+            events.extend(venue_events)
+            if venue_events:
+                print(f"    ✓ {len(venue_events)} events")
+            else:
+                print(f"    ℹ️  No events found")
+        except Exception as e:
+            print(f"    ✗ Error: {e}")
+        return events
+
+    if is_bibliotek_varmland_source(config):
+        try:
+            print(f"  🔄 {venue_name} (Axiell API)")
+            venue_events = fetch_bibliotek_varmland_events(config)
             events.extend(venue_events)
             if venue_events:
                 print(f"    ✓ {len(venue_events)} events")
