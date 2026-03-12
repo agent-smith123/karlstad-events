@@ -9,7 +9,6 @@ from pathlib import Path
 
 # Configuration
 CONTENT_DIR = Path(__file__).parent.parent / "content" / "events"
-BUILD_HOOK = "https://api.netlify.com/build_hooks/69a4aba1e906bcb08f79cbb2"
 
 # Known venues and their URLs
 VENUES = [

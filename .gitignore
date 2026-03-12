@@ -2,8 +2,6 @@
 public/
 resources/
 
-# Netlify
-.netlify/
 
 # IDE
 .idea/

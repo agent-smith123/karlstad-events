@@ -55,7 +55,7 @@ No single source provides comprehensive coverage. Successful aggregation require
 │              scripts/research-events.sh                 │
 │  • Dependency check                                     │
 │  • Run enhanced_research.py                             │
-│  • Trigger Netlify build                                │
+│  • Deploy static site build                             │
 └─────────────────────┬───────────────────────────────────┘
                       │
                       ▼
@@ -99,9 +99,9 @@ No single source provides comprehensive coverage. Successful aggregation require
                       │
                       ▼
 ┌─────────────────────────────────────────────────────────┐
-│              Netlify Build Hook                         │
+│                Static Site Deploy                       │
 │  • Automatic deployment                                 │
-│  • Site updates at karlstad-events.netlify.app          │
+│  • Site updates at karlstad-events.surge.sh             │
 └─────────────────────────────────────────────────────────┘
 ```
 
