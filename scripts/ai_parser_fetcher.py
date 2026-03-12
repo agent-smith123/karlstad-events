@@ -9,6 +9,7 @@ import os
 import json
 import yaml
 import requests
+import urllib.parse
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict
@@ -21,6 +22,115 @@ DATA_DIR = PROJECT_DIR / "data"
 # Current year for validation
 CURRENT_YEAR = datetime.now().year
 VALID_YEARS = {CURRENT_YEAR, CURRENT_YEAR + 1}
+VISIT_VARMLAND_ALGOLIA_APP_ID = "JLIO3DI59W"
+VISIT_VARMLAND_ALGOLIA_API_KEY = "c3e912c214238b637c6a86d637acfe79"
+
+
+def is_visit_varmland_source(config: dict) -> bool:
+    urls = config.get('urls', {})
+    return any(isinstance(url, str) and 'visitvarmland.com' in url for url in urls.values())
+
+
+def fetch_visit_varmland_events(config: dict) -> List[Dict]:
+    """Fetch Visit Värmland events via the Algolia index used by their own site."""
+    venue_name = config.get('name', 'Visit Värmland')
+    location = config.get('location', 'Värmland')
+    events = []
+
+    page_url = next(
+        (url for url in (config.get('urls') or {}).values() if isinstance(url, str) and 'visitvarmland.com' in url),
+        None,
+    )
+    if not page_url:
+        return events
+
+    page_resp = requests.get(page_url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=20)
+    page_resp.raise_for_status()
+
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(page_resp.text, 'html.parser')
+    script = soup.find('script', id='algolia-filter-js-before')
+    if not script:
+        return events
+
+    script_text = (script.get_text() or '').strip()
+    prefix = 'window.ALGOLIA_FILTER = '
+    if not script_text.startswith(prefix):
+        return events
+
+    filter_data = json.loads(script_text[len(prefix):].rstrip(' ;'))
+    index_name = filter_data.get('indexName', 'events')
+    filters = filter_data.get('filter')
+    locale = filter_data.get('locale', 'sv')
+    if not filters:
+        return events
+
+    query_url = f'https://{VISIT_VARMLAND_ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/*/queries'
+    headers = {
+        'X-Algolia-API-Key': VISIT_VARMLAND_ALGOLIA_API_KEY,
+        'X-Algolia-Application-Id': VISIT_VARMLAND_ALGOLIA_APP_ID,
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0',
+    }
+
+    page = 0
+    while page < 20:
+        params = urllib.parse.urlencode({
+            'hitsPerPage': 100,
+            'page': page,
+            'filters': filters,
+        })
+        payload = {'requests': [{'indexName': index_name, 'params': params}]}
+        resp = requests.post(query_url, headers=headers, json=payload, timeout=20)
+        resp.raise_for_status()
+        data = resp.json()['results'][0]
+        hits = data.get('hits', [])
+        if not hits:
+            break
+
+        for hit in hits:
+            title = hit.get(f'title_{locale}') or hit.get('title_sv') or hit.get('title_en') or hit.get('title')
+            place = hit.get('place') or venue_name
+            municipality = hit.get('municipality') or location
+            url_suffix = hit.get(f'url_{locale}') or hit.get('url_sv') or ''
+            link = f'https://www.visitvarmland.com/{url_suffix.lstrip("/")}' if url_suffix else page_url
+            category = None
+            categories = hit.get(f'categories_{locale}') or hit.get('categories_sv') or {}
+            lvl1 = categories.get('lvl1') or []
+            if lvl1:
+                category = lvl1[0].replace('Evenemang > ', '').strip()
+
+            for date_item in hit.get('dates', []):
+                date = date_item.get('date')
+                if not date:
+                    continue
+                year = int(date[:4])
+                if year not in VALID_YEARS:
+                    continue
+                events.append({
+                    'title': title,
+                    'date': date,
+                    'end_date': date_item.get('date_end') if date_item.get('date_end') != date else None,
+                    'venue': place,
+                    'location': municipality,
+                    'link': link,
+                    'source': venue_name,
+                    'category': category,
+                })
+
+        if page >= data.get('nbPages', 1) - 1:
+            break
+        page += 1
+
+    # Deduplicate exact duplicates emitted by repeated occurrences / content quirks
+    seen = set()
+    unique = []
+    for e in events:
+        key = (e['title'], e['date'], e['venue'], e['location'])
+        if key not in seen:
+            seen.add(key)
+            unique.append(e)
+    return unique
 
 
 def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
@@ -32,6 +142,19 @@ def fetch_and_parse_venue(venue_key: str, config: dict) -> List[Dict]:
     urls = config.get('urls', {})
     
     events = []
+
+    if is_visit_varmland_source(config):
+        try:
+            print(f"  🔄 {venue_name} (Algolia)")
+            venue_events = fetch_visit_varmland_events(config)
+            events.extend(venue_events)
+            if venue_events:
+                print(f"    ✓ {len(venue_events)} events")
+            else:
+                print(f"    ℹ️  No events found")
+        except Exception as e:
+            print(f"    ✗ Error: {e}")
+        return events
     
     for url_type, url in urls.items():
         if not isinstance(url, str) or not url.startswith('http'):

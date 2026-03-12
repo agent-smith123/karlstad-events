@@ -280,7 +280,7 @@ tier1_major:
   hammaro_kommun:
     active: true
     location: "Hammar\xF6"
-    name: Hammaro.se Evenemang
+    name: Hammarö kommun
     scraper:
       method: beautifulsoup
       note: Only scrape actual events, not news articles
@@ -393,7 +393,7 @@ tier1_major:
     - Evenemang
     - Kommunal
     urls:
-      evenemang: https://kil.se/arkiv/evenemang
+      evenemang: https://kil.se/uppleva-och-gora/evenemang
       home: https://kil.se/
   kristinehamn_arena:
     active: true
@@ -1851,9 +1851,75 @@ tier4_aggregators:
     type: aggregator
     urls:
       karlstad: https://www.tickster.com/se/sv/events/in/karlstad
-  visit_varmland:
+  visit_varmland_karlstad:
     active: true
-    name: "Visit V\xE4rmland"
+    location: Karlstad
+    name: "Visit Värmland - Karlstad"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://www.visitvarmland.com/karlstad/evenemang
+  visit_varmland_forshaga:
+    active: true
+    location: Forshaga
+    name: "Visit Värmland - Forshaga"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://visitvarmland.com/forshaga/evenemang
+  visit_varmland_hammaro:
+    active: true
+    location: Hammarö
+    name: "Visit Värmland - Hammarö"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://www.visitvarmland.com/hammaro/evenemang
+  visit_varmland_kil:
+    active: true
+    location: Kil
+    name: "Visit Värmland - Kil"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://visitvarmland.com/kil/evenemang
+  visit_varmland_grums:
+    active: true
+    location: Grums
+    name: "Visit Värmland - Grums"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://www.visitvarmland.com/grums/evenemang
+  visit_varmland_munkfors:
+    active: true
+    location: Munkfors
+    name: "Visit Värmland - Munkfors"
+    scraper:
+      max_pages: 999
+      method: beautifulsoup
+      type: static
+    type: tourism
+    urls:
+      events: https://www.visitvarmland.com/munkfors/evenemang
+  visit_varmland:
+    active: false
+    name: "Visit Värmland"
     scraper:
       max_pages: 999
       method: beautifulsoup
@@ -1877,6 +1943,7 @@ tier5_municipal:
       home: https://www.forshaga.se/
   karlstad_se:
     active: true
+    location: Karlstad
     name: Karlstads kommun
     scraper:
       max_pages: 999
@@ -1885,6 +1952,153 @@ tier5_municipal:
     type: municipal
     urls:
       events: https://karlstad.se/uppleva-och-gora/evenemang
+      home: https://karlstad.se/
+  grums_kommun:
+    active: true
+    location: Grums
+    name: Grums kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.grums.se/upplevagora/evenemangskalender.2477.html
+      home: https://www.grums.se/
+  kristinehamn_kommun:
+    active: true
+    location: Kristinehamn
+    name: Kristinehamns kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.kristinehamn.se/kultur-och-fritid/evenemang/
+      home: https://www.kristinehamn.se/
+  munkfors_kommun:
+    active: true
+    location: Munkfors
+    name: Munkfors kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.munkfors.se/uppleva-och-gora/evenemang/
+      home: https://www.munkfors.se/
+  sunne_kommun:
+    active: true
+    location: Sunne
+    name: Sunne kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.sunne.se/kommun/uppleva-och-gora/evenemang/
+      home: https://www.sunne.se/
+  torsby_kommun:
+    active: true
+    location: Torsby
+    name: Torsby kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.torsby.se/upplevagora/kultur/paganginomkulturenkulturkalendern.4.474ea4c8157c22e2140d2851.html
+      home: https://www.torsby.se/
+  filipstad_kommun:
+    active: true
+    location: Filipstad
+    name: Filipstads kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.filipstad.se/toppmeny/upplevaochgora/turismochkultur/visitfilipstad.2891.html
+      home: https://www.filipstad.se/
+  eda_kommun:
+    active: true
+    location: Eda
+    name: Eda kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+      note: No dedicated municipal event calendar found; using official Uppleva & göra page for now
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://eda.se/uppleva
+      home: https://eda.se/
+  storfors_kommun:
+    active: true
+    location: Storfors
+    name: Storfors kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.storfors.se/upplevaochgora/evenemang.4.34c20d5713f759f032516cb.html
+      home: https://www.storfors.se/
+  arjang_kommun:
+    active: true
+    location: Årjäng
+    name: Årjängs kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.arjang.se/kommunalservice/startsida/upplevaochgora/evenemang.9621.html
+      home: https://www.arjang.se/
+  arvika_kommun:
+    active: true
+    location: Arvika
+    name: Arvika kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+      note: Official tourism/events page; municipality points visitors here for event discovery
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.arvika.se/upplevaochgora/turismevenemangochsevardheter.1453.html
+      home: https://www.arvika.se/
+  hagfors_kommun:
+    active: true
+    location: Hagfors
+    name: Hagfors kommun
+    scraper:
+      method: beautifulsoup
+      type: static
+      note: Official municipality page highlighting markets and event channels
+    type:
+    - Evenemang
+    - Kommunal
+    urls:
+      events: https://www.hagfors.se/undersidor/politik-och-kommun/medborgardialog/framtagandet-av-hagforsstrategin/marknader-och-evenemang-i-kommunen.html
+      home: https://www.hagfors.se/
   regionvarmland:
     active: true
     location: "V\xE4rmland"
