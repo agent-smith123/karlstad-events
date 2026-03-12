@@ -2,147 +2,147 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1314/events/</loc>
+    <loc>https://karlstad-events.surge.sh/events/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/</loc>
+    <loc>https://karlstad-events.surge.sh/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/evenemang/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/evenemang/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-12-cb6d63a00c86/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-12-cb6d63a00c86/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-12-c58066b7ee71/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-12-c58066b7ee71/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-11-03319ff353c7/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-11-03319ff353c7/</loc>
     <lastmod>2026-03-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-11-1c5862a076cd/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-11-1c5862a076cd/</loc>
     <lastmod>2026-03-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-10-30ae9c089918/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-10-30ae9c089918/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-07-7be7ebe9561e/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-07-7be7ebe9561e/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-07-a105c6c6e463/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-07-a105c6c6e463/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-07-d9064a5ff61a/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-07-d9064a5ff61a/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-07-c7a7fc9a948f/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-07-c7a7fc9a948f/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-07-06f373e2756f/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-07-06f373e2756f/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/abba/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/abba/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-06-bf2fd71f3c8f/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-06-bf2fd71f3c8f/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/musik/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/musik/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/show/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/show/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-06-4903e888ee29/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-06-4903e888ee29/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/thank-you-for-the-music/</loc>
+    <loc>https://karlstad-events.surge.sh/events/thank-you-for-the-music/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-06-8104b98e6a50/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-06-8104b98e6a50/</loc>
     <lastmod>2026-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/konsert/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/konsert/</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-05-a1e7d118999e/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-05-a1e7d118999e/</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/5ca581e38b87/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/5ca581e38b87/</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/categories/opera/teater/</loc>
+    <loc>https://karlstad-events.surge.sh/categories/opera/teater/</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/2026-03-05-b9b62f38524e/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/2026-03-05-b9b62f38524e/</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/e4c7976f721e/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/e4c7976f721e/</loc>
     <lastmod>2026-02-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/events/duplicates_backup/8c39df4c42ce/</loc>
+    <loc>https://karlstad-events.surge.sh/events/duplicates_backup/8c39df4c42ce/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1314/tags/</loc>
+    <loc>https://karlstad-events.surge.sh/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

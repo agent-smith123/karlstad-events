@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Evenemang Karlstad</title>
-    <link>http://localhost:1314/categories/</link>
+    <link>https://karlstad-events.surge.sh/categories/</link>
     <description>Recent content in Categories on Evenemang Karlstad</description>
     <generator>Hugo</generator>
     <language>sv-se</language>
     <lastBuildDate>Thu, 12 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1314/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://karlstad-events.surge.sh/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Evenemang</title>
-      <link>http://localhost:1314/categories/evenemang/</link>
+      <link>https://karlstad-events.surge.sh/categories/evenemang/</link>
       <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/categories/evenemang/</guid>
+      <guid>https://karlstad-events.surge.sh/categories/evenemang/</guid>
       <description></description>
     </item>
     <item>
       <title>ABBA</title>
-      <link>http://localhost:1314/categories/abba/</link>
+      <link>https://karlstad-events.surge.sh/categories/abba/</link>
       <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/categories/abba/</guid>
+      <guid>https://karlstad-events.surge.sh/categories/abba/</guid>
       <description></description>
     </item>
     <item>
       <title>Musik</title>
-      <link>http://localhost:1314/categories/musik/</link>
+      <link>https://karlstad-events.surge.sh/categories/musik/</link>
       <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/categories/musik/</guid>
+      <guid>https://karlstad-events.surge.sh/categories/musik/</guid>
       <description></description>
     </item>
     <item>
       <title>Show</title>
-      <link>http://localhost:1314/categories/show/</link>
+      <link>https://karlstad-events.surge.sh/categories/show/</link>
       <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/categories/show/</guid>
+      <guid>https://karlstad-events.surge.sh/categories/show/</guid>
       <description></description>
     </item>
     <item>
       <title>Konsert</title>
-      <link>http://localhost:1314/categories/konsert/</link>
+      <link>https://karlstad-events.surge.sh/categories/konsert/</link>
       <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/categories/konsert/</guid>
+      <guid>https://karlstad-events.surge.sh/categories/konsert/</guid>
       <description></description>
     </item>
     <item>
       <title>Opera/Teater</title>
-      <link>http://localhost:1314/categories/opera/teater/</link>
+      <link>https://karlstad-events.surge.sh/categories/opera/teater/</link>
       <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/categories/opera/teater/</guid>
+      <guid>https://karlstad-events.surge.sh/categories/opera/teater/</guid>
       <description></description>
     </item>
   </channel>

@@ -74,7 +74,7 @@
 
   {{/* Embed events as JSON for the JS filter layer */}}
   <script>
-    window.__EVENTS__ = {{ $futureEvents | jsonify }};
+    window.__EVENTS__ = {{ $futureEvents | jsonify | safeJS }};
   </script>
 
   <ul class="event-list" id="event-list"></ul>
@@ -95,16 +95,18 @@
       'theater':  'Teater',
       'opera':    'Opera',
       'cinema':   'Bio',
-      'sport':    'Sport',
-      'museum':   'Museum',
+      'sport':    'Sport & Hälsa',
+      'museum':   'Utställningar',
       'library':  'Bibliotek',
+      'children': 'Barn & Familj',
+      'food':     'Mat & Dryck',
       'festival': 'Festival',
       'culture':  'Kultur',
       'park':     'Natur & Park',
       'other':    'Övrigt',
     };
     // Preferred display order
-    const CAT_ORDER = ['concert','theater','opera','cinema','sport','festival','museum','library','culture','park','other'];
+    const CAT_ORDER = ['concert','theater','opera','children','sport','museum','library','food','festival','culture','park','other'];
 
     const events = window.__EVENTS__ || [];
     let activeCategories = new Set(['all']);
